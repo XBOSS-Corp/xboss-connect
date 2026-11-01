@@ -211,3 +211,160 @@ test('CLI and real client error path do not expose reflected credentials or repl
   assert.deepEqual(stdout, []);
   assert.deepEqual(stderr, []);
 });
+
+
+test('search reports omitted matches without changing the JSON array contract', async () => {
+  const products = Array.from({ length: 23 }, (_, index) => ({ ...product, id: String(index), slug: 'report-' + index }));
+  const h = harness({ readCatalog: async () => ({ products }) });
+  await main(['search', '광고'], h.dependencies);
+  assert.match(h.stdout[0], /23개 중 20개/);
+  assert.match(h.stdout.at(-1), /--limit 23/);
+  assert.match(h.stdout[1], /node bin\/xboss.mjs show report-/);
+  const json = harness({ readCatalog: async () => ({ products }) });
+  await main(['search', '광고', '--json'], json.dependencies);
+  assert.equal(json.stdout.length, 1);
+  assert.equal(JSON.parse(json.stdout[0]).length, 20);
+  assert.equal(json.configs.length, 0);
+});
+
+test('schema finds an exact tool without consulting or inferring from the catalog', async () => {
+  const tool = { name: 'server.exception-name', title: '선택한 도구', inputSchema: { type: 'object' } };
+  const h = harness({
+    env: { XBOSS_CLIENT_ID: 'example-id', XBOSS_CLIENT_SECRET: 'example-secret' },
+    readCatalog: async () => { throw new Error('An exact current tool needs no catalog lookup.'); },
+    client: { listTools: async ({ anonymous }) => { assert.equal(anonymous, true); return { tools: [tool] }; } },
+  });
+  await main(['schema', tool.name, '--anonymous'], h.dependencies);
+  assert.deepEqual(JSON.parse(h.stdout[0]), tool);
+  assert.equal(h.configs[0].clientId, undefined);
+  assert.equal(h.configs[0].clientSecret, undefined);
+});
+
+test('schema resolves a public slug to its declared name across every list page', async () => {
+  const tool = { name: product.mcp.name, inputSchema: { type: 'object', required: ['period'] },
+    _meta: { 'xdata.kr/credential': { required: true, providers: ['naver'] } } };
+  const cursors = [];
+  const h = harness({ client: { listTools: async ({ cursor }) => {
+    cursors.push(cursor);
+    return cursor ? { tools: [tool] } : { tools: [{ name: 'other' }], nextCursor: 'next' };
+  } } });
+  await main(['schema', product.slug, '--anonymous'], h.dependencies);
+  assert.deepEqual(cursors, [undefined, 'next']);
+  assert.deepEqual(JSON.parse(h.stdout[0]), tool);
+});
+
+test('schema rejects absent and disabled mappings instead of guessing a tool name', async () => {
+  const absent = harness({ client: { listTools: async () => ({ tools: [{ name: 'naver__report' }] }) } });
+  await assert.rejects(main(['schema', product.slug], absent.dependencies), /현재 목록에 없습니다/);
+  assert.deepEqual(absent.stdout, []);
+  const disabled = harness({ readCatalog: async () => ({ products: [{ ...product, mcp: { ...product.mcp, enabled: false } }] }) });
+  await assert.rejects(main(['schema', product.slug], disabled.dependencies), /현재 목록에 없습니다/);
+  const unknown = harness();
+  await assert.rejects(main(['schema', 'ACTUAL_SERVER_NAME'], unknown.dependencies), /정확한 도구명/);
+  assert.equal(unknown.calls.some((call) => call.method !== 'listTools'), false);
+});
+
+test('templates contain only required structure and null values without following references', async () => {
+  const inputSchema = { type: 'object', required: ['employees', 'consent', 'date', 'reference', 'choice'], properties: {
+    employees: { type: 'array', minItems: 1, items: { type: 'object', required: ['name', 'amount'], properties: {
+      name: { type: 'string', default: 'must-not-copy' }, amount: { type: 'integer', default: 0 }, optional: { type: 'string' },
+    } } },
+    consent: { type: 'boolean', default: true }, date: { type: 'string', enum: ['must-not-copy'] },
+    reference: { $ref: 'https://example.invalid/no-fetch' }, choice: { oneOf: [{ type: 'number' }, { type: 'string' }] },
+    request_idempotency_key: { type: 'string' },
+  } };
+  const before = JSON.stringify(inputSchema);
+  let listCalls = 0;
+  const h = harness({ client: { listTools: async () => { listCalls++; return { tools: [{ name: 'exact', inputSchema }] }; } } });
+  await main(['schema', 'exact', '--template'], h.dependencies);
+  assert.deepEqual(JSON.parse(h.stdout[0]), {
+    employees: [{ name: null, amount: null }], consent: null, date: null, reference: null, choice: null,
+  });
+  assert.equal(JSON.stringify(inputSchema), before);
+  assert.equal(listCalls, 1);
+  assert.match(h.stderr.join(''), /미완성.*null.*별도 --execute/);
+});
+
+test('missing input files fail in Korean before constructing any network client', async () => {
+  const h = harness();
+  const missing = join(tmpdir(), 'xboss-missing-' + process.pid + '-' + Date.now(), 'private-input.json');
+  await assert.rejects(main(['call', 'actual_server_name', '--input', missing, '--execute'], h.dependencies), (error) => {
+    assert.match(error.message, /입력 파일.*--input 파일 경로/);
+    assert.equal(error.message.includes(missing), false);
+    assert.equal(error.message.includes('ENOENT'), false);
+    return true;
+  });
+  assert.equal(h.configs.length, 0);
+  assert.equal(h.calls.length, 0);
+});
+
+test('UTF-8 BOM input saved by Windows editors is accepted without changing the values', async (t) => {
+  const path = await inputFile(t, '\uFEFF{"period":"sample"}');
+  const h = harness();
+  await main(['call', 'actual_server_name', '--input', path, '--execute'], h.dependencies);
+  assert.deepEqual(h.calls, [{ method: 'callTool', name: 'actual_server_name', args: { period: 'sample' } }]);
+});
+
+test('public doctor fallback explicitly directs the user to connect their account', async () => {
+  const h = harness({ client: { authenticated: true,
+    listTools: async () => ({ tools: [{ name: 'public' }], _meta: { 'xdata.kr/lane': { source: 'anonymous' } } }),
+  } });
+  await main(['doctor'], h.dependencies);
+  const result = JSON.parse(h.stdout[0]);
+  assert.equal(result.mode, 'public');
+  assert.match(result.message, /내 계정 연결은 확인되지 않았습니다/);
+  assert.match(result.next, /--env-file=.env.*doctor/);
+});
+
+test('schema and template inspection cannot accept execution flags', async () => {
+  for (const args of [['schema', product.slug, '--execute'], ['search', '광고', '--template'], ['schema']]) {
+    const h = harness();
+    await assert.rejects(main(args, h.dependencies));
+    assert.equal(h.configs.length, 0);
+    assert.equal(h.calls.length, 0);
+  }
+});
+
+
+test('REST connection selection is forwarded at the top level without changing params', async (t) => {
+  const path = await inputFile(t);
+  const h = harness();
+  await main(['submit', '--provider', 'naver', '--action', 'naver.report', '--input', path,
+    '--idempotency-key', 'stable-request-key', '--account-link-id', 'example-account-link', '--execute'], h.dependencies);
+  assert.deepEqual(h.calls, [{ method: 'submitJob', job: {
+    provider: 'naver', action: 'naver.report', params: { period: 'sample' }, account_link_id: 'example-account-link',
+  }, options: { idempotencyKey: 'stable-request-key' } }]);
+});
+
+test('empty REST connection selection fails before reading input or constructing a client', async () => {
+  for (const value of ['', '   ', '\t']) {
+    const h = harness();
+    await assert.rejects(main(['submit', '--provider', 'naver', '--action', 'naver.report',
+      '--input', 'missing.json', '--idempotency-key', 'stable', '--account-link-id', value, '--execute'], h.dependencies),
+    /--account-link-id.*생략/);
+    assert.equal(h.configs.length, 0);
+    assert.equal(h.calls.length, 0);
+  }
+});
+
+test('account-link-id is accepted only for REST submission', async () => {
+  const h = harness();
+  await assert.rejects(main(['doctor', '--account-link-id', 'example-account-link'], h.dependencies), /옵션을 사용할 수 없습니다/);
+  assert.equal(h.configs.length, 0);
+});
+
+
+test('show carries connector attribution through product information without replacing its canonical URL', async () => {
+  const h = harness();
+  await main(['show', product.slug, '--json'], h.dependencies);
+  const result = JSON.parse(h.stdout[0]);
+  assert.equal(result.url, product.url);
+  const info = new URL(result.info_url);
+  assert.equal(info.searchParams.get('utm_source'), 'xboss-connect');
+  assert.equal(info.searchParams.get('utm_medium'), 'connector');
+  assert.equal(info.searchParams.get('utm_content'), product.slug);
+  const plain = harness();
+  await main(['show', product.slug], plain.dependencies);
+  assert.ok(plain.stdout[0].includes(result.info_url));
+  assert.equal(h.configs.length, 0);
+});

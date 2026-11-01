@@ -5,7 +5,7 @@
 
 **분야:** 기업정보 브리프
 
-[이 상품으로 시작하기](https://xboss.biz/auth/signup?returnTo=https%3A%2F%2Fconsole.xdata.kr%2Fproducts%3Fproduct%3Dcompany-info-pack-brief-v1-generate&utm_source=github&utm_medium=repository&utm_campaign=xboss_connect&utm_content=company-info-pack-brief-v1-generate) · [공식 상품 안내](https://xboss.biz/service-products/company-info-pack-brief-v1-generate)
+[이 상품으로 시작하기](https://xboss.biz/auth/signup?returnTo=https%3A%2F%2Fconsole.xdata.kr%2Fproducts%3Fproduct%3Dcompany-info-pack-brief-v1-generate&utm_source=github&utm_medium=repository&utm_campaign=xboss_connect&utm_content=company-info-pack-brief-v1-generate) · [공식 상품 안내](https://xboss.biz/service-products/company-info-pack-brief-v1-generate?utm_source=github&utm_medium=repository&utm_campaign=xboss_connect&utm_content=company-info-pack-brief-v1-generate)
 
 XBOSS는 무료로 시작할 수 있습니다. 이 상품의 준비 사항과 이용 조건은 시작 과정에서 확인하세요.
 

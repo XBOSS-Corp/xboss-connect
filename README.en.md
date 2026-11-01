@@ -12,11 +12,14 @@ Explore 214 business products across Korean tax, social insurance, supported ban
 Download this repository as a ZIP, extract it, and open a terminal in its folder. Requires Node.js 22 or newer.
 
 ```sh
-node bin/xboss.mjs search "홈택스"
+node bin/xboss.mjs search "급여명세서"
 node bin/xboss.mjs doctor --anonymous
+node bin/xboss.mjs schema payslip-xlsx --anonymous
+node bin/xboss.mjs schema payslip-xlsx --anonymous --template
 ```
 
 Local product search and public connection checks do not require an account.
+Use `schema` to inspect one product. `--template` prints required fields with `null` placeholders to fill before execution.
 For an actual job, follow the [connection guide](docs/quickstart.md), inspect the tool schema, and supply the required inputs.
 
 This repository contains clients for XBOSS public APIs, examples, and documentation. Institution connections and job processing run on the XBOSS service.

@@ -24,22 +24,25 @@ Node.js 22 이상에서 다운로드한 폴더를 열고 실행합니다. 아래
 
 ```sh
 node bin/xboss.mjs doctor --anonymous
-node bin/xboss.mjs tools --anonymous
+node bin/xboss.mjs schema naver-searchad-performance --anonymous
 ```
 
 내 계정에서 쓸 수 있는 도구는 [키 설정](quickstart.md#2-내-계정-연결) 후 확인합니다.
 
 ```sh
-node --env-file=.env bin/xboss.mjs tools
+node --env-file=.env bin/xboss.mjs schema naver-searchad-performance
 ```
+
+선택한 상품 slug를 `schema`에 넣으면 그 도구만 확인합니다. 전체 목록은 `tools`로 확인할 수 있습니다. 다운로드 폴더를 사용하는 에이전트에는 [스킬 안내](../skills/SKILL.md)를 읽도록 요청하세요.
 
 ## 에이전트가 따를 순서
 
 1. 상품 문서에서 목적과 지원 방식을 확인합니다.
-2. 현재 `tools/list`의 도구명과 입력 스키마를 사용합니다. 상품명에서 도구명을 추측하지 않습니다.
+2. 현재 `tools/list`의 도구명과 입력 스키마를 사용합니다. 로컬 CLI에서는 `schema <상품 slug>`로 선택합니다. 상품명에서 도구명을 추측하지 않습니다. 입력 틀의 `null`에는 사용자에게 확인한 실제 값만 넣습니다.
 3. 필요한 기관 연결은 사용자가 공식 등록 화면에서 완료하도록 안내합니다.
 4. 쓰기 확인이 필요한 작업은 서버의 미리보기를 보여주고 사용자의 확인을 받습니다. 확인값을 임의로 만들거나 자동 승인하지 않습니다.
-5. 사용자가 요청한 작업을 실행하고 결과와 다음 행동을 설명합니다.
+5. 인증한 MCP 호출의 스키마에 `request_idempotency_key`가 있으면 최초 호출 전에 키를 만들어 입력과 함께 보관합니다. 응답 유실 복구에만 같은 키와 같은 입력을 사용하며, 같은 키로 다른 요청을 보내거나 자동 재제출하지 않습니다.
+6. 사용자가 요청한 작업을 실행하고 결과와 다음 행동을 설명합니다.
 
 서버가 다음 행동을 안내하면 그 내용을 따릅니다. 실패한 작업을 무조건 다시 실행하지 않습니다.
 

@@ -5,7 +5,7 @@
 
 **분야:** KB국민카드 기업카드
 
-[이 상품으로 시작하기](https://xboss.biz/auth/signup?returnTo=https%3A%2F%2Fconsole.xdata.kr%2Fproducts%3Fproduct%3Dkb-biz-card-approvals-page&utm_source=github&utm_medium=repository&utm_campaign=xboss_connect&utm_content=kb-biz-card-approvals-page) · [공식 상품 안내](https://xboss.biz/service-products/kb-biz-card-approvals-page)
+[이 상품으로 시작하기](https://xboss.biz/auth/signup?returnTo=https%3A%2F%2Fconsole.xdata.kr%2Fproducts%3Fproduct%3Dkb-biz-card-approvals-page&utm_source=github&utm_medium=repository&utm_campaign=xboss_connect&utm_content=kb-biz-card-approvals-page) · [공식 상품 안내](https://xboss.biz/service-products/kb-biz-card-approvals-page?utm_source=github&utm_medium=repository&utm_campaign=xboss_connect&utm_content=kb-biz-card-approvals-page)
 
 XBOSS는 무료로 시작할 수 있습니다. 이 상품의 준비 사항과 이용 조건은 시작 과정에서 확인하세요.
 

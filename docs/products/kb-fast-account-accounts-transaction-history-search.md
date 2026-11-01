@@ -5,7 +5,7 @@ KB국민은행 계좌의 거래내역을 기간으로 조회하고, 건마다 �
 
 **분야:** KB국민은행 빠른조회
 
-[이 상품으로 시작하기](https://xboss.biz/auth/signup?returnTo=https%3A%2F%2Fconsole.xdata.kr%2Fproducts%3Fproduct%3Dkb-fast-account-accounts-transaction-history-search&utm_source=github&utm_medium=repository&utm_campaign=xboss_connect&utm_content=kb-fast-account-accounts-transaction-history-search) · [공식 상품 안내](https://xboss.biz/service-products/kb-fast-account-accounts-transaction-history-search)
+[이 상품으로 시작하기](https://xboss.biz/auth/signup?returnTo=https%3A%2F%2Fconsole.xdata.kr%2Fproducts%3Fproduct%3Dkb-fast-account-accounts-transaction-history-search&utm_source=github&utm_medium=repository&utm_campaign=xboss_connect&utm_content=kb-fast-account-accounts-transaction-history-search) · [공식 상품 안내](https://xboss.biz/service-products/kb-fast-account-accounts-transaction-history-search?utm_source=github&utm_medium=repository&utm_campaign=xboss_connect&utm_content=kb-fast-account-accounts-transaction-history-search)
 
 XBOSS는 무료로 시작할 수 있습니다. 이 상품의 준비 사항과 이용 조건은 시작 과정에서 확인하세요.
 

@@ -30,11 +30,14 @@ XBOSS의 **업무 상품 214개**를 한곳에서 탐색할 수 있습니다.
 - **코드에서:** 이 저장소의 ZIP을 내려받아 압축을 풀고, 해당 폴더에서 아래 명령을 실행하세요. Node.js 22 이상이 필요합니다.
 
 ```sh
-node bin/xboss.mjs search "홈택스"
+node bin/xboss.mjs search "급여명세서"
 node bin/xboss.mjs doctor --anonymous
+node bin/xboss.mjs schema payslip-xlsx --anonymous
+node bin/xboss.mjs schema payslip-xlsx --anonymous --template
 ```
 
 검색과 공개 연결 확인은 계정 없이 사용할 수 있습니다.
+선택한 상품의 입력은 `schema`로 확인하세요. `--template`의 `null`은 실행 전에 실제 값으로 채웁니다.
 실제 업무는 [시작 안내](docs/quickstart.md)에 따라 연결 정보를 설정한 뒤 실행하세요.
 
 ## 연결 방식

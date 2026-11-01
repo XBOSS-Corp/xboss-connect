@@ -5,7 +5,7 @@ IBK기업은행 계좌의 예금주와 원장잔액, 최근 일자별 입금과 
 
 **분야:** IBK기업은행 빠른조회
 
-[이 상품으로 시작하기](https://xboss.biz/auth/signup?returnTo=https%3A%2F%2Fconsole.xdata.kr%2Fproducts%3Fproduct%3Dibk-fast-account-accounts-quick-summary-get&utm_source=github&utm_medium=repository&utm_campaign=xboss_connect&utm_content=ibk-fast-account-accounts-quick-summary-get) · [공식 상품 안내](https://xboss.biz/service-products/ibk-fast-account-accounts-quick-summary-get)
+[이 상품으로 시작하기](https://xboss.biz/auth/signup?returnTo=https%3A%2F%2Fconsole.xdata.kr%2Fproducts%3Fproduct%3Dibk-fast-account-accounts-quick-summary-get&utm_source=github&utm_medium=repository&utm_campaign=xboss_connect&utm_content=ibk-fast-account-accounts-quick-summary-get) · [공식 상품 안내](https://xboss.biz/service-products/ibk-fast-account-accounts-quick-summary-get?utm_source=github&utm_medium=repository&utm_campaign=xboss_connect&utm_content=ibk-fast-account-accounts-quick-summary-get)
 
 XBOSS는 무료로 시작할 수 있습니다. 이 상품의 준비 사항과 이용 조건은 시작 과정에서 확인하세요.
 

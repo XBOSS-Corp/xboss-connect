@@ -1,7 +1,7 @@
 import { readFile, writeFile, mkdir, readdir, lstat, unlink } from 'node:fs/promises';
 import { resolve, relative, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { loadCatalog, productStartUrl, productDocumentPath } from '../src/catalog.mjs';
+import { loadCatalog, productStartUrl, productInfoUrl, productDocumentPath } from '../src/catalog.mjs';
 
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const MARKER = '<!-- Generated from catalog/public-products.json. -->';
@@ -53,6 +53,12 @@ export async function generateDocs() {
   if (featured.some((p) => !p)) throw new Error('대표 상품의 공개 목록이 변경되었습니다. 현재 상품을 확인하세요.');
   const index = indexMarkdown(products);
   const examples = featured.map((p) => '| ' + md(p.category) + ' | ' + detailLink(p) + ' |').join('\n');
+  const startCommands = [
+    'node bin/xboss.mjs search "급여명세서"',
+    'node bin/xboss.mjs doctor --anonymous',
+    'node bin/xboss.mjs schema payslip-xlsx --anonymous',
+    'node bin/xboss.mjs schema payslip-xlsx --anonymous --template',
+  ].join('\n');
   const intro = [
     MARKER, '# XBOSS Connect', '',
     '![XBOSS Connect — 찾던 업무 데이터, 지금 쓰는 AI와 코드에서.](docs/assets/banner.svg)', '',
@@ -67,8 +73,9 @@ export async function generateDocs() {
     '- **브라우저에서:** 아래에서 상품을 고르고 상품별 시작 링크를 여세요.',
     '- **AI에서:** [연결 안내](docs/ai-connect.md)에 따라 공식 MCP를 연결하세요. 현재 도구 목록으로 지원 업무와 입력을 확인할 수 있습니다.',
     '- **코드에서:** 이 저장소의 ZIP을 내려받아 압축을 풀고, 해당 폴더에서 아래 명령을 실행하세요. Node.js 22 이상이 필요합니다.', '',
-    code('node bin/xboss.mjs search "홈택스"\nnode bin/xboss.mjs doctor --anonymous'), '',
+    code(startCommands), '',
     '검색과 공개 연결 확인은 계정 없이 사용할 수 있습니다.',
+    '선택한 상품의 입력은 ' + inline('schema') + '로 확인하세요. ' + inline('--template') + '의 ' + inline('null') + '은 실행 전에 실제 값으로 채웁니다.',
     '실제 업무는 [시작 안내](docs/quickstart.md)에 따라 연결 정보를 설정한 뒤 실행하세요.', '',
     '## 연결 방식', '',
     '| 사용 목적 | 제공 방식 |', '| --- | --- |',
@@ -98,8 +105,9 @@ export async function generateDocs() {
     '**Start for free.** Product requirements and usage terms are shown when you get started.', '',
     '[Browse every product](PRODUCTS.md) · [Connect your AI](docs/ai-connect.md) · [Use the API](docs/quickstart.md) · [한국어](README.md)', '',
     'Download this repository as a ZIP, extract it, and open a terminal in its folder. Requires Node.js 22 or newer.', '',
-    code('node bin/xboss.mjs search "홈택스"\nnode bin/xboss.mjs doctor --anonymous'), '',
+    code(startCommands), '',
     'Local product search and public connection checks do not require an account.',
+    'Use ' + inline('schema') + ' to inspect one product. ' + inline('--template') + ' prints required fields with ' + inline('null') + ' placeholders to fill before execution.',
     'For an actual job, follow the [connection guide](docs/quickstart.md), inspect the tool schema, and supply the required inputs.', '',
     'This repository contains clients for XBOSS public APIs, examples, and documentation. Institution connections and job processing run on the XBOSS service.', '',
     'The [catalog](catalog/public-products.json) contains ' + count + ' business products and ' + steps + ' intermediate workflow steps, verified against official public sources on ' + updated + '. Product names are preserved in Korean.', '',
@@ -123,7 +131,7 @@ export async function generateDocs() {
     await write(productDocumentPath(p), [
       MARKER, '# ' + md(p.name), '', md(p.summary), '', '**분야:** ' + md(p.category), '',
       ...(p.kind === 'step' ? ['이 항목은 업무 과정의 중간 화면 단계입니다. 전체 업무 흐름은 공식 상품 안내를 확인하세요.', ''] : []),
-      '[이 상품으로 시작하기](' + productStartUrl(p, { source: 'github' }) + ') · [공식 상품 안내](' + p.url + ')', '',
+      '[이 상품으로 시작하기](' + productStartUrl(p, { source: 'github' }) + ') · [공식 상품 안내](' + productInfoUrl(p, { source: 'github' }) + ')', '',
       'XBOSS는 무료로 시작할 수 있습니다. 이 상품의 준비 사항과 이용 조건은 시작 과정에서 확인하세요.', '',
       '## AI와 코드에서 사용하기', '',
       '[AI 연결 안내](../ai-connect.md) · [코드 시작 안내](../quickstart.md)', '',

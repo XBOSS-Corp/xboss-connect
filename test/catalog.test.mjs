@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { join, resolve } from 'node:path';
-import { loadCatalog, searchProducts, findProduct, productStartUrl, productDocumentPath } from '../src/catalog.mjs';
+import { loadCatalog, searchProducts, searchProductPage, findProduct, productStartUrl, productInfoUrl, productDocumentPath } from '../src/catalog.mjs';
 import { parsePublicIndex, projectPublicCatalog, syncCatalog } from '../scripts/sync-catalog.mjs';
 
 const products = [
@@ -205,4 +205,69 @@ test('signup attribution accepts only the two supported public sources', () => {
   for (const source of ['', 'GitHub', 'newsletter', 'https://example.com', 'constructor', null, 123]) {
     assert.throws(() => productStartUrl(products[0], { source }), /유입 경로/);
   }
+});
+
+
+test('search totals include matches beyond the requested result limit', () => {
+  const matching = Array.from({ length: 24 }, (_, index) => ({ ...products[0], id: String(index), slug: 'report-' + index }));
+  const page = searchProductPage(matching, '광고', { limit: 3 });
+  assert.equal(page.total, 24);
+  assert.equal(page.products.length, 3);
+  assert.deepEqual(searchProducts(matching, '광고', { limit: 3 }), page.products);
+});
+
+test('advertising cost discovery is limited to the verified public performance product', () => {
+  const performance = { ...products[0], slug: 'naver-searchad-performance', provider: 'naver_searchad',
+    action: 'naver_searchad.performance.report', name: '네이버 검색광고 성과 보고서 조회',
+    summary: '캠페인이나 광고그룹의 노출, 클릭, 비용 같은 성과를 받아 옵니다.' };
+  const candidates = [performance,
+    { ...performance, id: 'different-slug', slug: 'another-product' },
+    { ...performance, id: 'different-provider', provider: 'another_provider' },
+    { ...performance, id: 'different-action', action: 'naver_searchad.bizmoney.read' },
+    ...products,
+  ];
+  assert.deepEqual(searchProducts(candidates, '광고비 보고서'), [performance]);
+  assert.deepEqual(searchProducts(candidates, '광고비 세금'), []);
+});
+
+
+test('official product links share attribution while preserving canonical URLs and Korean slugs', () => {
+  const product = { ...products[0], slug: '급여명세서-생성',
+    url: 'https://xboss.biz/service-products/' + encodeURIComponent('급여명세서-생성') + '?lang=ko#inputs' };
+  const canonical = product.url;
+  for (const [source, medium] of [['github', 'repository'], ['xboss-connect', 'connector']]) {
+    const info = new URL(productInfoUrl(product, { source }));
+    const start = new URL(productStartUrl(product, { source }));
+    assert.equal(decodeURIComponent(info.pathname), '/service-products/' + product.slug);
+    assert.equal(info.searchParams.get('lang'), 'ko');
+    assert.equal(info.hash, '#inputs');
+    assert.equal(info.searchParams.get('utm_medium'), medium);
+    for (const key of ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content']) {
+      assert.equal(info.searchParams.get(key), start.searchParams.get(key));
+      assert.equal(info.searchParams.getAll(key).length, 1);
+    }
+  }
+  assert.equal(product.url, canonical);
+});
+
+test('official product attribution replaces stale duplicate campaign values', () => {
+  const product = { ...products[0], url: 'https://xdata.kr/service-products/naver-report?utm_source=old&utm_source=older&utm_content=other' };
+  const info = new URL(productInfoUrl(product, { source: 'github' }));
+  assert.equal(info.origin, 'https://xdata.kr');
+  assert.deepEqual(info.searchParams.getAll('utm_source'), ['github']);
+  assert.equal(info.searchParams.get('utm_content'), 'naver-report');
+});
+
+test('product information attribution rejects nonofficial and mismatched addresses', () => {
+  for (const url of ['http://xboss.biz/service-products/naver-report',
+    'https://xboss.biz.example.invalid/service-products/naver-report',
+    'https://example-user@xboss.biz/service-products/naver-report',
+    'https://xboss.biz:444/service-products/naver-report',
+    'https://console.xdata.kr/service-products/naver-report',
+    'https://xboss.biz/auth/signup', 'https://xboss.biz/service-products/other',
+    'https://xboss.biz/service-products/%ZZ', '/service-products/naver-report']) {
+    assert.throws(() => productInfoUrl({ ...products[0], url }), /상품 안내 주소/);
+  }
+  assert.throws(() => productInfoUrl({ ...products[0], url: 'https://xboss.biz/service-products/naver-report' },
+    { source: 'newsletter' }), /유입 경로/);
 });

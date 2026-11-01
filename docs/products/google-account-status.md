@@ -5,7 +5,7 @@
 
 **분야:** Google 마케팅
 
-[이 상품으로 시작하기](https://xboss.biz/auth/signup?returnTo=https%3A%2F%2Fconsole.xdata.kr%2Fproducts%3Fproduct%3Dgoogle-account-status&utm_source=github&utm_medium=repository&utm_campaign=xboss_connect&utm_content=google-account-status) · [공식 상품 안내](https://xboss.biz/service-products/google-account-status)
+[이 상품으로 시작하기](https://xboss.biz/auth/signup?returnTo=https%3A%2F%2Fconsole.xdata.kr%2Fproducts%3Fproduct%3Dgoogle-account-status&utm_source=github&utm_medium=repository&utm_campaign=xboss_connect&utm_content=google-account-status) · [공식 상품 안내](https://xboss.biz/service-products/google-account-status?utm_source=github&utm_medium=repository&utm_campaign=xboss_connect&utm_content=google-account-status)
 
 XBOSS는 무료로 시작할 수 있습니다. 이 상품의 준비 사항과 이용 조건은 시작 과정에서 확인하세요.
 

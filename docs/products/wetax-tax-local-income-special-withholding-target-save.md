@@ -5,7 +5,7 @@
 
 **분야:** 위택스
 
-[이 상품으로 시작하기](https://xboss.biz/auth/signup?returnTo=https%3A%2F%2Fconsole.xdata.kr%2Fproducts%3Fproduct%3Dwetax-tax-local-income-special-withholding-target-save&utm_source=github&utm_medium=repository&utm_campaign=xboss_connect&utm_content=wetax-tax-local-income-special-withholding-target-save) · [공식 상품 안내](https://xboss.biz/service-products/wetax-tax-local-income-special-withholding-target-save)
+[이 상품으로 시작하기](https://xboss.biz/auth/signup?returnTo=https%3A%2F%2Fconsole.xdata.kr%2Fproducts%3Fproduct%3Dwetax-tax-local-income-special-withholding-target-save&utm_source=github&utm_medium=repository&utm_campaign=xboss_connect&utm_content=wetax-tax-local-income-special-withholding-target-save) · [공식 상품 안내](https://xboss.biz/service-products/wetax-tax-local-income-special-withholding-target-save?utm_source=github&utm_medium=repository&utm_campaign=xboss_connect&utm_content=wetax-tax-local-income-special-withholding-target-save)
 
 XBOSS는 무료로 시작할 수 있습니다. 이 상품의 준비 사항과 이용 조건은 시작 과정에서 확인하세요.
 
