@@ -1,0 +1,39 @@
+{
+  "name": "xboss-connect",
+  "version": "0.1.0",
+  "description": "XBOSS 업무 상품을 AI와 코드에 연결하는 공식 API·MCP 클라이언트",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "xboss-connect": "./bin/xboss.mjs"
+  },
+  "exports": {
+    ".": "./src/client.mjs",
+    "./catalog": "./src/catalog.mjs"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "catalog/",
+    "docs/",
+    "examples/",
+    "skills/",
+    "README.md",
+    "README.en.md",
+    "PRODUCTS.md",
+    "LICENSE",
+    "SECURITY.md",
+    ".env.example"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "verify": "node scripts/verify-public.mjs",
+    "catalog:sync": "node scripts/sync-catalog.mjs",
+    "docs:generate": "node scripts/generate-docs.mjs",
+    "check": "npm test && npm run verify"
+  }
+}

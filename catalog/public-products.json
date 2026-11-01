@@ -1,0 +1,4157 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-01T05:46:08.205Z",
+  "source": {
+    "catalog_url": "https://api.xdata.kr/v1/public/catalog/products",
+    "site_url": "https://xboss.biz",
+    "verified_at": "2026-11-01T05:46:08.205Z",
+    "verification_status": "live",
+    "record_count": 259
+  },
+  "products": [
+    {
+      "id": "385",
+      "slug": "edi-fourinsure-session-login",
+      "name": "4대보험 EDI 세션 등록",
+      "summary": "연동 계정 하나를 넣으면 그 계정에 등록된 공동인증서로 4대사회보험 정보연계센터에 로그인하고, 세션 저장 여부와 연동 계정 ID를 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.session.login",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-session-login",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__session__login",
+        "enabled": true
+      }
+    },
+    {
+      "id": "379",
+      "slug": "edi-fourinsure-b1-workplace-support-household-worker-init",
+      "name": "가사근로자종사 보험료지원 신청 입력 서식 조회",
+      "summary": "가사근로자를 고용한 사업장의 사회보험료 지원 신청 화면을 대신 열어, 제공기관 인증번호와 지원대상 근로자수처럼 채워야 할 항목과 이미 채워진 값을 정리해 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.workplace_support.household_worker.init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-workplace-support-household-worker-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__workplace_support__household_worker__init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "641",
+      "slug": "edi-fourinsure-b1-member-qualification-chg-draft-validate",
+      "name": "가입자 내용변경 신고 입력 초안 검증",
+      "summary": "정정할 가입자의 성명과 주민등록번호, 변경부호, 변경후 값, 변경일자를 넣으면 저장 없이 점검해 빠진 항목과 오류, 신고 가능 여부를 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.member_qualification.chg_draft_validate",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-member-qualification-chg-draft-validate",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__member_qualification__chg_draft_validate",
+        "enabled": true
+      }
+    },
+    {
+      "id": "313",
+      "slug": "edi-fourinsure-b1-member-qualification-chg-init",
+      "name": "가입자 내용변경 입력 서식 조회",
+      "summary": "가입자 내용변경 신고서 화면을 열어 변경 항목별 보험 변경후 입력란과 특수직종 선택 목록, 미리 채워진 사업장 값을 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.member_qualification.chg_init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-member-qualification-chg-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__member_qualification__chg_init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "812",
+      "slug": "edi-fourinsure-b1-common-com-cd-list",
+      "name": "공통코드 목록 조회",
+      "summary": "분류 아이디 하나를 넣으면 기관 코드 찾기 창에 보이는 그 분류의 공통코드를 코드 값과 이름의 짝으로 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.common.com_cd.list",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-common-com-cd-list",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__common__com_cd__list",
+        "enabled": true
+      }
+    },
+    {
+      "id": "370",
+      "slug": "edi-fourinsure-b1-resources-notices-institutions-list-init",
+      "name": "기관별 공지사항 목록/검색 입력 서식 조회",
+      "summary": "입력 없이 부르면 기관별 공지사항 검색 화면의 검색 범위(전체, 제목, 내용)와 검색어 칸, 기관 칸 이름을 받습니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.resources.notices.institutions.list_init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-resources-notices-institutions-list-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__resources__notices__institutions__list_init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "367",
+      "slug": "edi-fourinsure-b1-resources-notices-institutions-list",
+      "name": "기관별 공지사항 목록/검색 조회",
+      "summary": "검색 범위와 검색어로 기관별 공지사항 목록을 조회해 공지마다 올린 기관, 제목, 등록일, 조회수, 첨부 표시와 상세 조회에 쓸 글 번호를 받습니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.resources.notices.institutions.list",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-resources-notices-institutions-list",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__resources__notices__institutions__list",
+        "enabled": true
+      }
+    },
+    {
+      "id": "364",
+      "slug": "edi-fourinsure-b1-resources-notices-institutions-detail",
+      "name": "기관별 공지사항 상세 조회",
+      "summary": "공지 글 번호를 넣으면 그 공지의 제목과 본문 글, 붙은 첨부파일의 이름과 번호를 함께 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.resources.notices.institutions.detail",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-resources-notices-institutions-detail",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__resources__notices__institutions__detail",
+        "enabled": true
+      }
+    },
+    {
+      "id": "361",
+      "slug": "edi-fourinsure-b1-resources-notices-institutions-attachments",
+      "name": "기관별 공지사항 첨부파일 목록 조회",
+      "summary": "공지 글 번호를 넣으면 그 공지 상세 화면에 붙은 첨부파일의 개수와 파일마다 첨부 묶음 번호, 순번, 이름을 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.resources.notices.institutions.attachments",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-resources-notices-institutions-attachments",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__resources__notices__institutions__attachments",
+        "enabled": true
+      }
+    },
+    {
+      "id": "382",
+      "slug": "edi-fourinsure-b1-workplace-support-insurance-support-init",
+      "name": "두루누리 보험료지원 신청 입력 서식 조회",
+      "summary": "로그인한 사업장의 두루누리 보험료지원 신청 화면에서 국민연금과 고용보험 신청서 선택 칸, 가입대상자수, 지원대상 근로자수, 지원신청월 칸과 채워진 사업장 정보를 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.workplace_support.insurance_support.init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-workplace-support-insurance-support-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__workplace_support__insurance_support__init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "656",
+      "slug": "edi-fourinsure-b1-workplace-support-insurance-support-draft-validate",
+      "name": "두루누리 보험료지원 신청 입력 초안 검증",
+      "summary": "국민연금과 고용보험별 가입대상자수, 지원대상 근로자수, 지원신청월을 넣으면 빠진 항목과 형식 오류, 신고 가능 여부를 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.workplace_support.insurance_support.draft_validate",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-workplace-support-insurance-support-draft-validate",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__workplace_support__insurance_support__draft_validate",
+        "enabled": true
+      }
+    },
+    {
+      "id": "304",
+      "slug": "edi-fourinsure-b1-civil-receipt-history-list",
+      "name": "민원처리현황 조회",
+      "summary": "조건 없이 부르면 기관 화면에 미리 채워진 기간의 첫 쪽에 보이는 민원마다 민원 종류, 신고일, 진행상태, 보험과 기관, 처리 지사를 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.civil_receipt.history.list",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-civil-receipt-history-list",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__civil_receipt__history__list",
+        "enabled": true
+      }
+    },
+    {
+      "id": "307",
+      "slug": "edi-fourinsure-b1-civil-receipt-history-list-init",
+      "name": "민원처리현황 조회 입력 서식 조회",
+      "summary": "로그인한 연동 계정으로 민원처리현황 화면을 열어 처리여부, 보험유형, 민원서식 보기와 미리 채워진 조회 기간을 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.civil_receipt.history.list_init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-civil-receipt-history-list-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__civil_receipt__history__list_init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "325",
+      "slug": "edi-fourinsure-b1-payroll-amount-change-init",
+      "name": "보수월액 변경신청 입력 서식 조회",
+      "summary": "로그인한 연동으로 부르면 보수월액 변경신청 화면의 사업장 관리번호와 명칭, 소재지, 보험별 가입 여부, 전화와 팩스 칸을 받습니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.payroll.amount_change.init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-payroll-amount-change-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__payroll__amount_change__init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "650",
+      "slug": "edi-fourinsure-b1-payroll-amount-change-draft-validate",
+      "name": "보수월액 변경신청 입력 초안 검증",
+      "summary": "가입자별 성명과 주민등록번호, 변경 전후 기준소득월액, 근로자 동의, 보험별 변경 금액과 변경연월을 넣으면 오류와 신고 가능 여부를 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.payroll.amount_change.draft_validate",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-payroll-amount-change-draft-validate",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__payroll__amount_change__draft_validate",
+        "enabled": true
+      }
+    },
+    {
+      "id": "277",
+      "slug": "edi-fourinsure-b1-business-establishment-init",
+      "name": "사업장 성립 신고",
+      "summary": "사업장 성립 신고 화면의 초기 정보를 조회해 사업장 명칭과 관리번호, 공통 신고 목록, 화면에 채워진 신고 정보를 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.business_establishment.init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-business-establishment-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__business_establishment__init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "635",
+      "slug": "edi-fourinsure-b1-business-establishment-draft-validate",
+      "name": "사업장 성립 신고 입력 초안 검증",
+      "summary": "사업장 성립 신고서에 적을 값을 넣으면 저장이나 신고 없이 점검해 빠진 필수 항목과 항목별 오류, 신고 가능 여부를 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.business_establishment.draft_validate",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-business-establishment-draft-validate",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__business_establishment__draft_validate",
+        "enabled": true
+      }
+    },
+    {
+      "id": "373",
+      "slug": "edi-fourinsure-b1-workplace-auto-transfer-unagreement-init",
+      "name": "사업장 자동이체 신청 약관 입력 서식 조회",
+      "summary": "로그인한 사업장의 자동이체 신청 약관 화면에서 개인정보 수집 이용 동의와 고유식별정보 처리 동의의 안내 제목과 동의 선택 칸을 받아 옵니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.workplace.auto_transfer_unagreement.init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-workplace-auto-transfer-unagreement-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__workplace__auto_transfer_unagreement__init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "653",
+      "slug": "edi-fourinsure-b1-workplace-auto-transfer-unagreement-draft-validate",
+      "name": "사업장 자동이체 신청 입력 초안 검증",
+      "summary": "은행, 계좌번호, 예금주, 신청구분과 이체희망일 같은 자동이체 신청 값을 넣으면 빠진 필수 항목과 형식 오류, 신고 가능 여부를 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.workplace.auto_transfer_unagreement.draft_validate",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-workplace-auto-transfer-unagreement-draft-validate",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__workplace__auto_transfer_unagreement__draft_validate",
+        "enabled": true
+      }
+    },
+    {
+      "id": "376",
+      "slug": "edi-fourinsure-b1-workplace-withdrawal-init",
+      "name": "사업장 탈퇴 신고 입력 서식 조회",
+      "summary": "로그인한 사업장의 탈퇴 신고 화면에서 보험별 신고서 선택 칸, 폐업과 도산 같은 신고사유 선택지, 보험별 탈퇴일과 근로자수 칸, 채워진 사업장 정보를 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.workplace.withdrawal.init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-workplace-withdrawal-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__workplace__withdrawal__init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "358",
+      "slug": "edi-fourinsure-b1-resources-forms-list-init",
+      "name": "서식자료실 목록/검색 입력 서식 조회",
+      "summary": "입력 없이 부르면 서식자료실 검색 화면에서 고를 수 있는 보험유형, 업무유형(자격, 보험료, 제증명 등), 민원유형 선택 값을 받습니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.resources.forms.list_init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-resources-forms-list-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__resources__forms__list_init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "355",
+      "slug": "edi-fourinsure-b1-resources-forms-list",
+      "name": "서식자료실 목록/검색 조회",
+      "summary": "보험유형과 업무유형 코드, 검색어로 서식자료실 목록을 조회해 서식마다 제목, 보험 종류, 등록일과 상세 조회에 쓸 게시판 번호, 글 번호를 받습니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.resources.forms.list",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-resources-forms-list",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__resources__forms__list",
+        "enabled": true
+      }
+    },
+    {
+      "id": "352",
+      "slug": "edi-fourinsure-b1-resources-forms-detail",
+      "name": "서식자료실 상세 조회",
+      "summary": "서식자료실 목록/검색 조회의 게시판 번호와 게시글 번호를 넣으면 그 게시글의 제목과 본문 글, 첨부파일 이름과 기관 화면의 내려받기, 미리보기 단추 정보를 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.resources.forms.detail",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-resources-forms-detail",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__resources__forms__detail",
+        "enabled": true
+      }
+    },
+    {
+      "id": "349",
+      "slug": "edi-fourinsure-b1-resources-forms-attachments",
+      "name": "서식자료실 첨부파일 목록 조회",
+      "summary": "서식자료실 목록/검색 조회의 게시판 번호, 게시글 번호, 첨부 묶음 번호를 넣으면 그 서식에 붙은 파일마다 원본 이름, 확장자, 크기, 순번을 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.resources.forms.attachments",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-resources-forms-attachments",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__resources__forms__attachments",
+        "enabled": true
+      }
+    },
+    {
+      "id": "827",
+      "slug": "edi-fourinsure-b1-member-qualification-los-member-lookup",
+      "name": "자격상실 가입자 조회",
+      "summary": "퇴사자의 성명과 주민등록번호를 넣으면 자격상실 신고서에 쓸 자격키와 기존 자격취득일, 보험별 상실일을 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.member_qualification.los_member_lookup",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-member-qualification-los-member-lookup",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__member_qualification__los_member_lookup",
+        "enabled": true
+      }
+    },
+    {
+      "id": "824",
+      "slug": "edi-fourinsure-b1-member-qualification-los-exist-check",
+      "name": "자격상실 기존 신고 확인",
+      "summary": "자격키와 보험 하나를 넣으면 그 보험에 기존 상실신고가 있는지 기관에 확인해 신고 막힘 여부와 안내 문구를 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.member_qualification.los_exist_check",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-member-qualification-los-exist-check",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__member_qualification__los_exist_check",
+        "enabled": true
+      }
+    },
+    {
+      "id": "647",
+      "slug": "edi-fourinsure-b1-member-qualification-los-draft-validate",
+      "name": "자격상실 신고 입력 초안 검증",
+      "summary": "상실자 성명과 주민등록번호, 고른 보험, 상실일과 보험별 상실사유, 보수총액을 넣으면 빠진 항목과 오류, 신고 가능 여부를 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.member_qualification.los_draft_validate",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-member-qualification-los-draft-validate",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__member_qualification__los_draft_validate",
+        "enabled": true
+      }
+    },
+    {
+      "id": "319",
+      "slug": "edi-fourinsure-b1-member-qualification-los-init",
+      "name": "자격상실 입력 서식 조회",
+      "summary": "로그인한 연동으로 부르면 자격상실 신고 화면의 채워진 사업장 정보와, 비어 있는 상실일과 보험별 상실사유, 보수총액 칸 구성을 받습니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.member_qualification.los_init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-member-qualification-los-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__member_qualification__los_init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "830",
+      "slug": "edi-fourinsure-b1-member-qualification-los-save",
+      "name": "자격상실 초안 저장",
+      "summary": "퇴사자 자격키와 공통 자격상실일, 당해연도 보수총액, 건강보험 산정 개월수를 넣으면 자격상실 신고서를 정보연계센터에 초안으로 저장하고 접수번호를 받습니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.member_qualification.los_save",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-member-qualification-los-save",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__member_qualification__los_save",
+        "enabled": true
+      }
+    },
+    {
+      "id": "815",
+      "slug": "edi-fourinsure-b1-member-qualification-acqs-member-lookup",
+      "name": "자격취득 가입자 조회",
+      "summary": "입사자의 성명과 주민등록번호를 넣으면 자격취득 초안 저장에 쓸 자격키와 보험별 기존 취득일, 상실일을 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.member_qualification.acqs_member_lookup",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-member-qualification-acqs-member-lookup",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__member_qualification__acqs_member_lookup",
+        "enabled": true
+      }
+    },
+    {
+      "id": "818",
+      "slug": "edi-fourinsure-b1-member-qualification-acqs-precheck",
+      "name": "자격취득 사전 확인",
+      "summary": "자격취득 신고서를 쓰기 전에 상위 접수번호를 넣으면 그 번호에 이미 작성된 건수를 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.member_qualification.acqs_precheck",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-member-qualification-acqs-precheck",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__member_qualification__acqs_precheck",
+        "enabled": true
+      }
+    },
+    {
+      "id": "638",
+      "slug": "edi-fourinsure-b1-member-qualification-acqs-draft-validate",
+      "name": "자격취득 신고 입력 초안 검증",
+      "summary": "입사자의 성명과 주민등록번호, 자격취득일, 보험별 값을 넣으면 저장 없이 점검해 빠진 항목과 형식 오류, 신고 가능 여부를 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.member_qualification.acqs_draft_validate",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-member-qualification-acqs-draft-validate",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__member_qualification__acqs_draft_validate",
+        "enabled": true
+      }
+    },
+    {
+      "id": "310",
+      "slug": "edi-fourinsure-b1-member-qualification-acqs-init",
+      "name": "자격취득 입력 서식 조회",
+      "summary": "가입자 자격취득 신고서 화면을 열어 미리 채워진 사업장 정보와 보험별 가입 여부, 수정할 수 없는 항목을 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.member_qualification.acqs_init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-member-qualification-acqs-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__member_qualification__acqs_init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "821",
+      "slug": "edi-fourinsure-b1-member-qualification-acqs-save",
+      "name": "자격취득 초안 저장",
+      "summary": "입사자 자격키와 자격취득일, 월 보수, 건강보험 취득부호, 고용보험 직종을 넣으면 자격취득 신고서를 정보연계센터에 초안으로 저장하고 접수번호를 받습니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.member_qualification.acqs_save",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-member-qualification-acqs-save",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__member_qualification__acqs_save",
+        "enabled": true
+      }
+    },
+    {
+      "id": "346",
+      "slug": "edi-fourinsure-b1-resources-files-download",
+      "name": "자료실 첨부파일 다운로드",
+      "summary": "첨부 묶음 번호와 순번을 넣으면 자료실에 그 파일이 있는지와 원본 이름을 확인해 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.resources.files.download",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-resources-files-download",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__resources__files__download",
+        "enabled": true
+      }
+    },
+    {
+      "id": "343",
+      "slug": "edi-fourinsure-b1-resources-faqs-list-init",
+      "name": "자주묻는질문 목록/검색 입력 서식 조회",
+      "summary": "입력 없이 부르면 자주묻는질문 검색 화면의 검색 범위(전체, 제목, 내용)와 정렬(최신순, 조회순) 선택 값, 기본값을 받습니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.resources.faqs.list_init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-resources-faqs-list-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__resources__faqs__list_init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "340",
+      "slug": "edi-fourinsure-b1-resources-faqs-list",
+      "name": "자주묻는질문 목록/검색 조회",
+      "summary": "검색 범위와 검색어, 정렬, 쪽 번호를 넣으면 자주묻는질문 한 쪽의 문의유형, 제목, 등록일, 조회수, 질문 번호를 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.resources.faqs.list",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-resources-faqs-list",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__resources__faqs__list",
+        "enabled": true
+      }
+    },
+    {
+      "id": "337",
+      "slug": "edi-fourinsure-b1-resources-faqs-detail",
+      "name": "자주묻는질문 상세 조회",
+      "summary": "자주묻는질문 목록/검색 조회에서 받은 질문 번호를 넣으면 질문 제목과 화면 머리글, 표 줄, 답변이 담긴 화면 글자를 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.resources.faqs.detail",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-resources-faqs-detail",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__resources__faqs__detail",
+        "enabled": true
+      }
+    },
+    {
+      "id": "301",
+      "slug": "edi-fourinsure-b1-certificate-issue-fact-confirm",
+      "name": "증명서 발급사실 확인",
+      "summary": "발급번호로 증명서가 발급된 사실이 있는지와 발급일자, 발급처, 기관 안내 문구를 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.certificate.issue_fact.confirm",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-certificate-issue-fact-confirm",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__certificate__issue_fact__confirm",
+        "enabled": false
+      }
+    },
+    {
+      "id": "280",
+      "slug": "edi-fourinsure-b1-certificate-apply-init",
+      "name": "증명서 신청/발급 입력 서식 조회",
+      "summary": "로그인한 연동 계정의 증명서 신청 화면을 읽어 증명서 종류와 출력 순서 보기, 전화번호 칸, 미리 채워진 사업장 정보를 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.certificate.apply.init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-certificate-apply-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__certificate__apply__init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "283",
+      "slug": "edi-fourinsure-b1-certificate-apply-submit",
+      "name": "증명서 신청/발급 제출",
+      "summary": "사업장 가입내역 확인서와 가입자 명부 중 신청할 증명서를 기관에 제출하고 접수번호를 받습니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.certificate.apply.submit",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-certificate-apply-submit",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__certificate__apply__submit",
+        "enabled": true
+      }
+    },
+    {
+      "id": "295",
+      "slug": "edi-fourinsure-b1-certificate-history-list-init",
+      "name": "증명서 신청이력 목록 입력 서식 조회",
+      "summary": "로그인한 연동 계정으로 증명서 신청이력 목록 화면을 열어 접수번호, 그룹 접수번호, 쪽 번호 칸과 상세 화면 주소를 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.certificate.history.list_init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-certificate-history-list-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__certificate__history__list_init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "292",
+      "slug": "edi-fourinsure-b1-certificate-history-list",
+      "name": "증명서 신청이력 목록 조회",
+      "summary": "조건 없이 부르면 증명서 신청이력 화면 첫 쪽에 보이는 신청 건마다 접수번호, 증명서 종류, 접수일시, 처리 상태, 출력 가능 여부를 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.certificate.history.list",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-certificate-history-list",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__certificate__history__list",
+        "enabled": true
+      }
+    },
+    {
+      "id": "289",
+      "slug": "edi-fourinsure-b1-certificate-history-detail-init",
+      "name": "증명서 신청이력 상세 입력 서식 조회",
+      "summary": "증명서 신청이력 목록 조회에서 받은 접수번호를 넣으면 그 건 상세 화면의 출력 양식 칸과 출력 처리 주소를 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.certificate.history.detail_init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-certificate-history-detail-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__certificate__history__detail_init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "286",
+      "slug": "edi-fourinsure-b1-certificate-history-detail",
+      "name": "증명서 신청이력 상세 조회",
+      "summary": "접수번호 하나로 증명서 신청 건의 상세를 열어 접수일시, 처리 기관마다의 상태, 발급일자, 출력 가능 여부를 받습니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.certificate.history.detail",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-certificate-history-detail",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__certificate__history__detail",
+        "enabled": true
+      }
+    },
+    {
+      "id": "298",
+      "slug": "edi-fourinsure-b1-certificate-history-pdf-download",
+      "name": "증명서 신청이력 PDF 다운로드",
+      "summary": "출력가능 상태인 증명서 신청 건의 PDF 를 받는 상품입니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.certificate.history.pdf_download",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-certificate-history-pdf-download",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__certificate__history__pdf_download",
+        "enabled": true
+      }
+    },
+    {
+      "id": "644",
+      "slug": "edi-fourinsure-b1-member-qualification-dependent-draft-validate",
+      "name": "피부양자 자격 신고 입력 초안 검증",
+      "summary": "취득 또는 상실 구분, 직장가입자, 피부양자 명단, 연락처를 넣으면 빠진 필수 항목과 형식 오류, 신고 가능 여부를 돌려줍니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.member_qualification.dependent_draft_validate",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-member-qualification-dependent-draft-validate",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__member_qualification__dependent_draft_validate",
+        "enabled": true
+      }
+    },
+    {
+      "id": "316",
+      "slug": "edi-fourinsure-b1-member-qualification-dependent-init",
+      "name": "피부양자 자격 취득/상실 입력 서식 조회",
+      "summary": "로그인한 연동으로 부르면 건강보험 피부양자 신고서 화면의 신고서 종류, 채워진 사업장 정보와 신고일, 빈 가입자와 연락처 칸을 받습니다.",
+      "category": "4대보험",
+      "provider": "fourinsure",
+      "action": "fourinsure.b1.member_qualification.dependent_init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-member-qualification-dependent-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "fourinsure__b1__member_qualification__dependent_init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "743",
+      "slug": "work24-auth-npki-session-login",
+      "name": "고용24 공동인증서 세션 로그인",
+      "summary": "사업자 공동인증서를 콘솔에 한 번 등록하면, 로그인 호출 한 번으로 지원금 조회와 신청을 같은 연결로 이어서 진행할 수 있습니다.",
+      "category": "고용24",
+      "provider": "work24",
+      "action": "work24.auth.npki_session.login",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/work24-auth-npki-session-login",
+      "docs_url": null,
+      "mcp": {
+        "name": "work24__auth__npki_session__login",
+        "enabled": true
+      }
+    },
+    {
+      "id": "762",
+      "slug": "work24-subsidy-application-target-save",
+      "name": "고용24 기업지원금 대상자 저장",
+      "summary": "조회한 후보 중에서 고른 근로자를 신청서의 지원 대상으로 지정합니다.",
+      "category": "고용24",
+      "provider": "work24",
+      "action": "work24.subsidy.application.target_save",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/work24-subsidy-application-target-save",
+      "docs_url": null,
+      "mcp": {
+        "name": "work24__subsidy__application__target_save",
+        "enabled": true
+      }
+    },
+    {
+      "id": "760",
+      "slug": "work24-subsidy-application-target-search",
+      "name": "고용24 기업지원금 대상자 후보 조회",
+      "summary": "사업장 피보험자 목록을 보여 주고 이 지원사업의 대상으로 지정할 수 있는 근로자를 표시합니다.",
+      "category": "고용24",
+      "provider": "work24",
+      "action": "work24.subsidy.application.target_search",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/work24-subsidy-application-target-search",
+      "docs_url": null,
+      "mcp": {
+        "name": "work24__subsidy__application__target_search",
+        "enabled": true
+      }
+    },
+    {
+      "id": "758",
+      "slug": "work24-subsidy-application-target-init",
+      "name": "고용24 기업지원금 대상자정보 단계 진입",
+      "summary": "접수번호로 작성 중인 신청서를 다시 열어 대상자정보 단계로 들어갑니다.",
+      "category": "고용24",
+      "provider": "work24",
+      "action": "work24.subsidy.application.target_init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/work24-subsidy-application-target-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "work24__subsidy__application__target_init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "756",
+      "slug": "work24-subsidy-application-workplace-save",
+      "name": "고용24 기업지원금 사업장정보 저장",
+      "summary": "사업장 주소와 담당자 연락처, 지원금을 받을 계좌를 신청서에 저장하고 접수번호를 받습니다.",
+      "category": "고용24",
+      "provider": "work24",
+      "action": "work24.subsidy.application.workplace_save",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/work24-subsidy-application-workplace-save",
+      "docs_url": null,
+      "mcp": {
+        "name": "work24__subsidy__application__workplace_save",
+        "enabled": true
+      }
+    },
+    {
+      "id": "977",
+      "slug": "work24-subsidy-diagnosis-search",
+      "name": "고용24 기업지원금 사전진단 조회",
+      "summary": "사업주 사전진단이 있는 기업지원금 사업을 사업장 기준으로 한 번에 조회해, 사업별 진단 판정을 모아 보여 줍니다.",
+      "category": "고용24",
+      "provider": "work24",
+      "action": "work24.subsidy.diagnosis.search",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/work24-subsidy-diagnosis-search",
+      "docs_url": null,
+      "mcp": {
+        "name": "work24__subsidy__diagnosis__search",
+        "enabled": true
+      }
+    },
+    {
+      "id": "768",
+      "slug": "work24-subsidy-application-modify",
+      "name": "고용24 기업지원금 신청 수정",
+      "summary": "기관이 보완을 요청한 신청서에 같은 접수번호로 수정 요청을 보냅니다.",
+      "category": "고용24",
+      "provider": "work24",
+      "action": "work24.subsidy.application.modify",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/work24-subsidy-application-modify",
+      "docs_url": null,
+      "mcp": {
+        "name": "work24__subsidy__application__modify",
+        "enabled": true
+      }
+    },
+    {
+      "id": "774",
+      "slug": "work24-subsidy-application-history",
+      "name": "고용24 기업지원금 신청 이력 조회",
+      "summary": "선택한 지원사업의 신청 건을 처리 상태와 함께 확인합니다.",
+      "category": "고용24",
+      "provider": "work24",
+      "action": "work24.subsidy.application.history",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/work24-subsidy-application-history",
+      "docs_url": null,
+      "mcp": {
+        "name": "work24__subsidy__application__history",
+        "enabled": true
+      }
+    },
+    {
+      "id": "766",
+      "slug": "work24-subsidy-application-submit",
+      "name": "고용24 기업지원금 신청 제출",
+      "summary": "고용24 기업지원금 제출 전 확인에서 제출할 수 있다고 나온 신청서를 고용노동부에 제출합니다.",
+      "category": "고용24",
+      "provider": "work24",
+      "action": "work24.subsidy.application.submit",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/work24-subsidy-application-submit",
+      "docs_url": null,
+      "mcp": {
+        "name": "work24__subsidy__application__submit",
+        "enabled": true
+      }
+    },
+    {
+      "id": "752",
+      "slug": "work24-subsidy-application-init",
+      "name": "고용24 기업지원금 신청 진입",
+      "summary": "고용노동부가 운영하는 기업지원금 가운데 원하는 사업의 신청 가능 여부를 확인합니다.",
+      "category": "고용24",
+      "provider": "work24",
+      "action": "work24.subsidy.application.init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/work24-subsidy-application-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "work24__subsidy__application__init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "770",
+      "slug": "work24-subsidy-application-withdraw",
+      "name": "고용24 기업지원금 신청 철회",
+      "summary": "제출한 신청을 물러야 할 때 철회를 요청합니다.",
+      "category": "고용24",
+      "provider": "work24",
+      "action": "work24.subsidy.application.withdraw",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/work24-subsidy-application-withdraw",
+      "docs_url": null,
+      "mcp": {
+        "name": "work24__subsidy__application__withdraw",
+        "enabled": true
+      }
+    },
+    {
+      "id": "754",
+      "slug": "work24-subsidy-application-requirements",
+      "name": "고용24 기업지원금 신청 필요입력 안내",
+      "summary": "사업장정보를 저장하기 전에 무엇을 준비해야 하는지 먼저 정리해 드립니다.",
+      "category": "고용24",
+      "provider": "work24",
+      "action": "work24.subsidy.application.requirements",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/work24-subsidy-application-requirements",
+      "docs_url": null,
+      "mcp": {
+        "name": "work24__subsidy__application__requirements",
+        "enabled": true
+      }
+    },
+    {
+      "id": "772",
+      "slug": "work24-subsidy-application-delete",
+      "name": "고용24 기업지원금 작성중 초안 삭제",
+      "summary": "작성만 해두고 제출하지 않은 신청 초안을 정리합니다.",
+      "category": "고용24",
+      "provider": "work24",
+      "action": "work24.subsidy.application.delete",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/work24-subsidy-application-delete",
+      "docs_url": null,
+      "mcp": {
+        "name": "work24__subsidy__application__delete",
+        "enabled": true
+      }
+    },
+    {
+      "id": "764",
+      "slug": "work24-subsidy-application-draft-validate",
+      "name": "고용24 기업지원금 제출 전 확인",
+      "summary": "제출 버튼을 누르기 전에 신청서를 기관 화면 기준으로 점검해 제출 가능 여부와 필요한 첨부서류 목록을 받습니다.",
+      "category": "고용24",
+      "provider": "work24",
+      "action": "work24.subsidy.application.draft_validate",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/work24-subsidy-application-draft-validate",
+      "docs_url": null,
+      "mcp": {
+        "name": "work24__subsidy__application__draft_validate",
+        "enabled": true
+      }
+    },
+    {
+      "id": "979",
+      "slug": "work24-subsidy-application-attachment-delete",
+      "name": "고용24 기업지원금 첨부 파일 삭제",
+      "summary": "작성중인 신청 초안에 잘못 올린 첨부 파일을 한 건씩 지웁니다.",
+      "category": "고용24",
+      "provider": "work24",
+      "action": "work24.subsidy.application.attachment_delete",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/work24-subsidy-application-attachment-delete",
+      "docs_url": null,
+      "mcp": {
+        "name": "work24__subsidy__application__attachment_delete",
+        "enabled": true
+      }
+    },
+    {
+      "id": "745",
+      "slug": "work24-auth-session-status",
+      "name": "고용24 세션 상태 조회",
+      "summary": "지원금 신청을 시작하기 전에 저장된 고용24 연결의 인증 상태와 회원구분을 확인합니다.",
+      "category": "고용24",
+      "provider": "work24",
+      "action": "work24.auth.session.status",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/work24-auth-session-status",
+      "docs_url": null,
+      "mcp": {
+        "name": "work24__auth__session__status",
+        "enabled": true
+      }
+    },
+    {
+      "id": "596",
+      "slug": "opendata-nts-status",
+      "name": "국세청 사업자등록 상태 조회",
+      "summary": "거래처 사업자등록번호만 있으면 지금 휴업인지 폐업인지, 과세유형이 무엇인지 국세청 자료로 확인합니다.",
+      "category": "공공데이터 기업 위험 조회",
+      "provider": "opendata",
+      "action": "opendata.nts.status",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/opendata-nts-status",
+      "docs_url": null,
+      "mcp": {
+        "name": "opendata__nts__status",
+        "enabled": true
+      }
+    },
+    {
+      "id": "598",
+      "slug": "opendata-nts-validate",
+      "name": "국세청 사업자등록 진위 확인",
+      "summary": "거래처가 적어 준 사업자등록번호와 개업일자, 대표자명이 국세청 자료와 실제로 맞는지 대조합니다.",
+      "category": "공공데이터 기업 위험 조회",
+      "provider": "opendata",
+      "action": "opendata.nts.validate",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/opendata-nts-validate",
+      "docs_url": null,
+      "mcp": {
+        "name": "opendata__nts__validate",
+        "enabled": true
+      }
+    },
+    {
+      "id": "602",
+      "slug": "opendata-kiscon-sanction",
+      "name": "국토교통부 건설업 행정처분 조회",
+      "summary": "건설업체 공시 자료를 기간을 정해 훑고 사업자등록번호가 일치하는 건만 돌려줍니다.",
+      "category": "공공데이터 기업 위험 조회",
+      "provider": "opendata",
+      "action": "opendata.kiscon.sanction",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/opendata-kiscon-sanction",
+      "docs_url": null,
+      "mcp": {
+        "name": "opendata__kiscon__sanction",
+        "enabled": true
+      }
+    },
+    {
+      "id": "604",
+      "slug": "opendata-env-waste-sanction",
+      "name": "사업장폐기물 행정처분 조회",
+      "summary": "폐기물을 다루는 거래처가 행정처분을 받은 적이 있는지 사업자등록번호로 확인합니다.",
+      "category": "공공데이터 기업 위험 조회",
+      "provider": "opendata",
+      "action": "opendata.env.waste_sanction",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/opendata-env-waste-sanction",
+      "docs_url": null,
+      "mcp": {
+        "name": "opendata__env__waste_sanction",
+        "enabled": true
+      }
+    },
+    {
+      "id": "600",
+      "slug": "opendata-g2b-sanction",
+      "name": "조달청 부정당업자 제재 조회",
+      "summary": "공공 입찰과 계약에서 문제가 됐던 업체인지 사업자등록번호 하나로 확인합니다.",
+      "category": "공공데이터 기업 위험 조회",
+      "provider": "opendata",
+      "action": "opendata.g2b.sanction",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/opendata-g2b-sanction",
+      "docs_url": null,
+      "mcp": {
+        "name": "opendata__g2b__sanction",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1017",
+      "slug": "efine-paid-penalty-query",
+      "name": "교통민원24 기납과태료 조회",
+      "summary": "이미 납부한 과태료를 전체 기간이나 석 달 이내 구간으로 조회합니다.",
+      "category": "교통민원24",
+      "provider": "efine",
+      "action": "efine.paid_penalty.query",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/efine-paid-penalty-query",
+      "docs_url": null,
+      "mcp": {
+        "name": "efine__paid_penalty__query",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1015",
+      "slug": "efine-paid-violation-query",
+      "name": "교통민원24 기납범칙금 조회",
+      "summary": "이미 납부한 범칙금을 페이지 단위로 조회합니다.",
+      "category": "교통민원24",
+      "provider": "efine",
+      "action": "efine.paid_violation.query",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/efine-paid-violation-query",
+      "docs_url": null,
+      "mcp": {
+        "name": "efine__paid_violation__query",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1001",
+      "slug": "efine-session-login",
+      "name": "교통민원24 로그인",
+      "summary": "법인 공동인증서를 콘솔에 한 번 등록해 두면, 한 번의 로그인으로 과태료와 범칙금 조회가 저장된 세션을 그대로 씁니다.",
+      "category": "교통민원24",
+      "provider": "efine",
+      "action": "efine.session.login",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/efine-session-login",
+      "docs_url": null,
+      "mcp": {
+        "name": "efine__session__login",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1007",
+      "slug": "efine-unpaid-penalty-query",
+      "name": "교통민원24 미납 과태료 조회",
+      "summary": "남아 있는 과태료를 전체기간이나 기간을 정해 조회합니다.",
+      "category": "교통민원24",
+      "provider": "efine",
+      "action": "efine.unpaid_penalty.query",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/efine-unpaid-penalty-query",
+      "docs_url": null,
+      "mcp": {
+        "name": "efine__unpaid_penalty__query",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1013",
+      "slug": "efine-unpaid-violation-query",
+      "name": "교통민원24 미납범칙금 조회",
+      "summary": "남아 있는 범칙금을 페이지 단위로 조회합니다.",
+      "category": "교통민원24",
+      "provider": "efine",
+      "action": "efine.unpaid_violation.query",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/efine-unpaid-violation-query",
+      "docs_url": null,
+      "mcp": {
+        "name": "efine__unpaid_violation__query",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1009",
+      "slug": "efine-recent-enforcement-query",
+      "name": "교통민원24 최근단속내역 조회",
+      "summary": "보유 차량에 최근 단속이 걸렸는지 차량번호로 조회합니다.",
+      "category": "교통민원24",
+      "provider": "efine",
+      "action": "efine.recent_enforcement.query",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/efine-recent-enforcement-query",
+      "docs_url": null,
+      "mcp": {
+        "name": "efine__recent_enforcement__query",
+        "enabled": true
+      }
+    },
+    {
+      "id": "394",
+      "slug": "edi-nhis-edi-certificates-health-premium-payment-individual-init",
+      "name": "개인별 건강보험 납부확인 입력 서식 조회",
+      "summary": "연동 계정으로 개인별 건강보험 납부확인서 신청 화면의 신청인 칸, 신청년월 칸, 가입자 명단 표의 열을 받습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.certificates.health_premium_payment.individual.init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-certificates-health-premium-payment-individual-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__certificates__health_premium_payment__individual__init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "424",
+      "slug": "edi-nhis-edi-health-checkups-targets-detail",
+      "name": "건강검진 대상자 상세 조회",
+      "summary": "건강검진 대상자 관련 화면 데이터를 조회 결과로 돌려줍니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.health_checkups.targets.detail",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-health-checkups-targets-detail",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__health_checkups__targets__detail",
+        "enabled": false
+      }
+    },
+    {
+      "id": "439",
+      "slug": "edi-nhis-edi-hr-payroll-health-premiums-employee-details",
+      "name": "건강보험료 개인별 상세 조회",
+      "summary": "고지 연월과 차수를 넣으면 가입자고지내역서(건강)를 열어 가입자마다 보수월액과 건강보험, 장기요양보험의 산출, 조정, 당월 보험료와 합계를 받습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.hr_payroll.health_premiums.employee_details",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-hr-payroll-health-premiums-employee-details",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__hr_payroll__health_premiums__employee_details",
+        "enabled": true
+      }
+    },
+    {
+      "id": "442",
+      "slug": "edi-nhis-edi-hr-payroll-health-premiums-summary",
+      "name": "건강보험료 총괄 요약 조회",
+      "summary": "고지 연월과 차수를 넣으면 사업장고지내역서(건강)를 열어 고지 인원과 건강보험, 장기요양보험의 산출, 조정, 고지 총액, 납부 마감일, 미납 금액을 받습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.hr_payroll.health_premiums.summary",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-hr-payroll-health-premiums-summary",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__hr_payroll__health_premiums__summary",
+        "enabled": true
+      }
+    },
+    {
+      "id": "496",
+      "slug": "edi-nhis-edi-public-resources-list",
+      "name": "공개 자료실 목록 조회",
+      "summary": "쪽 번호로 공개 자료실 게시판의 한 쪽을 읽어 자료마다 번호나 공지 표시, 제목, 등록일과 글 주소를 돌려주고, 첨부가 있는 자료에는 첨부 안내가 붙습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.public.resources.list",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-public-resources-list",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__public__resources__list",
+        "enabled": true
+      }
+    },
+    {
+      "id": "511",
+      "slug": "edi-nhis-edi-session-login",
+      "name": "국민건강보험공단 EDI 세션 로그인",
+      "summary": "등록한 공동인증서로 건강보험 EDI에 로그인해 세션을 만들고, 로그인 성공 여부와 이번에 쓴 연동 계정 ID를 돌려줍니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.session.login",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-session-login",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__session__login",
+        "enabled": true
+      }
+    },
+    {
+      "id": "514",
+      "slug": "edi-nhis-edi-session-status",
+      "name": "국민건강보험공단 EDI 세션 상태 조회",
+      "summary": "연동 계정을 넣으면 저장된 건강보험 EDI 세션에 접속 정보가 모두 있는지와 로그인 확인 결과를 읽어 인증 여부와 업무 화면 준비 기록을 돌려줍니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.session.status",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-session-status",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__session__status",
+        "enabled": true
+      }
+    },
+    {
+      "id": "493",
+      "slug": "edi-nhis-edi-public-notices-list",
+      "name": "대외 공지사항 목록 조회",
+      "summary": "쪽 번호를 넣으면 대외 공지사항 게시판 그 쪽의 글마다 번호나 공지 표시, 제목, 등록일과 글 주소를 받고, 첨부가 있으면 첨부 안내도 받습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.public.notices.list",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-public-notices-list",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__public__notices__list",
+        "enabled": true
+      }
+    },
+    {
+      "id": "418",
+      "slug": "edi-nhis-edi-document-box-sent-documents-list",
+      "name": "문서함 보낸문서 목록 조회",
+      "summary": "조회 기간을 넣어 부르면 보낸 신고서마다 이름과 제출 일시, 접수 건수, 보험별 정상, 반송, 반려 건수를 받습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.document_box.sent_documents.list",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-document-box-sent-documents-list",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__document_box__sent_documents__list",
+        "enabled": true
+      }
+    },
+    {
+      "id": "415",
+      "slug": "edi-nhis-edi-document-box-sent-documents-detail",
+      "name": "문서함 보낸문서 상세 조회",
+      "summary": "보낸문서 목록의 행 번호나 행 키로 고른 4대보험 기준소득월액, 보수월액, 월평균보수 변경신청서 한 건의 대상자와 보험별 신고 내용을 받습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.document_box.sent_documents.detail",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-document-box-sent-documents-detail",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__document_box__sent_documents__detail",
+        "enabled": true
+      }
+    },
+    {
+      "id": "448",
+      "slug": "edi-nhis-edi-hr-payroll-premium-notices-detail",
+      "name": "보수월액 보험료 고지 상세 조회",
+      "summary": "탐색 결과의 행 키나 고지 연월과 문서 이름으로 고지내역서 하나를 열어 고지 연월과 차수, 보험 종류, 기관이 준 고지 항목 행을 받습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.hr_payroll.premium_notices.detail",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-hr-payroll-premium-notices-detail",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__hr_payroll__premium_notices__detail",
+        "enabled": true
+      }
+    },
+    {
+      "id": "454",
+      "slug": "edi-nhis-edi-hr-payroll-premium-notices-select",
+      "name": "보수월액 보험료 고지 선택",
+      "summary": "탐색 결과의 행 키나 고지 연월, 문서 이름으로 고지내역서 하나를 골라 같은 연동 계정의 다음 조회가 쓰도록 남기고, 고른 문서 정보와 이어 부를 조회 목록을 받습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.hr_payroll.premium_notices.select",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-hr-payroll-premium-notices-select",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__hr_payroll__premium_notices__select",
+        "enabled": true
+      }
+    },
+    {
+      "id": "451",
+      "slug": "edi-nhis-edi-hr-payroll-premium-notices-search",
+      "name": "보수월액 보험료 고지 탐색",
+      "summary": "문서를 받은 기간이나 고지 연월을 넣으면 건강과 연금, 고용, 산재 보험료의 고지내역서 목록을 받습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.hr_payroll.premium_notices.search",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-hr-payroll-premium-notices-search",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__hr_payroll__premium_notices__search",
+        "enabled": true
+      }
+    },
+    {
+      "id": "466",
+      "slug": "edi-nhis-edi-hr-payroll-received-documents-options",
+      "name": "보수월액 수신문서 목록 조회",
+      "summary": "기간이나 고지 연월을 넣으면 수신문서 목록의 행마다 행 번호, 문서 이름, 고지 연월과 차수, 작성 차수를 받습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.hr_payroll.received_documents.options",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-hr-payroll-received-documents-options",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__hr_payroll__received_documents__options",
+        "enabled": true
+      }
+    },
+    {
+      "id": "463",
+      "slug": "edi-nhis-edi-hr-payroll-received-documents-detail",
+      "name": "보수월액 수신문서 상세 조회",
+      "summary": "수신문서 목록에서 고른 행 한 건을 열어 문서 제목과 기관의 문서 코드, 표 이름별 열과 행을 받습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.hr_payroll.received_documents.detail",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-hr-payroll-received-documents-detail",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__hr_payroll__received_documents__detail",
+        "enabled": false
+      }
+    },
+    {
+      "id": "460",
+      "slug": "edi-nhis-edi-hr-payroll-received-documents-batch-details",
+      "name": "보수월액 수신문서 일괄 상세 조회",
+      "summary": "보수월액 수신문서 목록 조회가 돌려준 행 번호를 넣으면 행마다 상세를 열어 결과 목록으로 받습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.hr_payroll.received_documents.batch_details",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-hr-payroll-received-documents-batch-details",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__hr_payroll__received_documents__batch_details",
+        "enabled": false
+      }
+    },
+    {
+      "id": "469",
+      "slug": "edi-nhis-edi-hr-payroll-salary-total-notice-detail",
+      "name": "보수총액 통보서 상세 조회",
+      "summary": "보수총액 통보서 화면의 상세 데이터와 요약 정보를 조회합니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.hr_payroll.salary_total_notice.detail",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-hr-payroll-salary-total-notice-detail",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__hr_payroll__salary_total_notice__detail",
+        "enabled": false
+      }
+    },
+    {
+      "id": "445",
+      "slug": "edi-nhis-edi-hr-payroll-payment-status-list",
+      "name": "보험료 납부와 미납 내역 조회",
+      "summary": "연동 계정으로 부르면 기본으로 올해 건강보험의 달마다 고지금액, 납부마감일, 납부일, 낸 보험료와 연체금, 미납 금액을 장기요양보험 몫과 함께 받습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.hr_payroll.payment_status.list",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-hr-payroll-payment-status-list",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__hr_payroll__payment_status__list",
+        "enabled": true
+      }
+    },
+    {
+      "id": "400",
+      "slug": "edi-nhis-edi-certificates-payment-completion-issue",
+      "name": "보험료 납부확인서 발급 실행",
+      "summary": "증명서 종류와 연도, 용도, 발급구분을 넣으면 사업장 건강보험 납부확인서나 4대보험 완납증명서를 발급해 PDF 파일로 받습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.certificates.payment_completion.issue",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-certificates-payment-completion-issue",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__certificates__payment_completion__issue",
+        "enabled": true
+      }
+    },
+    {
+      "id": "397",
+      "slug": "edi-nhis-edi-certificates-payment-completion-init",
+      "name": "보험료 납부확인서 입력 서식 조회",
+      "summary": "연동 계정으로 건강보험료 납부확인서 화면의 고지 총액과 납부 총액 칸, 가입자별 보험료 표의 열, 발급번호 칸을 받습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.certificates.payment_completion.init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-certificates-payment-completion-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__certificates__payment_completion__init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "412",
+      "slug": "edi-nhis-edi-certificates-workplace-member-list-issued-init",
+      "name": "사업장 가입자 명부 발급확인 입력 서식 조회",
+      "summary": "로그인한 연동 계정으로 사업장 가입자 명부 발급확인 화면의 발급일자, 작성차수, 발급번호 칸과 명부 표의 열 이름을 받습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.certificates.workplace_member_list.issued.init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-certificates-workplace-member-list-issued-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__certificates__workplace_member_list__issued__init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "409",
+      "slug": "edi-nhis-edi-certificates-workplace-member-list-apply-init",
+      "name": "사업장 가입자 명부 신청 입력 서식 조회",
+      "summary": "연동 계정으로 부르면 사업장 가입자 명부 신청 화면의 가입자 범위와 상실자 포함 보기, 대상자 성명과 주민등록번호 칸을 돌려줍니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.certificates.workplace_member_list.apply.init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-certificates-workplace-member-list-apply-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__certificates__workplace_member_list__apply__init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "391",
+      "slug": "edi-nhis-edi-business-basic-info",
+      "name": "사업장 기본정보 조회",
+      "summary": "연동 계정으로 부르면 로그인한 건강보험 EDI 세션이 가진 사업장 기본정보를 받습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.business.basic_info",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-business-basic-info",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__business__basic_info",
+        "enabled": true
+      }
+    },
+    {
+      "id": "406",
+      "slug": "edi-nhis-edi-certificates-workplace-application-notice-issued-init",
+      "name": "사업장 적용 통보서 발급확인 입력 서식 조회",
+      "summary": "연동 계정으로 발급된 사업장 적용 통보서 화면의 사업장명, 사용자 성명, 적용일자, 가입자수, 발급번호 칸 구성을 받습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.certificates.workplace_application_notice.issued.init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-certificates-workplace-application-notice-issued-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__certificates__workplace_application_notice__issued__init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "403",
+      "slug": "edi-nhis-edi-certificates-workplace-application-notice-apply-init",
+      "name": "사업장 적용 통보서 신청 입력 서식 조회",
+      "summary": "연동 계정으로 사업장 적용 통보서 신청서 화면의 한글 영문 신청구분, 사업장 칸, 작성일과 일련번호 칸을 받습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.certificates.workplace_application_notice.apply.init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-certificates-workplace-application-notice-apply-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__certificates__workplace_application_notice__apply__init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "472",
+      "slug": "edi-nhis-edi-hr-payroll-year-end-settlement-detail",
+      "name": "연말정산 산출내역서 조회",
+      "summary": "수신문서 목록에서 직장가입자 보험료 연말정산 산출내역서 행을 찾아 열면 가입자별 행과 열을 받습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.hr_payroll.year_end_settlement.detail",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-hr-payroll-year-end-settlement-detail",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__hr_payroll__year_end_settlement__detail",
+        "enabled": false
+      }
+    },
+    {
+      "id": "457",
+      "slug": "edi-nhis-edi-hr-payroll-processing-results-list",
+      "name": "인사급여 처리결과 목록 조회",
+      "summary": "기간이나 고지 연월을 넣으면 받은 문서와 보낸 문서의 행을 한 목록으로 받습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.hr_payroll.processing_results.list",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-hr-payroll-processing-results-list",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__hr_payroll__processing_results__list",
+        "enabled": true
+      }
+    },
+    {
+      "id": "502",
+      "slug": "edi-nhis-edi-qualification-change-init",
+      "name": "자격내용 변경신고 입력 서식 조회",
+      "summary": "로그인한 연동 계정으로 부르면 자격 내역변경 신고서의 대상자, 신청구분, 내역변경, 보험별 구역 칸과 변경부호 같은 목록 이름을 받습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.qualification.change.init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-qualification-change-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__qualification__change__init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "508",
+      "slug": "edi-nhis-edi-qualification-loss-init",
+      "name": "자격상실 신고 입력 서식 조회",
+      "summary": "자격 상실 신고서의 보험별 상실일과 상실 코드 칸, 보수총액, 이직확인서 칸과 목록 이름을 로그인한 연동 계정으로 받습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.qualification.loss.init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-qualification-loss-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__qualification__loss__init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "499",
+      "slug": "edi-nhis-edi-qualification-acquisition-init",
+      "name": "자격취득 신고 입력 서식 조회",
+      "summary": "연동 계정 하나로 자격취득 신고서의 입력 항목 70개와, 대상자와 네 보험, 피부양자 등 구역 아홉의 목록을 받습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.qualification.acquisition.init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-qualification-acquisition-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__qualification__acquisition__init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "659",
+      "slug": "edi-nhis-edi-qualification-acquisition-draft-validate",
+      "name": "자격취득 신고 입력 초안 검증",
+      "summary": "입사자 성명과 주민등록번호, 고른 보험별 취득 값, 피부양자 행을 넣으면 빠진 항목과 오류, 첨부서류 안내, 대상자 등록 가능 여부를 돌려줍니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.qualification.acquisition.draft_validate",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-qualification-acquisition-draft-validate",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__qualification__acquisition__draft_validate",
+        "enabled": true
+      }
+    },
+    {
+      "id": "433",
+      "slug": "edi-nhis-edi-hr-payroll-edi-electronic-notices-search-options",
+      "name": "전자고지 검색옵션 조회",
+      "summary": "조회 기간을 넣어 부르면 전자고지마다 고지 연월과 차수, 작성 차수, 납부자번호, 문서 이름과 행 키를 받습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.hr_payroll.edi_electronic_notices.search_options",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-hr-payroll-edi-electronic-notices-search-options",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__hr_payroll__edi_electronic_notices__search_options",
+        "enabled": true
+      }
+    },
+    {
+      "id": "436",
+      "slug": "edi-nhis-edi-hr-payroll-edi-electronic-notices-select",
+      "name": "전자고지 검색행 선택",
+      "summary": "전자고지 검색 결과에서 행 번호나 행 키, 고지 연월과 차수로 한 건을 골라 로그인 세션에 남기고 그 고지의 값을 받습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.hr_payroll.edi_electronic_notices.select",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-hr-payroll-edi-electronic-notices-select",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__hr_payroll__edi_electronic_notices__select",
+        "enabled": false
+      }
+    },
+    {
+      "id": "430",
+      "slug": "edi-nhis-edi-hr-payroll-edi-electronic-notices-detail",
+      "name": "전자고지 상세 조회",
+      "summary": "검색해 고른 전자고지 한 건의 고지서 상세 행과 총 납부보험료, 총 체납액, 납부마감일 요약을 받습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.hr_payroll.edi_electronic_notices.detail",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-hr-payroll-edi-electronic-notices-detail",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__hr_payroll__edi_electronic_notices__detail",
+        "enabled": false
+      }
+    },
+    {
+      "id": "427",
+      "slug": "edi-nhis-edi-hr-payroll-edi-electronic-notices-contract",
+      "name": "전자고지 조회 규칙",
+      "summary": "연동 계정으로 부르면 전자고지를 검색해 한 건을 고르는 순서와 고를 때 쓰는 다섯 항목을 받습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.hr_payroll.edi_electronic_notices.contract",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-hr-payroll-edi-electronic-notices-contract",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__hr_payroll__edi_electronic_notices__contract",
+        "enabled": true
+      }
+    },
+    {
+      "id": "490",
+      "slug": "edi-nhis-edi-public-forms-list",
+      "name": "전체서식 화면 정보 조회",
+      "summary": "연동 계정으로 부르면 전체서식 화면의 화면 번호와 그 메뉴로 가는 연결 번호를 받습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.public.forms.list",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-public-forms-list",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__public__forms__list",
+        "enabled": true
+      }
+    },
+    {
+      "id": "421",
+      "slug": "edi-nhis-edi-file-report-init",
+      "name": "파일신고 입력 서식 조회",
+      "summary": "로그인한 연동 계정으로 파일신고에 쓸 수 있는 서식 다섯 가지와 기본 서식, 올릴 수 있는 파일 형식, 신고 자료 표의 열을 받습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.file_report.init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-file-report-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__file_report__init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "505",
+      "slug": "edi-nhis-edi-qualification-dependent-init",
+      "name": "피부양자 자격신고 입력 서식 조회",
+      "summary": "피부양자 취득 상실 신고서의 가입자, 피부양자, 장애인과 국가유공자, 외국인 구역 칸을 연동 계정 하나로 받습니다.",
+      "category": "국민건강보험공단 EDI",
+      "provider": "nhis_edi",
+      "action": "nhis_edi.qualification.dependent.init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/edi-nhis-edi-qualification-dependent-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "nhis_edi__qualification__dependent__init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "901",
+      "slug": "edi-nps-edi-b1-certificates-membership-subscribers-search",
+      "name": "가입증명 발급 대상자 조회",
+      "summary": "가입증명 신청서를 보낸 가장 최근 건에 딸린 가입자를 이름으로 찾아 성명, 가입 기간 표시와 행 번호, 행 키를 돌려줍니다.",
+      "category": "국민연금공단 EDI",
+      "provider": "nps_edi",
+      "action": "nps_edi.b1.certificates.membership.subscribers.search",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nps-edi-b1-certificates-membership-subscribers-search",
+      "docs_url": null,
+      "mcp": {
+        "name": "nps_edi__b1__certificates__membership__subscribers__search",
+        "enabled": true
+      }
+    },
+    {
+      "id": "954",
+      "slug": "edi-nps-edi-b1-certificates-membership-apply",
+      "name": "가입증명 신청서 발송",
+      "summary": "가입증명서를 발급하기 전에 대상 가입자 1명에서 100명의 가입증명 신청서를 기관에 보냅니다.",
+      "category": "국민연금공단 EDI",
+      "provider": "nps_edi",
+      "action": "nps_edi.b1.certificates.membership.apply",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nps-edi-b1-certificates-membership-apply",
+      "docs_url": null,
+      "mcp": {
+        "name": "nps_edi__b1__certificates__membership__apply",
+        "enabled": true
+      }
+    },
+    {
+      "id": "898",
+      "slug": "edi-nps-edi-b1-certificates-membership-issue",
+      "name": "가입증명서 발급",
+      "summary": "선택한 가입자의 국민연금 가입증명서를 한글 또는 영문으로 발급합니다.",
+      "category": "국민연금공단 EDI",
+      "provider": "nps_edi",
+      "action": "nps_edi.b1.certificates.membership.issue",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nps-edi-b1-certificates-membership-issue",
+      "docs_url": null,
+      "mcp": {
+        "name": "nps_edi__b1__certificates__membership__issue",
+        "enabled": true
+      }
+    },
+    {
+      "id": "553",
+      "slug": "edi-nps-edi-b1-national-pension-premiums-subscribers",
+      "name": "국민연금 가입자별 보험료 내역",
+      "summary": "고지 연월과 차수로 고른 고지의 가입자별 기준소득월액과 연금보험료, 부담금을 줄마다 돌려주고 받은 줄의 가입자 수와 합계도 줍니다.",
+      "category": "국민연금공단 EDI",
+      "provider": "nps_edi",
+      "action": "nps_edi.b1.national_pension_premiums.subscribers",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nps-edi-b1-national-pension-premiums-subscribers",
+      "docs_url": null,
+      "mcp": {
+        "name": "nps_edi__b1__national_pension_premiums__subscribers",
+        "enabled": true
+      }
+    },
+    {
+      "id": "544",
+      "slug": "edi-nps-edi-b1-national-pension-premiums-guide",
+      "name": "국민연금 결정내역 안내 문구",
+      "summary": "고지나 기간을 고르지 않고 부르면 국민연금보험료 2차 결정내역 화면에 붙은 기관 안내 문구를 화면 이름과 본문으로 돌려줍니다.",
+      "category": "국민연금공단 EDI",
+      "provider": "nps_edi",
+      "action": "nps_edi.b1.national_pension_premiums.guide",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nps-edi-b1-national-pension-premiums-guide",
+      "docs_url": null,
+      "mcp": {
+        "name": "nps_edi__b1__national_pension_premiums__guide",
+        "enabled": true
+      }
+    },
+    {
+      "id": "547",
+      "slug": "edi-nps-edi-b1-national-pension-premiums-payment-history",
+      "name": "국민연금 납부와 징수 이력",
+      "summary": "고지 연월과 차수 같은 값으로 고른 고지의 납부와 징수 이력이 있으면 기관이 준 줄을 돌려줍니다.",
+      "category": "국민연금공단 EDI",
+      "provider": "nps_edi",
+      "action": "nps_edi.b1.national_pension_premiums.payment_history",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nps-edi-b1-national-pension-premiums-payment-history",
+      "docs_url": null,
+      "mcp": {
+        "name": "nps_edi__b1__national_pension_premiums__payment_history",
+        "enabled": true
+      }
+    },
+    {
+      "id": "556",
+      "slug": "edi-nps-edi-b1-national-pension-premiums-summary",
+      "name": "국민연금 보험료 결정 요약",
+      "summary": "고지 연월과 차수로 고른 고지의 보험료 결정 요약을 한 건으로 돌려줍니다.",
+      "category": "국민연금공단 EDI",
+      "provider": "nps_edi",
+      "action": "nps_edi.b1.national_pension_premiums.summary",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nps-edi-b1-national-pension-premiums-summary",
+      "docs_url": null,
+      "mcp": {
+        "name": "nps_edi__b1__national_pension_premiums__summary",
+        "enabled": true
+      }
+    },
+    {
+      "id": "562",
+      "slug": "edi-nps-edi-b1-pension-notices-search",
+      "name": "국민연금 보험료 고지 목록 검색",
+      "summary": "기간이나 고지 연월을 넣으면 사업장에 온 국민연금 보험료 고지를 연월, 차수, 접수일, 열람 상태와 함께 목록으로 돌려줍니다.",
+      "category": "국민연금공단 EDI",
+      "provider": "nps_edi",
+      "action": "nps_edi.b1.pension_notices.search",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nps-edi-b1-pension-notices-search",
+      "docs_url": null,
+      "mcp": {
+        "name": "nps_edi__b1__pension_notices__search",
+        "enabled": true
+      }
+    },
+    {
+      "id": "565",
+      "slug": "edi-nps-edi-b1-pension-notices-select",
+      "name": "국민연금 보험료 고지 선택",
+      "summary": "행 번호나 고지 연월과 차수를 넣어 고지 한 건을 고르면, 그 고지를 같은 세션에 기억해 두고 고지 정보를 돌려줍니다.",
+      "category": "국민연금공단 EDI",
+      "provider": "nps_edi",
+      "action": "nps_edi.b1.pension_notices.select",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nps-edi-b1-pension-notices-select",
+      "docs_url": null,
+      "mcp": {
+        "name": "nps_edi__b1__pension_notices__select",
+        "enabled": true
+      }
+    },
+    {
+      "id": "550",
+      "slug": "edi-nps-edi-b1-national-pension-premiums-retro-payments",
+      "name": "국민연금 소급분 내역",
+      "summary": "고지 연월과 차수 같은 값으로 고른 고지에 소급분 내역이 있으면 기관이 준 줄을 돌려줍니다.",
+      "category": "국민연금공단 EDI",
+      "provider": "nps_edi",
+      "action": "nps_edi.b1.national_pension_premiums.retro_payments",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nps-edi-b1-national-pension-premiums-retro-payments",
+      "docs_url": null,
+      "mcp": {
+        "name": "nps_edi__b1__national_pension_premiums__retro_payments",
+        "enabled": true
+      }
+    },
+    {
+      "id": "559",
+      "slug": "edi-nps-edi-b1-national-pension-premiums-support-details",
+      "name": "국민연금 지원금과 보조 내역",
+      "summary": "고지 연월과 차수를 넣거나 앞서 고른 고지가 있으면, 그 고지의 가입자 목록과 지원내역 목록, 지원금액 합계를 돌려줍니다.",
+      "category": "국민연금공단 EDI",
+      "provider": "nps_edi",
+      "action": "nps_edi.b1.national_pension_premiums.support_details",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nps-edi-b1-national-pension-premiums-support-details",
+      "docs_url": null,
+      "mcp": {
+        "name": "nps_edi__b1__national_pension_premiums__support_details",
+        "enabled": true
+      }
+    },
+    {
+      "id": "520",
+      "slug": "edi-nps-edi-auth-session-status",
+      "name": "국민연금공단 EDI 세션 상태 조회",
+      "summary": "연동 계정 하나로 부르면 저장된 국민연금 EDI 세션이 있는지, 인증이 갖춰졌는지, 어느 사업장관리번호로 로그인했는지를 돌려줍니다.",
+      "category": "국민연금공단 EDI",
+      "provider": "nps_edi",
+      "action": "nps_edi.auth.session.status",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nps-edi-auth-session-status",
+      "docs_url": null,
+      "mcp": {
+        "name": "nps_edi__auth__session__status",
+        "enabled": true
+      }
+    },
+    {
+      "id": "517",
+      "slug": "edi-nps-edi-auth-npki-session-login",
+      "name": "국민연금공단 EDI NPKI 세션 로그인",
+      "summary": "사업장관리번호 11자리와 등록한 공동인증서로 국민연금 EDI에 로그인해 세션을 만들고, 로그인 성공 여부와 그 사업장관리번호를 돌려줍니다.",
+      "category": "국민연금공단 EDI",
+      "provider": "nps_edi",
+      "action": "nps_edi.auth.npki_session.login",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nps-edi-auth-npki-session-login",
+      "docs_url": null,
+      "mcp": {
+        "name": "nps_edi__auth__npki_session__login",
+        "enabled": true
+      }
+    },
+    {
+      "id": "541",
+      "slug": "edi-nps-edi-b1-lookups-workplace-subscribers-status",
+      "name": "사업장 가입자 현황 조회",
+      "summary": "로그인한 사업장의 국민연금 가입자마다 성명, 자격 상태, 기준소득월액, 최초 취득일, 최종 상실일을 사업장 정보와 함께 돌려줍니다.",
+      "category": "국민연금공단 EDI",
+      "provider": "nps_edi",
+      "action": "nps_edi.b1.lookups.workplace_subscribers.status",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nps-edi-b1-lookups-workplace-subscribers-status",
+      "docs_url": null,
+      "mcp": {
+        "name": "nps_edi__b1__lookups__workplace_subscribers__status",
+        "enabled": true
+      }
+    },
+    {
+      "id": "574",
+      "slug": "edi-nps-edi-b1-workplace-main-basic-info",
+      "name": "사업장 기본정보 조회",
+      "summary": "로그인한 사업장의 기본정보와 가입자 수, 관할 지사, 기준소득월액 상하한 정보, 메인 화면의 공지와 배너가 있으면 함께 돌려줍니다.",
+      "category": "국민연금공단 EDI",
+      "provider": "nps_edi",
+      "action": "nps_edi.b1.workplace.main_basic_info",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nps-edi-b1-workplace-main-basic-info",
+      "docs_url": null,
+      "mcp": {
+        "name": "nps_edi__b1__workplace__main_basic_info",
+        "enabled": true
+      }
+    },
+    {
+      "id": "535",
+      "slug": "edi-nps-edi-b1-lookups-workplace-premium-notices-search",
+      "name": "사업장 보험료 과오납금 조회",
+      "summary": "로그인한 사업장의 국민연금 보험료 과오납금 내역 목록과 납부금액 합계, 건수, 기관 안내 메시지를 조회합니다.",
+      "category": "국민연금공단 EDI",
+      "provider": "nps_edi",
+      "action": "nps_edi.b1.lookups.workplace_premium_notices.search",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nps-edi-b1-lookups-workplace-premium-notices-search",
+      "docs_url": null,
+      "mcp": {
+        "name": "nps_edi__b1__lookups__workplace_premium_notices__search",
+        "enabled": true
+      }
+    },
+    {
+      "id": "538",
+      "slug": "edi-nps-edi-b1-lookups-workplace-premium-support-details",
+      "name": "사업장 보험료 지원 내역 조회",
+      "summary": "로그인한 사업장의 국민연금 보험료 지원 내역을 가입자별 목록과 월별 결정 목록으로 나눠 지원금액과 환수결정금액 합계와 함께 돌려줍니다.",
+      "category": "국민연금공단 EDI",
+      "provider": "nps_edi",
+      "action": "nps_edi.b1.lookups.workplace_premium_support.details",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nps-edi-b1-lookups-workplace-premium-support-details",
+      "docs_url": null,
+      "mcp": {
+        "name": "nps_edi__b1__lookups__workplace_premium_support__details",
+        "enabled": true
+      }
+    },
+    {
+      "id": "529",
+      "slug": "edi-nps-edi-b1-declarations-processing-results-search",
+      "name": "신고 처리결과 목록 조회",
+      "summary": "조회 기간과 신고 서식, 처리 상태를 넣으면 국민연금 EDI로 낸 신고마다 신고일자, 접수번호, 처리 상태, 보험별 확인 상태를 돌려줍니다.",
+      "category": "국민연금공단 EDI",
+      "provider": "nps_edi",
+      "action": "nps_edi.b1.declarations.processing_results.search",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nps-edi-b1-declarations-processing-results-search",
+      "docs_url": null,
+      "mcp": {
+        "name": "nps_edi__b1__declarations__processing_results__search",
+        "enabled": true
+      }
+    },
+    {
+      "id": "532",
+      "slug": "edi-nps-edi-b1-lookups-pension-support-recovery-decisions-search",
+      "name": "연금 지원금 환수 결정 조회",
+      "summary": "환수 결정 연월을 정해 국민연금 지원금의 환수 결정 금액과 대상자별 내역을 조회합니다.",
+      "category": "국민연금공단 EDI",
+      "provider": "nps_edi",
+      "action": "nps_edi.b1.lookups.pension_support_recovery_decisions.search",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nps-edi-b1-lookups-pension-support-recovery-decisions-search",
+      "docs_url": null,
+      "mcp": {
+        "name": "nps_edi__b1__lookups__pension_support_recovery_decisions__search",
+        "enabled": true
+      }
+    },
+    {
+      "id": "571",
+      "slug": "edi-nps-edi-b1-pension-notification-documents-search",
+      "name": "연금 통지문서 목록 검색",
+      "summary": "기간과 통지 서식을 넣으면 사업장에 온 연금 통지문서를 서식명, 송수신 구분, 열람 상태, 통지일시와 함께 목록으로 돌려줍니다.",
+      "category": "국민연금공단 EDI",
+      "provider": "nps_edi",
+      "action": "nps_edi.b1.pension_notification_documents.search",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nps-edi-b1-pension-notification-documents-search",
+      "docs_url": null,
+      "mcp": {
+        "name": "nps_edi__b1__pension_notification_documents__search",
+        "enabled": true
+      }
+    },
+    {
+      "id": "568",
+      "slug": "edi-nps-edi-b1-pension-notification-documents-detail",
+      "name": "연금 통지문서 상세 조회",
+      "summary": "연금 통지문서 목록 검색에서 고른 문서를 넣으면 가입자별 근무기간, 소득총액, 결정 기준소득월액과 월 보험료를 돌려줍니다.",
+      "category": "국민연금공단 EDI",
+      "provider": "nps_edi",
+      "action": "nps_edi.b1.pension_notification_documents.detail",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nps-edi-b1-pension-notification-documents-detail",
+      "docs_url": null,
+      "mcp": {
+        "name": "nps_edi__b1__pension_notification_documents__detail",
+        "enabled": true
+      }
+    },
+    {
+      "id": "523",
+      "slug": "edi-nps-edi-b1-certificates-application-results-document-view",
+      "name": "증명서 문서 뷰 파라미터 준비",
+      "summary": "증명서 신청 처리결과 검색에서 고른 한 건을 넣으면 처리 상태와 열람 사전 확인 결과를, 상세 화면이 있는 증명서는 여는 값까지 돌려줍니다.",
+      "category": "국민연금공단 EDI",
+      "provider": "nps_edi",
+      "action": "nps_edi.b1.certificates.application_results.document_view",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nps-edi-b1-certificates-application-results-document-view",
+      "docs_url": null,
+      "mcp": {
+        "name": "nps_edi__b1__certificates__application_results__document_view",
+        "enabled": true
+      }
+    },
+    {
+      "id": "526",
+      "slug": "edi-nps-edi-b1-certificates-application-results-search",
+      "name": "증명서 신청 처리결과 검색",
+      "summary": "접수 기간과 증명서 종류, 처리 상태를 넣으면 국민연금 증명서 신청 건마다 접수번호, 문서번호, 처리 상태를 돌려줍니다.",
+      "category": "국민연금공단 EDI",
+      "provider": "nps_edi",
+      "action": "nps_edi.b1.certificates.application_results.search",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/edi-nps-edi-b1-certificates-application-results-search",
+      "docs_url": null,
+      "mcp": {
+        "name": "nps_edi__b1__certificates__application_results__search",
+        "enabled": true
+      }
+    },
+    {
+      "id": "739",
+      "slug": "comwel-info-individual-billed-premium-worker-select",
+      "name": "개인별 부과고지보험료 근로자 검색",
+      "summary": "개인별 부과고지보험료를 보려면 어느 근로자인지 먼저 정해야 합니다.",
+      "category": "근로복지공단",
+      "provider": "comwel",
+      "action": "comwel.info.individual_billed_premium.worker_select",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/comwel-info-individual-billed-premium-worker-select",
+      "docs_url": null,
+      "mcp": {
+        "name": "comwel__info__individual_billed_premium__worker_select",
+        "enabled": true
+      }
+    },
+    {
+      "id": "741",
+      "slug": "comwel-info-individual-billed-premium-detail",
+      "name": "개인별 부과고지보험료 상세",
+      "summary": "고른 근로자 한 사람의 부과고지보험료를 산재보험과 고용보험으로 나눠, 근로자 부담분과 사업장 부담분을 월별로 받아옵니다.",
+      "category": "근로복지공단",
+      "provider": "comwel",
+      "action": "comwel.info.individual_billed_premium.detail",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/comwel-info-individual-billed-premium-detail",
+      "docs_url": null,
+      "mcp": {
+        "name": "comwel__info__individual_billed_premium__detail",
+        "enabled": true
+      }
+    },
+    {
+      "id": "617",
+      "slug": "comwel-auth-session-status",
+      "name": "고용산재 세션 상태 조회",
+      "summary": "보험료 조회를 시작하기 전에 저장된 근로복지공단 연결 정보를 먼저 확인합니다.",
+      "category": "근로복지공단",
+      "provider": "comwel",
+      "action": "comwel.auth.session.status",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/comwel-auth-session-status",
+      "docs_url": null,
+      "mcp": {
+        "name": "comwel__auth__session__status",
+        "enabled": true
+      }
+    },
+    {
+      "id": "615",
+      "slug": "comwel-auth-npki-session-login",
+      "name": "고용산재 NPKI 세션 로그인",
+      "summary": "콘솔에 등록한 사업자 공동인증서로 로그인하면 고용산재보험 토탈서비스 연결이 만들어지고 사업장관리번호도 확인됩니다.",
+      "category": "근로복지공단",
+      "provider": "comwel",
+      "action": "comwel.auth.npki_session.login",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/comwel-auth-npki-session-login",
+      "docs_url": null,
+      "mcp": {
+        "name": "comwel__auth__npki_session__login",
+        "enabled": true
+      }
+    },
+    {
+      "id": "797",
+      "slug": "comwel-info-premium-billing-notice-search",
+      "name": "보험료 부과고지 검색",
+      "summary": "부과 연도와 월만 정하면 그 달 사업장에 고지된 산재보험료와 고용보험료를 월별 합계로 받아옵니다.",
+      "category": "근로복지공단",
+      "provider": "comwel",
+      "action": "comwel.info.premium_billing_notice.search",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/comwel-info-premium-billing-notice-search",
+      "docs_url": null,
+      "mcp": {
+        "name": "comwel__info__premium_billing_notice__search",
+        "enabled": true
+      }
+    },
+    {
+      "id": "799",
+      "slug": "comwel-info-premium-billing-notice-detail",
+      "name": "보험료 부과고지 상세",
+      "summary": "부과고지 검색 결과를 넘기면 그 달 고지의 근로자별 산정 내역을 받습니다.",
+      "category": "근로복지공단",
+      "provider": "comwel",
+      "action": "comwel.info.premium_billing_notice.detail",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/comwel-info-premium-billing-notice-detail",
+      "docs_url": null,
+      "mcp": {
+        "name": "comwel__info__premium_billing_notice__detail",
+        "enabled": true
+      }
+    },
+    {
+      "id": "594",
+      "slug": "payroll-pack-insurance-deduction-material-v1-generate",
+      "name": "4대보험 공제 자료",
+      "summary": "건강보험료, 장기요양보험료, 국민연금보험료, 고용보험료(실업급여분)를 기관마다 찾지 않고 한 번에 받고 합계도 계산합니다.",
+      "category": "급여 묶음",
+      "provider": "payroll_pack",
+      "action": "payroll_pack.insurance_deduction_material_v1.generate",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/payroll-pack-insurance-deduction-material-v1-generate",
+      "docs_url": null,
+      "mcp": {
+        "name": "payroll_pack__insurance_deduction_material_v1__generate",
+        "enabled": true
+      }
+    },
+    {
+      "id": "583",
+      "slug": "payroll-pack-premium-summary-v1-generate",
+      "name": "건강보험 국민연금 보험료 요약",
+      "summary": "지정한 고지 연월의 건강보험과 국민연금 고지를 두 기관 사이트에 따로 들어가지 않고 한 번의 요청으로 받습니다.",
+      "category": "급여 묶음",
+      "provider": "payroll_pack",
+      "action": "payroll_pack.premium_summary_v1.generate",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/payroll-pack-premium-summary-v1-generate",
+      "docs_url": null,
+      "mcp": {
+        "name": "payroll_pack__premium_summary_v1__generate",
+        "enabled": true
+      }
+    },
+    {
+      "id": "591",
+      "slug": "payroll-pack-employment-insurance-summary-v1-generate",
+      "name": "고용보험 보험료 요약",
+      "summary": "근로복지공단 부과고지 화면을 열어 고용보험 항목까지 찾아 들어가던 과정을 한 번의 요청으로 끝냅니다.",
+      "category": "급여 묶음",
+      "provider": "payroll_pack",
+      "action": "payroll_pack.employment_insurance_summary_v1.generate",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/payroll-pack-employment-insurance-summary-v1-generate",
+      "docs_url": null,
+      "mcp": {
+        "name": "payroll_pack__employment_insurance_summary_v1__generate",
+        "enabled": true
+      }
+    },
+    {
+      "id": "610",
+      "slug": "register-xlsx",
+      "name": "급여대장 엑셀 생성",
+      "summary": "한 달 급여를 한 장에 모아 보는 대장을 표준 서식으로 만듭니다.",
+      "category": "급여 문서",
+      "provider": "payroll_artifact",
+      "action": "register_xlsx",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/register-xlsx",
+      "docs_url": null,
+      "mcp": {
+        "name": "payroll_artifact__register_xlsx",
+        "enabled": true
+      }
+    },
+    {
+      "id": "612",
+      "slug": "payslip-xlsx",
+      "name": "급여명세서 엑셀 생성",
+      "summary": "직원 수만큼 명세서를 따로 만들던 작업을 한 번의 요청으로 끝냅니다.",
+      "category": "급여 문서",
+      "provider": "payroll_artifact",
+      "action": "payslip_xlsx",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/payslip-xlsx",
+      "docs_url": null,
+      "mcp": {
+        "name": "payroll_artifact__payslip_xlsx",
+        "enabled": true
+      }
+    },
+    {
+      "id": "608",
+      "slug": "company-info-pack-brief-v1-generate",
+      "name": "기업정보 리스크 브리프",
+      "summary": "새 거래처의 사업자등록 상태, 부정당업자, 건설과 폐기물 행정처분 조회 결과를 한 번의 요청으로 한 장에 받습니다.",
+      "category": "기업정보 브리프",
+      "provider": "company_info_pack",
+      "action": "company_info_pack.brief_v1.generate",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/company-info-pack-brief-v1-generate",
+      "docs_url": null,
+      "mcp": {
+        "name": "company_info_pack__brief_v1__generate",
+        "enabled": true
+      }
+    },
+    {
+      "id": "963",
+      "slug": "naver-searchad-ads",
+      "name": "네이버 검색광고 광고 소재 목록 조회",
+      "summary": "고른 광고그룹에 걸린 광고 소재 목록을 받아 옵니다.",
+      "category": "네이버 검색광고",
+      "provider": "naver_searchad",
+      "action": "naver_searchad.ads.read",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/naver-searchad-ads",
+      "docs_url": null,
+      "mcp": {
+        "name": "naver_searchad__ads__read",
+        "enabled": true
+      }
+    },
+    {
+      "id": "961",
+      "slug": "naver-searchad-adgroups",
+      "name": "네이버 검색광고 광고그룹 목록 조회",
+      "summary": "고른 캠페인 아래에 있는 광고그룹 목록을 받아 옵니다.",
+      "category": "네이버 검색광고",
+      "provider": "naver_searchad",
+      "action": "naver_searchad.adgroups.read",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/naver-searchad-adgroups",
+      "docs_url": null,
+      "mcp": {
+        "name": "naver_searchad__adgroups__read",
+        "enabled": true
+      }
+    },
+    {
+      "id": "969",
+      "slug": "naver-searchad-bizmoney",
+      "name": "네이버 검색광고 비즈머니 잔액 조회",
+      "summary": "네이버 검색광고 광고비로 쓰는 비즈머니 잔액을 넣을 값 없이 확인합니다.",
+      "category": "네이버 검색광고",
+      "provider": "naver_searchad",
+      "action": "naver_searchad.bizmoney.read",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/naver-searchad-bizmoney",
+      "docs_url": null,
+      "mcp": {
+        "name": "naver_searchad__bizmoney__read",
+        "enabled": true
+      }
+    },
+    {
+      "id": "967",
+      "slug": "naver-searchad-performance",
+      "name": "네이버 검색광고 성과 보고서 조회",
+      "summary": "캠페인이나 광고그룹의 노출, 클릭, 비용 같은 성과를 받아 옵니다.",
+      "category": "네이버 검색광고",
+      "provider": "naver_searchad",
+      "action": "naver_searchad.performance.report",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/naver-searchad-performance",
+      "docs_url": null,
+      "mcp": {
+        "name": "naver_searchad__performance__report",
+        "enabled": true
+      }
+    },
+    {
+      "id": "959",
+      "slug": "naver-searchad-campaigns",
+      "name": "네이버 검색광고 캠페인 목록 조회",
+      "summary": "연동한 네이버 검색광고 계정의 캠페인 목록을 넣을 값 없이 한 번에 받아 옵니다.",
+      "category": "네이버 검색광고",
+      "provider": "naver_searchad",
+      "action": "naver_searchad.campaigns.read",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/naver-searchad-campaigns",
+      "docs_url": null,
+      "mcp": {
+        "name": "naver_searchad__campaigns__read",
+        "enabled": true
+      }
+    },
+    {
+      "id": "965",
+      "slug": "naver-searchad-keywords",
+      "name": "네이버 검색광고 키워드 목록 조회",
+      "summary": "고른 광고그룹에 이미 등록한 키워드 목록을 받아 옵니다.",
+      "category": "네이버 검색광고",
+      "provider": "naver_searchad",
+      "action": "naver_searchad.keywords.read",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/naver-searchad-keywords",
+      "docs_url": null,
+      "mcp": {
+        "name": "naver_searchad__keywords__read",
+        "enabled": true
+      }
+    },
+    {
+      "id": "809",
+      "slug": "google-marketing-report",
+      "name": "마케팅 통합 보고",
+      "summary": "측정 진단과 웹사이트 성과, 검색 실적을 한 번의 요청으로 조회해 보고서 하나로 묶어 줍니다.",
+      "category": "마케팅 통합 보고",
+      "provider": "google_marketing_pack",
+      "action": "google_marketing_pack.report_v1.generate",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-marketing-report",
+      "docs_url": null,
+      "mcp": {
+        "name": "google_marketing_pack__report_v1__generate",
+        "enabled": true
+      }
+    },
+    {
+      "id": "991",
+      "slug": "si4n-payment-confirmation-issue",
+      "name": "사회보험통합징수포털 납부확인서 발급",
+      "summary": "건강보험과 국민연금, 고용보험, 산재보험의 납부확인서와 네 보험을 합산한 연도별과 월별 확인서를 발급해 받습니다.",
+      "category": "사회보험통합징수포털",
+      "provider": "si4n",
+      "action": "si4n.payment_confirmation.issue",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/si4n-payment-confirmation-issue",
+      "docs_url": null,
+      "mcp": {
+        "name": "si4n__payment_confirmation__issue",
+        "enabled": true
+      }
+    },
+    {
+      "id": "981",
+      "slug": "si4n-session-login",
+      "name": "사회보험통합징수포털 로그인",
+      "summary": "사업장 공동인증서를 콘솔에 한 번 등록해 두면, 한 번의 로그인으로 보험료 조회와 납부확인서 발급이 저장된 세션을 씁니다.",
+      "category": "사회보험통합징수포털",
+      "provider": "si4n",
+      "action": "si4n.session.login",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/si4n-session-login",
+      "docs_url": null,
+      "mcp": {
+        "name": "si4n__session__login",
+        "enabled": true
+      }
+    },
+    {
+      "id": "995",
+      "slug": "si4n-premium-calculation-inquiry",
+      "name": "사회보험통합징수포털 보험료 산출내역 조회",
+      "summary": "고지서 금액이 왜 그 숫자인지 항목별로 받아 봅니다.",
+      "category": "사회보험통합징수포털",
+      "provider": "si4n",
+      "action": "si4n.premium_calculation.inquiry",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/si4n-premium-calculation-inquiry",
+      "docs_url": null,
+      "mcp": {
+        "name": "si4n__premium_calculation__inquiry",
+        "enabled": true
+      }
+    },
+    {
+      "id": "989",
+      "slug": "si4n-premium-inquiry",
+      "name": "사회보험통합징수포털 보험료 조회",
+      "summary": "4대보험 보험료가 얼마이고 미납이 남아 있는지 고지년월과 함께 호출 한 번으로 받습니다.",
+      "category": "사회보험통합징수포털",
+      "provider": "si4n",
+      "action": "si4n.premium.inquiry",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/si4n-premium-inquiry",
+      "docs_url": null,
+      "mcp": {
+        "name": "si4n__premium__inquiry",
+        "enabled": true
+      }
+    },
+    {
+      "id": "668",
+      "slug": "shinhan-easy-accounts-transaction-history-search",
+      "name": "신한은행 간편조회 거래내역 조회",
+      "summary": "기간을 지정해 신한은행 계좌의 거래내역을 건별로 받습니다.",
+      "category": "신한은행 간편조회",
+      "provider": "shinhan_easy",
+      "action": "shinhan_easy.accounts.transaction_history.search",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/shinhan-easy-accounts-transaction-history-search",
+      "docs_url": null,
+      "mcp": {
+        "name": "shinhan_easy__accounts__transaction_history__search",
+        "enabled": true
+      }
+    },
+    {
+      "id": "665",
+      "slug": "shinhan-easy-accounts-list",
+      "name": "신한은행 간편조회 계좌 목록 조회",
+      "summary": "신한은행에 연결된 조회 계좌를 한 번에 나열합니다.",
+      "category": "신한은행 간편조회",
+      "provider": "shinhan_easy",
+      "action": "shinhan_easy.accounts.list",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/shinhan-easy-accounts-list",
+      "docs_url": null,
+      "mcp": {
+        "name": "shinhan_easy__accounts__list",
+        "enabled": true
+      }
+    },
+    {
+      "id": "662",
+      "slug": "shinhan-easy-auth-id-password-session-login",
+      "name": "신한은행 간편조회 계좌 연결 로그인",
+      "summary": "신한은행 계좌를 한 번 연결해 두면 이후 계좌 목록과 거래내역 조회를 담당자 손을 거치지 않고 실행합니다.",
+      "category": "신한은행 간편조회",
+      "provider": "shinhan_easy",
+      "action": "shinhan_easy.auth.id_password_session.login",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/shinhan-easy-auth-id-password-session-login",
+      "docs_url": null,
+      "mcp": {
+        "name": "shinhan_easy__auth__id_password_session__login",
+        "enabled": true
+      }
+    },
+    {
+      "id": "725",
+      "slug": "woori-bank-accounts-transaction-history-search",
+      "name": "우리은행 빠른조회 거래내역 조회",
+      "summary": "시작일과 종료일을 정해 우리은행 계좌의 거래내역을 받습니다.",
+      "category": "우리은행 빠른조회",
+      "provider": "woori_bank",
+      "action": "woori_bank.accounts.transaction_history.search",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/woori-bank-accounts-transaction-history-search",
+      "docs_url": null,
+      "mcp": {
+        "name": "woori_bank__accounts__transaction_history__search",
+        "enabled": true
+      }
+    },
+    {
+      "id": "722",
+      "slug": "woori-bank-session-login",
+      "name": "우리은행 빠른조회 계좌 연결 로그인",
+      "summary": "우리은행 계좌 자격을 콘솔에 한 번 등록하면 조회용 연결이 열립니다.",
+      "category": "우리은행 빠른조회",
+      "provider": "woori_bank",
+      "action": "woori_bank.session.login",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/woori-bank-session-login",
+      "docs_url": null,
+      "mcp": {
+        "name": "woori_bank__session__login",
+        "enabled": true
+      }
+    },
+    {
+      "id": "847",
+      "slug": "wetax-session-login",
+      "name": "위택스 공동인증서 로그인",
+      "summary": "사업장 공동인증서를 콘솔에 한 번 등록하면, 로그인 호출 하나로 특별징수 신고의 모든 단계와 납부 상태 조회가 같은 세션을 씁니다.",
+      "category": "위택스",
+      "provider": "wetax",
+      "action": "wetax.session.login",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/wetax-session-login",
+      "docs_url": null,
+      "mcp": {
+        "name": "wetax__session__login",
+        "enabled": true
+      }
+    },
+    {
+      "id": "871",
+      "slug": "wetax-tax-local-income-special-withholding-payment-status",
+      "name": "지방소득세 특별징수 납부 상태 조회",
+      "summary": "제출한 신고가 납부까지 됐는지 신고 식별자 하나로 확인합니다.",
+      "category": "위택스",
+      "provider": "wetax",
+      "action": "wetax.tax.local_income.special_withholding.payment_status",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/wetax-tax-local-income-special-withholding-payment-status",
+      "docs_url": null,
+      "mcp": {
+        "name": "wetax__tax__local_income__special_withholding__payment_status",
+        "enabled": true
+      }
+    },
+    {
+      "id": "865",
+      "slug": "wetax-tax-local-income-special-withholding-review",
+      "name": "지방소득세 특별징수 신고 검토",
+      "summary": "제출 전에 위택스에 지금 저장된 신고 내용을 다시 읽어 요약으로 받습니다.",
+      "category": "위택스",
+      "provider": "wetax",
+      "action": "wetax.tax.local_income.special_withholding.review",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/wetax-tax-local-income-special-withholding-review",
+      "docs_url": null,
+      "mcp": {
+        "name": "wetax__tax__local_income__special_withholding__review",
+        "enabled": true
+      }
+    },
+    {
+      "id": "856",
+      "slug": "wetax-tax-local-income-special-withholding-target-save",
+      "name": "지방소득세 특별징수 신고 대상 저장",
+      "summary": "이번 신고의 귀속 연월과 지급 연월, 소득 종류별 내역을 한 번에 저장합니다.",
+      "category": "위택스",
+      "provider": "wetax",
+      "action": "wetax.tax.local_income.special_withholding.target_save",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/wetax-tax-local-income-special-withholding-target-save",
+      "docs_url": null,
+      "mcp": {
+        "name": "wetax__tax__local_income__special_withholding__target_save",
+        "enabled": true
+      }
+    },
+    {
+      "id": "862",
+      "slug": "wetax-tax-local-income-special-withholding-statement-save",
+      "name": "지방소득세 특별징수 신고 명세 저장",
+      "summary": "소득자별 명세가 필요할 때만 담아 저장합니다.",
+      "category": "위택스",
+      "provider": "wetax",
+      "action": "wetax.tax.local_income.special_withholding.statement_save",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/wetax-tax-local-income-special-withholding-statement-save",
+      "docs_url": null,
+      "mcp": {
+        "name": "wetax__tax__local_income__special_withholding__statement_save",
+        "enabled": true
+      }
+    },
+    {
+      "id": "859",
+      "slug": "wetax-tax-local-income-special-withholding-adjustment-save",
+      "name": "지방소득세 특별징수 신고 세액 저장",
+      "summary": "과세표준과 산출세액은 대상 저장 합계와 같은 값을 넣고, 당월 기타 환급액과 중도 퇴사자 환급액, 추가납부액, 비고를 담습니다.",
+      "category": "위택스",
+      "provider": "wetax",
+      "action": "wetax.tax.local_income.special_withholding.adjustment_save",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/wetax-tax-local-income-special-withholding-adjustment-save",
+      "docs_url": null,
+      "mcp": {
+        "name": "wetax__tax__local_income__special_withholding__adjustment_save",
+        "enabled": true
+      }
+    },
+    {
+      "id": "850",
+      "slug": "wetax-tax-local-income-special-withholding-init",
+      "name": "지방소득세 특별징수 신고 시작",
+      "summary": "신고를 쓰기 전에 신고 권한과 사업장 정보, 저장 단계마다 넣을 값을 한 번에 확인합니다.",
+      "category": "위택스",
+      "provider": "wetax",
+      "action": "wetax.tax.local_income.special_withholding.init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/wetax-tax-local-income-special-withholding-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "wetax__tax__local_income__special_withholding__init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "874",
+      "slug": "wetax-tax-local-income-special-withholding-search-history",
+      "name": "지방소득세 특별징수 신고 이력 조회",
+      "summary": "기간을 정해 그동안의 특별징수 신고 이력을 받습니다.",
+      "category": "위택스",
+      "provider": "wetax",
+      "action": "wetax.tax.local_income.special_withholding.search_history",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/wetax-tax-local-income-special-withholding-search-history",
+      "docs_url": null,
+      "mcp": {
+        "name": "wetax__tax__local_income__special_withholding__search_history",
+        "enabled": true
+      }
+    },
+    {
+      "id": "868",
+      "slug": "wetax-tax-local-income-special-withholding-submit",
+      "name": "지방소득세 특별징수 신고 제출",
+      "summary": "작성과 검토를 마친 신고를 기관에 제출합니다.",
+      "category": "위택스",
+      "provider": "wetax",
+      "action": "wetax.tax.local_income.special_withholding.submit",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/wetax-tax-local-income-special-withholding-submit",
+      "docs_url": null,
+      "mcp": {
+        "name": "wetax__tax__local_income__special_withholding__submit",
+        "enabled": true
+      }
+    },
+    {
+      "id": "957",
+      "slug": "wetax-tax-local-income-special-withholding-cancel",
+      "name": "지방소득세 특별징수 신고 취소",
+      "summary": "제출한 신고를 취소합니다.",
+      "category": "위택스",
+      "provider": "wetax",
+      "action": "wetax.tax.local_income.special_withholding.cancel",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/wetax-tax-local-income-special-withholding-cancel",
+      "docs_url": null,
+      "mcp": {
+        "name": "wetax__tax__local_income__special_withholding__cancel",
+        "enabled": true
+      }
+    },
+    {
+      "id": "853",
+      "slug": "wetax-tax-local-income-special-withholding-declarant-save",
+      "name": "지방소득세 특별징수 신고인 저장",
+      "summary": "신고인 정보를 저장하면 작성 중인 신고서가 생기고 신고 식별자가 돌아옵니다.",
+      "category": "위택스",
+      "provider": "wetax",
+      "action": "wetax.tax.local_income.special_withholding.declarant_save",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/wetax-tax-local-income-special-withholding-declarant-save",
+      "docs_url": null,
+      "mcp": {
+        "name": "wetax__tax__local_income__special_withholding__declarant_save",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1003",
+      "slug": "gov24-session-login",
+      "name": "정부24 로그인",
+      "summary": "법인 공동인증서를 콘솔에 한 번 등록해 두면, 한 번의 로그인으로 이후 증명서 발급 호출이 저장된 세션을 그대로 씁니다.",
+      "category": "정부24",
+      "provider": "gov24",
+      "action": "gov24.session.login",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/gov24-session-login",
+      "docs_url": null,
+      "mcp": {
+        "name": "gov24__session__login",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1011",
+      "slug": "gov24-business-registration-certificate-issue",
+      "name": "정부24 사업자등록증명(법인) 발급",
+      "summary": "거래처가 요구하는 법인 사업자등록증명을 기관 화면을 열지 않고 신청해 PDF 로 내려받습니다.",
+      "category": "정부24",
+      "provider": "gov24",
+      "action": "gov24.business_registration_certificate.issue",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/gov24-business-registration-certificate-issue",
+      "docs_url": null,
+      "mcp": {
+        "name": "gov24__business_registration_certificate__issue",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1005",
+      "slug": "gov24-local-tax-certificate-issue",
+      "name": "정부24 지방세 납세증명서(법인) 발급",
+      "summary": "입찰과 계약에 내야 하는 법인 지방세 납세증명서를 기관 화면을 열지 않고 신청해 PDF 로 내려받습니다.",
+      "category": "정부24",
+      "provider": "gov24",
+      "action": "gov24.local_tax_certificate.issue",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/gov24-local-tax-certificate-issue",
+      "docs_url": null,
+      "mcp": {
+        "name": "gov24__local_tax_certificate__issue",
+        "enabled": true
+      }
+    },
+    {
+      "id": "747",
+      "slug": "subsidy-pack-diagnosis-v1-generate",
+      "name": "기업지원금 진단",
+      "summary": "우리 사업장이 어느 고용 지원금 요건에 맞는지 사업마다 화면을 열어 보던 일을 한 번에 끝냅니다.",
+      "category": "지원금 진단",
+      "provider": "subsidy_pack",
+      "action": "subsidy_pack.diagnosis_v1.generate",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/subsidy-pack-diagnosis-v1-generate",
+      "docs_url": null,
+      "mcp": {
+        "name": "subsidy_pack__diagnosis_v1__generate",
+        "enabled": true
+      }
+    },
+    {
+      "id": "734",
+      "slug": "mcp-bundle-tax-status-v1",
+      "name": "세무 현황 통합관리팩",
+      "summary": "홈택스에서 나눠 쓰던 세무 업무를 한 묶음으로 씁니다.",
+      "category": "통합 묶음",
+      "provider": "hometax",
+      "action": "mcp_bundle.tax_status_v1",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/mcp-bundle-tax-status-v1",
+      "docs_url": null,
+      "mcp": {
+        "name": null,
+        "enabled": false
+      }
+    },
+    {
+      "id": "737",
+      "slug": "mcp-bundle-finance-card-v1",
+      "name": "자금 및 카드 통합관리팩",
+      "summary": "카드사와 은행 사이트를 따로 열던 일을 한 묶음이 대신합니다.",
+      "category": "통합 묶음",
+      "provider": "kb_biz_card",
+      "action": "mcp_bundle.finance_card_v1",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/mcp-bundle-finance-card-v1",
+      "docs_url": null,
+      "mcp": {
+        "name": null,
+        "enabled": false
+      }
+    },
+    {
+      "id": "975",
+      "slug": "hana-fast-account-accounts-transaction-history-search",
+      "name": "하나은행 빠른조회 거래내역 조회",
+      "summary": "시작일과 종료일을 정해 하나은행 계좌의 거래내역을 받습니다.",
+      "category": "하나은행 빠른조회",
+      "provider": "hana_fast_account",
+      "action": "hana_fast_account.accounts.transaction_history.search",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/hana-fast-account-accounts-transaction-history-search",
+      "docs_url": null,
+      "mcp": {
+        "name": "hana_fast_account__accounts__transaction_history__search",
+        "enabled": true
+      }
+    },
+    {
+      "id": "972",
+      "slug": "hana-fast-account-session-login",
+      "name": "하나은행 빠른조회 계좌 연결 로그인",
+      "summary": "하나은행 계좌 자격을 콘솔에 한 번 등록하면 조회용 연결이 열립니다.",
+      "category": "하나은행 빠른조회",
+      "provider": "hana_fast_account",
+      "action": "hana_fast_account.session.login",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/hana-fast-account-session-login",
+      "docs_url": null,
+      "mcp": {
+        "name": "hana_fast_account__session__login",
+        "enabled": true
+      }
+    },
+    {
+      "id": "93",
+      "slug": "세금-납부-환급-고지-체납-내역",
+      "name": "고지 납부 내역 조회",
+      "summary": "국세청이 보낸 고지서를 발송일 기준으로 최근 십 년 범위에서 되짚어 봅니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.notice.search_history",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%84%B8%EA%B8%88-%EB%82%A9%EB%B6%80-%ED%99%98%EA%B8%89-%EA%B3%A0%EC%A7%80-%EC%B2%B4%EB%82%A9-%EB%82%B4%EC%97%AD",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__notice__search_history",
+        "enabled": true
+      }
+    },
+    {
+      "id": "42",
+      "slug": "국세완납증명서-신청",
+      "name": "국세완납증명서 발급(신청)",
+      "summary": "은행 대출과 공공 입찰, 거래처 계약에 필요한 국세완납증명서를 홈택스에 신청하고 증명서 ID를 받습니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.certificate.apply.national_tax_payment",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EA%B5%AD%EC%84%B8%EC%99%84%EB%82%A9%EC%A6%9D%EB%AA%85%EC%84%9C-%EC%8B%A0%EC%B2%AD",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__certificate__apply__national_tax_payment",
+        "enabled": true
+      }
+    },
+    {
+      "id": "90",
+      "slug": "나의세무대리인-조회",
+      "name": "나의 세무대리인 조회",
+      "summary": "지금 우리 회사를 수임하고 있는 세무대리인이 누구인지, 언제부터 맡았고 어디까지 정보를 제공하기로 했는지 확인합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.my_tax_agent.search",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EB%82%98%EC%9D%98%EC%84%B8%EB%AC%B4%EB%8C%80%EB%A6%AC%EC%9D%B8-%EC%A1%B0%ED%9A%8C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__my_tax_agent__search",
+        "enabled": true
+      }
+    },
+    {
+      "id": "99",
+      "slug": "납부할세액-조회납부",
+      "name": "납부할 세액 조회",
+      "summary": "전자신고를 마쳤거나 고지서를 받은 뒤 지금 실제로 내야 할 세액을 세목별로 확인합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.payment_due.search_or_pay",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EB%82%A9%EB%B6%80%ED%95%A0%EC%84%B8%EC%95%A1-%EC%A1%B0%ED%9A%8C%EB%82%A9%EB%B6%80",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__payment_due__search_or_pay",
+        "enabled": true
+      }
+    },
+    {
+      "id": "45",
+      "slug": "납세사실증명서-신청",
+      "name": "납세사실증명서 발급(신청)",
+      "summary": "납부한 기간을 정해 증명하는 납세사실증명서를 홈택스에 신청하고 증명서 ID를 받습니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.certificate.apply.tax_payment_record",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EB%82%A9%EC%84%B8%EC%82%AC%EC%8B%A4%EC%A6%9D%EB%AA%85%EC%84%9C-%EC%8B%A0%EC%B2%AD",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__certificate__apply__tax_payment_record",
+        "enabled": true
+      }
+    },
+    {
+      "id": "117",
+      "slug": "미수령-환급금-조회",
+      "name": "미수령 환급금 조회",
+      "summary": "환급 결정일부터 최근 5년 사이에 찾아가지 않은 국세 환급금이 남아 있는지 확인합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.unclaimed_refund.search",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EB%AF%B8%EC%88%98%EB%A0%B9-%ED%99%98%EA%B8%89%EA%B8%88-%EC%A1%B0%ED%9A%8C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__unclaimed_refund__search",
+        "enabled": true
+      }
+    },
+    {
+      "id": "48",
+      "slug": "부가가치세-과세표준증명원-신청",
+      "name": "부가가치세 과세표준증명원 발급(신청)",
+      "summary": "부가가치세 과세표준과 납부세액을 담은 증명원을 홈택스에 신청합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.certificate.apply.vat_standard",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EB%B6%80%EA%B0%80%EA%B0%80%EC%B9%98%EC%84%B8-%EA%B3%BC%EC%84%B8%ED%91%9C%EC%A4%80%EC%A6%9D%EB%AA%85%EC%9B%90-%EC%8B%A0%EC%B2%AD",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__certificate__apply__vat_standard",
+        "enabled": true
+      }
+    },
+    {
+      "id": "111",
+      "slug": "부가가치세-신고내역-조회",
+      "name": "부가가치세 신고내역 조회",
+      "summary": "언제 어떤 내용으로 부가가치세를 신고했는지 신고일자 기간으로 되짚어 봅니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.return_history.search_vat",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EB%B6%80%EA%B0%80%EA%B0%80%EC%B9%98%EC%84%B8-%EC%8B%A0%EA%B3%A0%EB%82%B4%EC%97%AD-%EC%A1%B0%ED%9A%8C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__return_history__search_vat",
+        "enabled": true
+      }
+    },
+    {
+      "id": "78",
+      "slug": "사업자-등록사항-및-담당자-안내",
+      "name": "사업자 등록사항 및 담당자 안내",
+      "summary": "내 사업장의 등록사항을 상호와 사업상태, 과세유형, 주업종까지 한 번에 확인하고 관할 세무서와 담당자 이름, 전화번호를 함께 받습니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.business_registration.search_info",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%82%AC%EC%97%85%EC%9E%90-%EB%93%B1%EB%A1%9D%EC%82%AC%ED%95%AD-%EB%B0%8F-%EB%8B%B4%EB%8B%B9%EC%9E%90-%EC%95%88%EB%82%B4",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__business_registration__search_info",
+        "enabled": true
+      }
+    },
+    {
+      "id": "81",
+      "slug": "개인사업자등록상태-조회",
+      "name": "사업자등록 상태 조회(개인 휴폐업)",
+      "summary": "거래를 트기 전 상대 사업자등록번호만 넣으면 계속 사업 중인지 휴업인지 폐업인지, 과세유형은 무엇인지 돌아옵니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.business_registration.search_status",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EA%B0%9C%EC%9D%B8%EC%82%AC%EC%97%85%EC%9E%90%EB%93%B1%EB%A1%9D%EC%83%81%ED%83%9C-%EC%A1%B0%ED%9A%8C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__business_registration__search_status",
+        "enabled": true
+      }
+    },
+    {
+      "id": "30",
+      "slug": "사업자등록증-재발급-신청",
+      "name": "사업자등록증 재발급(신청)",
+      "summary": "사업자등록증 원본을 잃어버렸거나 훼손됐을 때 재발급을 신청하고 증명서 ID를 받습니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.certificate.apply.business_registration_reissue",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%82%AC%EC%97%85%EC%9E%90%EB%93%B1%EB%A1%9D%EC%A6%9D-%EC%9E%AC%EB%B0%9C%EA%B8%89-%EC%8B%A0%EC%B2%AD",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__certificate__apply__business_registration_reissue",
+        "enabled": true
+      }
+    },
+    {
+      "id": "27",
+      "slug": "사업자등록-증명",
+      "name": "사업자등록증명 발급",
+      "summary": "상대 회사가 요구하는 사업자등록증명을 제출처 조건에 맞춰 홈택스에 신청하고 증명서 ID를 받습니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.certificate.apply.business_registration",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%82%AC%EC%97%85%EC%9E%90%EB%93%B1%EB%A1%9D-%EC%A6%9D%EB%AA%85",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__certificate__apply__business_registration",
+        "enabled": true
+      }
+    },
+    {
+      "id": "39",
+      "slug": "증명발급-소득금액증명원",
+      "name": "소득금액증명 발급",
+      "summary": "종합소득세 신고 내역을 근거로 한 소득금액증명을 홈택스에 신청하고 증명서 ID를 받습니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.certificate.apply.income_statement",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%A6%9D%EB%AA%85%EB%B0%9C%EA%B8%89-%EC%86%8C%EB%93%9D%EA%B8%88%EC%95%A1%EC%A6%9D%EB%AA%85%EC%9B%90",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__certificate__apply__income_statement",
+        "enabled": false
+      }
+    },
+    {
+      "id": "84",
+      "slug": "신용카드-매출자료-조회",
+      "name": "신용카드 매출자료 조회",
+      "summary": "홈택스에 모인 신용카드와 제로페이, 판매 결제대행 매출자료를 함께 받아옵니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.credit_card.search_sales_data",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%8B%A0%EC%9A%A9%EC%B9%B4%EB%93%9C-%EB%A7%A4%EC%B6%9C%EC%9E%90%EB%A3%8C-%EC%A1%B0%ED%9A%8C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__credit_card__search_sales_data",
+        "enabled": true
+      }
+    },
+    {
+      "id": "620",
+      "slug": "원천세-정기신고-기본사항-저장",
+      "name": "원천세 정기신고 기본정보 저장",
+      "summary": "작성 중인 원천세 신고서의 첫 장을 채웁니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.regular_report.basic_save",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%A0%95%EA%B8%B0%EC%8B%A0%EA%B3%A0-%EA%B8%B0%EB%B3%B8%EC%82%AC%ED%95%AD-%EC%A0%80%EC%9E%A5",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__regular_report__basic_save",
+        "enabled": true
+      }
+    },
+    {
+      "id": "623",
+      "slug": "원천세-정기신고-소득별-명세-저장",
+      "name": "원천세 정기신고 소득별 상세 저장",
+      "summary": "급여대장에서 뽑은 숫자를 신고서 명세에 채웁니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.regular_report.detail_save",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%A0%95%EA%B8%B0%EC%8B%A0%EA%B3%A0-%EC%86%8C%EB%93%9D%EB%B3%84-%EB%AA%85%EC%84%B8-%EC%A0%80%EC%9E%A5",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__regular_report__detail_save",
+        "enabled": true
+      }
+    },
+    {
+      "id": "632",
+      "slug": "원천세-정기신고-검토",
+      "name": "원천세 정기신고 저장 내용 검토",
+      "summary": "제출하기 전에 지금까지 저장한 내용이 신고서 기준에 맞는지 따져 봅니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.regular_report.review",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%A0%95%EA%B8%B0%EC%8B%A0%EA%B3%A0-%EA%B2%80%ED%86%A0",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__regular_report__review",
+        "enabled": true
+      }
+    },
+    {
+      "id": "713",
+      "slug": "원천세-정기신고-제출",
+      "name": "원천세 정기신고 제출",
+      "summary": "작성과 검토가 끝난 원천세 신고서를 홈택스에 접수합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.regular_report.submit",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%A0%95%EA%B8%B0%EC%8B%A0%EA%B3%A0-%EC%A0%9C%EC%B6%9C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__regular_report__submit",
+        "enabled": true
+      }
+    },
+    {
+      "id": "629",
+      "slug": "원천세-정기신고-미리보기",
+      "name": "원천세 정기신고 제출 전 미리보기",
+      "summary": "접수 직전의 신고서를 그대로 펼쳐 봅니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.regular_report.preview",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%A0%95%EA%B8%B0%EC%8B%A0%EA%B3%A0-%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__regular_report__preview",
+        "enabled": true
+      }
+    },
+    {
+      "id": "626",
+      "slug": "원천세-정기신고-작성시작",
+      "name": "원천세 정기신고 초안 초기화",
+      "summary": "이번 달 원천세 정기신고서를 새로 엽니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.regular_report.init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%A0%95%EA%B8%B0%EC%8B%A0%EA%B3%A0-%EC%9E%91%EC%84%B1%EC%8B%9C%EC%9E%91",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__regular_report__init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "87",
+      "slug": "전자고지-신청-현황-조회",
+      "name": "전자고지(전자송달) 신청 현황 조회",
+      "summary": "우리 사업장이 전자고지를 신청해 둔 상태인지, 언제부터 언제까지 적용되는지 확인합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.electronic_notice.check_status",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%A0%84%EC%9E%90%EA%B3%A0%EC%A7%80-%EC%8B%A0%EC%B2%AD-%ED%98%84%ED%99%A9-%EC%A1%B0%ED%9A%8C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__electronic_notice__check_status",
+        "enabled": true
+      }
+    },
+    {
+      "id": "786",
+      "slug": "전자세금계산서-거래처-정보",
+      "name": "전자세금계산서 거래처 정보 조회",
+      "summary": "홈택스 전자세금계산서 발급 화면에 등록해 둔 거래처 목록을 그대로 받아옵니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.etax.client_info.get",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%A0%84%EC%9E%90%EC%84%B8%EA%B8%88%EA%B3%84%EC%82%B0%EC%84%9C-%EA%B1%B0%EB%9E%98%EC%B2%98-%EC%A0%95%EB%B3%B4",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__etax__client_info__get",
+        "enabled": true
+      }
+    },
+    {
+      "id": "783",
+      "slug": "전자세금계산서-공급자-정보",
+      "name": "전자세금계산서 공급자 정보 조회",
+      "summary": "전자세금계산서 공급자 칸에 들어가는 상호, 대표자, 업태, 주소, 이메일을 홈택스에서 받습니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.etax.business_info.get",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%A0%84%EC%9E%90%EC%84%B8%EA%B8%88%EA%B3%84%EC%82%B0%EC%84%9C-%EA%B3%B5%EA%B8%89%EC%9E%90-%EC%A0%95%EB%B3%B4",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__etax__business_info__get",
+        "enabled": true
+      }
+    },
+    {
+      "id": "63",
+      "slug": "전자세금계산서-목록",
+      "name": "전자세금계산서 목록 조회",
+      "summary": "홈택스에 쌓인 전자세금계산서를 기간과 매출 매입 구분으로 받아옵니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.etax.invoice.search_list",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%A0%84%EC%9E%90%EC%84%B8%EA%B8%88%EA%B3%84%EC%82%B0%EC%84%9C-%EB%AA%A9%EB%A1%9D",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__etax__invoice__search_list",
+        "enabled": true
+      }
+    },
+    {
+      "id": "54",
+      "slug": "전자세금계산서-발행",
+      "name": "전자세금계산서 발행",
+      "summary": "거래처 사업자등록번호와 품명, 수량, 단가, 공급일자를 넘기면 홈택스에 전자세금계산서를 발행합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.etax.invoice.issue",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%A0%84%EC%9E%90%EC%84%B8%EA%B8%88%EA%B3%84%EC%82%B0%EC%84%9C-%EB%B0%9C%ED%96%89",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__etax__invoice__issue",
+        "enabled": true
+      }
+    },
+    {
+      "id": "60",
+      "slug": "전자세금계산서-상세",
+      "name": "전자세금계산서 상세 조회",
+      "summary": "승인번호 한 건으로 그 전자세금계산서의 속을 전부 펼쳐 봅니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.etax.invoice.search_detail",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%A0%84%EC%9E%90%EC%84%B8%EA%B8%88%EA%B3%84%EC%82%B0%EC%84%9C-%EC%83%81%EC%84%B8",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__etax__invoice__search_detail",
+        "enabled": true
+      }
+    },
+    {
+      "id": "57",
+      "slug": "전자세금계산서-발행취소",
+      "name": "전자세금계산서 수정 취소",
+      "summary": "이미 발행한 전자세금계산서를 원본 승인번호로 지목해, 원본 전액을 취소하는 수정세금계산서를 발행합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.etax.invoice.modify",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%A0%84%EC%9E%90%EC%84%B8%EA%B8%88%EA%B3%84%EC%82%B0%EC%84%9C-%EB%B0%9C%ED%96%89%EC%B7%A8%EC%86%8C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__etax__invoice__modify",
+        "enabled": true
+      }
+    },
+    {
+      "id": "66",
+      "slug": "전자세금계산서-기간별-매출-매입-통계",
+      "name": "전자세금계산서 통계 조회",
+      "summary": "전자세금계산서 매출과 매입을 월별, 분기별, 연도별로 집계해 받습니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.etax.invoice.search_statistics",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%A0%84%EC%9E%90%EC%84%B8%EA%B8%88%EA%B3%84%EC%82%B0%EC%84%9C-%EA%B8%B0%EA%B0%84%EB%B3%84-%EB%A7%A4%EC%B6%9C-%EB%A7%A4%EC%9E%85-%ED%86%B5%EA%B3%84",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__etax__invoice__search_statistics",
+        "enabled": true
+      }
+    },
+    {
+      "id": "69",
+      "slug": "전자세금계산서-합계표",
+      "name": "전자세금계산서 합계표 조회",
+      "summary": "부가가치세 신고에 붙이는 매출과 매입 합계표를 홈택스에서 그대로 받아옵니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.etax.invoice.search_summary",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%A0%84%EC%9E%90%EC%84%B8%EA%B8%88%EA%B3%84%EC%82%B0%EC%84%9C-%ED%95%A9%EA%B3%84%ED%91%9C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__etax__invoice__search_summary",
+        "enabled": true
+      }
+    },
+    {
+      "id": "777",
+      "slug": "증명서-내려받기",
+      "name": "증명서 내려받기",
+      "summary": "신청해 둔 증명서를 증명서 ID와 접수번호로 출력해 PDF로 받습니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.certificate.download",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%A6%9D%EB%AA%85%EC%84%9C-%EB%82%B4%EB%A0%A4%EB%B0%9B%EA%B8%B0",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__certificate__download",
+        "enabled": true
+      }
+    },
+    {
+      "id": "780",
+      "slug": "증명서-서식-목록",
+      "name": "증명서 서식 목록 조회",
+      "summary": "국세완납증명, 납세사실증명, 사업자등록증명처럼 신청할 수 있는 증명서 서식 아홉 가지의 이름과 서식 값을 돌려줍니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.certificate.list_templates",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%A6%9D%EB%AA%85%EC%84%9C-%EC%84%9C%EC%8B%9D-%EB%AA%A9%EB%A1%9D",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__certificate__list_templates",
+        "enabled": true
+      }
+    },
+    {
+      "id": "792",
+      "slug": "증명서-서식-지정-신청",
+      "name": "증명서 서식 지정 신청",
+      "summary": "필요한 증명서 서식을 골라 홈택스에 발급을 신청하고, 접수되면 증명서 ID를 받습니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.certificate.apply_with_template",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%A6%9D%EB%AA%85%EC%84%9C-%EC%84%9C%EC%8B%9D-%EC%A7%80%EC%A0%95-%EC%8B%A0%EC%B2%AD",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__certificate__apply_with_template",
+        "enabled": true
+      }
+    },
+    {
+      "id": "51",
+      "slug": "증명서-진위확인",
+      "name": "증명서 신청 목록 조회",
+      "summary": "홈택스에 신청해 둔 증명서가 어느 단계인지 목록으로 확인합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.certificate.list",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%A6%9D%EB%AA%85%EC%84%9C-%EC%A7%84%EC%9C%84%ED%99%95%EC%9D%B8",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__certificate__list",
+        "enabled": true
+      }
+    },
+    {
+      "id": "789",
+      "slug": "증명서-자동-신청",
+      "name": "증명서 자동 신청",
+      "summary": "로그인한 사업자 정보를 홈택스에서 가져와 신청서를 채우며, 서식을 정하지 않으면 국세완납증명으로 신청합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.certificate.apply_auto",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%A6%9D%EB%AA%85%EC%84%9C-%EC%9E%90%EB%8F%99-%EC%8B%A0%EC%B2%AD",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__certificate__apply_auto",
+        "enabled": true
+      }
+    },
+    {
+      "id": "795",
+      "slug": "증명서-자동-신청-내려받기",
+      "name": "증명서 자동 신청 후 내려받기",
+      "summary": "로그인한 사업자 명의로 국세완납증명 1매를 신청하고, 발급되면 PDF로 받습니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.certificate.apply_auto_download",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%A6%9D%EB%AA%85%EC%84%9C-%EC%9E%90%EB%8F%99-%EC%8B%A0%EC%B2%AD-%EB%82%B4%EB%A0%A4%EB%B0%9B%EA%B8%B0",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__certificate__apply_auto_download",
+        "enabled": true
+      }
+    },
+    {
+      "id": "105",
+      "slug": "지급명세서-등-제출내역",
+      "name": "지급명세서 등 제출내역 조회",
+      "summary": "일용근로소득 지급명세서와 간이지급명세서를 제출 연월로 조회해 무엇을 언제 냈는지 확인합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.payment_statement.search_submit_history",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%A7%80%EA%B8%89%EB%AA%85%EC%84%B8%EC%84%9C-%EB%93%B1-%EC%A0%9C%EC%B6%9C%EB%82%B4%EC%97%AD",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__payment_statement__search_submit_history",
+        "enabled": true
+      }
+    },
+    {
+      "id": "102",
+      "slug": "지급명세서-조회",
+      "name": "지급명세서 조회",
+      "summary": "홈택스에 제출된 지급명세서를 소득 종류와 제출 연월로 좁혀 조회합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.payment_statement.search",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%A7%80%EA%B8%89%EB%AA%85%EC%84%B8%EC%84%9C-%EC%A1%B0%ED%9A%8C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__payment_statement__search",
+        "enabled": true
+      }
+    },
+    {
+      "id": "96",
+      "slug": "체납-연체-납부-내역-조회",
+      "name": "체납 연체 납부 내역 조회",
+      "summary": "납부기한을 넘긴 세금이 어느 세목에 얼마나 남아 있는지 봅니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.overdue.search_history",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%B2%B4%EB%82%A9-%EC%97%B0%EC%B2%B4-%EB%82%A9%EB%B6%80-%EB%82%B4%EC%97%AD-%EC%A1%B0%ED%9A%8C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__overdue__search_history",
+        "enabled": true
+      }
+    },
+    {
+      "id": "24",
+      "slug": "폐업사실증명서-신청",
+      "name": "폐업사실증명서 발급(신청)",
+      "summary": "폐업 신고를 마친 사업자의 폐업사실증명서를 홈택스에 신청하고 증명서 ID를 받습니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.certificate.apply.business_closure",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%ED%8F%90%EC%97%85%EC%82%AC%EC%8B%A4%EC%A6%9D%EB%AA%85%EC%84%9C-%EC%8B%A0%EC%B2%AD",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__certificate__apply__business_closure",
+        "enabled": false
+      }
+    },
+    {
+      "id": "36",
+      "slug": "표준재무제표증명원-신청",
+      "name": "표준재무제표증명원 발급(신청)",
+      "summary": "은행 여신이나 투자 심사에서 요구하는 표준재무제표증명원을 필요한 연도로 정해 홈택스에 신청합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.certificate.apply.financial_statement",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%ED%91%9C%EC%A4%80%EC%9E%AC%EB%AC%B4%EC%A0%9C%ED%91%9C%EC%A6%9D%EB%AA%85%EC%9B%90-%EC%8B%A0%EC%B2%AD",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__certificate__apply__financial_statement",
+        "enabled": true
+      }
+    },
+    {
+      "id": "12",
+      "slug": "현금영수증-발행",
+      "name": "현금영수증 개별 발급",
+      "summary": "현금으로 결제한 고객의 현금영수증을 휴대전화 번호나 사업자등록번호로 발급합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.cash_receipt.issue_individual",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%ED%98%84%EA%B8%88%EC%98%81%EC%88%98%EC%A6%9D-%EB%B0%9C%ED%96%89",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__cash_receipt__issue_individual",
+        "enabled": true
+      }
+    },
+    {
+      "id": "9",
+      "slug": "현금영수증-당일발행-내역-조회",
+      "name": "현금영수증 당일발행 내역 조회",
+      "summary": "오늘 발급된 현금영수증이 몇 건이고 각각 얼마인지 영업 중에 바로 확인합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.cash_receipt.daily_issue.search",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%ED%98%84%EA%B8%88%EC%98%81%EC%88%98%EC%A6%9D-%EB%8B%B9%EC%9D%BC%EB%B0%9C%ED%96%89-%EB%82%B4%EC%97%AD-%EC%A1%B0%ED%9A%8C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__cash_receipt__daily_issue__search",
+        "enabled": true
+      }
+    },
+    {
+      "id": "6",
+      "slug": "현금영수증-당일발행-수정",
+      "name": "현금영수증 당일발행 수정",
+      "summary": "결제 금액을 잘못 입력해 나간 현금영수증을 취소하지 않고 바로잡습니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.cash_receipt.daily_issue.modify",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%ED%98%84%EA%B8%88%EC%98%81%EC%88%98%EC%A6%9D-%EB%8B%B9%EC%9D%BC%EB%B0%9C%ED%96%89-%EC%88%98%EC%A0%95",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__cash_receipt__daily_issue__modify",
+        "enabled": true
+      }
+    },
+    {
+      "id": "3",
+      "slug": "현금영수증-당일발행-취소",
+      "name": "현금영수증 당일발행 취소",
+      "summary": "고객이 결제를 취소했거나 잘못 발급한 현금영수증을 발급한 같은 날 안에 취소합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.cash_receipt.daily_issue.cancel",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%ED%98%84%EA%B8%88%EC%98%81%EC%88%98%EC%A6%9D-%EB%8B%B9%EC%9D%BC%EB%B0%9C%ED%96%89-%EC%B7%A8%EC%86%8C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__cash_receipt__daily_issue__cancel",
+        "enabled": true
+      }
+    },
+    {
+      "id": "15",
+      "slug": "현금영수증-사업용-신용카드-매입세액-공제-확인-변경-조회",
+      "name": "현금영수증 매입 내역 조회",
+      "summary": "직원들이 현금으로 쓴 비용이 어디에 얼마나 잡혔는지 기간별로 받아옵니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.cash_receipt.purchase.search_history",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%ED%98%84%EA%B8%88%EC%98%81%EC%88%98%EC%A6%9D-%EC%82%AC%EC%97%85%EC%9A%A9-%EC%8B%A0%EC%9A%A9%EC%B9%B4%EB%93%9C-%EB%A7%A4%EC%9E%85%EC%84%B8%EC%95%A1-%EA%B3%B5%EC%A0%9C-%ED%99%95%EC%9D%B8-%EB%B3%80%EA%B2%BD-%EC%A1%B0%ED%9A%8C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__cash_receipt__purchase__search_history",
+        "enabled": true
+      }
+    },
+    {
+      "id": "18",
+      "slug": "현금영수증-매출내역",
+      "name": "현금영수증 매출 내역 조회",
+      "summary": "가게에서 나간 현금영수증 매출을 기간별로 모아 봅니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.cash_receipt.sales.search_history",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%ED%98%84%EA%B8%88%EC%98%81%EC%88%98%EC%A6%9D-%EB%A7%A4%EC%B6%9C%EB%82%B4%EC%97%AD",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__cash_receipt__sales__search_history",
+        "enabled": true
+      }
+    },
+    {
+      "id": "21",
+      "slug": "현금영수증-매출내역누계",
+      "name": "현금영수증 매출 누계 조회",
+      "summary": "건별 목록을 모두 받지 않고도 한 해나 분기의 현금영수증 매출 총액을 확인합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.cash_receipt.sales.search_summary",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%ED%98%84%EA%B8%88%EC%98%81%EC%88%98%EC%A6%9D-%EB%A7%A4%EC%B6%9C%EB%82%B4%EC%97%AD%EB%88%84%EA%B3%84",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__cash_receipt__sales__search_summary",
+        "enabled": true
+      }
+    },
+    {
+      "id": "114",
+      "slug": "전자세금계산서-거래처-관리",
+      "name": "홈택스 거래처 목록 조회",
+      "summary": "홈택스에 등록해 둔 전자세금계산서 거래처를 등록번호나 상호, 대표자명으로 찾습니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.trade_partner.search_list",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%A0%84%EC%9E%90%EC%84%B8%EA%B8%88%EA%B3%84%EC%82%B0%EC%84%9C-%EA%B1%B0%EB%9E%98%EC%B2%98-%EA%B4%80%EB%A6%AC",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__trade_partner__search_list",
+        "enabled": true
+      }
+    },
+    {
+      "id": "72",
+      "slug": "홈택스-세션-로그인",
+      "name": "홈택스 세션 로그인(연동)",
+      "summary": "홈택스 연동에 등록해 둔 공인인증서로 로그인해 이후 조회와 발행에 쓸 세션을 만듭니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.session.login",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%ED%99%88%ED%83%9D%EC%8A%A4-%EC%84%B8%EC%85%98-%EB%A1%9C%EA%B7%B8%EC%9D%B8",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__session__login",
+        "enabled": true
+      }
+    },
+    {
+      "id": "75",
+      "slug": "국세청-회원-등록여부",
+      "name": "홈택스 회원 등록 여부 조회",
+      "summary": "연동해 둔 홈택스가 어느 사업자로 열려 있는지 확인합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.session.user_info",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EA%B5%AD%EC%84%B8%EC%B2%AD-%ED%9A%8C%EC%9B%90-%EB%93%B1%EB%A1%9D%EC%97%AC%EB%B6%80",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__session__user_info",
+        "enabled": true
+      }
+    },
+    {
+      "id": "108",
+      "slug": "환급세액-조회-정기신고",
+      "name": "환급세액 조회(정기 신고)",
+      "summary": "신고 뒤 결정된 국세 환급금이 실제로 지급됐는지 건별로 확인합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.refund.search_detail",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%ED%99%98%EA%B8%89%EC%84%B8%EC%95%A1-%EC%A1%B0%ED%9A%8C-%EC%A0%95%EA%B8%B0%EC%8B%A0%EA%B3%A0",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__refund__search_detail",
+        "enabled": true
+      }
+    },
+    {
+      "id": "33",
+      "slug": "휴업사실증명서-신청",
+      "name": "휴업사실증명서 발급(신청)",
+      "summary": "휴업 신고를 마친 사업자의 휴업사실증명서를 기관에 신청하고 증명서 ID를 받습니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.certificate.apply.business_suspension",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%ED%9C%B4%EC%97%85%EC%82%AC%EC%8B%A4%EC%A6%9D%EB%AA%85%EC%84%9C-%EC%8B%A0%EC%B2%AD",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__certificate__apply__business_suspension",
+        "enabled": false
+      }
+    },
+    {
+      "id": "807",
+      "slug": "google-search-performance",
+      "name": "검색 실적 조회",
+      "summary": "검색에서 얼마나 노출되고 눌렸는지, 어떤 검색어로 들어왔는지 받아 갑니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.search_console.performance",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-search-performance",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__search_console__performance",
+        "enabled": true
+      }
+    },
+    {
+      "id": "832",
+      "slug": "google-index-status",
+      "name": "색인 상태 조회",
+      "summary": "페이지 하나가 검색에 등록돼 있는지, 막혀 있다면 무엇이 막는지 알려 줍니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.search_console.index_status",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-index-status",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__search_console__index_status",
+        "enabled": true
+      }
+    },
+    {
+      "id": "805",
+      "slug": "google-analytics-report",
+      "name": "웹사이트 성과 조회",
+      "summary": "고른 기간의 방문과 이용 지표를 표로 받아 갑니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.analytics.report",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-analytics-report",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__analytics__report",
+        "enabled": true
+      }
+    },
+    {
+      "id": "801",
+      "slug": "google-account-status",
+      "name": "Google 연동 상태 조회",
+      "summary": "연결한 Google 계정으로 지금 무엇을 조회할 수 있는지 확인합니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.account.status",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-account-status",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__account__status",
+        "enabled": true
+      }
+    },
+    {
+      "id": "803",
+      "slug": "google-analytics-measurement-audit",
+      "name": "Google 측정 설정 진단",
+      "summary": "연결한 계정의 측정 설정에서 데이터 수집 경로와 주요 이벤트가 빠졌거나 지정되지 않은 자리를 목록으로 알려 줍니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.analytics.measurement.audit",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-analytics-measurement-audit",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__analytics__measurement__audit",
+        "enabled": true
+      }
+    },
+    {
+      "id": "719",
+      "slug": "ibk-fast-account-session-login",
+      "name": "IBK기업은행 빠른조회 계좌 연결 로그인",
+      "summary": "IBK기업은행 계좌 자격으로 조회용 연결을 열고, 일부가 가려진 계좌번호로 대상 계좌를 확인합니다.",
+      "category": "IBK기업은행 빠른조회",
+      "provider": "ibk_fast_account",
+      "action": "ibk_fast_account.session.login",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/ibk-fast-account-session-login",
+      "docs_url": null,
+      "mcp": {
+        "name": "ibk_fast_account__session__login",
+        "enabled": true
+      }
+    },
+    {
+      "id": "731",
+      "slug": "ibk-fast-account-accounts-quick-summary-get",
+      "name": "IBK기업은행 빠른조회 계좌 잔액 요약 조회",
+      "summary": "IBK기업은행 계좌의 예금주와 원장잔액, 최근 일자별 입금과 출금 요약을 한 번에 받습니다.",
+      "category": "IBK기업은행 빠른조회",
+      "provider": "ibk_fast_account",
+      "action": "ibk_fast_account.accounts.quick_summary.get",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/ibk-fast-account-accounts-quick-summary-get",
+      "docs_url": null,
+      "mcp": {
+        "name": "ibk_fast_account__accounts__quick_summary__get",
+        "enabled": true
+      }
+    },
+    {
+      "id": "750",
+      "slug": "kb-fast-account-accounts-transaction-history-search",
+      "name": "KB국민은행 빠른조회 거래내역 조회",
+      "summary": "KB국민은행 계좌의 거래내역을 기간으로 조회하고, 건마다 거래 상대방이 붙어 어디서 들어온 돈인지 확인합니다.",
+      "category": "KB국민은행 빠른조회",
+      "provider": "kb_fast_account",
+      "action": "kb_fast_account.accounts.transaction_history.search",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/kb-fast-account-accounts-transaction-history-search",
+      "docs_url": null,
+      "mcp": {
+        "name": "kb_fast_account__accounts__transaction_history__search",
+        "enabled": true
+      }
+    },
+    {
+      "id": "728",
+      "slug": "kb-fast-account-session-login",
+      "name": "KB국민은행 빠른조회 계좌 연결 로그인",
+      "summary": "KB국민은행 계좌를 조회용으로 연결합니다.",
+      "category": "KB국민은행 빠른조회",
+      "provider": "kb_fast_account",
+      "action": "kb_fast_account.session.login",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/kb-fast-account-session-login",
+      "docs_url": null,
+      "mcp": {
+        "name": "kb_fast_account__session__login",
+        "enabled": true
+      }
+    },
+    {
+      "id": "704",
+      "slug": "kb-biz-card-payments-result",
+      "name": "KB국민카드 기업카드 결제내역 전체 수집",
+      "summary": "결제 자료를 구간별로 나눠 부르지 않고 조건에 걸린 것을 한 번에 받습니다.",
+      "category": "KB국민카드 기업카드",
+      "provider": "kb_biz_card",
+      "action": "kb_biz_card.payments.result",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/kb-biz-card-payments-result",
+      "docs_url": null,
+      "mcp": {
+        "name": "kb_biz_card__payments__result",
+        "enabled": true
+      }
+    },
+    {
+      "id": "698",
+      "slug": "kb-biz-card-payments-search",
+      "name": "KB국민카드 기업카드 결제내역 조건 조회",
+      "summary": "카드 대금이 언제 얼마 청구됐고 결제됐는지 기간과 부서별로 받습니다.",
+      "category": "KB국민카드 기업카드",
+      "provider": "kb_biz_card",
+      "action": "kb_biz_card.payments.search",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/kb-biz-card-payments-search",
+      "docs_url": null,
+      "mcp": {
+        "name": "kb_biz_card__payments__search",
+        "enabled": true
+      }
+    },
+    {
+      "id": "695",
+      "slug": "kb-biz-card-payments-init",
+      "name": "KB국민카드 기업카드 결제내역 조회 시작",
+      "summary": "결제내역을 조회하기 전에 카드사에 등록된 부서 목록과 부서별 사용 상태를 받아옵니다.",
+      "category": "KB국민카드 기업카드",
+      "provider": "kb_biz_card",
+      "action": "kb_biz_card.payments.init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/kb-biz-card-payments-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "kb_biz_card__payments__init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "701",
+      "slug": "kb-biz-card-payments-page",
+      "name": "KB국민카드 기업카드 결제내역 페이지 조회",
+      "summary": "이미 정해 둔 결제내역 조회 조건에서 볼 페이지를 지정해 그 구간만 받아옵니다.",
+      "category": "KB국민카드 기업카드",
+      "provider": "kb_biz_card",
+      "action": "kb_biz_card.payments.page",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/kb-biz-card-payments-page",
+      "docs_url": null,
+      "mcp": {
+        "name": "kb_biz_card__payments__page",
+        "enabled": true
+      }
+    },
+    {
+      "id": "716",
+      "slug": "kb-biz-card-session-login",
+      "name": "KB국민카드 기업카드 공동인증서 로그인",
+      "summary": "법인 공동인증서로 KB국민카드 기업카드 사이트에 로그인해 승인내역, 결제내역, 매입내역 조회에 쓸 연결을 엽니다.",
+      "category": "KB국민카드 기업카드",
+      "provider": "kb_biz_card",
+      "action": "kb_biz_card.session.login",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/kb-biz-card-session-login",
+      "docs_url": null,
+      "mcp": {
+        "name": "kb_biz_card__session__login",
+        "enabled": true
+      }
+    },
+    {
+      "id": "692",
+      "slug": "kb-biz-card-purchases-result",
+      "name": "KB국민카드 기업카드 매입내역 전체 수집",
+      "summary": "매입일이 지정한 기간 안에 드는 매입 확정 건을 페이지를 넘겨 가며 받지 않고 전부 모아 한 번에 돌려받습니다.",
+      "category": "KB국민카드 기업카드",
+      "provider": "kb_biz_card",
+      "action": "kb_biz_card.purchases.result",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/kb-biz-card-purchases-result",
+      "docs_url": null,
+      "mcp": {
+        "name": "kb_biz_card__purchases__result",
+        "enabled": true
+      }
+    },
+    {
+      "id": "686",
+      "slug": "kb-biz-card-purchases-search",
+      "name": "KB국민카드 기업카드 매입내역 조건 조회",
+      "summary": "카드사가 가맹점 매입을 확정한 건 가운데 매입일이 지정한 기간에 드는 건을 한 페이지(최대 열 건)씩 받아옵니다.",
+      "category": "KB국민카드 기업카드",
+      "provider": "kb_biz_card",
+      "action": "kb_biz_card.purchases.search",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/kb-biz-card-purchases-search",
+      "docs_url": null,
+      "mcp": {
+        "name": "kb_biz_card__purchases__search",
+        "enabled": true
+      }
+    },
+    {
+      "id": "683",
+      "slug": "kb-biz-card-purchases-init",
+      "name": "KB국민카드 기업카드 매입내역 조회 시작",
+      "summary": "카드사가 가맹점 매입을 확정한 기록을 조회하기 전에, 등록된 부서 목록과 첫 번째 부서의 카드 목록을 받아옵니다.",
+      "category": "KB국민카드 기업카드",
+      "provider": "kb_biz_card",
+      "action": "kb_biz_card.purchases.init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/kb-biz-card-purchases-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "kb_biz_card__purchases__init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "689",
+      "slug": "kb-biz-card-purchases-page",
+      "name": "KB국민카드 기업카드 매입내역 페이지 조회",
+      "summary": "정해 둔 매입 조회 조건에서 몇 번째 페이지를 볼지 지정해 그 페이지의 매입 확정 건만 받습니다.",
+      "category": "KB국민카드 기업카드",
+      "provider": "kb_biz_card",
+      "action": "kb_biz_card.purchases.page",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/kb-biz-card-purchases-page",
+      "docs_url": null,
+      "mcp": {
+        "name": "kb_biz_card__purchases__page",
+        "enabled": true
+      }
+    },
+    {
+      "id": "707",
+      "slug": "kb-biz-card-common-departments-select",
+      "name": "KB국민카드 기업카드 부서 목록 조회",
+      "summary": "KB국민카드 기업카드에 등록된 부서를 부서번호와 부서명, 사용 상태까지 받아옵니다.",
+      "category": "KB국민카드 기업카드",
+      "provider": "kb_biz_card",
+      "action": "kb_biz_card.common.departments.select",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/kb-biz-card-common-departments-select",
+      "docs_url": null,
+      "mcp": {
+        "name": "kb_biz_card__common__departments__select",
+        "enabled": true
+      }
+    },
+    {
+      "id": "680",
+      "slug": "kb-biz-card-approvals-result",
+      "name": "KB국민카드 기업카드 승인내역 전체 수집",
+      "summary": "페이지를 하나씩 넘겨 가며 받는 대신, 조건에 걸린 승인 건을 전부 모아 한 번에 돌려받습니다.",
+      "category": "KB국민카드 기업카드",
+      "provider": "kb_biz_card",
+      "action": "kb_biz_card.approvals.result",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/kb-biz-card-approvals-result",
+      "docs_url": null,
+      "mcp": {
+        "name": "kb_biz_card__approvals__result",
+        "enabled": true
+      }
+    },
+    {
+      "id": "674",
+      "slug": "kb-biz-card-approvals-search",
+      "name": "KB국민카드 기업카드 승인내역 조건 조회",
+      "summary": "기간을 정해 카드 승인이 일어난 건별 기록을 한 페이지(최대 열 건)씩 조회합니다.",
+      "category": "KB국민카드 기업카드",
+      "provider": "kb_biz_card",
+      "action": "kb_biz_card.approvals.search",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/kb-biz-card-approvals-search",
+      "docs_url": null,
+      "mcp": {
+        "name": "kb_biz_card__approvals__search",
+        "enabled": true
+      }
+    },
+    {
+      "id": "671",
+      "slug": "kb-biz-card-approvals-init",
+      "name": "KB국민카드 기업카드 승인내역 조회 시작",
+      "summary": "승인내역을 조회하기 전에 회사에 등록된 부서 목록과 첫 번째 부서의 카드 목록을 받아옵니다.",
+      "category": "KB국민카드 기업카드",
+      "provider": "kb_biz_card",
+      "action": "kb_biz_card.approvals.init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/kb-biz-card-approvals-init",
+      "docs_url": null,
+      "mcp": {
+        "name": "kb_biz_card__approvals__init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "677",
+      "slug": "kb-biz-card-approvals-page",
+      "name": "KB국민카드 기업카드 승인내역 페이지 조회",
+      "summary": "정해 둔 조회 조건에서 몇 번째 페이지를 볼지 지정해 그 페이지만 받습니다.",
+      "category": "KB국민카드 기업카드",
+      "provider": "kb_biz_card",
+      "action": "kb_biz_card.approvals.page",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/kb-biz-card-approvals-page",
+      "docs_url": null,
+      "mcp": {
+        "name": "kb_biz_card__approvals__page",
+        "enabled": true
+      }
+    },
+    {
+      "id": "710",
+      "slug": "kb-biz-card-common-cards-select",
+      "name": "KB국민카드 기업카드 카드 목록 조회",
+      "summary": "회사에 발급된 기업카드를 부서별로 받아, 어느 임직원에게 나간 카드인지 확인합니다.",
+      "category": "KB국민카드 기업카드",
+      "provider": "kb_biz_card",
+      "action": "kb_biz_card.common.cards.select",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/kb-biz-card-common-cards-select",
+      "docs_url": null,
+      "mcp": {
+        "name": "kb_biz_card__common__cards__select",
+        "enabled": true
+      }
+    }
+  ]
+}
