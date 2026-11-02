@@ -1,0 +1,437 @@
+{
+  "name": "Generate a Korean payroll register with XBOSS",
+  "nodes": [
+    {
+      "id": "96052a8b-db9b-5ba6-8d89-ce339519bdb8",
+      "name": "Start",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "dd226b63-4ebb-5edd-8a64-0bcd91158870",
+      "name": "Task inputs",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        220,
+        0
+      ],
+      "parameters": {
+        "jsCode": "// Edit task inputs. Secrets belong in n8n credentials.\nreturn [{json:{\n  \"business_key\": \"\",\n  \"account_link_id\": \"\",\n  \"env_scope\": \"real_test\",\n  \"resume_job_id\": \"\",\n  \"reviewed\": false,\n  \"params\": {\n    \"attribution_ym\": \"202608\",\n    \"workplace_name\": \"예시상사\",\n    \"business_registration_no\": \"000-00-00000\",\n    \"workplace_address\": \"서울특별시 예시구 예시로 1\",\n    \"employees\": [\n      {\n        \"employee_key\": \"E001\",\n        \"employee_name\": \"홍길동\",\n        \"birth_date\": \"1990-01-15\",\n        \"dependent_count\": 1,\n        \"children_count_8_to_20\": 0,\n        \"monthly_pay_won\": 3000000,\n        \"base_salary_won\": 3000000,\n        \"national_pension_won\": 135000,\n        \"health_insurance_won\": 106350,\n        \"long_term_care_won\": 13770,\n        \"employment_insurance_won\": 27000,\n        \"income_tax_won\": 74350,\n        \"local_income_tax_won\": 7430,\n        \"total_deduction_won\": 363900,\n        \"net_pay_won\": 2636100\n      },\n      {\n        \"employee_key\": \"E002\",\n        \"employee_name\": \"김가나\",\n        \"birth_date\": \"1985-06-30\",\n        \"dependent_count\": 3,\n        \"children_count_8_to_20\": 1,\n        \"monthly_pay_won\": 3500000,\n        \"base_salary_won\": 3500000,\n        \"national_pension_won\": 157500,\n        \"health_insurance_won\": 124075,\n        \"long_term_care_won\": 16065,\n        \"employment_insurance_won\": 31500,\n        \"income_tax_won\": 38960,\n        \"local_income_tax_won\": 3890,\n        \"total_deduction_won\": 371990,\n        \"net_pay_won\": 3128010\n      }\n    ]\n  }\n}}];"
+      }
+    },
+    {
+      "id": "70c043f3-8479-5107-a423-abef23867918",
+      "name": "Validate inputs",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        440,
+        0
+      ],
+      "parameters": {
+        "jsCode": "const c=$input.first().json;\nif (!['real_test','production'].includes(c.env_scope)) throw new Error('Choose real_test or production; neither is a simulation.');\nif (c.resume_job_id) {\n if (!/^job_[0-9A-HJKMNP-TV-Z]{26}$/.test(c.resume_job_id)) throw new Error('Invalid resume_job_id');\n return [{json:{...c,resume:true,job_id:c.resume_job_id}}];\n}\nif (!/^[A-Za-z0-9._:-]{1,90}$/.test(c.business_key||'')) throw new Error('Set a stable business_key. Reuse it for recovery of the SAME task.');\nif (c.reviewed!==true) throw new Error('Review inputs, then set reviewed=true.');\nif (!c.params || Array.isArray(c.params) || typeof c.params!=='object') throw new Error('params must be an object');\nfor (const key of [\"attribution_ym\", \"employees\"]) if (c.params[key]===undefined || c.params[key]===null || c.params[key]==='') throw new Error('Required input: '+key);\nif (!Array.isArray(c.params.employees)||!c.params.employees.length) throw new Error('At least one employee is required.');\nreturn [{json:{...c,resume:false,idempotency_key:'n8n:register-xlsx:'+c.business_key,body:{provider:\"payroll_artifact\",action:\"register_xlsx\",params:c.params,...(c.account_link_id?{account_link_id:c.account_link_id}:{})}}}];"
+      }
+    },
+    {
+      "id": "d262f254-064a-5ab9-92fb-557c469b2233",
+      "name": "Resume existing job",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        660,
+        0
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "cb7be0dd-dd7c-5e74-9553-cba12b54ac94",
+              "leftValue": "={{ $json.resume }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "50599b12-961a-5770-8f5c-8c4a2660f19e",
+      "name": "Submit once",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        880,
+        0
+      ],
+      "parameters": {
+        "url": "https://api.xdata.kr/v1/jobs",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBasicAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-Env-Scope",
+              "value": "={{ $('Validate inputs').first().json.env_scope }}"
+            },
+            {
+              "name": "Idempotency-Key",
+              "value": "={{ $json.idempotency_key }}"
+            }
+          ]
+        },
+        "options": {
+          "redirect": {
+            "redirect": {
+              "followRedirects": false
+            }
+          },
+          "timeout": 120000,
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        },
+        "method": "POST",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $json.body }}"
+      },
+      "retryOnFail": false
+    },
+    {
+      "id": "0cbb4629-2d4d-50ff-a62d-09c48273a5f6",
+      "name": "Keep job reference",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1100,
+        0
+      ],
+      "parameters": {
+        "jsCode": "const j=$input.first().json; if (!/^job_[0-9A-HJKMNP-TV-Z]{26}$/.test(j.job_id||'')) throw new Error('No valid job_id. Keep the business_key; check XBOSS jobs before recovery. Do not create a new key.'); return [{json:{job_id:j.job_id}}];"
+      }
+    },
+    {
+      "id": "3aef934f-3bfb-5e0c-a538-d5e34963e7e9",
+      "name": "Read job status",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1320,
+        0
+      ],
+      "parameters": {
+        "url": "={{ 'https://api.xdata.kr/v1/jobs/' + $('Keep job reference').first().json.job_id }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBasicAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-Env-Scope",
+              "value": "={{ $('Validate inputs').first().json.env_scope }}"
+            }
+          ]
+        },
+        "options": {
+          "redirect": {
+            "redirect": {
+              "followRedirects": false
+            }
+          },
+          "timeout": 120000,
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "retryOnFail": false
+    },
+    {
+      "id": "94b95425-004a-5309-98e5-21a9d23bc4f1",
+      "name": "Check job status",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1540,
+        0
+      ],
+      "parameters": {
+        "jsCode": "const s=$input.first().json; const id=$('Keep job reference').first().json.job_id; if (s.job_id!==id) throw new Error('Mismatched job response'); if (['FAILED','TIMEOUT','CANCELED'].includes(s.status)) throw new Error('Job '+s.status+'. Check existing job '+id+'; do not resubmit automatically.'); if (!['SUCCEEDED','RUNNING','QUEUED'].includes(s.status)) throw new Error('Unknown job status'); if (s.status!=='SUCCEEDED' && $runIndex>=59) throw new Error('Polling limit reached. Resume job '+id+' with resume_job_id.'); return [{json:s}];"
+      }
+    },
+    {
+      "id": "6f0cab8c-8872-56bb-a1ff-67130039f011",
+      "name": "Completed",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1760,
+        0
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "4933ff55-95a1-539d-ac59-e1503b3a010d",
+              "leftValue": "={{ $json.status === \"SUCCEEDED\" }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "4a599916-6315-5152-9b8a-112226412643",
+      "name": "Wait before polling",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1760,
+        240
+      ],
+      "parameters": {
+        "amount": 5,
+        "unit": "seconds"
+      }
+    },
+    {
+      "id": "4e1474f4-6be1-5ba5-a6fe-5f5cdbd86fee",
+      "name": "Get task result",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1980,
+        0
+      ],
+      "parameters": {
+        "url": "={{ 'https://api.xdata.kr/v1/jobs/' + $('Keep job reference').first().json.job_id + '/result' }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBasicAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-Env-Scope",
+              "value": "={{ $('Validate inputs').first().json.env_scope }}"
+            }
+          ]
+        },
+        "options": {
+          "redirect": {
+            "redirect": {
+              "followRedirects": false
+            }
+          },
+          "timeout": 120000,
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "retryOnFail": false
+    },
+    {
+      "id": "61321f72-b328-5468-8c9f-c4c00736970f",
+      "name": "Setup",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        0,
+        -400
+      ],
+      "parameters": {
+        "content": "## 한 달 급여를 대장 한 장으로\n1. [XBOSS에서 무료로 시작](https://xboss.biz/service-products/register-xlsx?utm_source=n8n&utm_medium=workflow&utm_campaign=n8n_templates&utm_content=register-xlsx)\n2. HTTP 노드 3개에 같은 Basic Auth 연결: Username=Client ID, Password=Client Secret.\n3. Task inputs 입력 → 확인 → reviewed=true → 실행.\n\n계산된 급여 데이터를 엑셀로 만듭니다. 세금 계산·신고는 포함하지 않습니다.\n무료 시작과 개별 상품 이용 조건은 다를 수 있습니다.",
+        "height": 360,
+        "width": 650
+      }
+    },
+    {
+      "id": "4fbc1a2d-5ce8-5ca3-a5c4-616a0e999854",
+      "name": "Recovery",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        -350
+      ],
+      "parameters": {
+        "content": "## 중복 실행 없이 이어가기\n실행 오류 시 먼저 XBOSS 작업 내역을 확인하세요. job_id가 있으면 resume_job_id에 넣고 실행합니다. 없으면 같은 business_key를 보존해 복구하세요. 새 키로 다시 발행하지 마세요. 자동 재시도는 꺼져 있습니다.\n\nGet task result에서 결과를 확인합니다. 파일이 있으면 응답의 다운로드 링크를 만료 전에 이용하세요. 실행 데이터 보관은 기본으로 껐습니다. 인스턴스 정책도 확인하세요.",
+        "width": 600,
+        "height": 260
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Task inputs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Task inputs": {
+      "main": [
+        [
+          {
+            "node": "Validate inputs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validate inputs": {
+      "main": [
+        [
+          {
+            "node": "Resume existing job",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Submit once": {
+      "main": [
+        [
+          {
+            "node": "Keep job reference",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Keep job reference": {
+      "main": [
+        [
+          {
+            "node": "Read job status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read job status": {
+      "main": [
+        [
+          {
+            "node": "Check job status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check job status": {
+      "main": [
+        [
+          {
+            "node": "Completed",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait before polling": {
+      "main": [
+        [
+          {
+            "node": "Read job status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Resume existing job": {
+      "main": [
+        [
+          {
+            "node": "Keep job reference",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Submit once",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Completed": {
+      "main": [
+        [
+          {
+            "node": "Get task result",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Wait before polling",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataSuccessExecution": "none",
+    "saveDataErrorExecution": "none",
+    "saveManualExecutions": false
+  },
+  "active": false,
+  "pinData": {},
+  "tags": []
+}
