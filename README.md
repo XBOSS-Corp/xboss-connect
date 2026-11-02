@@ -10,7 +10,7 @@ XBOSS의 **업무 상품 214개**를 한곳에서 탐색할 수 있습니다.
 
 **무료로 시작할 수 있습니다.** 상품별 준비 사항과 이용 조건은 시작 과정에서 확인하세요.
 
-[상품 찾기](#전체-상품) · [AI에 연결](docs/ai-connect.md) · [코드로 시작](docs/quickstart.md) · [English](README.en.md)
+[상품 찾기](#전체-상품) · [AI에 연결](docs/ai-connect.md) · [n8n 템플릿](examples/n8n/README.md) · [코드로 시작](docs/quickstart.md) · [English](README.en.md)
 
 ## 이런 업무부터 찾아보세요
 

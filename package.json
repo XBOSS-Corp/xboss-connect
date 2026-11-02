@@ -1,6 +1,6 @@
 {
   "name": "xboss-connect",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "XBOSS 업무 상품을 AI와 코드에 연결하는 공식 API·MCP 클라이언트",
   "type": "module",
   "private": true,

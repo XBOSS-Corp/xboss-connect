@@ -1,5 +1,5 @@
 {
-  "name": "Generate Korean payslip spreadsheets with XBOSS",
+  "name": "급여명세서 엑셀 생성 · Korean payslips with XBOSS",
   "nodes": [
     {
       "id": "96052a8b-db9b-5ba6-8d89-ce339519bdb8",

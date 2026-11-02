@@ -1,5 +1,5 @@
 {
-  "name": "Cancel Korean tax invoices in full with XBOSS",
+  "name": "수정세금계산서 전액 취소 · Cancel Korean tax invoices with XBOSS",
   "nodes": [
     {
       "id": "96052a8b-db9b-5ba6-8d89-ce339519bdb8",
