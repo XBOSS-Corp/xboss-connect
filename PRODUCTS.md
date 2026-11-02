@@ -6,7 +6,7 @@
 2026-11-02 확인: 업무 상품 214개와 화면 단계 45개입니다.
 화면 단계는 독립 업무 상품 수와 구분했습니다.
 
-[무료로 시작하기](https://xboss.biz/auth/signup) · [AI 연결](docs/ai-connect.md) · [코드 시작](docs/quickstart.md)
+[무료로 시작하기](https://xboss.biz/auth/signup) ,  [AI 연결](docs/ai-connect.md) ,  [코드 시작](docs/quickstart.md)
 
 ### 4대보험
 

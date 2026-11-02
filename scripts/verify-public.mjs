@@ -10,6 +10,7 @@ const MAX_FILE_BYTES = 2 * 1024 * 1024;
 const ROOT_FILES = new Set([
   'README.md', 'README.en.md', 'PRODUCTS.md', 'package.json', '.gitignore',
   '.env.example', 'LICENSE', 'LICENSE.md', 'SECURITY.md',
+  'plugin.json', 'mcp.json', 'gemini-extension.json', 'GEMINI.md',
 ]);
 const DIRECTORIES = new Set(['src', 'bin', 'catalog', 'docs', 'examples', 'skills', 'scripts', 'test', '.github']);
 const CATALOG_KEYS = new Set(['schema_version', 'generated_at', 'source', 'products']);

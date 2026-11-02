@@ -1,16 +1,18 @@
 <!-- Generated from catalog/public-products.json. -->
-# XBOSS Connect
+# XBOSS Connect | 홈택스, 4대보험, 은행, 위택스를 AI로
 
 ![XBOSS Connect — 찾던 업무 데이터, 지금 쓰는 AI와 코드에서.](docs/assets/banner.svg)
 
-**찾던 업무 데이터, 지금 쓰는 AI와 코드에서.**
+**15개 이상 기관과 플랫폼의 업무를, 지금 쓰는 AI와 코드에서.**
 
-세금계산서·현금영수증 발행부터 급여 엑셀, 보험료 조회, 광고 보고서까지.
+전자세금계산서와 현금영수증, 4대보험과 급여명세서, 은행과 기업카드 조회, 고용지원금, 거래처 확인, 광고 성과까지.
 XBOSS의 **업무 상품 214개**를 한곳에서 탐색할 수 있습니다.
 
 **무료로 시작할 수 있습니다.** 상품별 준비 사항과 이용 조건은 시작 과정에서 확인하세요.
 
-[상품 찾기](#전체-상품) · [AI에 연결](docs/ai-connect.md) · [n8n 템플릿](examples/n8n/README.md) · [코드로 시작](docs/quickstart.md) · [English](README.en.md)
+[상품 찾기](#전체-상품) ,  [AI에 연결](docs/ai-connect.md) ,  [n8n 템플릿](examples/n8n/README.md) ,  [코드로 시작](docs/quickstart.md) ,  [English](README.en.md)
+
+[내 업무에 맞는 활용법과 시작 경로](docs/use-cases.md)에서 사업 운영, 직원 입퇴사, 자금 확인, 마케팅 분석과 서비스 개발에 맞는 업무를 고르세요.
 
 ## 이런 업무부터 찾아보세요
 
@@ -21,14 +23,14 @@ XBOSS의 **업무 상품 214개**를 한곳에서 탐색할 수 있습니다.
 | [현금영수증 개별 발급](docs/products/%ED%98%84%EA%B8%88%EC%98%81%EC%88%98%EC%A6%9D-%EB%B0%9C%ED%96%89.md) | 현금 결제 건의 현금영수증 발급 |
 | [급여명세서 엑셀 생성](docs/products/payslip-xlsx.md) | 계산된 급여로 직원별 명세서 엑셀 생성 |
 | [급여대장 엑셀 생성](docs/products/register-xlsx.md) | 한 달 급여 데이터를 대장 엑셀로 정리 |
-| [원천세 정기신고 제출](docs/products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%A0%95%EA%B8%B0%EC%8B%A0%EA%B3%A0-%EC%A0%9C%EC%B6%9C.md) | 작성·검토를 마친 원천세 정기신고 제출 |
-| [건강보험 국민연금 보험료 요약](docs/products/payroll-pack-premium-summary-v1-generate.md) | 건강보험·국민연금 고지 보험료 요약 |
+| [원천세 정기신고 제출](docs/products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%A0%95%EA%B8%B0%EC%8B%A0%EA%B3%A0-%EC%A0%9C%EC%B6%9C.md) | 작성, 검토를 마친 원천세 정기신고 제출 |
+| [건강보험 국민연금 보험료 요약](docs/products/payroll-pack-premium-summary-v1-generate.md) | 건강보험, 국민연금 고지 보험료 요약 |
 | [증명서 자동 신청 후 내려받기](docs/products/%EC%A6%9D%EB%AA%85%EC%84%9C-%EC%9E%90%EB%8F%99-%EC%8B%A0%EC%B2%AD-%EB%82%B4%EB%A0%A4%EB%B0%9B%EA%B8%B0.md) | 국세완납증명서 신청부터 PDF 받기까지 |
 | [네이버 검색광고 성과 보고서 조회](docs/products/naver-searchad-performance.md) | 네이버 검색광고 성과 조회 |
-| [마케팅 통합 보고](docs/products/google-marketing-report.md) | 측정 진단·웹사이트 성과·검색 실적을 보고서로 |
+| [마케팅 통합 보고](docs/products/google-marketing-report.md) | 측정 진단, 웹사이트 성과, 검색 실적을 보고서로 |
 
-4대보험 취득·상실 초안, 지원 은행 거래내역 등 다른 업무도 [전체 상품](PRODUCTS.md)에서 찾을 수 있습니다.
-상품별 입력과 기관 연결이 필요합니다. 신고 초안은 최종 제출과 구분하고, 실제 발행·제출은 내용을 확인한 뒤 진행하세요.
+4대보험 취득, 상실 초안, 지원 은행 거래내역 등 다른 업무도 [전체 상품](PRODUCTS.md)에서 찾을 수 있습니다.
+상품별 입력과 기관 연결이 필요합니다. 신고 초안은 최종 제출과 구분하고, 실제 발행, 제출은 내용을 확인한 뒤 진행하세요.
 
 ## 가장 편한 방법으로 시작하세요
 
@@ -54,7 +56,7 @@ node bin/xboss.mjs schema payslip-xlsx --anonymous --template
 | 사용 목적 | 제공 방식 |
 | --- | --- |
 | AI에게 업무 요청 | 공식 MCP 연결 안내, 현재 도구 목록과 입력 스키마 조회 |
-| 프로그램에서 업무 실행 | REST 작업 제출·상태 조회·결과 조회 |
+| 프로그램에서 업무 실행 | REST 작업 제출, 상태 조회, 결과 조회 |
 | 상품 찾기 | 전체 상품 문서, 로컬 검색 CLI, [공개 JSON 목록](catalog/public-products.json) |
 
 기관 연결과 업무 처리는 XBOSS 서비스에서 수행합니다.
@@ -62,7 +64,7 @@ node bin/xboss.mjs schema payslip-xlsx --anonymous --template
 
 ## 전체 상품
 
-2026-11-02 공식 공개 목록 확인: **업무 상품 214개 · 화면 단계 45개**.
+2026-11-02 공식 공개 목록 확인: **업무 상품 214개 ,  화면 단계 45개**.
 상품명은 모두 아래에 텍스트로 수록했습니다. 브라우저 찾기와 저장소 검색으로도 찾을 수 있습니다.
 
 ### 4대보험
@@ -431,7 +433,7 @@ node bin/xboss.mjs schema payslip-xlsx --anonymous --template
 
 ## 도움말
 
-[시작 안내](docs/quickstart.md) · [연결 문제 해결](docs/troubleshooting.md) · [공식 개발 문서](https://developer.xdata.kr) · [서비스 문의](https://xboss.biz/service-inquiry)
+[시작 안내](docs/quickstart.md) ,  [연결 문제 해결](docs/troubleshooting.md) ,  [공식 개발 문서](https://developer.xdata.kr) ,  [서비스 문의](https://xboss.biz/service-inquiry)
 
 상품별 지원 범위와 이용 조건은 [XBOSS 공식 안내](https://xboss.biz/service-products)에서 확인하세요.
 

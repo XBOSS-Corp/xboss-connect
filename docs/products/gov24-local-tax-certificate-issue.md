@@ -5,13 +5,13 @@
 
 **분야:** 정부24
 
-[이 상품으로 시작하기](https://xboss.biz/auth/signup?returnTo=https%3A%2F%2Fconsole.xdata.kr%2Fproducts%3Fproduct%3Dgov24-local-tax-certificate-issue&utm_source=github&utm_medium=repository&utm_campaign=xboss_connect&utm_content=gov24-local-tax-certificate-issue) · [공식 상품 안내](https://xboss.biz/service-products/gov24-local-tax-certificate-issue?utm_source=github&utm_medium=repository&utm_campaign=xboss_connect&utm_content=gov24-local-tax-certificate-issue)
+[이 상품으로 시작하기](https://xboss.biz/auth/signup?returnTo=https%3A%2F%2Fconsole.xdata.kr%2Fproducts%3Fproduct%3Dgov24-local-tax-certificate-issue&utm_source=github&utm_medium=repository&utm_campaign=xboss_connect&utm_content=gov24-local-tax-certificate-issue) ,  [공식 상품 안내](https://xboss.biz/service-products/gov24-local-tax-certificate-issue?utm_source=github&utm_medium=repository&utm_campaign=xboss_connect&utm_content=gov24-local-tax-certificate-issue)
 
 XBOSS는 무료로 시작할 수 있습니다. 이 상품의 준비 사항과 이용 조건은 시작 과정에서 확인하세요.
 
 ## AI와 코드에서 사용하기
 
-[AI 연결 안내](../ai-connect.md) · [코드 시작 안내](../quickstart.md)
+[AI 연결 안내](../ai-connect.md) ,  [코드 시작 안내](../quickstart.md)
 
 MCP 도구명: `gov24__local_tax_certificate__issue`. 실제 연결 후 도구 목록에서 현재 입력 스키마와 이용 가능 여부를 확인하세요.
 
@@ -22,4 +22,4 @@ REST 실행 식별자: provider `gov24`, action `gov24.local_tax_certificate.iss
 node bin/xboss.mjs show "gov24-local-tax-certificate-issue"
 ```
 
-[같은 분야의 상품 찾기](../../PRODUCTS.md) · [연결 문제 해결](../troubleshooting.md)
+[같은 분야의 상품 찾기](../../PRODUCTS.md) ,  [연결 문제 해결](../troubleshooting.md)

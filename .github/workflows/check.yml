@@ -28,3 +28,5 @@ jobs:
         run: node --test
       - name: Verify public files and catalog
         run: node scripts/verify-public.mjs
+      - name: Verify platform packages
+        run: node scripts/verify-platforms.mjs

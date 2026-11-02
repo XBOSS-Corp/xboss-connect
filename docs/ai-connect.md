@@ -4,6 +4,30 @@
 
 ## 1. 사용할 앱 연결
 
+공식 원격 MCP 주소는 `https://api.xdata.kr/mcp`입니다. 지원 클라이언트에서는 OAuth 로그인으로 연결합니다. 공개 도구 목록 조회와 실제 업무 인증은 구분되며, 보호된 업무에는 본인 계정 연결이 필요합니다.
+
+이 저장소에는 ChatGPT와 Codex 제출용 메타데이터, Cursor 호환 Agent Plugins 패키지, Gemini CLI 확장이 포함되어 있습니다. 공개 디렉터리에 승인되어 노출되는 상태와 저장소에서 직접 연결하는 상태는 다릅니다.
+
+| 사용하는 앱 | 연결 방법 |
+| --- | --- |
+| ChatGPT와 Codex | 공개 디렉터리 승인 후 XBOSS 플러그인을 설치할 수 있습니다. 승인 전 개발용 MCP 연결은 앱의 지원 요금제와 개발자 설정을 확인하세요. 이 저장소의 `plugin.json`과 `examples/platforms/openai-mcp.json`이 공동 제출 패키지의 원본입니다. |
+| Cursor | MCP 설정에서 아래 XBOSS 항목을 기존 설정에 추가합니다. 공개 마켓플레이스 플러그인 배포에는 별도 검토가 적용됩니다. |
+| Gemini CLI | `gemini extensions install https://github.com/XBOSS-Corp/xboss-connect`로 설치합니다. 설치 안내를 확인한 뒤 `/mcp`에서 연결을 점검하고 필요한 OAuth 로그인을 진행하세요. 일반 Gemini 앱의 공개 연결 앱 등록과는 별도 경로입니다. |
+
+Cursor의 사용자 MCP 설정 예시입니다. 기존 설정을 덮어쓰지 말고 `mcpServers`에 XBOSS 항목을 병합하세요.
+
+```json
+{
+  "mcpServers": {
+    "xboss": {
+      "url": "https://api.xdata.kr/mcp"
+    }
+  }
+}
+```
+
+기존 Basic 인증 기반 API 클라이언트는 아래 공식 개발 문서의 해당 방식을 사용할 수 있습니다. 비밀값을 플러그인 JSON에 고정하거나 공개 저장소에 넣지 않습니다.
+
 [공식 앱별 연결 안내](https://developer.xdata.kr/common-guide/mcp-native-clients)에서 사용하는 앱을 선택하세요. 계정 연결은 [XBOSS 콘솔](https://console.xdata.kr/mcp)에서 진행합니다.
 
 앱마다 설정 방법과 준비물이 다릅니다. 기존 MCP 설정은 유지하고 XBOSS 항목만 추가하세요. 인증정보는 채팅이나 공개 저장소에 붙여 넣지 않습니다.

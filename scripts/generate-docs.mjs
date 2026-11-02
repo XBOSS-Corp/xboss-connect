@@ -37,7 +37,7 @@ async function write(path, lines) {
     const info = await lstat(destination);
     if (!info.isFile() || info.isSymbolicLink()) throw new Error('일반 문서 파일만 갱신할 수 있습니다.');
   } catch (error) { if (error.code !== 'ENOENT') throw error; }
-  await writeFile(destination, (Array.isArray(lines) ? lines.join('\n') : lines).trimEnd() + '\n', 'utf8');
+  await writeFile(destination, (Array.isArray(lines) ? lines.join('\n') : lines).replace(/·/g, ', ').trimEnd() + '\n', 'utf8');
 }
 export async function generateDocs() {
   const catalog = await loadCatalog();
@@ -74,13 +74,14 @@ export async function generateDocs() {
     'node bin/xboss.mjs schema payslip-xlsx --anonymous --template',
   ].join('\n');
   const intro = [
-    MARKER, '# XBOSS Connect', '',
+    MARKER, '# XBOSS Connect | 홈택스, 4대보험, 은행, 위택스를 AI로', '',
     '![XBOSS Connect — 찾던 업무 데이터, 지금 쓰는 AI와 코드에서.](docs/assets/banner.svg)', '',
-    '**찾던 업무 데이터, 지금 쓰는 AI와 코드에서.**', '',
-    '세금계산서·현금영수증 발행부터 급여 엑셀, 보험료 조회, 광고 보고서까지.',
+    '**15개 이상 기관과 플랫폼의 업무를, 지금 쓰는 AI와 코드에서.**', '',
+    '전자세금계산서와 현금영수증, 4대보험과 급여명세서, 은행과 기업카드 조회, 고용지원금, 거래처 확인, 광고 성과까지.',
     'XBOSS의 **업무 상품 ' + count + '개**를 한곳에서 탐색할 수 있습니다.', '',
     '**무료로 시작할 수 있습니다.** 상품별 준비 사항과 이용 조건은 시작 과정에서 확인하세요.', '',
     '[상품 찾기](#전체-상품) · [AI에 연결](docs/ai-connect.md) · [n8n 템플릿](examples/n8n/README.md) · [코드로 시작](docs/quickstart.md) · [English](README.en.md)', '',
+    '[내 업무에 맞는 활용법과 시작 경로](docs/use-cases.md)에서 사업 운영, 직원 입퇴사, 자금 확인, 마케팅 분석과 서비스 개발에 맞는 업무를 고르세요.', '',
     '## 이런 업무부터 찾아보세요', '',
     '| 필요한 업무 | 얻는 결과 |', '| --- | --- |', examples, '',
     '4대보험 취득·상실 초안, 지원 은행 거래내역 등 다른 업무도 [전체 상품](PRODUCTS.md)에서 찾을 수 있습니다.',
