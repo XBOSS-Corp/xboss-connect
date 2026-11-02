@@ -4,8 +4,29 @@
   "description": "홈택스, 4대보험, 은행, 위택스 등 15개 이상 기관과 플랫폼 업무를 AI로 연결합니다. 전자세금계산서, 급여명세서, 계좌 조회, 고용지원금, 광고 성과를 지원하는 XBOSS 공식 MCP 연결 패키지입니다.",
   "mcpServers": {
     "xboss": {
-      "httpUrl": "https://api.xdata.kr/mcp"
+      "command": "node",
+      "args": [
+        "${extensionPath}/bin/xboss-mcp.mjs"
+      ],
+      "env": {
+        "XBOSS_CLIENT_ID": "${XBOSS_CLIENT_ID}",
+        "XBOSS_CLIENT_SECRET": "${XBOSS_CLIENT_SECRET}"
+      }
     }
   },
-  "contextFileName": "GEMINI.md"
+  "contextFileName": "GEMINI.md",
+  "settings": [
+    {
+      "name": "XBOSS Client ID",
+      "description": "XBOSS 콘솔 API 키 화면에서 확인하는 Client ID입니다. 채팅에 입력하지 마세요.",
+      "envVar": "XBOSS_CLIENT_ID",
+      "sensitive": true
+    },
+    {
+      "name": "XBOSS Client Secret",
+      "description": "XBOSS 콘솔에서 확인하는 Client Secret입니다. 채팅이나 공개 파일에 입력하지 마세요.",
+      "envVar": "XBOSS_CLIENT_SECRET",
+      "sensitive": true
+    }
+  ]
 }

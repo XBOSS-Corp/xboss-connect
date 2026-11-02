@@ -17,13 +17,17 @@ requireValue(plugin.version === pkg.version && gemini.version === pkg.version, '
 requireValue(plugin.$schema === 'https://agent-plugins.org/schemas/1.0.0/plugin.schema.json', 'Use the portable plugin schema.');
 requireValue(!('hooks' in plugin) && !('apps' in plugin.extensions['com.openai']) && !('hooks' in plugin.extensions['com.openai']), 'Public plugins must not contain lifecycle hooks or app overlays.');
 requireValue(Object.keys(portable.mcpServers).length === 1 && Object.keys(openai.mcpServers).length === 1, 'Submit exactly one MCP server.');
-for (const server of [portable.mcpServers.xboss, openai.mcpServers.xboss]) {
+for (const server of [openai.mcpServers.xboss]) {
   requireValue(server.type === 'streamable-http' && server.url === endpoint, 'Use the official HTTPS streamable HTTP endpoint.');
   requireValue(!server.headers && !server.command && !server.env, 'Do not package credentials or executable MCP launchers.');
 }
 const auth = openai.mcpServers.xboss.extensions['com.openai'].auth;
 requireValue(auth.type === 'mixed' && auth.client.mode === 'cimd' && !auth.client.clientId && !auth.clientSecret, 'OpenAI must discover public and OAuth access using CIMD without packaged secrets.');
-requireValue(gemini.mcpServers.xboss.httpUrl === endpoint && !gemini.mcpServers.xboss.trust && !gemini.mcpServers.xboss.headers, 'Gemini must preserve normal tool approvals without packaged secrets.');
+const cursor = portable.mcpServers.xboss;
+requireValue(cursor.type === 'stdio' && cursor.command === 'node' && cursor.args[0] === '${CURSOR_PLUGIN_ROOT}/bin/xboss-mcp.mjs', 'Cursor must launch the bundled client using the documented plugin root.');
+requireValue(cursor.env.XBOSS_CLIENT_ID === '${env:XBOSS_CLIENT_ID}' && cursor.env.XBOSS_CLIENT_SECRET === '${env:XBOSS_CLIENT_SECRET}', 'Cursor credentials must come from the user environment.');
+requireValue(gemini.mcpServers.xboss.command === 'node' && gemini.mcpServers.xboss.args[0] === '${extensionPath}/bin/xboss-mcp.mjs' && !gemini.mcpServers.xboss.trust && !gemini.mcpServers.xboss.headers, 'Gemini must preserve normal tool approvals and use the bundled client.');
+requireValue(gemini.settings.length === 2 && gemini.settings.every(s => s.sensitive === true), 'Gemini must collect API credentials through sensitive settings.');
 const listing = plugin.extensions['com.openai'].interface;
 for (const key of ['displayName', 'shortDescription']) requireValue(listing[key].length > 0 && [...listing[key]].length <= 30, `${key} exceeds the listing limit.`);
 requireValue([...listing.longDescription].length <= 4000 && /홈택스/.test(listing.longDescription), 'Provide a Korean listing within the length limit.');

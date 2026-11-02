@@ -2,8 +2,15 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
   "mcpServers": {
     "xboss": {
-      "type": "streamable-http",
-      "url": "https://api.xdata.kr/mcp"
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "${CURSOR_PLUGIN_ROOT}/bin/xboss-mcp.mjs"
+      ],
+      "env": {
+        "XBOSS_CLIENT_ID": "${env:XBOSS_CLIENT_ID}",
+        "XBOSS_CLIENT_SECRET": "${env:XBOSS_CLIENT_SECRET}"
+      }
     }
   }
 }
