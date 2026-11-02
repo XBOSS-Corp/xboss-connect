@@ -5,7 +5,7 @@
 
 **찾던 업무 데이터, 지금 쓰는 AI와 코드에서.**
 
-홈택스·4대보험·은행 조회·마케팅 데이터를 찾고, 필요한 업무를 연결하세요.
+세금계산서·현금영수증 발행부터 급여 엑셀, 보험료 조회, 광고 보고서까지.
 XBOSS의 **업무 상품 214개**를 한곳에서 탐색할 수 있습니다.
 
 **무료로 시작할 수 있습니다.** 상품별 준비 사항과 이용 조건은 시작 과정에서 확인하세요.
@@ -14,14 +14,21 @@ XBOSS의 **업무 상품 214개**를 한곳에서 탐색할 수 있습니다.
 
 ## 이런 업무부터 찾아보세요
 
-| 분야 | 실제 상품 |
+| 필요한 업무 | 얻는 결과 |
 | --- | --- |
-| 홈택스 | [증명서 자동 신청 후 내려받기](docs/products/%EC%A6%9D%EB%AA%85%EC%84%9C-%EC%9E%90%EB%8F%99-%EC%8B%A0%EC%B2%AD-%EB%82%B4%EB%A0%A4%EB%B0%9B%EA%B8%B0.md) |
-| 급여 묶음 | [건강보험 국민연금 보험료 요약](docs/products/payroll-pack-premium-summary-v1-generate.md) |
-| 신한은행 간편조회 | [신한은행 간편조회 거래내역 조회](docs/products/shinhan-easy-accounts-transaction-history-search.md) |
-| 네이버 검색광고 | [네이버 검색광고 성과 보고서 조회](docs/products/naver-searchad-performance.md) |
-| 급여 문서 | [급여명세서 엑셀 생성](docs/products/payslip-xlsx.md) |
-| 기업정보 브리프 | [기업정보 리스크 브리프](docs/products/company-info-pack-brief-v1-generate.md) |
+| [전자세금계산서 발행](docs/products/%EC%A0%84%EC%9E%90%EC%84%B8%EA%B8%88%EA%B3%84%EC%82%B0%EC%84%9C-%EB%B0%9C%ED%96%89.md) | 거래 내용을 확인하고 전자세금계산서 발행 |
+| [전자세금계산서 수정 취소](docs/products/%EC%A0%84%EC%9E%90%EC%84%B8%EA%B8%88%EA%B3%84%EC%82%B0%EC%84%9C-%EB%B0%9C%ED%96%89%EC%B7%A8%EC%86%8C.md) | 원본 세금계산서 전액 취소 수정발행 |
+| [현금영수증 개별 발급](docs/products/%ED%98%84%EA%B8%88%EC%98%81%EC%88%98%EC%A6%9D-%EB%B0%9C%ED%96%89.md) | 현금 결제 건의 현금영수증 발급 |
+| [급여명세서 엑셀 생성](docs/products/payslip-xlsx.md) | 계산된 급여로 직원별 명세서 엑셀 생성 |
+| [급여대장 엑셀 생성](docs/products/register-xlsx.md) | 한 달 급여 데이터를 대장 엑셀로 정리 |
+| [원천세 정기신고 제출](docs/products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%A0%95%EA%B8%B0%EC%8B%A0%EA%B3%A0-%EC%A0%9C%EC%B6%9C.md) | 작성·검토를 마친 원천세 정기신고 제출 |
+| [건강보험 국민연금 보험료 요약](docs/products/payroll-pack-premium-summary-v1-generate.md) | 건강보험·국민연금 고지 보험료 요약 |
+| [증명서 자동 신청 후 내려받기](docs/products/%EC%A6%9D%EB%AA%85%EC%84%9C-%EC%9E%90%EB%8F%99-%EC%8B%A0%EC%B2%AD-%EB%82%B4%EB%A0%A4%EB%B0%9B%EA%B8%B0.md) | 국세완납증명서 신청부터 PDF 받기까지 |
+| [네이버 검색광고 성과 보고서 조회](docs/products/naver-searchad-performance.md) | 네이버 검색광고 성과 조회 |
+| [마케팅 통합 보고](docs/products/google-marketing-report.md) | 측정 진단·웹사이트 성과·검색 실적을 보고서로 |
+
+4대보험 취득·상실 초안, 지원 은행 거래내역 등 다른 업무도 [전체 상품](PRODUCTS.md)에서 찾을 수 있습니다.
+상품별 입력과 기관 연결이 필요합니다. 신고 초안은 최종 제출과 구분하고, 실제 발행·제출은 내용을 확인한 뒤 진행하세요.
 
 ## 가장 편한 방법으로 시작하세요
 
@@ -30,7 +37,9 @@ XBOSS의 **업무 상품 214개**를 한곳에서 탐색할 수 있습니다.
 - **코드에서:** 이 저장소의 ZIP을 내려받아 압축을 풀고, 해당 폴더에서 아래 명령을 실행하세요. Node.js 22 이상이 필요합니다.
 
 ```sh
-node bin/xboss.mjs search "급여명세서"
+node bin/xboss.mjs search "세금계산서"
+node bin/xboss.mjs search "4대보험"
+node bin/xboss.mjs search "마케팅"
 node bin/xboss.mjs doctor --anonymous
 node bin/xboss.mjs schema payslip-xlsx --anonymous
 node bin/xboss.mjs schema payslip-xlsx --anonymous --template
@@ -53,7 +62,7 @@ node bin/xboss.mjs schema payslip-xlsx --anonymous --template
 
 ## 전체 상품
 
-2026-11-01 공식 공개 목록 확인: **업무 상품 214개 · 화면 단계 45개**.
+2026-11-02 공식 공개 목록 확인: **업무 상품 214개 · 화면 단계 45개**.
 상품명은 모두 아래에 텍스트로 수록했습니다. 브라우저 찾기와 저장소 검색으로도 찾을 수 있습니다.
 
 ### 4대보험
@@ -264,7 +273,7 @@ node bin/xboss.mjs schema payslip-xlsx --anonymous --template
 
 ### 사회보험통합징수포털
 
-- [사회보험통합징수포털 납부확인서 발급](docs/products/si4n-payment-confirmation-issue.md) — 건강보험과 국민연금, 고용보험, 산재보험의 납부확인서와 네 보험을 합산한 연도별과 월별 확인서를 발급해 받습니다.
+- [사회보험통합징수포털 납부확인서 발급](docs/products/si4n-payment-confirmation-issue.md) — 건강보험과 국민연금, 고용보험, 산재보험의 납부확인서를 발급하고, 합산고지를 신청한 사업장은 네 보험 합산 확인서도 받습니다.
 - [사회보험통합징수포털 로그인](docs/products/si4n-session-login.md) — 사업장 공동인증서를 콘솔에 한 번 등록해 두면, 한 번의 로그인으로 보험료 조회와 납부확인서 발급이 저장된 세션을 씁니다.
 - [사회보험통합징수포털 보험료 산출내역 조회](docs/products/si4n-premium-calculation-inquiry.md) — 고지서 금액이 왜 그 숫자인지 항목별로 받아 봅니다.
 - [사회보험통합징수포털 보험료 조회](docs/products/si4n-premium-inquiry.md) — 4대보험 보험료가 얼마이고 미납이 남아 있는지 고지년월과 함께 호출 한 번으로 받습니다.
@@ -289,7 +298,7 @@ node bin/xboss.mjs schema payslip-xlsx --anonymous --template
 - [지방소득세 특별징수 신고 명세 저장](docs/products/wetax-tax-local-income-special-withholding-statement-save.md) — 소득자별 명세가 필요할 때만 담아 저장합니다.
 - [지방소득세 특별징수 신고 세액 저장](docs/products/wetax-tax-local-income-special-withholding-adjustment-save.md) — 과세표준과 산출세액은 대상 저장 합계와 같은 값을 넣고, 당월 기타 환급액과 중도 퇴사자 환급액, 추가납부액, 비고를 담습니다.
 - [지방소득세 특별징수 신고 이력 조회](docs/products/wetax-tax-local-income-special-withholding-search-history.md) — 기간을 정해 그동안의 특별징수 신고 이력을 받습니다.
-- [지방소득세 특별징수 신고 제출](docs/products/wetax-tax-local-income-special-withholding-submit.md) — 작성과 검토를 마친 신고를 기관에 제출합니다.
+- [지방소득세 특별징수 신고 제출](docs/products/wetax-tax-local-income-special-withholding-submit.md) — 저장 네 단계를 마친 신고를 기관에 제출합니다.
 - [지방소득세 특별징수 신고 취소](docs/products/wetax-tax-local-income-special-withholding-cancel.md) — 제출한 신고를 취소합니다.
 - [지방소득세 특별징수 신고인 저장](docs/products/wetax-tax-local-income-special-withholding-declarant-save.md) — 신고인 정보를 저장하면 작성 중인 신고서가 생기고 신고 식별자가 돌아옵니다.
 
@@ -297,7 +306,7 @@ node bin/xboss.mjs schema payslip-xlsx --anonymous --template
 
 아래 항목은 업무 과정의 중간 단계입니다.
 
-- [지방소득세 특별징수 신고 시작](docs/products/wetax-tax-local-income-special-withholding-init.md) — 신고를 쓰기 전에 신고 권한과 사업장 정보, 저장 단계마다 넣을 값을 한 번에 확인합니다.
+- [지방소득세 특별징수 신고 시작](docs/products/wetax-tax-local-income-special-withholding-init.md) — 신고를 쓰기 전에 사업장 정보와 저장 단계마다 넣을 값을 한 번에 확인합니다.
 
 ### 정부24
 
@@ -340,7 +349,7 @@ node bin/xboss.mjs schema payslip-xlsx --anonymous --template
 - [원천세 정기신고 저장 내용 검토](docs/products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%A0%95%EA%B8%B0%EC%8B%A0%EA%B3%A0-%EA%B2%80%ED%86%A0.md) — 제출하기 전에 지금까지 저장한 내용이 신고서 기준에 맞는지 따져 봅니다.
 - [원천세 정기신고 제출](docs/products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%A0%95%EA%B8%B0%EC%8B%A0%EA%B3%A0-%EC%A0%9C%EC%B6%9C.md) — 작성과 검토가 끝난 원천세 신고서를 홈택스에 접수합니다.
 - [원천세 정기신고 제출 전 미리보기](docs/products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%A0%95%EA%B8%B0%EC%8B%A0%EA%B3%A0-%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0.md) — 접수 직전의 신고서를 그대로 펼쳐 봅니다.
-- [전자고지(전자송달) 신청 현황 조회](docs/products/%EC%A0%84%EC%9E%90%EA%B3%A0%EC%A7%80-%EC%8B%A0%EC%B2%AD-%ED%98%84%ED%99%A9-%EC%A1%B0%ED%9A%8C.md) — 우리 사업장이 전자고지를 신청해 둔 상태인지, 언제부터 언제까지 적용되는지 확인합니다.
+- [전자고지(전자송달) 신청 현황 조회](docs/products/%EC%A0%84%EC%9E%90%EA%B3%A0%EC%A7%80-%EC%8B%A0%EC%B2%AD-%ED%98%84%ED%99%A9-%EC%A1%B0%ED%9A%8C.md) — 연결에 로그인한 사용자가 전자고지를 신청했는지, 언제부터 언제까지 적용되는지 확인합니다.
 - [전자세금계산서 거래처 정보 조회](docs/products/%EC%A0%84%EC%9E%90%EC%84%B8%EA%B8%88%EA%B3%84%EC%82%B0%EC%84%9C-%EA%B1%B0%EB%9E%98%EC%B2%98-%EC%A0%95%EB%B3%B4.md) — 홈택스 전자세금계산서 발급 화면에 등록해 둔 거래처 목록을 그대로 받아옵니다.
 - [전자세금계산서 공급자 정보 조회](docs/products/%EC%A0%84%EC%9E%90%EC%84%B8%EA%B8%88%EA%B3%84%EC%82%B0%EC%84%9C-%EA%B3%B5%EA%B8%89%EC%9E%90-%EC%A0%95%EB%B3%B4.md) — 전자세금계산서 공급자 칸에 들어가는 상호, 대표자, 업태, 주소, 이메일을 홈택스에서 받습니다.
 - [전자세금계산서 목록 조회](docs/products/%EC%A0%84%EC%9E%90%EC%84%B8%EA%B8%88%EA%B3%84%EC%82%B0%EC%84%9C-%EB%AA%A9%EB%A1%9D.md) — 홈택스에 쌓인 전자세금계산서를 기간과 매출 매입 구분으로 받아옵니다.

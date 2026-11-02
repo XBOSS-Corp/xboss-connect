@@ -3,7 +3,7 @@
 
 **필요한 업무를 찾고, 해당 상품에서 바로 시작하세요.**
 
-2026-11-01 확인: 업무 상품 214개와 화면 단계 45개입니다.
+2026-11-02 확인: 업무 상품 214개와 화면 단계 45개입니다.
 화면 단계는 독립 업무 상품 수와 구분했습니다.
 
 [무료로 시작하기](https://xboss.biz/auth/signup) · [AI 연결](docs/ai-connect.md) · [코드 시작](docs/quickstart.md)
@@ -216,7 +216,7 @@
 
 ### 사회보험통합징수포털
 
-- [사회보험통합징수포털 납부확인서 발급](docs/products/si4n-payment-confirmation-issue.md) — 건강보험과 국민연금, 고용보험, 산재보험의 납부확인서와 네 보험을 합산한 연도별과 월별 확인서를 발급해 받습니다.
+- [사회보험통합징수포털 납부확인서 발급](docs/products/si4n-payment-confirmation-issue.md) — 건강보험과 국민연금, 고용보험, 산재보험의 납부확인서를 발급하고, 합산고지를 신청한 사업장은 네 보험 합산 확인서도 받습니다.
 - [사회보험통합징수포털 로그인](docs/products/si4n-session-login.md) — 사업장 공동인증서를 콘솔에 한 번 등록해 두면, 한 번의 로그인으로 보험료 조회와 납부확인서 발급이 저장된 세션을 씁니다.
 - [사회보험통합징수포털 보험료 산출내역 조회](docs/products/si4n-premium-calculation-inquiry.md) — 고지서 금액이 왜 그 숫자인지 항목별로 받아 봅니다.
 - [사회보험통합징수포털 보험료 조회](docs/products/si4n-premium-inquiry.md) — 4대보험 보험료가 얼마이고 미납이 남아 있는지 고지년월과 함께 호출 한 번으로 받습니다.
@@ -241,7 +241,7 @@
 - [지방소득세 특별징수 신고 명세 저장](docs/products/wetax-tax-local-income-special-withholding-statement-save.md) — 소득자별 명세가 필요할 때만 담아 저장합니다.
 - [지방소득세 특별징수 신고 세액 저장](docs/products/wetax-tax-local-income-special-withholding-adjustment-save.md) — 과세표준과 산출세액은 대상 저장 합계와 같은 값을 넣고, 당월 기타 환급액과 중도 퇴사자 환급액, 추가납부액, 비고를 담습니다.
 - [지방소득세 특별징수 신고 이력 조회](docs/products/wetax-tax-local-income-special-withholding-search-history.md) — 기간을 정해 그동안의 특별징수 신고 이력을 받습니다.
-- [지방소득세 특별징수 신고 제출](docs/products/wetax-tax-local-income-special-withholding-submit.md) — 작성과 검토를 마친 신고를 기관에 제출합니다.
+- [지방소득세 특별징수 신고 제출](docs/products/wetax-tax-local-income-special-withholding-submit.md) — 저장 네 단계를 마친 신고를 기관에 제출합니다.
 - [지방소득세 특별징수 신고 취소](docs/products/wetax-tax-local-income-special-withholding-cancel.md) — 제출한 신고를 취소합니다.
 - [지방소득세 특별징수 신고인 저장](docs/products/wetax-tax-local-income-special-withholding-declarant-save.md) — 신고인 정보를 저장하면 작성 중인 신고서가 생기고 신고 식별자가 돌아옵니다.
 
@@ -249,7 +249,7 @@
 
 아래 항목은 업무 과정의 중간 단계입니다.
 
-- [지방소득세 특별징수 신고 시작](docs/products/wetax-tax-local-income-special-withholding-init.md) — 신고를 쓰기 전에 신고 권한과 사업장 정보, 저장 단계마다 넣을 값을 한 번에 확인합니다.
+- [지방소득세 특별징수 신고 시작](docs/products/wetax-tax-local-income-special-withholding-init.md) — 신고를 쓰기 전에 사업장 정보와 저장 단계마다 넣을 값을 한 번에 확인합니다.
 
 ### 정부24
 
@@ -292,7 +292,7 @@
 - [원천세 정기신고 저장 내용 검토](docs/products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%A0%95%EA%B8%B0%EC%8B%A0%EA%B3%A0-%EA%B2%80%ED%86%A0.md) — 제출하기 전에 지금까지 저장한 내용이 신고서 기준에 맞는지 따져 봅니다.
 - [원천세 정기신고 제출](docs/products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%A0%95%EA%B8%B0%EC%8B%A0%EA%B3%A0-%EC%A0%9C%EC%B6%9C.md) — 작성과 검토가 끝난 원천세 신고서를 홈택스에 접수합니다.
 - [원천세 정기신고 제출 전 미리보기](docs/products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%A0%95%EA%B8%B0%EC%8B%A0%EA%B3%A0-%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0.md) — 접수 직전의 신고서를 그대로 펼쳐 봅니다.
-- [전자고지(전자송달) 신청 현황 조회](docs/products/%EC%A0%84%EC%9E%90%EA%B3%A0%EC%A7%80-%EC%8B%A0%EC%B2%AD-%ED%98%84%ED%99%A9-%EC%A1%B0%ED%9A%8C.md) — 우리 사업장이 전자고지를 신청해 둔 상태인지, 언제부터 언제까지 적용되는지 확인합니다.
+- [전자고지(전자송달) 신청 현황 조회](docs/products/%EC%A0%84%EC%9E%90%EA%B3%A0%EC%A7%80-%EC%8B%A0%EC%B2%AD-%ED%98%84%ED%99%A9-%EC%A1%B0%ED%9A%8C.md) — 연결에 로그인한 사용자가 전자고지를 신청했는지, 언제부터 언제까지 적용되는지 확인합니다.
 - [전자세금계산서 거래처 정보 조회](docs/products/%EC%A0%84%EC%9E%90%EC%84%B8%EA%B8%88%EA%B3%84%EC%82%B0%EC%84%9C-%EA%B1%B0%EB%9E%98%EC%B2%98-%EC%A0%95%EB%B3%B4.md) — 홈택스 전자세금계산서 발급 화면에 등록해 둔 거래처 목록을 그대로 받아옵니다.
 - [전자세금계산서 공급자 정보 조회](docs/products/%EC%A0%84%EC%9E%90%EC%84%B8%EA%B8%88%EA%B3%84%EC%82%B0%EC%84%9C-%EA%B3%B5%EA%B8%89%EC%9E%90-%EC%A0%95%EB%B3%B4.md) — 전자세금계산서 공급자 칸에 들어가는 상호, 대표자, 업태, 주소, 이메일을 홈택스에서 받습니다.
 - [전자세금계산서 목록 조회](docs/products/%EC%A0%84%EC%9E%90%EC%84%B8%EA%B8%88%EA%B3%84%EC%82%B0%EC%84%9C-%EB%AA%A9%EB%A1%9D.md) — 홈택스에 쌓인 전자세금계산서를 기간과 매출 매입 구분으로 받아옵니다.

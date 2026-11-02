@@ -48,13 +48,27 @@ export async function generateDocs() {
   for (const p of products) {
     if (!/^[a-z0-9가-힣]+(?:-[a-z0-9가-힣]+)*$/.test(p.slug) || p.slug.length > 128) throw new Error('문서 경로로 사용할 수 없는 상품 주소입니다.');
   }
-  const preferred = ['증명서-자동-신청-내려받기', 'payroll-pack-premium-summary-v1-generate', 'shinhan-easy-accounts-transaction-history-search', 'naver-searchad-performance', 'payslip-xlsx', 'company-info-pack-brief-v1-generate'];
+  const highlights = [
+    ['전자세금계산서-발행', '거래 내용을 확인하고 전자세금계산서 발행'],
+    ['전자세금계산서-발행취소', '원본 세금계산서 전액 취소 수정발행'],
+    ['현금영수증-발행', '현금 결제 건의 현금영수증 발급'],
+    ['payslip-xlsx', '계산된 급여로 직원별 명세서 엑셀 생성'],
+    ['register-xlsx', '한 달 급여 데이터를 대장 엑셀로 정리'],
+    ['원천세-정기신고-제출', '작성·검토를 마친 원천세 정기신고 제출'],
+    ['payroll-pack-premium-summary-v1-generate', '건강보험·국민연금 고지 보험료 요약'],
+    ['증명서-자동-신청-내려받기', '국세완납증명서 신청부터 PDF 받기까지'],
+    ['naver-searchad-performance', '네이버 검색광고 성과 조회'],
+    ['google-marketing-report', '측정 진단·웹사이트 성과·검색 실적을 보고서로'],
+  ];
+  const preferred = highlights.map(([slug]) => slug);
   const featured = preferred.map((slug) => products.find((p) => p.slug === slug && p.kind === 'product'));
   if (featured.some((p) => !p)) throw new Error('대표 상품의 공개 목록이 변경되었습니다. 현재 상품을 확인하세요.');
   const index = indexMarkdown(products);
-  const examples = featured.map((p) => '| ' + md(p.category) + ' | ' + detailLink(p) + ' |').join('\n');
+  const examples = featured.map((p, i) => '| ' + detailLink(p) + ' | ' + md(highlights[i][1]) + ' |').join('\n');
   const startCommands = [
-    'node bin/xboss.mjs search "급여명세서"',
+    'node bin/xboss.mjs search "세금계산서"',
+    'node bin/xboss.mjs search "4대보험"',
+    'node bin/xboss.mjs search "마케팅"',
     'node bin/xboss.mjs doctor --anonymous',
     'node bin/xboss.mjs schema payslip-xlsx --anonymous',
     'node bin/xboss.mjs schema payslip-xlsx --anonymous --template',
@@ -63,12 +77,14 @@ export async function generateDocs() {
     MARKER, '# XBOSS Connect', '',
     '![XBOSS Connect — 찾던 업무 데이터, 지금 쓰는 AI와 코드에서.](docs/assets/banner.svg)', '',
     '**찾던 업무 데이터, 지금 쓰는 AI와 코드에서.**', '',
-    '홈택스·4대보험·은행 조회·마케팅 데이터를 찾고, 필요한 업무를 연결하세요.',
+    '세금계산서·현금영수증 발행부터 급여 엑셀, 보험료 조회, 광고 보고서까지.',
     'XBOSS의 **업무 상품 ' + count + '개**를 한곳에서 탐색할 수 있습니다.', '',
     '**무료로 시작할 수 있습니다.** 상품별 준비 사항과 이용 조건은 시작 과정에서 확인하세요.', '',
     '[상품 찾기](#전체-상품) · [AI에 연결](docs/ai-connect.md) · [코드로 시작](docs/quickstart.md) · [English](README.en.md)', '',
     '## 이런 업무부터 찾아보세요', '',
-    '| 분야 | 실제 상품 |', '| --- | --- |', examples, '',
+    '| 필요한 업무 | 얻는 결과 |', '| --- | --- |', examples, '',
+    '4대보험 취득·상실 초안, 지원 은행 거래내역 등 다른 업무도 [전체 상품](PRODUCTS.md)에서 찾을 수 있습니다.',
+    '상품별 입력과 기관 연결이 필요합니다. 신고 초안은 최종 제출과 구분하고, 실제 발행·제출은 내용을 확인한 뒤 진행하세요.', '',
     '## 가장 편한 방법으로 시작하세요', '',
     '- **브라우저에서:** 아래에서 상품을 고르고 상품별 시작 링크를 여세요.',
     '- **AI에서:** [연결 안내](docs/ai-connect.md)에 따라 공식 MCP를 연결하세요. 현재 도구 목록으로 지원 업무와 입력을 확인할 수 있습니다.',
