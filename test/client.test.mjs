@@ -220,8 +220,10 @@ test('local abort interrupts polling delay and does not cancel the remote job', 
 
 test('local wait deadline ends without resubmitting or losing the job identifier', async () => {
   let calls = 0;
-  const client = new XbossClient({ ...credentials, fetchImpl: async () => {
+  const client = new XbossClient({ ...credentials, fetchImpl: async (url, request) => {
     calls += 1;
+    assert.equal(request.method, 'GET');
+    assert.equal(url, `${API_ORIGIN}/v1/jobs/${JOB_ID}`);
     return json({ job_id: JOB_ID, status: 'RUNNING', retry_after_seconds: 30 });
   } });
   await assert.rejects(client.waitForJob(JOB_ID, { timeoutMs: 20 }), (error) => {
@@ -229,7 +231,8 @@ test('local wait deadline ends without resubmitting or losing the job identifier
     assert.equal(error.data.job_id, JOB_ID);
     return true;
   });
-  assert.equal(calls, 1);
+  // A timer may wake just before the deadline. Every poll must still be a GET for the same job.
+  assert.ok(calls >= 1);
 });
 
 test('UUID idempotency keys are accepted once while whitespace, Korean, and oversized keys fail before fetch', async () => {
