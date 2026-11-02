@@ -74,10 +74,10 @@ export async function generateDocs() {
     'node bin/xboss.mjs schema payslip-xlsx --anonymous --template',
   ].join('\n');
   const intro = [
-    MARKER, '# XBOSS Connect | 홈택스, 4대보험, 은행, 위택스를 AI로', '',
+    MARKER, '# XBOSS Connect | 홈택스, 4대보험, 정부24, 은행, 위택스 등 15개 이상 기관과 플랫폼 업무 자동화', '',
     '![XBOSS Connect — 찾던 업무 데이터, 지금 쓰는 AI와 코드에서.](docs/assets/banner.svg)', '',
     '**흩어진 기관 업무를, 지금 쓰는 AI에서 결과까지.**', '',
-    '홈택스, 4대보험, 은행, 위택스 등 15개 이상 기관과 플랫폼의 업무를 연결합니다.', '',
+    '홈택스, 4대보험, 정부24, 은행, 위택스 등 15개 이상 기관과 플랫폼의 업무를 연결합니다.', '',
     '전자세금계산서와 현금영수증, 4대보험과 급여명세서, 은행과 기업카드 조회, 고용지원금, 거래처 확인, 광고 성과까지.',
     'XBOSS의 **업무 상품 ' + count + '개**를 한곳에서 탐색할 수 있습니다.', '',
     '**무료로 시작할 수 있습니다.** 상품별 준비 사항과 이용 조건은 시작 과정에서 확인하세요.', '',
@@ -112,7 +112,7 @@ export async function generateDocs() {
   ];
   await write('README.md', intro);
   await write('PRODUCTS.md', [
-    MARKER, '# XBOSS 전체 상품', '', '**필요한 업무를 찾고, 해당 상품에서 바로 시작하세요.**', '',
+    MARKER, '# XBOSS 전체 상품 | 홈택스, 4대보험, 정부24, 은행, 위택스 등 15개 이상 기관과 플랫폼', '', '**필요한 업무를 찾고, 해당 상품에서 바로 시작하세요.**', '',
     updated + ' 확인: 업무 상품 ' + count + '개와 화면 단계 ' + steps + '개입니다.',
     '화면 단계는 독립 업무 상품 수와 구분했습니다.', '',
     '[무료로 시작하기](https://xboss.biz/auth/signup) · [AI 연결](docs/ai-connect.md) · [코드 시작](docs/quickstart.md)', '', index
@@ -168,7 +168,7 @@ export async function generateDocs() {
     '<text x="64" y="112" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#a2edda">XBOSS CONNECT</text>',
     '<text x="64" y="192" font-family="Arial,Malgun Gothic,sans-serif" font-size="48" font-weight="700" fill="#fff">찾던 업무 데이터,</text>',
     '<text x="64" y="257" font-family="Arial,Malgun Gothic,sans-serif" font-size="48" font-weight="700" fill="#fff">지금 쓰는 AI와 코드에서.</text>',
-    '<text x="66" y="329" font-family="Arial,Malgun Gothic,sans-serif" font-size="23" fill="#b4c7da">홈택스 · 4대보험 · 은행 조회 · 마케팅</text>',
+    '<text x="66" y="329" font-family="Arial,Malgun Gothic,sans-serif" font-size="23" fill="#b4c7da">홈택스, 4대보험, 정부24, 은행, 위택스 등 15+ 기관과 플랫폼</text>',
     '<rect x="958" y="257" width="226" height="65" rx="16" fill="#a2edda"/><text x="1071" y="299" text-anchor="middle" font-family="Arial,Malgun Gothic,sans-serif" font-size="24" font-weight="700" fill="#0b182b">무료로 시작하세요</text>',
     '</svg>'
   ]);

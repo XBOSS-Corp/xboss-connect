@@ -1,5 +1,5 @@
 <!-- Generated from catalog/public-products.json. -->
-# XBOSS 전체 상품
+# XBOSS 전체 상품 | 홈택스, 4대보험, 정부24, 은행, 위택스 등 15개 이상 기관과 플랫폼
 
 **필요한 업무를 찾고, 해당 상품에서 바로 시작하세요.**
 
