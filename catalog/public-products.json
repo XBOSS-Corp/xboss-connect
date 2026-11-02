@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-02T03:02:14.099Z",
+  "generated_at": "2026-11-02T13:13:34.467Z",
   "source": {
     "catalog_url": "https://api.xdata.kr/v1/public/catalog/products",
     "site_url": "https://xboss.biz",
-    "verified_at": "2026-11-02T03:02:14.099Z",
+    "verified_at": "2026-11-02T13:13:34.467Z",
     "verification_status": "live",
     "record_count": 259
   },

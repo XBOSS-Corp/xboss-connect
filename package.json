@@ -1,6 +1,6 @@
 {
   "name": "xboss-connect",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "홈택스, 4대보험, 은행, 위택스 등 기관 업무를 AI와 코드로 연결하는 XBOSS 공식 API와 MCP 클라이언트",
   "type": "module",
   "private": true,

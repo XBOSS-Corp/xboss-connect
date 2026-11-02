@@ -26,7 +26,7 @@ export function createStdioBridge(client) {
         return response(id, {
           protocolVersion: SUPPORTED_VERSIONS.has(params.protocolVersion) ? params.protocolVersion : '2025-06-18',
           capabilities: { tools: {} },
-          serverInfo: { name: 'xboss-connect', version: '0.1.4' },
+          serverInfo: { name: 'xboss-connect', version: '0.1.5' },
           instructions: 'XBOSS의 현재 도구와 입력을 확인하고 요청한 업무만 실행하세요. 발행, 신고, 신청, 초안 저장의 효과를 확인하고 서버의 확인 절차를 따르세요. 비밀키는 채팅에 요청하지 마세요. 계정 설정은 https://console.xdata.kr/api 에서 진행합니다.',
         });
       }

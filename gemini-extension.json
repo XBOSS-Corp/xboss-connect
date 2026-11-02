@@ -1,6 +1,6 @@
 {
   "name": "xboss-connect",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "홈택스, 4대보험, 은행, 위택스 등 15개 이상 기관과 플랫폼 업무를 AI로 연결합니다. 전자세금계산서, 급여명세서, 계좌 조회, 고용지원금, 광고 성과를 지원하는 XBOSS 공식 MCP 연결 패키지입니다.",
   "mcpServers": {
     "xboss": {
