@@ -1,4 +1,4 @@
-import { XbossClient, readAllTools } from './client.mjs';
+import { XbossClient, XbossError, readAllTools } from './client.mjs';
 
 // Explicit aliases preserve both workflows without truncating or hiding tools.
 const ALIASES = new Map([
@@ -26,7 +26,7 @@ export function createStdioBridge(client) {
         return response(id, {
           protocolVersion: SUPPORTED_VERSIONS.has(params.protocolVersion) ? params.protocolVersion : '2025-06-18',
           capabilities: { tools: {} },
-          serverInfo: { name: 'xboss-connect', version: '0.1.3' },
+          serverInfo: { name: 'xboss-connect', version: '0.1.4' },
           instructions: 'XBOSS의 현재 도구와 입력을 확인하고 요청한 업무만 실행하세요. 발행, 신고, 신청, 초안 저장의 효과를 확인하고 서버의 확인 절차를 따르세요. 비밀키는 채팅에 요청하지 마세요. 계정 설정은 https://console.xdata.kr/api 에서 진행합니다.',
         });
       }
@@ -39,7 +39,7 @@ export function createStdioBridge(client) {
           if (!/^[a-zA-Z0-9_-]{1,64}$/.test(name) || resolved.has(name)) {
             throw new Error('도구 이름의 길이 또는 중복 오류가 있습니다. 최신 연결 패키지를 확인하세요.');
           }
-          resolved.set(name, tool.name);
+          resolved.set(name, { remote: tool.name, anonymousAllowed: Array.isArray(tool.securitySchemes) && tool.securitySchemes.some(s => s.type === 'noauth') });
           return { ...tool, name };
         });
         names.clear();
@@ -47,13 +47,14 @@ export function createStdioBridge(client) {
         return response(id, { ...result, tools });
       }
       if (method === 'tools/call') {
-        if (!client.authenticated) {
-          return response(id, { isError: true, content: [{ type: 'text', text: '실제 업무에는 XBOSS 계정 연결이 필요합니다. https://console.xdata.kr/api 에서 Client ID와 Client Secret을 확인하고 앱의 로컬 환경변수 XBOSS_CLIENT_ID, XBOSS_CLIENT_SECRET에 설정하세요. 비밀값을 채팅에 보내지 마세요. 공개 목록 조회만으로 업무가 실행되지는 않습니다.' }] });
-        }
         if (typeof params.name !== 'string' || !names.has(params.name) || !isObject(params.arguments ?? {})) {
           return failure(id, -32602, '현재 tools/list에 있는 도구와 올바른 입력 객체를 사용하세요.');
         }
-        const result = await client.callTool(names.get(params.name), params.arguments ?? {});
+        const selected = names.get(params.name);
+        if (!client.authenticated && !selected.anonymousAllowed) {
+          return response(id, { isError: true, content: [{ type: 'text', text: '실제 업무에는 XBOSS 계정 연결이 필요합니다. https://console.xdata.kr/api 에서 Client ID와 Client Secret을 확인하고 앱의 로컬 환경변수 XBOSS_CLIENT_ID, XBOSS_CLIENT_SECRET에 설정하세요. 비밀값을 채팅에 보내지 마세요. 공개 목록 조회만으로 업무가 실행되지는 않습니다.' }] });
+        }
+        const result = await client.callTool(selected.remote, params.arguments ?? {});
         return response(id, result);
       }
       return failure(id, -32601, '이 연결은 initialize, ping, tools/list, tools/call을 지원합니다.');
@@ -61,7 +62,8 @@ export function createStdioBridge(client) {
       // The existing client sanitizes server errors. Never serialize process.env or the client.
       if (method === 'tools/call' && error.data?.isError === true) return response(id, error.data);
       if (method !== 'tools/call') return failure(id, -32603, 'XBOSS 도구 목록을 확인하지 못했습니다. 연결과 최신 패키지를 확인하세요.');
-      return response(id, { isError: true, content: [{ type: 'text', text: 'XBOSS 연결 또는 작업을 완료하지 못했습니다. 기존 작업이 있으면 상태를 먼저 확인하고 자동 재제출하지 마세요.' }],
+      const message = error instanceof XbossError ? error.message : 'XBOSS 연결 또는 작업을 완료하지 못했습니다. 기존 작업이 있으면 상태를 먼저 확인하고 자동 재제출하지 마세요.';
+      return response(id, { isError: true, content: [{ type: 'text', text: message }],
         _meta: { 'xboss.errorCode': String(error.code ?? 'CONNECTION_ERROR'), ...(error.next ? { 'xdata.kr/next': error.next } : {}), ...(error.recovery ? { 'xboss.recovery': error.recovery } : {}) } });
     }
   };

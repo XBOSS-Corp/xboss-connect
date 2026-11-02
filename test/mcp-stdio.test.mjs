@@ -31,13 +31,25 @@ test('stdio preserves schemas and annotations, and dispatches a short alias to t
 
 test('stdio refuses unknown tools and does not call protected operations without credentials', async () => {
   let calls = 0;
-  const client = { authenticated: false, callTool: async () => { calls++; } };
-  const denied = await createStdioBridge(client)(request(1, 'tools/call', { name: alias }));
+  const client = { authenticated: false, listTools: async () => ({ tools }), callTool: async () => { calls++; } };
+  const bridge = createStdioBridge(client);
+  await bridge(request(0, 'tools/list'));
+  const denied = await bridge(request(1, 'tools/call', { name: alias }));
   assert.equal(denied.result.isError, true);
   assert.equal(calls, 0);
   client.authenticated = true;
   assert.equal((await createStdioBridge(client)(request(2, 'tools/call', { name: alias }))).error.code, -32602);
   assert.equal(calls, 0);
+});
+
+test('stdio permits only tools explicitly declared noauth by the live server without granting protected access', async () => {
+  const calls = [];
+  const publicTool = { name: 'opendata__nts__status', inputSchema: { type: 'object' }, securitySchemes: [{ type: 'noauth' }] };
+  const bridge = createStdioBridge({ authenticated: false, listTools: async () => ({ tools: [publicTool, ...tools] }), callTool: async (...args) => { calls.push(args); return { content: [{ type: 'text', text: 'public result' }] }; } });
+  await bridge(request(0, 'tools/list'));
+  assert.equal((await bridge(request(1, 'tools/call', { name: publicTool.name, arguments: { b_no: ['1234567890'] } }))).result.content[0].text, 'public result');
+  assert.equal((await bridge(request(2, 'tools/call', { name: alias }))).result.isError, true);
+  assert.deepEqual(calls, [[publicTool.name, { b_no: ['1234567890'] }]]);
 });
 
 test('stdio detects alias collisions rather than losing a workflow', async () => {
@@ -69,6 +81,21 @@ test('stdio environment configuration uses existing Basic API authentication wit
   const result = await bridge(request(1, 'tools/list'));
   assert.equal(result.result.tools[0].name, alias);
   assert.equal(JSON.stringify(result).includes(clientSecret), false);
+});
+
+test('stdio forwards sanitized server guidance when authentication or quota blocks a request', async () => {
+  const clientSecret = 'example-client-secret';
+  const bridge = createBridgeFromEnvironment({ XBOSS_CLIENT_ID: 'example-client-id', XBOSS_CLIENT_SECRET: clientSecret }, { fetchImpl: async (_url, options) => {
+    const request = JSON.parse(options.body);
+    const payload = request.method === 'tools/list' ? { result: { tools } } : { error: { code: -32001, message: `한도를 확인하세요 ${clientSecret}`, data: { next: { action: 'connect_account' } } } };
+    return new Response(JSON.stringify({ jsonrpc: '2.0', id: request.id, ...payload }));
+  } });
+  await bridge(request(1, 'tools/list'));
+  const result = await bridge(request(2, 'tools/call', { name: alias }));
+  assert.equal(result.result.isError, true);
+  assert.match(result.result.content[0].text, /한도를 확인하세요/);
+  assert.equal(JSON.stringify(result).includes(clientSecret), false);
+  assert.equal(result.result._meta['xdata.kr/next'].action, 'connect_account');
 });
 
 test('stdio executable emits only protocol messages and handles invalid JSON', async () => {
