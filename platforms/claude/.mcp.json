@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "xboss": {
+      "type": "http",
+      "url": "https://api.xdata.kr/mcp"
+    }
+  }
+}

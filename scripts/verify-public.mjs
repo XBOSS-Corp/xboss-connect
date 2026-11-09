@@ -12,7 +12,19 @@ const ROOT_FILES = new Set([
   '.env.example', 'LICENSE', 'LICENSE.md', 'SECURITY.md',
   'plugin.json', 'mcp.json', 'gemini-extension.json', 'GEMINI.md',
 ]);
-const DIRECTORIES = new Set(['src', 'bin', 'catalog', 'docs', 'examples', 'skills', 'scripts', 'test', '.github']);
+const DIRECTORIES = new Set(['src', 'bin', 'catalog', 'docs', 'examples', 'skills', 'scripts', 'test', '.github', '.claude-plugin', 'platforms']);
+const CLAUDE_FILES = new Set([
+  '.claude-plugin/marketplace.json',
+  'platforms/claude/.claude-plugin/plugin.json', 'platforms/claude/.mcp.json',
+  'platforms/claude/README.md', 'platforms/claude/LICENSE',
+  'platforms/claude/assets/xboss-icon.svg',
+  'platforms/claude/skills/xboss-start/SKILL.md',
+  'platforms/claude/skills/xboss-workflows/SKILL.md',
+]);
+const CLAUDE_DIRECTORIES = new Set([...CLAUDE_FILES].flatMap(file => {
+  const parts = file.split('/');
+  return parts.slice(0, -1).map((_, index) => parts.slice(0, index + 1).join('/'));
+}));
 const CATALOG_KEYS = new Set(['schema_version', 'generated_at', 'source', 'products']);
 const SOURCE_KEYS = new Set(['catalog_url', 'site_url', 'verified_at', 'record_count', 'verification_status']);
 const PRODUCT_KEYS = new Set(['id', 'slug', 'name', 'summary', 'category', 'provider', 'action', 'kind', 'url', 'docs_url', 'mcp']);
@@ -31,6 +43,7 @@ function inside(root, target) {
 
 function allowedFile(file) {
   if (ROOT_FILES.has(file)) return true;
+  if (CLAUDE_FILES.has(file)) return true;
   if (file === '.github/workflows/check.yml') return true;
   if (file === 'catalog/public-products.json') return true;
   if (/^(?:src|bin|scripts)\/[a-zA-Z0-9_-]+\.mjs$/.test(file)) return true;
@@ -278,7 +291,10 @@ export async function verifyPublicTree(directory = PROJECT_ROOT, options = {}) {
         const stat = await lstat(absolute);
         if (stat.isSymbolicLink()) { issue(issues, 'SYMLINK', relative || '.', null, 'Symbolic links and junctions must not be distributed.'); return; }
         if (stat.isDirectory()) {
-          if (relative && (!DIRECTORIES.has(relative.split('/')[0]) || relative.split('/').some(part => part.startsWith('.') && part !== '.github'))) {
+          const claudeDirectory = CLAUDE_DIRECTORIES.has(relative);
+          if (relative && (!DIRECTORIES.has(relative.split('/')[0]) ||
+              (relative.startsWith('platforms/') && !claudeDirectory) ||
+              (!claudeDirectory && relative.split('/').some(part => part.startsWith('.') && part !== '.github')))) {
             issue(issues, 'UNAPPROVED_DIRECTORY', relative, null, 'A directory is outside the public allowlist.');
             return;
           }

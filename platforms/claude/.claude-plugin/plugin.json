@@ -1,0 +1,39 @@
+{
+  "name": "xboss-connect",
+  "displayName": "엑스보스 홈택스 4대보험 정부24 은행 등 15개 이상 기관 업무",
+  "version": "0.1.0",
+  "description": "흩어진 기관 업무를 지금 쓰는 AI에서 결과까지. 홈택스, 4대보험, 정부24, 은행, 위택스 등 기관과 플랫폼을 연결해 전자세금계산서, 증명서, 급여 엑셀, 계좌 조회, 기업지원금과 마케팅 보고서를 처리하는 XBOSS 공식 플러그인입니다.",
+  "author": {
+    "name": "엑스보스",
+    "email": "support@xboss.biz",
+    "url": "https://xboss.biz"
+  },
+  "homepage": "https://xboss.biz/?utm_source=claude&utm_medium=plugin&utm_campaign=xboss_connect",
+  "repository": "https://github.com/XBOSS-Corp/xboss-connect",
+  "license": "MIT",
+  "keywords": [
+    "XBOSS",
+    "엑스보스",
+    "홈택스",
+    "4대보험",
+    "정부24",
+    "은행",
+    "위택스",
+    "전자세금계산서",
+    "증명서",
+    "급여명세서",
+    "급여대장",
+    "계좌조회",
+    "고용지원금",
+    "거래처 조회",
+    "GA4",
+    "네이버 검색광고",
+    "업무자동화",
+    "MCP"
+  ],
+  "icon": "./assets/xboss-icon.svg",
+  "documentationUrl": "https://developer.xdata.kr/common-guide/mcp-native-clients",
+  "supportUrl": "https://xboss.biz/service-inquiry",
+  "privacyPolicyUrl": "https://xboss.biz/legal/privacy-policy",
+  "termsOfServiceUrl": "https://xboss.biz/legal/terms"
+}
