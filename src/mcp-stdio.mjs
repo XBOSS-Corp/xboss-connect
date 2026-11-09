@@ -1,6 +1,7 @@
 import { XbossClient, XbossError, readAllTools } from './client.mjs';
+import { createHash } from 'node:crypto';
 
-// Explicit aliases preserve both workflows without truncating or hiding tools.
+// Keep published aliases stable; later long names receive a deterministic alias.
 const ALIASES = new Map([
   ['nhis_edi__certificates__workplace_application_notice__apply__init', 'nhis_edi__certificates__workplace_notice__apply__init'],
   ['nhis_edi__certificates__workplace_application_notice__issued__init', 'nhis_edi__certificates__workplace_notice__issued__init'],
@@ -26,7 +27,7 @@ export function createStdioBridge(client) {
         return response(id, {
           protocolVersion: SUPPORTED_VERSIONS.has(params.protocolVersion) ? params.protocolVersion : '2025-06-18',
           capabilities: { tools: {} },
-          serverInfo: { name: 'xboss-connect', version: '0.1.5' },
+          serverInfo: { name: 'xboss-connect', version: '0.1.9' },
           instructions: 'XBOSS의 현재 도구와 입력을 확인하고 요청한 업무만 실행하세요. 발행, 신고, 신청, 초안 저장의 효과를 확인하고 서버의 확인 절차를 따르세요. 비밀키는 채팅에 요청하지 마세요. 계정 설정은 https://console.xdata.kr/api 에서 진행합니다.',
         });
       }
@@ -35,7 +36,11 @@ export function createStdioBridge(client) {
         const result = await readAllTools(client, { anonymous: !client.authenticated });
         const resolved = new Map();
         const tools = result.tools.map(tool => {
-          const name = ALIASES.get(tool.name) ?? tool.name;
+          let name = ALIASES.get(tool.name) ?? tool.name;
+          if (typeof name === 'string' && name.length > 64 && /^[a-zA-Z0-9_-]{65,256}$/.test(name)) {
+            const suffix = createHash('sha256').update(name).digest('hex').slice(0, 12);
+            name = `${name.slice(0, 49)}__${suffix}`;
+          }
           if (!/^[a-zA-Z0-9_-]{1,64}$/.test(name) || resolved.has(name)) {
             throw new Error('도구 이름의 길이 또는 중복 오류가 있습니다. 최신 연결 패키지를 확인하세요.');
           }
