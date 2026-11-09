@@ -47,6 +47,7 @@ test('new long tool names load without hiding tools and dispatch exactly to thei
     'fourinsure__b1__workplace_support__insurance_support__draft_validate',
     'fourinsure__b1__workplace__auto_transfer_unagreement__draft_validate',
     'future_provider__' + 'long_workflow_'.repeat(6) + 'read',
+    'future.provider.tools.read',
   ];
   const liveTools = [...tools, ...originals.map(name => ({ name, description: '공식 업무 입력 검증', inputSchema: { type: 'object' }, annotations: { readOnlyHint: true } }))];
   const calls = [];

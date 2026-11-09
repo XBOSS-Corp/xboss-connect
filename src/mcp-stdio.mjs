@@ -37,9 +37,9 @@ export function createStdioBridge(client) {
         const resolved = new Map();
         const tools = result.tools.map(tool => {
           let name = ALIASES.get(tool.name) ?? tool.name;
-          if (typeof name === 'string' && name.length > 64 && /^[a-zA-Z0-9_-]{65,256}$/.test(name)) {
+          if (typeof name === 'string' && (name.length > 64 || name.includes('.')) && /^[a-zA-Z0-9_.-]{1,256}$/.test(name)) {
             const suffix = createHash('sha256').update(name).digest('hex').slice(0, 12);
-            name = `${name.slice(0, 49)}__${suffix}`;
+            name = `${name.slice(0, 49).replaceAll('.', '_')}__${suffix}`;
           }
           if (!/^[a-zA-Z0-9_-]{1,64}$/.test(name) || resolved.has(name)) {
             throw new Error('도구 이름의 길이 또는 중복 오류가 있습니다. 최신 연결 패키지를 확인하세요.');
