@@ -12,8 +12,9 @@ const ROOT_FILES = new Set([
   '.env.example', 'LICENSE', 'LICENSE.md', 'SECURITY.md',
   'plugin.json', 'mcp.json', 'gemini-extension.json', 'GEMINI.md',
 ]);
-const DIRECTORIES = new Set(['src', 'bin', 'catalog', 'docs', 'examples', 'skills', 'scripts', 'test', '.github', 'platforms']);
+const DIRECTORIES = new Set(['src', 'bin', 'catalog', 'docs', 'examples', 'skills', 'scripts', 'test', '.github', '.claude-plugin', 'platforms']);
 const CLAUDE_FILES = new Set([
+  '.claude-plugin/marketplace.json',
   'platforms/claude/.claude-plugin/plugin.json', 'platforms/claude/.mcp.json',
   'platforms/claude/README.md', 'platforms/claude/LICENSE',
   'platforms/claude/assets/xboss-icon.svg',

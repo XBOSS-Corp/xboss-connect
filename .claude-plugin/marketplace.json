@@ -1,0 +1,15 @@
+{
+  "name": "xboss",
+  "description": "홈택스, 4대보험, 정부24, 은행, 위택스 업무를 한국어로 연결하는 엑스보스 공식 플러그인",
+  "owner": {
+    "name": "엑스보스",
+    "email": "support@xboss.biz"
+  },
+  "plugins": [
+    {
+      "name": "xboss-connect",
+      "source": "./platforms/claude",
+      "description": "기관 업무와 급여 파일, 거래처 정보, 마케팅 보고서를 AI에서 결과까지 처리합니다."
+    }
+  ]
+}

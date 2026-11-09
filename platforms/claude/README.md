@@ -17,6 +17,14 @@
 
 홈택스, 4대보험, 정부24, 은행, 위택스 등 15개 이상 기관과 플랫폼을 연결합니다. 지원 상품과 도구는 계속 바뀔 수 있으므로 [현재 상품 안내](https://xboss.biz/service-products?utm_source=claude&utm_medium=plugin&utm_campaign=xboss_connect)와 연결된 도구의 실제 입력 스키마를 확인하세요. 전자세금계산서와 증명서, 급여 파일, 조회 데이터처럼 업무별 결과가 다릅니다.
 
+## Claude Code에서 직접 설치하기
+
+공개 디렉터리 심사 상태와 별도로, 공식 GitHub 저장소에서 직접 설치할 수 있습니다. Claude Code 2.1.275 이상에서 다음 명령을 사용하세요.
+
+```text
+/plugin install xboss-connect --marketplace XBOSS-Corp/xboss-connect
+```
+
 ## 연결하고 첫 업무 시작하기
 
 1. Claude에서 이 플러그인을 추가하고 XBOSS 연결을 시작합니다.
