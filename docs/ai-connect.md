@@ -10,6 +10,7 @@
 
 | 사용하는 앱 | 연결 방법 |
 | --- | --- |
+| Claude | 한국어 사용 안내와 원격 OAuth MCP를 묶은 [공식 플러그인 번들](../platforms/claude/README.md)을 제공합니다. 기존 MCP 커넥터와 번들은 별도 심사 항목이며, 공개 디렉터리 노출에는 승인이 필요합니다. |
 | ChatGPT와 Codex | 공개 디렉터리 승인 후 XBOSS 플러그인을 설치할 수 있습니다. 승인 전 개발용 MCP 연결은 앱의 지원 요금제와 개발자 설정을 확인하세요. 이 저장소의 `plugin.json`과 `examples/platforms/openai-mcp.json`이 공동 제출 패키지의 원본입니다. |
 | Cursor | Node.js 22 이상과 이 패키지를 설치하고 로컬 환경변수에 XBOSS Client ID와 Client Secret을 설정합니다. 아래 수동 설정도 사용할 수 있습니다. 공개 마켓플레이스 배포에는 별도 검토가 적용됩니다. |
 | Gemini CLI | Node.js 22 이상에서 `gemini extensions install https://github.com/XBOSS-Corp/xboss-connect`로 설치합니다. 설치 설정의 XBOSS Client ID와 Client Secret을 입력하고 `/mcp`에서 연결을 점검합니다. 일반 Gemini 앱의 공개 연결 앱 등록과는 별도 경로입니다. |
