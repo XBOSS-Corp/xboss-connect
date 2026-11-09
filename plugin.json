@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "xboss-connect",
-  "version": "0.1.6",
+  "version": "0.1.9",
   "description": "홈택스, 4대보험, 정부24, 은행, 위택스 등 15개 이상 기관과 플랫폼 업무를 AI에 연결합니다. 세금계산서, 증명서, 급여 엑셀, 계좌 조회, 지원금 진단과 마케팅 보고서를 지원하는 XBOSS 공식 플러그인입니다.",
   "author": {
     "name": "XBOSS",
@@ -66,7 +66,7 @@
         "countries": [
           "KR"
         ],
-        "release_notes": "0.1.6: 대표 제목과 소개에 정부24를 포함하고 홈택스, 4대보험, 정부24, 은행, 위택스 등 15개 이상 기관과 플랫폼의 연결 범위를 명확히 했습니다. 업무별 상품 제목과 실행 기능은 유지했습니다.",
+        "release_notes": "0.1.9: 새로 추가된 긴 도구 이름 때문에 Cursor와 Gemini CLI의 전체 도구 목록이 실패하던 문제를 수정했습니다. 기존 별칭은 유지하고 새로운 긴 이름은 충돌을 검사하는 안정된 별칭으로 매핑합니다. 실제 호출은 원래 서버 도구명과 입력으로 전달합니다.",
         "translations": {
           "ko-KR": {
             "subtitle": "기관 업무부터 광고 성과까지 AI로",

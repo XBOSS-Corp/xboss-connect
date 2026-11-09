@@ -42,6 +42,37 @@ test('stdio refuses unknown tools and does not call protected operations without
   assert.equal(calls, 0);
 });
 
+test('new long tool names load without hiding tools and dispatch exactly to their original names', async () => {
+  const originals = [
+    'fourinsure__b1__workplace_support__insurance_support__draft_validate',
+    'fourinsure__b1__workplace__auto_transfer_unagreement__draft_validate',
+    'future_provider__' + 'long_workflow_'.repeat(6) + 'read',
+    'future.provider.tools.read',
+  ];
+  const liveTools = [...tools, ...originals.map(name => ({ name, description: '공식 업무 입력 검증', inputSchema: { type: 'object' }, annotations: { readOnlyHint: true } }))];
+  const calls = [];
+  const client = { authenticated: true, listTools: async () => ({ tools: liveTools }), callTool: async (...args) => { calls.push(args); return { content: [] }; } };
+  const bridge = createStdioBridge(client);
+  const first = await bridge(request(1, 'tools/list'));
+  assert.equal(first.result.tools.length, liveTools.length);
+  assert.equal(first.result.tools[0].name, alias);
+  const names = first.result.tools.map(t => t.name);
+  assert.equal(new Set(names).size, names.length);
+  assert.ok(names.every(name => /^[a-zA-Z0-9_-]{1,64}$/.test(name)));
+  for (let i = 0; i < originals.length; i++) {
+    const entry = first.result.tools[i + 1];
+    assert.deepEqual(entry.inputSchema, liveTools[i + 1].inputSchema);
+    assert.deepEqual(entry.annotations, liveTools[i + 1].annotations);
+    await bridge(request(i + 2, 'tools/call', { name: entry.name, arguments: { checked: i } }));
+  }
+  assert.deepEqual(calls, originals.map((name, i) => [name, { checked: i }]));
+  const reverse = createStdioBridge({ ...client, listTools: async () => ({ tools: [...liveTools].reverse() }) });
+  const reordered = await reverse(request(10, 'tools/list'));
+  assert.deepEqual(reordered.result.tools.map(t => t.name).reverse(), names);
+  const collision = createStdioBridge({ ...client, listTools: async () => ({ tools: [...liveTools, { ...liveTools[1], name: names[1] }] }) });
+  assert.equal((await collision(request(11, 'tools/list'))).error.code, -32603);
+});
+
 test('stdio permits only tools explicitly declared noauth by the live server without granting protected access', async () => {
   const calls = [];
   const publicTool = { name: 'opendata__nts__status', inputSchema: { type: 'object' }, securitySchemes: [{ type: 'noauth' }] };
