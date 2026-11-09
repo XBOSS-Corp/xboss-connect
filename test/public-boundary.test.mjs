@@ -73,6 +73,23 @@ test('imports cannot cross the connector root or pull internal packages', async 
   assert.ok(result.issues.filter(item => item.code === 'IMPORT_BOUNDARY').length >= 2);
 });
 
+test('Claude bundle allows only its reviewed files and keeps credential scanning active', async t => {
+  const { root } = await fixture(t, {
+    'platforms/claude/.claude-plugin/plugin.json': JSON.stringify({ name: 'xboss-connect' }),
+    'platforms/claude/.mcp.json': JSON.stringify({ mcpServers: { xboss: { type: 'http', url: 'https://api.xdata.kr/mcp' } } }),
+    'platforms/claude/skills/xboss-start/SKILL.md': '# 한국어 시작 안내\n',
+  });
+  assert.equal((await verifyPublicTree(root)).ok, true);
+  await writeFile(path.join(root, 'platforms/claude/.mcp.json'), JSON.stringify({ password: 'x'.repeat(24) }));
+  await writeFile(path.join(root, 'platforms/claude/.claude-plugin/private.json'), '{}');
+  await mkdir(path.join(root, 'platforms/unreviewed'));
+  await writeFile(path.join(root, 'platforms/unreviewed/index.md'), '# 검토되지 않은 파일');
+  const result = await verifyPublicTree(root);
+  assert.ok(result.issues.some(item => item.code === 'SECRET_ASSIGNMENT' && item.file.endsWith('/.mcp.json')));
+  assert.ok(result.issues.some(item => item.code === 'UNAPPROVED_FILE' && item.file.endsWith('/private.json')));
+  assert.ok(result.issues.some(item => item.code === 'UNAPPROVED_DIRECTORY' && item.file === 'platforms/unreviewed'));
+});
+
 test('secret findings identify only the location and type, never the credential value', async t => {
   const credential = 'gh' + 'p_' + 'z'.repeat(32);
   const basicValue = 'a'.repeat(28);
