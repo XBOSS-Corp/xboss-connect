@@ -127,6 +127,31 @@ test('every catalog record must appear under its exact name in both indexes', as
   assert.ok(result.issues.some(item => item.code === 'INDEX_NAME_DRIFT' && item.file === 'PRODUCTS.md'));
 });
 
+test('a catalog name with a middle dot verifies against the comma form the documents are written in', async t => {
+  const dotted = makeProduct('3', 'dotted-product', '신고서 작성·신고');
+  const { root, catalog, files } = await fixture(t);
+  catalog.products.push(dotted);
+  catalog.source.record_count = catalog.products.length;
+  const written = '신고서 작성, 신고';
+  const line = `- [${written}](docs/products/${dotted.slug}.md)
+`;
+  await writeFile(path.join(root, 'catalog/public-products.json'), JSON.stringify(catalog));
+  await writeFile(path.join(root, 'README.md'), files['README.md'] + line);
+  await writeFile(path.join(root, 'PRODUCTS.md'), files['PRODUCTS.md'] + line);
+  await writeFile(path.join(root, `docs/products/${dotted.slug}.md`), `# ${written}
+
+${dotted.summary}
+`);
+  const result = await verifyPublicTree(root);
+  assert.deepEqual(result.issues.filter(item => item.code.endsWith('NAME_DRIFT')), []);
+  await writeFile(path.join(root, `docs/products/${dotted.slug}.md`), `# ${dotted.name}
+
+${dotted.summary}
+`);
+  const raw = await verifyPublicTree(root);
+  assert.ok(raw.issues.some(item => item.code === 'PRODUCT_NAME_DRIFT'));
+});
+
 test('missing, renamed, and orphaned product documents are detected', async t => {
   const { root } = await fixture(t, {
     'docs/products/sample-product.md': '# 다른 상품\n',

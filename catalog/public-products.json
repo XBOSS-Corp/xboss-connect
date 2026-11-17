@@ -1,30 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-02T13:13:34.467Z",
+  "generated_at": "2026-11-17T14:40:47.203Z",
   "source": {
     "catalog_url": "https://api.xdata.kr/v1/public/catalog/products",
     "site_url": "https://xboss.biz",
-    "verified_at": "2026-11-02T13:13:34.467Z",
+    "verified_at": "2026-11-17T14:40:47.203Z",
     "verification_status": "live",
-    "record_count": 259
+    "record_count": 324
   },
   "products": [
-    {
-      "id": "385",
-      "slug": "edi-fourinsure-session-login",
-      "name": "4대보험 EDI 세션 등록",
-      "summary": "연동 계정 하나를 넣으면 그 계정에 등록된 공동인증서로 4대사회보험 정보연계센터에 로그인하고, 세션 저장 여부와 연동 계정 ID를 돌려줍니다.",
-      "category": "4대보험",
-      "provider": "fourinsure",
-      "action": "fourinsure.session.login",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/edi-fourinsure-session-login",
-      "docs_url": null,
-      "mcp": {
-        "name": "fourinsure__session__login",
-        "enabled": true
-      }
-    },
     {
       "id": "379",
       "slug": "edi-fourinsure-b1-workplace-support-household-worker-init",
@@ -74,86 +58,6 @@
       }
     },
     {
-      "id": "812",
-      "slug": "edi-fourinsure-b1-common-com-cd-list",
-      "name": "공통코드 목록 조회",
-      "summary": "분류 아이디 하나를 넣으면 기관 코드 찾기 창에 보이는 그 분류의 공통코드를 코드 값과 이름의 짝으로 돌려줍니다.",
-      "category": "4대보험",
-      "provider": "fourinsure",
-      "action": "fourinsure.b1.common.com_cd.list",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-common-com-cd-list",
-      "docs_url": null,
-      "mcp": {
-        "name": "fourinsure__b1__common__com_cd__list",
-        "enabled": true
-      }
-    },
-    {
-      "id": "370",
-      "slug": "edi-fourinsure-b1-resources-notices-institutions-list-init",
-      "name": "기관별 공지사항 목록/검색 입력 서식 조회",
-      "summary": "입력 없이 부르면 기관별 공지사항 검색 화면의 검색 범위(전체, 제목, 내용)와 검색어 칸, 기관 칸 이름을 받습니다.",
-      "category": "4대보험",
-      "provider": "fourinsure",
-      "action": "fourinsure.b1.resources.notices.institutions.list_init",
-      "kind": "step",
-      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-resources-notices-institutions-list-init",
-      "docs_url": null,
-      "mcp": {
-        "name": "fourinsure__b1__resources__notices__institutions__list_init",
-        "enabled": true
-      }
-    },
-    {
-      "id": "367",
-      "slug": "edi-fourinsure-b1-resources-notices-institutions-list",
-      "name": "기관별 공지사항 목록/검색 조회",
-      "summary": "검색 범위와 검색어로 기관별 공지사항 목록을 조회해 공지마다 올린 기관, 제목, 등록일, 조회수, 첨부 표시와 상세 조회에 쓸 글 번호를 받습니다.",
-      "category": "4대보험",
-      "provider": "fourinsure",
-      "action": "fourinsure.b1.resources.notices.institutions.list",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-resources-notices-institutions-list",
-      "docs_url": null,
-      "mcp": {
-        "name": "fourinsure__b1__resources__notices__institutions__list",
-        "enabled": true
-      }
-    },
-    {
-      "id": "364",
-      "slug": "edi-fourinsure-b1-resources-notices-institutions-detail",
-      "name": "기관별 공지사항 상세 조회",
-      "summary": "공지 글 번호를 넣으면 그 공지의 제목과 본문 글, 붙은 첨부파일의 이름과 번호를 함께 돌려줍니다.",
-      "category": "4대보험",
-      "provider": "fourinsure",
-      "action": "fourinsure.b1.resources.notices.institutions.detail",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-resources-notices-institutions-detail",
-      "docs_url": null,
-      "mcp": {
-        "name": "fourinsure__b1__resources__notices__institutions__detail",
-        "enabled": true
-      }
-    },
-    {
-      "id": "361",
-      "slug": "edi-fourinsure-b1-resources-notices-institutions-attachments",
-      "name": "기관별 공지사항 첨부파일 목록 조회",
-      "summary": "공지 글 번호를 넣으면 그 공지 상세 화면에 붙은 첨부파일의 개수와 파일마다 첨부 묶음 번호, 순번, 이름을 돌려줍니다.",
-      "category": "4대보험",
-      "provider": "fourinsure",
-      "action": "fourinsure.b1.resources.notices.institutions.attachments",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-resources-notices-institutions-attachments",
-      "docs_url": null,
-      "mcp": {
-        "name": "fourinsure__b1__resources__notices__institutions__attachments",
-        "enabled": true
-      }
-    },
-    {
       "id": "382",
       "slug": "edi-fourinsure-b1-workplace-support-insurance-support-init",
       "name": "두루누리 보험료지원 신청 입력 서식 조회",
@@ -198,22 +102,6 @@
       "docs_url": null,
       "mcp": {
         "name": "fourinsure__b1__civil_receipt__history__list",
-        "enabled": true
-      }
-    },
-    {
-      "id": "307",
-      "slug": "edi-fourinsure-b1-civil-receipt-history-list-init",
-      "name": "민원처리현황 조회 입력 서식 조회",
-      "summary": "로그인한 연동 계정으로 민원처리현황 화면을 열어 처리여부, 보험유형, 민원서식 보기와 미리 채워진 조회 기간을 돌려줍니다.",
-      "category": "4대보험",
-      "provider": "fourinsure",
-      "action": "fourinsure.b1.civil_receipt.history.list_init",
-      "kind": "step",
-      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-civil-receipt-history-list-init",
-      "docs_url": null,
-      "mcp": {
-        "name": "fourinsure__b1__civil_receipt__history__list_init",
         "enabled": true
       }
     },
@@ -282,22 +170,6 @@
       }
     },
     {
-      "id": "373",
-      "slug": "edi-fourinsure-b1-workplace-auto-transfer-unagreement-init",
-      "name": "사업장 자동이체 신청 약관 입력 서식 조회",
-      "summary": "로그인한 사업장의 자동이체 신청 약관 화면에서 개인정보 수집 이용 동의와 고유식별정보 처리 동의의 안내 제목과 동의 선택 칸을 받아 옵니다.",
-      "category": "4대보험",
-      "provider": "fourinsure",
-      "action": "fourinsure.b1.workplace.auto_transfer_unagreement.init",
-      "kind": "step",
-      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-workplace-auto-transfer-unagreement-init",
-      "docs_url": null,
-      "mcp": {
-        "name": "fourinsure__b1__workplace__auto_transfer_unagreement__init",
-        "enabled": true
-      }
-    },
-    {
       "id": "653",
       "slug": "edi-fourinsure-b1-workplace-auto-transfer-unagreement-draft-validate",
       "name": "사업장 자동이체 신청 입력 초안 검증",
@@ -326,70 +198,6 @@
       "docs_url": null,
       "mcp": {
         "name": "fourinsure__b1__workplace__withdrawal__init",
-        "enabled": true
-      }
-    },
-    {
-      "id": "358",
-      "slug": "edi-fourinsure-b1-resources-forms-list-init",
-      "name": "서식자료실 목록/검색 입력 서식 조회",
-      "summary": "입력 없이 부르면 서식자료실 검색 화면에서 고를 수 있는 보험유형, 업무유형(자격, 보험료, 제증명 등), 민원유형 선택 값을 받습니다.",
-      "category": "4대보험",
-      "provider": "fourinsure",
-      "action": "fourinsure.b1.resources.forms.list_init",
-      "kind": "step",
-      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-resources-forms-list-init",
-      "docs_url": null,
-      "mcp": {
-        "name": "fourinsure__b1__resources__forms__list_init",
-        "enabled": true
-      }
-    },
-    {
-      "id": "355",
-      "slug": "edi-fourinsure-b1-resources-forms-list",
-      "name": "서식자료실 목록/검색 조회",
-      "summary": "보험유형과 업무유형 코드, 검색어로 서식자료실 목록을 조회해 서식마다 제목, 보험 종류, 등록일과 상세 조회에 쓸 게시판 번호, 글 번호를 받습니다.",
-      "category": "4대보험",
-      "provider": "fourinsure",
-      "action": "fourinsure.b1.resources.forms.list",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-resources-forms-list",
-      "docs_url": null,
-      "mcp": {
-        "name": "fourinsure__b1__resources__forms__list",
-        "enabled": true
-      }
-    },
-    {
-      "id": "352",
-      "slug": "edi-fourinsure-b1-resources-forms-detail",
-      "name": "서식자료실 상세 조회",
-      "summary": "서식자료실 목록/검색 조회의 게시판 번호와 게시글 번호를 넣으면 그 게시글의 제목과 본문 글, 첨부파일 이름과 기관 화면의 내려받기, 미리보기 단추 정보를 돌려줍니다.",
-      "category": "4대보험",
-      "provider": "fourinsure",
-      "action": "fourinsure.b1.resources.forms.detail",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-resources-forms-detail",
-      "docs_url": null,
-      "mcp": {
-        "name": "fourinsure__b1__resources__forms__detail",
-        "enabled": true
-      }
-    },
-    {
-      "id": "349",
-      "slug": "edi-fourinsure-b1-resources-forms-attachments",
-      "name": "서식자료실 첨부파일 목록 조회",
-      "summary": "서식자료실 목록/검색 조회의 게시판 번호, 게시글 번호, 첨부 묶음 번호를 넣으면 그 서식에 붙은 파일마다 원본 이름, 확장자, 크기, 순번을 돌려줍니다.",
-      "category": "4대보험",
-      "provider": "fourinsure",
-      "action": "fourinsure.b1.resources.forms.attachments",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-resources-forms-attachments",
-      "docs_url": null,
-      "mcp": {
-        "name": "fourinsure__b1__resources__forms__attachments",
         "enabled": true
       }
     },
@@ -461,7 +269,7 @@
       "id": "830",
       "slug": "edi-fourinsure-b1-member-qualification-los-save",
       "name": "자격상실 초안 저장",
-      "summary": "퇴사자 자격키와 공통 자격상실일, 당해연도 보수총액, 건강보험 산정 개월수를 넣으면 자격상실 신고서를 정보연계센터에 초안으로 저장하고 접수번호를 받습니다.",
+      "summary": "퇴사자 자격키와 성명, 주민등록번호, 공통 자격상실일, 보험마다 상실 사유, 당해연도 보수총액, 건강보험 산정 개월수를 넣으면 자격상실 신고서를 정보연계센터에 초안으로 저장하고 접수번호를 받습니다.",
       "category": "4대보험",
       "provider": "fourinsure",
       "action": "fourinsure.b1.member_qualification.los_save",
@@ -541,7 +349,7 @@
       "id": "821",
       "slug": "edi-fourinsure-b1-member-qualification-acqs-save",
       "name": "자격취득 초안 저장",
-      "summary": "입사자 자격키와 자격취득일, 월 보수, 건강보험 취득부호, 고용보험 직종을 넣으면 자격취득 신고서를 정보연계센터에 초안으로 저장하고 접수번호를 받습니다.",
+      "summary": "입사자 자격키와 성명, 주민등록번호, 자격취득일, 월 보수, 건강보험 취득부호, 고용보험 직종을 넣으면 자격취득 신고서를 정보연계센터에 초안으로 저장하고 접수번호를 받습니다.",
       "category": "4대보험",
       "provider": "fourinsure",
       "action": "fourinsure.b1.member_qualification.acqs_save",
@@ -550,70 +358,6 @@
       "docs_url": null,
       "mcp": {
         "name": "fourinsure__b1__member_qualification__acqs_save",
-        "enabled": true
-      }
-    },
-    {
-      "id": "346",
-      "slug": "edi-fourinsure-b1-resources-files-download",
-      "name": "자료실 첨부파일 다운로드",
-      "summary": "첨부 묶음 번호와 순번을 넣으면 자료실에 그 파일이 있는지와 원본 이름을 확인해 돌려줍니다.",
-      "category": "4대보험",
-      "provider": "fourinsure",
-      "action": "fourinsure.b1.resources.files.download",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-resources-files-download",
-      "docs_url": null,
-      "mcp": {
-        "name": "fourinsure__b1__resources__files__download",
-        "enabled": true
-      }
-    },
-    {
-      "id": "343",
-      "slug": "edi-fourinsure-b1-resources-faqs-list-init",
-      "name": "자주묻는질문 목록/검색 입력 서식 조회",
-      "summary": "입력 없이 부르면 자주묻는질문 검색 화면의 검색 범위(전체, 제목, 내용)와 정렬(최신순, 조회순) 선택 값, 기본값을 받습니다.",
-      "category": "4대보험",
-      "provider": "fourinsure",
-      "action": "fourinsure.b1.resources.faqs.list_init",
-      "kind": "step",
-      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-resources-faqs-list-init",
-      "docs_url": null,
-      "mcp": {
-        "name": "fourinsure__b1__resources__faqs__list_init",
-        "enabled": true
-      }
-    },
-    {
-      "id": "340",
-      "slug": "edi-fourinsure-b1-resources-faqs-list",
-      "name": "자주묻는질문 목록/검색 조회",
-      "summary": "검색 범위와 검색어, 정렬, 쪽 번호를 넣으면 자주묻는질문 한 쪽의 문의유형, 제목, 등록일, 조회수, 질문 번호를 돌려줍니다.",
-      "category": "4대보험",
-      "provider": "fourinsure",
-      "action": "fourinsure.b1.resources.faqs.list",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-resources-faqs-list",
-      "docs_url": null,
-      "mcp": {
-        "name": "fourinsure__b1__resources__faqs__list",
-        "enabled": true
-      }
-    },
-    {
-      "id": "337",
-      "slug": "edi-fourinsure-b1-resources-faqs-detail",
-      "name": "자주묻는질문 상세 조회",
-      "summary": "자주묻는질문 목록/검색 조회에서 받은 질문 번호를 넣으면 질문 제목과 화면 머리글, 표 줄, 답변이 담긴 화면 글자를 돌려줍니다.",
-      "category": "4대보험",
-      "provider": "fourinsure",
-      "action": "fourinsure.b1.resources.faqs.detail",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-resources-faqs-detail",
-      "docs_url": null,
-      "mcp": {
-        "name": "fourinsure__b1__resources__faqs__detail",
         "enabled": true
       }
     },
@@ -630,7 +374,7 @@
       "docs_url": null,
       "mcp": {
         "name": "fourinsure__b1__certificate__issue_fact__confirm",
-        "enabled": false
+        "enabled": true
       }
     },
     {
@@ -662,22 +406,6 @@
       "docs_url": null,
       "mcp": {
         "name": "fourinsure__b1__certificate__apply__submit",
-        "enabled": true
-      }
-    },
-    {
-      "id": "295",
-      "slug": "edi-fourinsure-b1-certificate-history-list-init",
-      "name": "증명서 신청이력 목록 입력 서식 조회",
-      "summary": "로그인한 연동 계정으로 증명서 신청이력 목록 화면을 열어 접수번호, 그룹 접수번호, 쪽 번호 칸과 상세 화면 주소를 돌려줍니다.",
-      "category": "4대보험",
-      "provider": "fourinsure",
-      "action": "fourinsure.b1.certificate.history.list_init",
-      "kind": "step",
-      "url": "https://xboss.biz/service-products/edi-fourinsure-b1-certificate-history-list-init",
-      "docs_url": null,
-      "mcp": {
-        "name": "fourinsure__b1__certificate__history__list_init",
         "enabled": true
       }
     },
@@ -778,26 +506,10 @@
       }
     },
     {
-      "id": "743",
-      "slug": "work24-auth-npki-session-login",
-      "name": "고용24 공동인증서 세션 로그인",
-      "summary": "사업자 공동인증서를 콘솔에 한 번 등록하면, 로그인 호출 한 번으로 지원금 조회와 신청을 같은 연결로 이어서 진행할 수 있습니다.",
-      "category": "고용24",
-      "provider": "work24",
-      "action": "work24.auth.npki_session.login",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/work24-auth-npki-session-login",
-      "docs_url": null,
-      "mcp": {
-        "name": "work24__auth__npki_session__login",
-        "enabled": true
-      }
-    },
-    {
       "id": "762",
       "slug": "work24-subsidy-application-target-save",
       "name": "고용24 기업지원금 대상자 저장",
-      "summary": "조회한 후보 중에서 고른 근로자를 신청서의 지원 대상으로 지정합니다.",
+      "summary": "조회한 후보 중에서 고른 근로자를 고용촉진, 청년추가고용장려금 같은 기업지원금 신청서의 지원 대상으로 지정합니다.",
       "category": "고용24",
       "provider": "work24",
       "action": "work24.subsidy.application.target_save",
@@ -813,7 +525,7 @@
       "id": "760",
       "slug": "work24-subsidy-application-target-search",
       "name": "고용24 기업지원금 대상자 후보 조회",
-      "summary": "사업장 피보험자 목록을 보여 주고 이 지원사업의 대상으로 지정할 수 있는 근로자를 표시합니다.",
+      "summary": "사업장 피보험자 목록을 보여 주고 고용촉진 같은 지원사업의 대상으로 지정할 수 있는 근로자를 표시합니다.",
       "category": "고용24",
       "provider": "work24",
       "action": "work24.subsidy.application.target_search",
@@ -829,7 +541,7 @@
       "id": "758",
       "slug": "work24-subsidy-application-target-init",
       "name": "고용24 기업지원금 대상자정보 단계 진입",
-      "summary": "접수번호로 작성 중인 신청서를 다시 열어 대상자정보 단계로 들어갑니다.",
+      "summary": "접수번호로 작성 중인 고용촉진 같은 기업지원금 신청서를 다시 열어 대상자정보 단계로 들어갑니다.",
       "category": "고용24",
       "provider": "work24",
       "action": "work24.subsidy.application.target_init",
@@ -845,7 +557,7 @@
       "id": "756",
       "slug": "work24-subsidy-application-workplace-save",
       "name": "고용24 기업지원금 사업장정보 저장",
-      "summary": "사업장 주소와 담당자 연락처, 지원금을 받을 계좌를 신청서에 저장하고 접수번호를 받습니다.",
+      "summary": "고용촉진 같은 기업지원금 신청서에 사업장 주소와 담당자 연락처, 지원금을 받을 계좌를 저장하고 접수번호를 받습니다.",
       "category": "고용24",
       "provider": "work24",
       "action": "work24.subsidy.application.workplace_save",
@@ -861,7 +573,7 @@
       "id": "977",
       "slug": "work24-subsidy-diagnosis-search",
       "name": "고용24 기업지원금 사전진단 조회",
-      "summary": "사업주 사전진단이 있는 기업지원금 사업을 사업장 기준으로 한 번에 조회해, 사업별 진단 판정을 모아 보여 줍니다.",
+      "summary": "고용촉진, 대체인력 지원금 등 사업주 사전진단이 있는 기업지원금 사업을 사업장 기준으로 한 번에 조회해, 사업별 진단 판정을 모아 보여 줍니다.",
       "category": "고용24",
       "provider": "work24",
       "action": "work24.subsidy.diagnosis.search",
@@ -877,7 +589,7 @@
       "id": "768",
       "slug": "work24-subsidy-application-modify",
       "name": "고용24 기업지원금 신청 수정",
-      "summary": "기관이 보완을 요청한 신청서에 같은 접수번호로 수정 요청을 보냅니다.",
+      "summary": "기관이 보완을 요청한 고용촉진 등 지원금 신청서에 같은 접수번호로 수정 요청을 보냅니다.",
       "category": "고용24",
       "provider": "work24",
       "action": "work24.subsidy.application.modify",
@@ -893,7 +605,7 @@
       "id": "774",
       "slug": "work24-subsidy-application-history",
       "name": "고용24 기업지원금 신청 이력 조회",
-      "summary": "선택한 지원사업의 신청 건을 처리 상태와 함께 확인합니다.",
+      "summary": "고용촉진, 청년추가고용장려금 등 선택한 지원사업의 신청 건을 처리 상태와 함께 확인합니다.",
       "category": "고용24",
       "provider": "work24",
       "action": "work24.subsidy.application.history",
@@ -909,7 +621,7 @@
       "id": "766",
       "slug": "work24-subsidy-application-submit",
       "name": "고용24 기업지원금 신청 제출",
-      "summary": "고용24 기업지원금 제출 전 확인에서 제출할 수 있다고 나온 신청서를 고용노동부에 제출합니다.",
+      "summary": "기업지원금 제출 전 확인에서 제출할 수 있다고 나온 고용촉진 같은 지원사업 신청서를 고용노동부에 제출합니다.",
       "category": "고용24",
       "provider": "work24",
       "action": "work24.subsidy.application.submit",
@@ -925,7 +637,7 @@
       "id": "752",
       "slug": "work24-subsidy-application-init",
       "name": "고용24 기업지원금 신청 진입",
-      "summary": "고용노동부가 운영하는 기업지원금 가운데 원하는 사업의 신청 가능 여부를 확인합니다.",
+      "summary": "고용촉진, 청년추가고용장려금 등 고용노동부 기업지원금 가운데 원하는 사업의 신청 가능 여부를 확인합니다.",
       "category": "고용24",
       "provider": "work24",
       "action": "work24.subsidy.application.init",
@@ -941,7 +653,7 @@
       "id": "770",
       "slug": "work24-subsidy-application-withdraw",
       "name": "고용24 기업지원금 신청 철회",
-      "summary": "제출한 신청을 물러야 할 때 철회를 요청합니다.",
+      "summary": "제출한 고용촉진, 청년추가고용장려금 같은 기업지원금 신청을 물러야 할 때 철회를 요청합니다.",
       "category": "고용24",
       "provider": "work24",
       "action": "work24.subsidy.application.withdraw",
@@ -957,7 +669,7 @@
       "id": "754",
       "slug": "work24-subsidy-application-requirements",
       "name": "고용24 기업지원금 신청 필요입력 안내",
-      "summary": "사업장정보를 저장하기 전에 무엇을 준비해야 하는지 먼저 정리해 드립니다.",
+      "summary": "고용촉진, 청년추가고용장려금 같은 기업지원금을 신청하기 전에 준비할 것을 정리해 드립니다.",
       "category": "고용24",
       "provider": "work24",
       "action": "work24.subsidy.application.requirements",
@@ -973,7 +685,7 @@
       "id": "772",
       "slug": "work24-subsidy-application-delete",
       "name": "고용24 기업지원금 작성중 초안 삭제",
-      "summary": "작성만 해두고 제출하지 않은 신청 초안을 정리합니다.",
+      "summary": "작성만 해두고 제출하지 않은 고용촉진 등 지원금 신청 초안을 정리합니다.",
       "category": "고용24",
       "provider": "work24",
       "action": "work24.subsidy.application.delete",
@@ -989,7 +701,7 @@
       "id": "764",
       "slug": "work24-subsidy-application-draft-validate",
       "name": "고용24 기업지원금 제출 전 확인",
-      "summary": "제출 버튼을 누르기 전에 신청서를 기관 화면 기준으로 점검해 제출 가능 여부와 필요한 첨부서류 목록을 받습니다.",
+      "summary": "고용촉진 같은 기업지원금 신청서를 제출 전에 기관 화면 기준으로 점검해 제출 가능 여부와 필요한 첨부서류 목록을 받습니다.",
       "category": "고용24",
       "provider": "work24",
       "action": "work24.subsidy.application.draft_validate",
@@ -1005,7 +717,7 @@
       "id": "979",
       "slug": "work24-subsidy-application-attachment-delete",
       "name": "고용24 기업지원금 첨부 파일 삭제",
-      "summary": "작성중인 신청 초안에 잘못 올린 첨부 파일을 한 건씩 지웁니다.",
+      "summary": "작성중인 고용촉진 같은 기업지원금 신청 초안에 잘못 올린 첨부 파일을 한 건씩 지웁니다.",
       "category": "고용24",
       "provider": "work24",
       "action": "work24.subsidy.application.attachment_delete",
@@ -1018,18 +730,34 @@
       }
     },
     {
-      "id": "745",
-      "slug": "work24-auth-session-status",
-      "name": "고용24 세션 상태 조회",
-      "summary": "지원금 신청을 시작하기 전에 저장된 고용24 연결의 인증 상태와 회원구분을 확인합니다.",
-      "category": "고용24",
-      "provider": "work24",
-      "action": "work24.auth.session.status",
+      "id": "1063",
+      "slug": "opendata-comwel-workplace",
+      "name": "고용보험 및 산재보험 가입 사업장 조회",
+      "summary": "사업자등록번호만 있으면 그 사업자가 고용보험과 산재보험에 가입한 사업장과 성립일자, 상시인원, 업종을 확인합니다.",
+      "category": "공공데이터 기업 위험 조회",
+      "provider": "opendata",
+      "action": "opendata.comwel.workplace",
       "kind": "product",
-      "url": "https://xboss.biz/service-products/work24-auth-session-status",
+      "url": "https://xboss.biz/service-products/opendata-comwel-workplace",
       "docs_url": null,
       "mcp": {
-        "name": "work24__auth__session__status",
+        "name": "opendata__comwel__workplace",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1065",
+      "slug": "opendata-nps-workplace",
+      "name": "국민연금 가입 사업장 조회",
+      "summary": "사업자등록번호와 상호로 국민연금에 가입된 사업장의 가입자 수와 당월 고지금액, 등록일, 업종을 확인합니다.",
+      "category": "공공데이터 기업 위험 조회",
+      "provider": "opendata",
+      "action": "opendata.nps.workplace",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/opendata-nps-workplace",
+      "docs_url": null,
+      "mcp": {
+        "name": "opendata__nps__workplace",
         "enabled": true
       }
     },
@@ -1037,7 +765,7 @@
       "id": "596",
       "slug": "opendata-nts-status",
       "name": "국세청 사업자등록 상태 조회",
-      "summary": "거래처 사업자등록번호만 있으면 지금 휴업인지 폐업인지, 과세유형이 무엇인지 국세청 자료로 확인합니다.",
+      "summary": "거래처 사업자등록번호로 휴업과 폐업 여부, 과세유형을 국세청 자료로 확인합니다.",
       "category": "공공데이터 기업 위험 조회",
       "provider": "opendata",
       "action": "opendata.nts.status",
@@ -1082,6 +810,54 @@
       }
     },
     {
+      "id": "1061",
+      "slug": "opendata-fsc-corp-outline",
+      "name": "기업개요 조회",
+      "summary": "상호나 법인등록번호, 사업자등록번호 하나로 법인의 설립일자와 산업분류, 소재지, 종업원 수, 상장 시장을 확인합니다.",
+      "category": "공공데이터 기업 위험 조회",
+      "provider": "opendata",
+      "action": "opendata.fsc.corp_outline",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/opendata-fsc-corp-outline",
+      "docs_url": null,
+      "mcp": {
+        "name": "opendata__fsc__corp_outline",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1071",
+      "slug": "opendata-nrg-trades",
+      "name": "사업장 건물 실거래 조회",
+      "summary": "사업장 주소나 사업자등록번호로 그 지번의 상업용과 업무용 부동산 매매 실거래를 최근 기간만큼 확인합니다.",
+      "category": "공공데이터 기업 위험 조회",
+      "provider": "opendata",
+      "action": "opendata.nrg.trades",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/opendata-nrg-trades",
+      "docs_url": null,
+      "mcp": {
+        "name": "opendata__nrg__trades",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1069",
+      "slug": "opendata-bld-register",
+      "name": "사업장 건물 조회",
+      "summary": "사업장 주소나 사업자등록번호로 그 지번의 건축물대장 표제부를 확인합니다.",
+      "category": "공공데이터 기업 위험 조회",
+      "provider": "opendata",
+      "action": "opendata.bld.register",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/opendata-bld-register",
+      "docs_url": null,
+      "mcp": {
+        "name": "opendata__bld__register",
+        "enabled": true
+      }
+    },
+    {
       "id": "604",
       "slug": "opendata-env-waste-sanction",
       "name": "사업장폐기물 행정처분 조회",
@@ -1098,6 +874,38 @@
       }
     },
     {
+      "id": "1097",
+      "slug": "opendata-comwel-name-search",
+      "name": "상호로 사업자 찾기",
+      "summary": "상호만 알아도 그 이름의 사업자를 찾아 사업자등록번호와 사업장명, 주소, 성립일을 확인합니다.",
+      "category": "공공데이터 기업 위험 조회",
+      "provider": "opendata",
+      "action": "opendata.comwel.name_search",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/opendata-comwel-name-search",
+      "docs_url": null,
+      "mcp": {
+        "name": "opendata__comwel__name_search",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1067",
+      "slug": "opendata-fsc-financials",
+      "name": "재무 요약 조회",
+      "summary": "법인등록번호나 사업자등록번호로 공시된 법인의 매출액과 영업이익, 당기순이익, 총자산, 총부채, 부채비율을 사업연도별로 확인합니다.",
+      "category": "공공데이터 기업 위험 조회",
+      "provider": "opendata",
+      "action": "opendata.fsc.financials",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/opendata-fsc-financials",
+      "docs_url": null,
+      "mcp": {
+        "name": "opendata__fsc__financials",
+        "enabled": true
+      }
+    },
+    {
       "id": "600",
       "slug": "opendata-g2b-sanction",
       "name": "조달청 부정당업자 제재 조회",
@@ -1110,6 +918,22 @@
       "docs_url": null,
       "mcp": {
         "name": "opendata__g2b__sanction",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1340",
+      "slug": "opendata-ftc-mail-order",
+      "name": "통신판매 사업자 조회",
+      "summary": "상호나 사업자등록번호로 통신판매를 신고한 사업자를 찾아 운영 상태와 신고일자, 소재지를 확인합니다.",
+      "category": "공공데이터 기업 위험 조회",
+      "provider": "opendata",
+      "action": "opendata.ftc.mail_order",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/opendata-ftc-mail-order",
+      "docs_url": null,
+      "mcp": {
+        "name": "opendata__ftc__mail_order",
         "enabled": true
       }
     },
@@ -1142,22 +966,6 @@
       "docs_url": null,
       "mcp": {
         "name": "efine__paid_violation__query",
-        "enabled": true
-      }
-    },
-    {
-      "id": "1001",
-      "slug": "efine-session-login",
-      "name": "교통민원24 로그인",
-      "summary": "법인 공동인증서를 콘솔에 한 번 등록해 두면, 한 번의 로그인으로 과태료와 범칙금 조회가 저장된 세션을 그대로 씁니다.",
-      "category": "교통민원24",
-      "provider": "efine",
-      "action": "efine.session.login",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/efine-session-login",
-      "docs_url": null,
-      "mcp": {
-        "name": "efine__session__login",
         "enabled": true
       }
     },
@@ -1210,26 +1018,10 @@
       }
     },
     {
-      "id": "394",
-      "slug": "edi-nhis-edi-certificates-health-premium-payment-individual-init",
-      "name": "개인별 건강보험 납부확인 입력 서식 조회",
-      "summary": "연동 계정으로 개인별 건강보험 납부확인서 신청 화면의 신청인 칸, 신청년월 칸, 가입자 명단 표의 열을 받습니다.",
-      "category": "국민건강보험공단 EDI",
-      "provider": "nhis_edi",
-      "action": "nhis_edi.certificates.health_premium_payment.individual.init",
-      "kind": "step",
-      "url": "https://xboss.biz/service-products/edi-nhis-edi-certificates-health-premium-payment-individual-init",
-      "docs_url": null,
-      "mcp": {
-        "name": "nhis_edi__certificates__health_premium_payment__individual__init",
-        "enabled": true
-      }
-    },
-    {
       "id": "424",
       "slug": "edi-nhis-edi-health-checkups-targets-detail",
       "name": "건강검진 대상자 상세 조회",
-      "summary": "건강검진 대상자 관련 화면 데이터를 조회 결과로 돌려줍니다.",
+      "summary": "최근 석 달 안에 받은 건강검진 대상자 문서에서 검진년도와 통보일, 사무직과 비사무직 대상자 수, 사업장 주소와 연락처를 돌려줍니다.",
       "category": "국민건강보험공단 EDI",
       "provider": "nhis_edi",
       "action": "nhis_edi.health_checkups.targets.detail",
@@ -1238,7 +1030,7 @@
       "docs_url": null,
       "mcp": {
         "name": "nhis_edi__health_checkups__targets__detail",
-        "enabled": false
+        "enabled": true
       }
     },
     {
@@ -1270,70 +1062,6 @@
       "docs_url": null,
       "mcp": {
         "name": "nhis_edi__hr_payroll__health_premiums__summary",
-        "enabled": true
-      }
-    },
-    {
-      "id": "496",
-      "slug": "edi-nhis-edi-public-resources-list",
-      "name": "공개 자료실 목록 조회",
-      "summary": "쪽 번호로 공개 자료실 게시판의 한 쪽을 읽어 자료마다 번호나 공지 표시, 제목, 등록일과 글 주소를 돌려주고, 첨부가 있는 자료에는 첨부 안내가 붙습니다.",
-      "category": "국민건강보험공단 EDI",
-      "provider": "nhis_edi",
-      "action": "nhis_edi.public.resources.list",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/edi-nhis-edi-public-resources-list",
-      "docs_url": null,
-      "mcp": {
-        "name": "nhis_edi__public__resources__list",
-        "enabled": true
-      }
-    },
-    {
-      "id": "511",
-      "slug": "edi-nhis-edi-session-login",
-      "name": "국민건강보험공단 EDI 세션 로그인",
-      "summary": "등록한 공동인증서로 건강보험 EDI에 로그인해 세션을 만들고, 로그인 성공 여부와 이번에 쓴 연동 계정 ID를 돌려줍니다.",
-      "category": "국민건강보험공단 EDI",
-      "provider": "nhis_edi",
-      "action": "nhis_edi.session.login",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/edi-nhis-edi-session-login",
-      "docs_url": null,
-      "mcp": {
-        "name": "nhis_edi__session__login",
-        "enabled": true
-      }
-    },
-    {
-      "id": "514",
-      "slug": "edi-nhis-edi-session-status",
-      "name": "국민건강보험공단 EDI 세션 상태 조회",
-      "summary": "연동 계정을 넣으면 저장된 건강보험 EDI 세션에 접속 정보가 모두 있는지와 로그인 확인 결과를 읽어 인증 여부와 업무 화면 준비 기록을 돌려줍니다.",
-      "category": "국민건강보험공단 EDI",
-      "provider": "nhis_edi",
-      "action": "nhis_edi.session.status",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/edi-nhis-edi-session-status",
-      "docs_url": null,
-      "mcp": {
-        "name": "nhis_edi__session__status",
-        "enabled": true
-      }
-    },
-    {
-      "id": "493",
-      "slug": "edi-nhis-edi-public-notices-list",
-      "name": "대외 공지사항 목록 조회",
-      "summary": "쪽 번호를 넣으면 대외 공지사항 게시판 그 쪽의 글마다 번호나 공지 표시, 제목, 등록일과 글 주소를 받고, 첨부가 있으면 첨부 안내도 받습니다.",
-      "category": "국민건강보험공단 EDI",
-      "provider": "nhis_edi",
-      "action": "nhis_edi.public.notices.list",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/edi-nhis-edi-public-notices-list",
-      "docs_url": null,
-      "mcp": {
-        "name": "nhis_edi__public__notices__list",
         "enabled": true
       }
     },
@@ -1446,7 +1174,7 @@
       "docs_url": null,
       "mcp": {
         "name": "nhis_edi__hr_payroll__received_documents__detail",
-        "enabled": false
+        "enabled": true
       }
     },
     {
@@ -1462,7 +1190,7 @@
       "docs_url": null,
       "mcp": {
         "name": "nhis_edi__hr_payroll__received_documents__batch_details",
-        "enabled": false
+        "enabled": true
       }
     },
     {
@@ -1478,7 +1206,7 @@
       "docs_url": null,
       "mcp": {
         "name": "nhis_edi__hr_payroll__salary_total_notice__detail",
-        "enabled": false
+        "enabled": true
       }
     },
     {
@@ -1514,54 +1242,6 @@
       }
     },
     {
-      "id": "397",
-      "slug": "edi-nhis-edi-certificates-payment-completion-init",
-      "name": "보험료 납부확인서 입력 서식 조회",
-      "summary": "연동 계정으로 건강보험료 납부확인서 화면의 고지 총액과 납부 총액 칸, 가입자별 보험료 표의 열, 발급번호 칸을 받습니다.",
-      "category": "국민건강보험공단 EDI",
-      "provider": "nhis_edi",
-      "action": "nhis_edi.certificates.payment_completion.init",
-      "kind": "step",
-      "url": "https://xboss.biz/service-products/edi-nhis-edi-certificates-payment-completion-init",
-      "docs_url": null,
-      "mcp": {
-        "name": "nhis_edi__certificates__payment_completion__init",
-        "enabled": true
-      }
-    },
-    {
-      "id": "412",
-      "slug": "edi-nhis-edi-certificates-workplace-member-list-issued-init",
-      "name": "사업장 가입자 명부 발급확인 입력 서식 조회",
-      "summary": "로그인한 연동 계정으로 사업장 가입자 명부 발급확인 화면의 발급일자, 작성차수, 발급번호 칸과 명부 표의 열 이름을 받습니다.",
-      "category": "국민건강보험공단 EDI",
-      "provider": "nhis_edi",
-      "action": "nhis_edi.certificates.workplace_member_list.issued.init",
-      "kind": "step",
-      "url": "https://xboss.biz/service-products/edi-nhis-edi-certificates-workplace-member-list-issued-init",
-      "docs_url": null,
-      "mcp": {
-        "name": "nhis_edi__certificates__workplace_member_list__issued__init",
-        "enabled": true
-      }
-    },
-    {
-      "id": "409",
-      "slug": "edi-nhis-edi-certificates-workplace-member-list-apply-init",
-      "name": "사업장 가입자 명부 신청 입력 서식 조회",
-      "summary": "연동 계정으로 부르면 사업장 가입자 명부 신청 화면의 가입자 범위와 상실자 포함 보기, 대상자 성명과 주민등록번호 칸을 돌려줍니다.",
-      "category": "국민건강보험공단 EDI",
-      "provider": "nhis_edi",
-      "action": "nhis_edi.certificates.workplace_member_list.apply.init",
-      "kind": "step",
-      "url": "https://xboss.biz/service-products/edi-nhis-edi-certificates-workplace-member-list-apply-init",
-      "docs_url": null,
-      "mcp": {
-        "name": "nhis_edi__certificates__workplace_member_list__apply__init",
-        "enabled": true
-      }
-    },
-    {
       "id": "391",
       "slug": "edi-nhis-edi-business-basic-info",
       "name": "사업장 기본정보 조회",
@@ -1578,38 +1258,6 @@
       }
     },
     {
-      "id": "406",
-      "slug": "edi-nhis-edi-certificates-workplace-application-notice-issued-init",
-      "name": "사업장 적용 통보서 발급확인 입력 서식 조회",
-      "summary": "연동 계정으로 발급된 사업장 적용 통보서 화면의 사업장명, 사용자 성명, 적용일자, 가입자수, 발급번호 칸 구성을 받습니다.",
-      "category": "국민건강보험공단 EDI",
-      "provider": "nhis_edi",
-      "action": "nhis_edi.certificates.workplace_application_notice.issued.init",
-      "kind": "step",
-      "url": "https://xboss.biz/service-products/edi-nhis-edi-certificates-workplace-application-notice-issued-init",
-      "docs_url": null,
-      "mcp": {
-        "name": "nhis_edi__certificates__workplace_application_notice__issued__init",
-        "enabled": true
-      }
-    },
-    {
-      "id": "403",
-      "slug": "edi-nhis-edi-certificates-workplace-application-notice-apply-init",
-      "name": "사업장 적용 통보서 신청 입력 서식 조회",
-      "summary": "연동 계정으로 사업장 적용 통보서 신청서 화면의 한글 영문 신청구분, 사업장 칸, 작성일과 일련번호 칸을 받습니다.",
-      "category": "국민건강보험공단 EDI",
-      "provider": "nhis_edi",
-      "action": "nhis_edi.certificates.workplace_application_notice.apply.init",
-      "kind": "step",
-      "url": "https://xboss.biz/service-products/edi-nhis-edi-certificates-workplace-application-notice-apply-init",
-      "docs_url": null,
-      "mcp": {
-        "name": "nhis_edi__certificates__workplace_application_notice__apply__init",
-        "enabled": true
-      }
-    },
-    {
       "id": "472",
       "slug": "edi-nhis-edi-hr-payroll-year-end-settlement-detail",
       "name": "연말정산 산출내역서 조회",
@@ -1622,7 +1270,7 @@
       "docs_url": null,
       "mcp": {
         "name": "nhis_edi__hr_payroll__year_end_settlement__detail",
-        "enabled": false
+        "enabled": true
       }
     },
     {
@@ -1638,54 +1286,6 @@
       "docs_url": null,
       "mcp": {
         "name": "nhis_edi__hr_payroll__processing_results__list",
-        "enabled": true
-      }
-    },
-    {
-      "id": "502",
-      "slug": "edi-nhis-edi-qualification-change-init",
-      "name": "자격내용 변경신고 입력 서식 조회",
-      "summary": "로그인한 연동 계정으로 부르면 자격 내역변경 신고서의 대상자, 신청구분, 내역변경, 보험별 구역 칸과 변경부호 같은 목록 이름을 받습니다.",
-      "category": "국민건강보험공단 EDI",
-      "provider": "nhis_edi",
-      "action": "nhis_edi.qualification.change.init",
-      "kind": "step",
-      "url": "https://xboss.biz/service-products/edi-nhis-edi-qualification-change-init",
-      "docs_url": null,
-      "mcp": {
-        "name": "nhis_edi__qualification__change__init",
-        "enabled": true
-      }
-    },
-    {
-      "id": "508",
-      "slug": "edi-nhis-edi-qualification-loss-init",
-      "name": "자격상실 신고 입력 서식 조회",
-      "summary": "자격 상실 신고서의 보험별 상실일과 상실 코드 칸, 보수총액, 이직확인서 칸과 목록 이름을 로그인한 연동 계정으로 받습니다.",
-      "category": "국민건강보험공단 EDI",
-      "provider": "nhis_edi",
-      "action": "nhis_edi.qualification.loss.init",
-      "kind": "step",
-      "url": "https://xboss.biz/service-products/edi-nhis-edi-qualification-loss-init",
-      "docs_url": null,
-      "mcp": {
-        "name": "nhis_edi__qualification__loss__init",
-        "enabled": true
-      }
-    },
-    {
-      "id": "499",
-      "slug": "edi-nhis-edi-qualification-acquisition-init",
-      "name": "자격취득 신고 입력 서식 조회",
-      "summary": "연동 계정 하나로 자격취득 신고서의 입력 항목 70개와, 대상자와 네 보험, 피부양자 등 구역 아홉의 목록을 받습니다.",
-      "category": "국민건강보험공단 EDI",
-      "provider": "nhis_edi",
-      "action": "nhis_edi.qualification.acquisition.init",
-      "kind": "step",
-      "url": "https://xboss.biz/service-products/edi-nhis-edi-qualification-acquisition-init",
-      "docs_url": null,
-      "mcp": {
-        "name": "nhis_edi__qualification__acquisition__init",
         "enabled": true
       }
     },
@@ -1734,7 +1334,7 @@
       "docs_url": null,
       "mcp": {
         "name": "nhis_edi__hr_payroll__edi_electronic_notices__select",
-        "enabled": false
+        "enabled": true
       }
     },
     {
@@ -1750,70 +1350,6 @@
       "docs_url": null,
       "mcp": {
         "name": "nhis_edi__hr_payroll__edi_electronic_notices__detail",
-        "enabled": false
-      }
-    },
-    {
-      "id": "427",
-      "slug": "edi-nhis-edi-hr-payroll-edi-electronic-notices-contract",
-      "name": "전자고지 조회 규칙",
-      "summary": "연동 계정으로 부르면 전자고지를 검색해 한 건을 고르는 순서와 고를 때 쓰는 다섯 항목을 받습니다.",
-      "category": "국민건강보험공단 EDI",
-      "provider": "nhis_edi",
-      "action": "nhis_edi.hr_payroll.edi_electronic_notices.contract",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/edi-nhis-edi-hr-payroll-edi-electronic-notices-contract",
-      "docs_url": null,
-      "mcp": {
-        "name": "nhis_edi__hr_payroll__edi_electronic_notices__contract",
-        "enabled": true
-      }
-    },
-    {
-      "id": "490",
-      "slug": "edi-nhis-edi-public-forms-list",
-      "name": "전체서식 화면 정보 조회",
-      "summary": "연동 계정으로 부르면 전체서식 화면의 화면 번호와 그 메뉴로 가는 연결 번호를 받습니다.",
-      "category": "국민건강보험공단 EDI",
-      "provider": "nhis_edi",
-      "action": "nhis_edi.public.forms.list",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/edi-nhis-edi-public-forms-list",
-      "docs_url": null,
-      "mcp": {
-        "name": "nhis_edi__public__forms__list",
-        "enabled": true
-      }
-    },
-    {
-      "id": "421",
-      "slug": "edi-nhis-edi-file-report-init",
-      "name": "파일신고 입력 서식 조회",
-      "summary": "로그인한 연동 계정으로 파일신고에 쓸 수 있는 서식 다섯 가지와 기본 서식, 올릴 수 있는 파일 형식, 신고 자료 표의 열을 받습니다.",
-      "category": "국민건강보험공단 EDI",
-      "provider": "nhis_edi",
-      "action": "nhis_edi.file_report.init",
-      "kind": "step",
-      "url": "https://xboss.biz/service-products/edi-nhis-edi-file-report-init",
-      "docs_url": null,
-      "mcp": {
-        "name": "nhis_edi__file_report__init",
-        "enabled": true
-      }
-    },
-    {
-      "id": "505",
-      "slug": "edi-nhis-edi-qualification-dependent-init",
-      "name": "피부양자 자격신고 입력 서식 조회",
-      "summary": "피부양자 취득 상실 신고서의 가입자, 피부양자, 장애인과 국가유공자, 외국인 구역 칸을 연동 계정 하나로 받습니다.",
-      "category": "국민건강보험공단 EDI",
-      "provider": "nhis_edi",
-      "action": "nhis_edi.qualification.dependent.init",
-      "kind": "step",
-      "url": "https://xboss.biz/service-products/edi-nhis-edi-qualification-dependent-init",
-      "docs_url": null,
-      "mcp": {
-        "name": "nhis_edi__qualification__dependent__init",
         "enabled": true
       }
     },
@@ -1853,7 +1389,7 @@
       "id": "898",
       "slug": "edi-nps-edi-b1-certificates-membership-issue",
       "name": "가입증명서 발급",
-      "summary": "선택한 가입자의 국민연금 가입증명서를 한글 또는 영문으로 발급합니다.",
+      "summary": "선택한 가입자의 국민연금 가입증명서를 한글로 발급합니다.",
       "category": "국민연금공단 EDI",
       "provider": "nps_edi",
       "action": "nps_edi.b1.certificates.membership.issue",
@@ -1878,22 +1414,6 @@
       "docs_url": null,
       "mcp": {
         "name": "nps_edi__b1__national_pension_premiums__subscribers",
-        "enabled": true
-      }
-    },
-    {
-      "id": "544",
-      "slug": "edi-nps-edi-b1-national-pension-premiums-guide",
-      "name": "국민연금 결정내역 안내 문구",
-      "summary": "고지나 기간을 고르지 않고 부르면 국민연금보험료 2차 결정내역 화면에 붙은 기관 안내 문구를 화면 이름과 본문으로 돌려줍니다.",
-      "category": "국민연금공단 EDI",
-      "provider": "nps_edi",
-      "action": "nps_edi.b1.national_pension_premiums.guide",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/edi-nps-edi-b1-national-pension-premiums-guide",
-      "docs_url": null,
-      "mcp": {
-        "name": "nps_edi__b1__national_pension_premiums__guide",
         "enabled": true
       }
     },
@@ -1994,38 +1514,6 @@
       }
     },
     {
-      "id": "520",
-      "slug": "edi-nps-edi-auth-session-status",
-      "name": "국민연금공단 EDI 세션 상태 조회",
-      "summary": "연동 계정 하나로 부르면 저장된 국민연금 EDI 세션이 있는지, 인증이 갖춰졌는지, 어느 사업장관리번호로 로그인했는지를 돌려줍니다.",
-      "category": "국민연금공단 EDI",
-      "provider": "nps_edi",
-      "action": "nps_edi.auth.session.status",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/edi-nps-edi-auth-session-status",
-      "docs_url": null,
-      "mcp": {
-        "name": "nps_edi__auth__session__status",
-        "enabled": true
-      }
-    },
-    {
-      "id": "517",
-      "slug": "edi-nps-edi-auth-npki-session-login",
-      "name": "국민연금공단 EDI NPKI 세션 로그인",
-      "summary": "사업장관리번호 11자리와 등록한 공동인증서로 국민연금 EDI에 로그인해 세션을 만들고, 로그인 성공 여부와 그 사업장관리번호를 돌려줍니다.",
-      "category": "국민연금공단 EDI",
-      "provider": "nps_edi",
-      "action": "nps_edi.auth.npki_session.login",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/edi-nps-edi-auth-npki-session-login",
-      "docs_url": null,
-      "mcp": {
-        "name": "nps_edi__auth__npki_session__login",
-        "enabled": true
-      }
-    },
-    {
       "id": "541",
       "slug": "edi-nps-edi-b1-lookups-workplace-subscribers-status",
       "name": "사업장 가입자 현황 조회",
@@ -2077,7 +1565,7 @@
       "id": "538",
       "slug": "edi-nps-edi-b1-lookups-workplace-premium-support-details",
       "name": "사업장 보험료 지원 내역 조회",
-      "summary": "로그인한 사업장의 국민연금 보험료 지원 내역을 가입자별 목록과 월별 결정 목록으로 나눠 지원금액과 환수결정금액 합계와 함께 돌려줍니다.",
+      "summary": "로그인한 사업장의 국민연금 보험료 지원 내역을 가입자별 목록과 월별 결정 목록으로 나눠 돌려주고, 금액 합계도 목록마다 따로 냅니다.",
       "category": "국민연금공단 EDI",
       "provider": "nps_edi",
       "action": "nps_edi.b1.lookups.workplace_premium_support.details",
@@ -2218,38 +1706,6 @@
       }
     },
     {
-      "id": "617",
-      "slug": "comwel-auth-session-status",
-      "name": "고용산재 세션 상태 조회",
-      "summary": "보험료 조회를 시작하기 전에 저장된 근로복지공단 연결 정보를 먼저 확인합니다.",
-      "category": "근로복지공단",
-      "provider": "comwel",
-      "action": "comwel.auth.session.status",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/comwel-auth-session-status",
-      "docs_url": null,
-      "mcp": {
-        "name": "comwel__auth__session__status",
-        "enabled": true
-      }
-    },
-    {
-      "id": "615",
-      "slug": "comwel-auth-npki-session-login",
-      "name": "고용산재 NPKI 세션 로그인",
-      "summary": "콘솔에 등록한 사업자 공동인증서로 로그인하면 고용산재보험 토탈서비스 연결이 만들어지고 사업장관리번호도 확인됩니다.",
-      "category": "근로복지공단",
-      "provider": "comwel",
-      "action": "comwel.auth.npki_session.login",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/comwel-auth-npki-session-login",
-      "docs_url": null,
-      "mcp": {
-        "name": "comwel__auth__npki_session__login",
-        "enabled": true
-      }
-    },
-    {
       "id": "797",
       "slug": "comwel-info-premium-billing-notice-search",
       "name": "보험료 부과고지 검색",
@@ -2298,42 +1754,10 @@
       }
     },
     {
-      "id": "583",
-      "slug": "payroll-pack-premium-summary-v1-generate",
-      "name": "건강보험 국민연금 보험료 요약",
-      "summary": "지정한 고지 연월의 건강보험과 국민연금 고지를 두 기관 사이트에 따로 들어가지 않고 한 번의 요청으로 받습니다.",
-      "category": "급여 묶음",
-      "provider": "payroll_pack",
-      "action": "payroll_pack.premium_summary_v1.generate",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/payroll-pack-premium-summary-v1-generate",
-      "docs_url": null,
-      "mcp": {
-        "name": "payroll_pack__premium_summary_v1__generate",
-        "enabled": true
-      }
-    },
-    {
-      "id": "591",
-      "slug": "payroll-pack-employment-insurance-summary-v1-generate",
-      "name": "고용보험 보험료 요약",
-      "summary": "근로복지공단 부과고지 화면을 열어 고용보험 항목까지 찾아 들어가던 과정을 한 번의 요청으로 끝냅니다.",
-      "category": "급여 묶음",
-      "provider": "payroll_pack",
-      "action": "payroll_pack.employment_insurance_summary_v1.generate",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/payroll-pack-employment-insurance-summary-v1-generate",
-      "docs_url": null,
-      "mcp": {
-        "name": "payroll_pack__employment_insurance_summary_v1__generate",
-        "enabled": true
-      }
-    },
-    {
       "id": "610",
       "slug": "register-xlsx",
-      "name": "급여대장 엑셀 생성",
-      "summary": "한 달 급여를 한 장에 모아 보는 대장을 표준 서식으로 만듭니다.",
+      "name": "급여대장/명세서 통합팩",
+      "summary": "직원별 급여 자료를 한 번 정리하면 급여대장과 급여명세서를 표준 서식 엑셀로 함께 만들고, 급여대장의 합계 행은 자동으로 계산해 넣어 드립니다.",
       "category": "급여 문서",
       "provider": "payroll_artifact",
       "action": "register_xlsx",
@@ -2346,18 +1770,18 @@
       }
     },
     {
-      "id": "612",
-      "slug": "payslip-xlsx",
-      "name": "급여명세서 엑셀 생성",
-      "summary": "직원 수만큼 명세서를 따로 만들던 작업을 한 번의 요청으로 끝냅니다.",
-      "category": "급여 문서",
-      "provider": "payroll_artifact",
-      "action": "payslip_xlsx",
+      "id": "1081",
+      "slug": "company-info-pack-profile-v1-generate",
+      "name": "기업 종합 프로필",
+      "summary": "거래처나 투자 대상 회사의 사업자 상태와 공공 제재, 보험 가입 사업장, 재무 요약, 사업장 건물까지 한 번의 요청으로 한 장에 받습니다.",
+      "category": "기업정보 브리프",
+      "provider": "company_info_pack",
+      "action": "company_info_pack.profile_v1.generate",
       "kind": "product",
-      "url": "https://xboss.biz/service-products/payslip-xlsx",
+      "url": "https://xboss.biz/service-products/company-info-pack-profile-v1-generate",
       "docs_url": null,
       "mcp": {
-        "name": "payroll_artifact__payslip_xlsx",
+        "name": "company_info_pack__profile_v1__generate",
         "enabled": true
       }
     },
@@ -2378,6 +1802,38 @@
       }
     },
     {
+      "id": "1393",
+      "slug": "naver-searchad-ads-create",
+      "name": "네이버 검색광고 광고 만들기",
+      "summary": "광고그룹 식별자와 광고 유형, 광고 내용을 넣으면 광고가 만들어지고 심사가 시작됩니다.",
+      "category": "네이버 검색광고",
+      "provider": "naver_searchad",
+      "action": "naver_searchad.ads.create",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/naver-searchad-ads-create",
+      "docs_url": null,
+      "mcp": {
+        "name": "naver_searchad__ads__create",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1394",
+      "slug": "naver-searchad-ads-delete",
+      "name": "네이버 검색광고 광고 삭제",
+      "summary": "광고 식별자를 넣고 확인하면 광고가 지워지고, 다시 읽어 없어졌는지 확인합니다.",
+      "category": "네이버 검색광고",
+      "provider": "naver_searchad",
+      "action": "naver_searchad.ads.delete",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/naver-searchad-ads-delete",
+      "docs_url": null,
+      "mcp": {
+        "name": "naver_searchad__ads__delete",
+        "enabled": true
+      }
+    },
+    {
       "id": "963",
       "slug": "naver-searchad-ads",
       "name": "네이버 검색광고 광고 소재 목록 조회",
@@ -2394,6 +1850,38 @@
       }
     },
     {
+      "id": "1395",
+      "slug": "naver-searchad-ads-update",
+      "name": "네이버 검색광고 광고 수정",
+      "summary": "광고 식별자를 넣고 일시정지 여부를 보내면 바로 반영되고 바뀐 상태가 결과로 돌아옵니다.",
+      "category": "네이버 검색광고",
+      "provider": "naver_searchad",
+      "action": "naver_searchad.ads.update",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/naver-searchad-ads-update",
+      "docs_url": null,
+      "mcp": {
+        "name": "naver_searchad__ads__update",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1390",
+      "slug": "naver-searchad-adgroups-create",
+      "name": "네이버 검색광고 광고그룹 만들기",
+      "summary": "캠페인 식별자와 광고그룹 이름, 유형, 비즈채널을 넣으면 광고그룹이 일시정지 상태로 만들어집니다.",
+      "category": "네이버 검색광고",
+      "provider": "naver_searchad",
+      "action": "naver_searchad.adgroups.create",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/naver-searchad-adgroups-create",
+      "docs_url": null,
+      "mcp": {
+        "name": "naver_searchad__adgroups__create",
+        "enabled": true
+      }
+    },
+    {
       "id": "961",
       "slug": "naver-searchad-adgroups",
       "name": "네이버 검색광고 광고그룹 목록 조회",
@@ -2406,6 +1894,54 @@
       "docs_url": null,
       "mcp": {
         "name": "naver_searchad__adgroups__read",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1391",
+      "slug": "naver-searchad-adgroups-delete",
+      "name": "네이버 검색광고 광고그룹 삭제",
+      "summary": "광고그룹 식별자를 넣고 확인하면 광고그룹이 지워지고, 다시 읽어 없어졌는지 확인합니다.",
+      "category": "네이버 검색광고",
+      "provider": "naver_searchad",
+      "action": "naver_searchad.adgroups.delete",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/naver-searchad-adgroups-delete",
+      "docs_url": null,
+      "mcp": {
+        "name": "naver_searchad__adgroups__delete",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1392",
+      "slug": "naver-searchad-adgroups-update",
+      "name": "네이버 검색광고 광고그룹 수정",
+      "summary": "광고그룹 식별자와 바꿀 값을 넣으면 일시정지, 다시 시작, 네트워크 입찰 가중치, 지역, 시간, 매체, 성별 타기팅이 반영됩니다.",
+      "category": "네이버 검색광고",
+      "provider": "naver_searchad",
+      "action": "naver_searchad.adgroups.update",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/naver-searchad-adgroups-update",
+      "docs_url": null,
+      "mcp": {
+        "name": "naver_searchad__adgroups__update",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1402",
+      "slug": "naver-searchad-measurement-audit",
+      "name": "네이버 검색광고 노출 문제 점검",
+      "summary": "넣을 값 없이 계정의 캠페인, 광고그룹, 광고, 키워드를 모두 읽고 광고가 나가지 않게 막는 네 가지 문제를 찾아 고칠 방법과 함께 알려 줍니다.",
+      "category": "네이버 검색광고",
+      "provider": "naver_searchad",
+      "action": "naver_searchad.measurement.audit",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/naver-searchad-measurement-audit",
+      "docs_url": null,
+      "mcp": {
+        "name": "naver_searchad__measurement__audit",
         "enabled": true
       }
     },
@@ -2442,6 +1978,22 @@
       }
     },
     {
+      "id": "1396",
+      "slug": "naver-searchad-campaigns-create",
+      "name": "네이버 검색광고 캠페인 만들기",
+      "summary": "캠페인 이름과 유형을 넣으면 캠페인이 만들어지고, 받은 캠페인 식별자로 광고그룹 만들기를 이어갑니다.",
+      "category": "네이버 검색광고",
+      "provider": "naver_searchad",
+      "action": "naver_searchad.campaigns.create",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/naver-searchad-campaigns-create",
+      "docs_url": null,
+      "mcp": {
+        "name": "naver_searchad__campaigns__create",
+        "enabled": true
+      }
+    },
+    {
       "id": "959",
       "slug": "naver-searchad-campaigns",
       "name": "네이버 검색광고 캠페인 목록 조회",
@@ -2454,6 +2006,54 @@
       "docs_url": null,
       "mcp": {
         "name": "naver_searchad__campaigns__read",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1397",
+      "slug": "naver-searchad-campaigns-delete",
+      "name": "네이버 검색광고 캠페인 삭제",
+      "summary": "캠페인 식별자를 넣고 확인하면 캠페인과 그 아래 전부가 지워지고, 다시 읽어 정말 없어졌는지 확인합니다.",
+      "category": "네이버 검색광고",
+      "provider": "naver_searchad",
+      "action": "naver_searchad.campaigns.delete",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/naver-searchad-campaigns-delete",
+      "docs_url": null,
+      "mcp": {
+        "name": "naver_searchad__campaigns__delete",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1398",
+      "slug": "naver-searchad-campaigns-update",
+      "name": "네이버 검색광고 캠페인 수정",
+      "summary": "캠페인 식별자와 바꿀 값을 넣으면 일시정지, 다시 시작, 광고 기간이 바로 반영되고 바뀐 캠페인 설정이 결과로 돌아옵니다.",
+      "category": "네이버 검색광고",
+      "provider": "naver_searchad",
+      "action": "naver_searchad.campaigns.update",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/naver-searchad-campaigns-update",
+      "docs_url": null,
+      "mcp": {
+        "name": "naver_searchad__campaigns__update",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1399",
+      "slug": "naver-searchad-keywords-create",
+      "name": "네이버 검색광고 키워드 만들기",
+      "summary": "광고그룹 식별자와 키워드 목록을 넣으면 키워드가 한꺼번에 만들어지고 심사가 시작됩니다.",
+      "category": "네이버 검색광고",
+      "provider": "naver_searchad",
+      "action": "naver_searchad.keywords.create",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/naver-searchad-keywords-create",
+      "docs_url": null,
+      "mcp": {
+        "name": "naver_searchad__keywords__create",
         "enabled": true
       }
     },
@@ -2474,10 +2074,138 @@
       }
     },
     {
+      "id": "1400",
+      "slug": "naver-searchad-keywords-delete",
+      "name": "네이버 검색광고 키워드 삭제",
+      "summary": "키워드 식별자를 넣고 확인하면 키워드가 지워지고, 다시 읽어 없어졌는지 확인합니다.",
+      "category": "네이버 검색광고",
+      "provider": "naver_searchad",
+      "action": "naver_searchad.keywords.delete",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/naver-searchad-keywords-delete",
+      "docs_url": null,
+      "mcp": {
+        "name": "naver_searchad__keywords__delete",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1401",
+      "slug": "naver-searchad-keywords-update",
+      "name": "네이버 검색광고 키워드 수정",
+      "summary": "키워드 식별자와 일시정지 여부나 입찰가를 넣으면 바로 반영되고 바뀐 상태와 심사 상태가 결과로 돌아옵니다.",
+      "category": "네이버 검색광고",
+      "provider": "naver_searchad",
+      "action": "naver_searchad.keywords.update",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/naver-searchad-keywords-update",
+      "docs_url": null,
+      "mcp": {
+        "name": "naver_searchad__keywords__update",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1055",
+      "slug": "naver-blog-post-draft-create",
+      "name": "네이버 블로그 글 초안 만들기",
+      "summary": "준비한 제목과 본문, 태그, 카테고리로 내 네이버 블로그에 새 글 초안을 만들어 임시저장합니다.",
+      "category": "네이버 마케팅",
+      "provider": "naver",
+      "action": "naver.blog.post_via_retired_api.create",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/naver-blog-post-draft-create",
+      "docs_url": null,
+      "mcp": {
+        "name": "naver__blog__post_via_retired_api__create",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1098",
+      "slug": "naver-blog-post-draft-update",
+      "name": "네이버 블로그 글 초안 수정",
+      "summary": "이미 임시저장한 네이버 블로그 초안 하나를 새 제목과 본문, 태그, 카테고리로 고쳐 다시 임시저장합니다.",
+      "category": "네이버 마케팅",
+      "provider": "naver",
+      "action": "naver.blog.owner_post.update",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/naver-blog-post-draft-update",
+      "docs_url": null,
+      "mcp": {
+        "name": "naver__blog__owner_post__update",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1056",
+      "slug": "naver-blog-post-draft-save",
+      "name": "네이버 블로그 글쓰기 임시저장",
+      "summary": "준비한 제목과 본문, 태그, 카테고리를 내 네이버 블로그에 임시저장합니다.",
+      "category": "네이버 마케팅",
+      "provider": "naver",
+      "action": "naver.blog.post_via_retired_api.publish",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/naver-blog-post-draft-save",
+      "docs_url": null,
+      "mcp": {
+        "name": "naver__blog__post_via_retired_api__publish",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1338",
+      "slug": "naver-blog-owner-post",
+      "name": "네이버 블로그 내 글 조회",
+      "summary": "연결한 내 네이버 블로그의 글을 글 번호로 조회하면 제목과 작성일, 본문까지 받아 옵니다.",
+      "category": "네이버 마케팅",
+      "provider": "naver",
+      "action": "naver.blog.owner_post.read",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/naver-blog-owner-post",
+      "docs_url": null,
+      "mcp": {
+        "name": "naver__blog__owner_post__read",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1336",
+      "slug": "naver-blog-owner-stats",
+      "name": "네이버 블로그 방문 통계 조회",
+      "summary": "연결한 내 네이버 블로그의 방문 통계를 넣은 지표와 기준일로 받아 옵니다.",
+      "category": "네이버 마케팅",
+      "provider": "naver",
+      "action": "naver.blog.owner_stats.report",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/naver-blog-owner-stats",
+      "docs_url": null,
+      "mcp": {
+        "name": "naver__blog__owner_stats__report",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1095",
+      "slug": "naver-blog-search",
+      "name": "네이버 블로그 검색 조회",
+      "summary": "검색어에 맞는 네이버 블로그 글을 목록으로 받아 옵니다.",
+      "category": "네이버 블로그 검색",
+      "provider": "naver_openapi",
+      "action": "naver_openapi.blog.search",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/naver-blog-search",
+      "docs_url": null,
+      "mcp": {
+        "name": "naver_openapi__blog__search",
+        "enabled": true
+      }
+    },
+    {
       "id": "809",
       "slug": "google-marketing-report",
       "name": "마케팅 통합 보고",
-      "summary": "측정 진단과 웹사이트 성과, 검색 실적을 한 번의 요청으로 조회해 보고서 하나로 묶어 줍니다.",
+      "summary": "애널리틱스 측정 진단과 웹사이트 성과, Search Console 검색 실적을 한 번의 요청으로 조회해 보고서 하나로 묶어 줍니다.",
       "category": "마케팅 통합 보고",
       "provider": "google_marketing_pack",
       "action": "google_marketing_pack.report_v1.generate",
@@ -2486,6 +2214,70 @@
       "docs_url": null,
       "mcp": {
         "name": "google_marketing_pack__report_v1__generate",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1025",
+      "slug": "vat-deduction-review",
+      "name": "부가세 공제판정·세무사 검토",
+      "summary": "모은 자료로 매입세액 공제 여부를 자동으로 판정해 세무사 검토용으로 정리합니다.",
+      "category": "부가세 신고",
+      "provider": "vat",
+      "action": "vat.analysis.run",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/vat-deduction-review",
+      "docs_url": null,
+      "mcp": {
+        "name": "vat__analysis__run",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1022",
+      "slug": "vat-source-preparation",
+      "name": "부가세 원천·기관원본 준비",
+      "summary": "흩어진 매출과 매입 자료를 한 번에 끌어와 부가세 신고 준비 상태로 모읍니다.",
+      "category": "부가세 신고",
+      "provider": "vat",
+      "action": "vat.case.create",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/vat-source-preparation",
+      "docs_url": null,
+      "mcp": {
+        "name": "vat__case__create",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1028",
+      "slug": "vat-card-change-apply",
+      "name": "카드 매입 공제변경 반영",
+      "summary": "공제와 불공제로 바꿀 사업용 카드 매입 건을 한 번에 기관 목록에 반영합니다.",
+      "category": "부가세 신고",
+      "provider": "vat",
+      "action": "vat.card.review.import_and_apply",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/vat-card-change-apply",
+      "docs_url": null,
+      "mcp": {
+        "name": "vat__card__review__import_and_apply",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1087",
+      "slug": "blog-autowrite-generate",
+      "name": "블로그 본문 자동작성 (선택)",
+      "summary": "주제와 설정을 넣으면 엑스보스 스타일로 블로그 본문 초안을 만들어 돌려줍니다.",
+      "category": "블로그 자동작성",
+      "provider": "blog_autowrite",
+      "action": "blog_autowrite.content.generate",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/blog-autowrite-generate",
+      "docs_url": null,
+      "mcp": {
+        "name": "blog_autowrite__content__generate",
         "enabled": true
       }
     },
@@ -2502,22 +2294,6 @@
       "docs_url": null,
       "mcp": {
         "name": "si4n__payment_confirmation__issue",
-        "enabled": true
-      }
-    },
-    {
-      "id": "981",
-      "slug": "si4n-session-login",
-      "name": "사회보험통합징수포털 로그인",
-      "summary": "사업장 공동인증서를 콘솔에 한 번 등록해 두면, 한 번의 로그인으로 보험료 조회와 납부확인서 발급이 저장된 세션을 씁니다.",
-      "category": "사회보험통합징수포털",
-      "provider": "si4n",
-      "action": "si4n.session.login",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/si4n-session-login",
-      "docs_url": null,
-      "mcp": {
-        "name": "si4n__session__login",
         "enabled": true
       }
     },
@@ -2586,22 +2362,6 @@
       }
     },
     {
-      "id": "662",
-      "slug": "shinhan-easy-auth-id-password-session-login",
-      "name": "신한은행 간편조회 계좌 연결 로그인",
-      "summary": "신한은행 계좌를 한 번 연결해 두면 이후 계좌 목록과 거래내역 조회를 담당자 손을 거치지 않고 실행합니다.",
-      "category": "신한은행 간편조회",
-      "provider": "shinhan_easy",
-      "action": "shinhan_easy.auth.id_password_session.login",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/shinhan-easy-auth-id-password-session-login",
-      "docs_url": null,
-      "mcp": {
-        "name": "shinhan_easy__auth__id_password_session__login",
-        "enabled": true
-      }
-    },
-    {
       "id": "725",
       "slug": "woori-bank-accounts-transaction-history-search",
       "name": "우리은행 빠른조회 거래내역 조회",
@@ -2618,34 +2378,50 @@
       }
     },
     {
-      "id": "722",
-      "slug": "woori-bank-session-login",
-      "name": "우리은행 빠른조회 계좌 연결 로그인",
-      "summary": "우리은행 계좌 자격을 콘솔에 한 번 등록하면 조회용 연결이 열립니다.",
-      "category": "우리은행 빠른조회",
-      "provider": "woori_bank",
-      "action": "woori_bank.session.login",
+      "id": "1057",
+      "slug": "wetax-tax-local-due-query",
+      "name": "지방세 고지 및 미납 내역 조회",
+      "summary": "사업장 인증서 연동으로 조회 기간과 세목을 지정해 지방세 고지 및 미납 내역을 페이지 단위로 확인합니다.",
+      "category": "위택스",
+      "provider": "wetax",
+      "action": "wetax.tax.local.due.query",
       "kind": "product",
-      "url": "https://xboss.biz/service-products/woori-bank-session-login",
+      "url": "https://xboss.biz/service-products/wetax-tax-local-due-query",
       "docs_url": null,
       "mcp": {
-        "name": "woori_bank__session__login",
+        "name": "wetax__tax__local__due__query",
         "enabled": true
       }
     },
     {
-      "id": "847",
-      "slug": "wetax-session-login",
-      "name": "위택스 공동인증서 로그인",
-      "summary": "사업장 공동인증서를 콘솔에 한 번 등록하면, 로그인 호출 하나로 특별징수 신고의 모든 단계와 납부 상태 조회가 같은 세션을 씁니다.",
+      "id": "1058",
+      "slug": "wetax-tax-local-payment-history-query",
+      "name": "지방세 납부내역 조회",
+      "summary": "납부일 기간과 세목을 지정해 지방세 납부 이력, 전자납부번호와 기관 식별자를 페이지별로 확인합니다.",
       "category": "위택스",
       "provider": "wetax",
-      "action": "wetax.session.login",
+      "action": "wetax.tax.local.payment.history.query",
       "kind": "product",
-      "url": "https://xboss.biz/service-products/wetax-session-login",
+      "url": "https://xboss.biz/service-products/wetax-tax-local-payment-history-query",
       "docs_url": null,
       "mcp": {
-        "name": "wetax__session__login",
+        "name": "wetax__tax__local__payment__history__query",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1059",
+      "slug": "wetax-tax-local-refund-query",
+      "name": "지방세 환급 조회",
+      "summary": "환급 가능 건수를 확인하고, 환급 기간과 유형 및 처리 상태를 지정해 신청 및 지급 이력을 확인합니다.",
+      "category": "위택스",
+      "provider": "wetax",
+      "action": "wetax.tax.local.refund.query",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/wetax-tax-local-refund-query",
+      "docs_url": null,
+      "mcp": {
+        "name": "wetax__tax__local__refund__query",
         "enabled": true
       }
     },
@@ -2669,7 +2445,7 @@
       "id": "865",
       "slug": "wetax-tax-local-income-special-withholding-review",
       "name": "지방소득세 특별징수 신고 검토",
-      "summary": "제출 전에 위택스에 지금 저장된 신고 내용을 다시 읽어 요약으로 받습니다.",
+      "summary": "제출 전에 기관에 지금 저장된 신고 내용을 다시 읽어 요약으로 받습니다.",
       "category": "위택스",
       "provider": "wetax",
       "action": "wetax.tax.local_income.special_withholding.review",
@@ -2733,7 +2509,7 @@
       "id": "850",
       "slug": "wetax-tax-local-income-special-withholding-init",
       "name": "지방소득세 특별징수 신고 시작",
-      "summary": "신고를 쓰기 전에 사업장 정보와 저장 단계마다 넣을 값을 한 번에 확인합니다.",
+      "summary": "원천징수분 지방소득세 신고를 쓰기 전에 사업장 정보와 저장 단계마다 넣을 값을 한 번에 확인합니다.",
       "category": "위택스",
       "provider": "wetax",
       "action": "wetax.tax.local_income.special_withholding.init",
@@ -2810,22 +2586,6 @@
       }
     },
     {
-      "id": "1003",
-      "slug": "gov24-session-login",
-      "name": "정부24 로그인",
-      "summary": "법인 공동인증서를 콘솔에 한 번 등록해 두면, 한 번의 로그인으로 이후 증명서 발급 호출이 저장된 세션을 그대로 씁니다.",
-      "category": "정부24",
-      "provider": "gov24",
-      "action": "gov24.session.login",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/gov24-session-login",
-      "docs_url": null,
-      "mcp": {
-        "name": "gov24__session__login",
-        "enabled": true
-      }
-    },
-    {
       "id": "1011",
       "slug": "gov24-business-registration-certificate-issue",
       "name": "정부24 사업자등록증명(법인) 발급",
@@ -2861,7 +2621,7 @@
       "id": "747",
       "slug": "subsidy-pack-diagnosis-v1-generate",
       "name": "기업지원금 진단",
-      "summary": "우리 사업장이 어느 고용 지원금 요건에 맞는지 사업마다 화면을 열어 보던 일을 한 번에 끝냅니다.",
+      "summary": "고용촉진, 대체인력 지원금 등 고용 지원금 17개 사업의 사전진단을 한 번에 끝내고 신청 가능, 결격 사유, 판정 전으로 나눠 드립니다.",
       "category": "지원금 진단",
       "provider": "subsidy_pack",
       "action": "subsidy_pack.diagnosis_v1.generate",
@@ -2906,6 +2666,54 @@
       }
     },
     {
+      "id": "1051",
+      "slug": "tistory-post-draft-create",
+      "name": "티스토리 글 초안 만들기",
+      "summary": "준비한 제목과 본문, 태그, 카테고리로 내 티스토리에 새 글 초안을 만들어 임시저장합니다.",
+      "category": "티스토리",
+      "provider": "tistory",
+      "action": "tistory.retired_openapi.create",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/tistory-post-draft-create",
+      "docs_url": null,
+      "mcp": {
+        "name": "tistory__retired_openapi__create",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1052",
+      "slug": "tistory-post-draft-update",
+      "name": "티스토리 글 초안 수정",
+      "summary": "이미 임시저장한 티스토리 초안 하나를 새 제목과 본문, 태그, 카테고리로 고쳐 다시 임시저장합니다.",
+      "category": "티스토리",
+      "provider": "tistory",
+      "action": "tistory.retired_openapi.update",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/tistory-post-draft-update",
+      "docs_url": null,
+      "mcp": {
+        "name": "tistory__retired_openapi__update",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1053",
+      "slug": "tistory-post-draft-save",
+      "name": "티스토리 글쓰기 임시저장",
+      "summary": "고객이 만든 글을 태그, 카테고리와 함께 티스토리에 임시저장합니다.",
+      "category": "티스토리",
+      "provider": "tistory",
+      "action": "tistory.retired_openapi.publish",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/tistory-post-draft-save",
+      "docs_url": null,
+      "mcp": {
+        "name": "tistory__retired_openapi__publish",
+        "enabled": true
+      }
+    },
+    {
       "id": "975",
       "slug": "hana-fast-account-accounts-transaction-history-search",
       "name": "하나은행 빠른조회 거래내역 조회",
@@ -2918,22 +2726,6 @@
       "docs_url": null,
       "mcp": {
         "name": "hana_fast_account__accounts__transaction_history__search",
-        "enabled": true
-      }
-    },
-    {
-      "id": "972",
-      "slug": "hana-fast-account-session-login",
-      "name": "하나은행 빠른조회 계좌 연결 로그인",
-      "summary": "하나은행 계좌 자격을 콘솔에 한 번 등록하면 조회용 연결이 열립니다.",
-      "category": "하나은행 빠른조회",
-      "provider": "hana_fast_account",
-      "action": "hana_fast_account.session.login",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/hana-fast-account-session-login",
-      "docs_url": null,
-      "mcp": {
-        "name": "hana_fast_account__session__login",
         "enabled": true
       }
     },
@@ -3066,6 +2858,70 @@
       }
     },
     {
+      "id": "1031",
+      "slug": "vat-return-filing",
+      "name": "부가세 신고서 작성·신고",
+      "summary": "준비하고 검토한 자료로 부가세 신고서를 작성해 값을 검증하고 제출합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.vat.draft.load",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/vat-return-filing",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__vat__draft__load",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1407",
+      "slug": "세금-신고내역-조회",
+      "name": "부가세와 법인세 신고내역 조회",
+      "summary": "경정청구를 준비할 때 지난 세금 신고를 신고일자 기간으로 최대 6년까지 한 번에 모아 봅니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.return_history.search",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%84%B8%EA%B8%88-%EC%8B%A0%EA%B3%A0%EB%82%B4%EC%97%AD-%EC%A1%B0%ED%9A%8C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__return_history__search",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1409",
+      "slug": "세금-신고서-상세-조회",
+      "name": "부가세와 법인세 신고서 상세 조회",
+      "summary": "이미 낸 부가가치세 신고서와 법인세 과세표준 및 세액신고서를 표준재무상태표, 세액조정계산서 같은 부속서류까지 서식별 항목과 값으로 받습니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.return_document.detail",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%84%B8%EA%B8%88-%EC%8B%A0%EA%B3%A0%EC%84%9C-%EC%83%81%EC%84%B8-%EC%A1%B0%ED%9A%8C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__return_document__detail",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1411",
+      "slug": "세금-신고서-원문-조회",
+      "name": "부가세와 법인세 신고서 원문 PDF 조회",
+      "summary": "지난 부가가치세 신고서와 법인세 과세표준 및 세액신고서를 원문 PDF 로 받습니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.return_document.pdf",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%84%B8%EA%B8%88-%EC%8B%A0%EA%B3%A0%EC%84%9C-%EC%9B%90%EB%AC%B8-%EC%A1%B0%ED%9A%8C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__return_document__pdf",
+        "enabled": true
+      }
+    },
+    {
       "id": "78",
       "slug": "사업자-등록사항-및-담당자-안내",
       "name": "사업자 등록사항 및 담당자 안내",
@@ -3142,7 +2998,7 @@
       "docs_url": null,
       "mcp": {
         "name": "hometax__certificate__apply__income_statement",
-        "enabled": false
+        "enabled": true
       }
     },
     {
@@ -3158,6 +3014,582 @@
       "docs_url": null,
       "mcp": {
         "name": "hometax__tax__credit_card__search_sales_data",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1127",
+      "slug": "원천세-기한후신고-기본사항-저장",
+      "name": "원천세 기한후신고 기본정보 저장",
+      "summary": "기한후신고서의 신고 구분과 회사명, 대표자 같은 납세자 정보, 신고할 소득 종류를 저장합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.late_report.basic_save",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EA%B8%B0%ED%95%9C%ED%9B%84%EC%8B%A0%EA%B3%A0-%EA%B8%B0%EB%B3%B8%EC%82%AC%ED%95%AD-%EC%A0%80%EC%9E%A5",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__late_report__basic_save",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1387",
+      "slug": "원천세-기한후신고-부표-저장",
+      "name": "원천세 기한후신고 부표 저장",
+      "summary": "작성 중인 기한후신고서의 부표를 저장하고 홈택스에서 다시 읽어 저장된 내용을 확인합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.late_report.annex_save",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EA%B8%B0%ED%95%9C%ED%9B%84%EC%8B%A0%EA%B3%A0-%EB%B6%80%ED%91%9C-%EC%A0%80%EC%9E%A5",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__late_report__annex_save",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1129",
+      "slug": "원천세-기한후신고-소득별-명세-저장",
+      "name": "원천세 기한후신고 소득별 상세 저장",
+      "summary": "기한후신고서에 소득 종류별 인원과 총지급액, 징수세액과 가산세를 저장합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.late_report.detail_save",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EA%B8%B0%ED%95%9C%ED%9B%84%EC%8B%A0%EA%B3%A0-%EC%86%8C%EB%93%9D%EB%B3%84-%EB%AA%85%EC%84%B8-%EC%A0%80%EC%9E%A5",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__late_report__detail_save",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1139",
+      "slug": "원천세-기한후신고-신고-내역-조회",
+      "name": "원천세 기한후신고 신고 내역 조회",
+      "summary": "사업자등록번호와 접수일 기간을 정해 홈택스에 접수된 원천세 신고 목록을 불러옵니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.late_report.history",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EA%B8%B0%ED%95%9C%ED%9B%84%EC%8B%A0%EA%B3%A0-%EC%8B%A0%EA%B3%A0-%EB%82%B4%EC%97%AD-%EC%A1%B0%ED%9A%8C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__late_report__history",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1125",
+      "slug": "원천세-기한후신고-작성-참고자료-조회",
+      "name": "원천세 기한후신고 작성 참고자료 조회",
+      "summary": "기한후신고를 쓰는 동안 필요한 기납부세액과 가산세, 홈택스에 저장해 둔 신고서를 조회합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.late_report.lookup",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EA%B8%B0%ED%95%9C%ED%9B%84%EC%8B%A0%EA%B3%A0-%EC%9E%91%EC%84%B1-%EC%B0%B8%EA%B3%A0%EC%9E%90%EB%A3%8C-%EC%A1%B0%ED%9A%8C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__late_report__lookup",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1389",
+      "slug": "원천세-기한후신고-작성-취소",
+      "name": "원천세 기한후신고 작성 취소",
+      "summary": "홈택스에 작성 중인 기한후신고서를 취소합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.late_report.cancel_draft",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EA%B8%B0%ED%95%9C%ED%9B%84%EC%8B%A0%EA%B3%A0-%EC%9E%91%EC%84%B1-%EC%B7%A8%EC%86%8C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__late_report__cancel_draft",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1131",
+      "slug": "원천세-기한후신고-검토",
+      "name": "원천세 기한후신고 저장 내용 검토",
+      "summary": "저장한 기한후신고서를 홈택스 내용검증에 넣어 바로 제출할 수 있는지, 경고를 확인해야 하는지 알려 드립니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.late_report.review",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EA%B8%B0%ED%95%9C%ED%9B%84%EC%8B%A0%EA%B3%A0-%EA%B2%80%ED%86%A0",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__late_report__review",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1137",
+      "slug": "원천세-기한후신고-접수증-조회",
+      "name": "원천세 기한후신고 접수증 조회",
+      "summary": "제출한 원천세 기한후신고가 홈택스에 제대로 접수됐는지 접수번호와 접수일로 다시 확인합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.late_report.receipt",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EA%B8%B0%ED%95%9C%ED%9B%84%EC%8B%A0%EA%B3%A0-%EC%A0%91%EC%88%98%EC%A6%9D-%EC%A1%B0%ED%9A%8C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__late_report__receipt",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1135",
+      "slug": "원천세-기한후신고-제출",
+      "name": "원천세 기한후신고 제출",
+      "summary": "미리보기까지 마친 원천세 기한후신고서를 홈택스에 접수합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.late_report.submit",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EA%B8%B0%ED%95%9C%ED%9B%84%EC%8B%A0%EA%B3%A0-%EC%A0%9C%EC%B6%9C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__late_report__submit",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1133",
+      "slug": "원천세-기한후신고-미리보기",
+      "name": "원천세 기한후신고 제출 전 미리보기",
+      "summary": "검토를 마친 기한후신고서가 실제로 접수될 모습을 제출 전에 그대로 펼쳐 봅니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.late_report.preview",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EA%B8%B0%ED%95%9C%ED%9B%84%EC%8B%A0%EA%B3%A0-%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__late_report__preview",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1123",
+      "slug": "원천세-기한후신고-작성시작",
+      "name": "원천세 기한후신고 초안 초기화",
+      "summary": "기한을 넘긴 달의 귀속연월과 지급연월, 제출연월을 정해 원천세 기한후신고 작성을 시작합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.late_report.init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EA%B8%B0%ED%95%9C%ED%9B%84%EC%8B%A0%EA%B3%A0-%EC%9E%91%EC%84%B1%EC%8B%9C%EC%9E%91",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__late_report__init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1381",
+      "slug": "원천세-수정신고-기본사항-저장",
+      "name": "원천세 수정신고 기본정보 저장",
+      "summary": "수정신고서의 신고 구분과 납세자 정보, 신고할 소득 종류를 작성 중인 신고서에 저장합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.amendment_report.basic_save",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%88%98%EC%A0%95%EC%8B%A0%EA%B3%A0-%EA%B8%B0%EB%B3%B8%EC%82%AC%ED%95%AD-%EC%A0%80%EC%9E%A5",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__amendment_report__basic_save",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1383",
+      "slug": "원천세-수정신고-부표-저장",
+      "name": "원천세 수정신고 부표 저장",
+      "summary": "작성 중인 수정신고서의 부표를 저장하고 홈택스에서 다시 읽어 저장된 내용을 확인합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.amendment_report.annex_save",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%88%98%EC%A0%95%EC%8B%A0%EA%B3%A0-%EB%B6%80%ED%91%9C-%EC%A0%80%EC%9E%A5",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__amendment_report__annex_save",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1106",
+      "slug": "원천세-수정신고-소득별-명세-저장",
+      "name": "원천세 수정신고 소득별 상세 저장",
+      "summary": "작성 중인 수정신고서에 소득 종류별로 바로잡은 인원과 지급액, 징수세액을 저장합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.amendment_report.detail_save",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%88%98%EC%A0%95%EC%8B%A0%EA%B3%A0-%EC%86%8C%EB%93%9D%EB%B3%84-%EB%AA%85%EC%84%B8-%EC%A0%80%EC%9E%A5",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__amendment_report__detail_save",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1116",
+      "slug": "원천세-수정신고-신고-내역-조회",
+      "name": "원천세 수정신고 신고 내역 조회",
+      "summary": "기간을 정해 홈택스에 접수된 원천세 신고 내역을 받아 수정신고가 언제 어떤 연월로 접수됐는지 확인합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.amendment_report.history",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%88%98%EC%A0%95%EC%8B%A0%EA%B3%A0-%EC%8B%A0%EA%B3%A0-%EB%82%B4%EC%97%AD-%EC%A1%B0%ED%9A%8C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__amendment_report__history",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1104",
+      "slug": "원천세-수정신고-작성-참고자료-조회",
+      "name": "원천세 수정신고 작성 참고자료 조회",
+      "summary": "수정신고서를 고치는 데 필요한 기납부세액과 가산세, 홈택스에 저장된 수정신고서를 조회합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.amendment_report.lookup",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%88%98%EC%A0%95%EC%8B%A0%EA%B3%A0-%EC%9E%91%EC%84%B1-%EC%B0%B8%EA%B3%A0%EC%9E%90%EB%A3%8C-%EC%A1%B0%ED%9A%8C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__amendment_report__lookup",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1385",
+      "slug": "원천세-수정신고-작성-취소",
+      "name": "원천세 수정신고 작성 취소",
+      "summary": "홈택스에 작성 중인 수정신고서를 취소합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.amendment_report.cancel_draft",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%88%98%EC%A0%95%EC%8B%A0%EA%B3%A0-%EC%9E%91%EC%84%B1-%EC%B7%A8%EC%86%8C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__amendment_report__cancel_draft",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1108",
+      "slug": "원천세-수정신고-검토",
+      "name": "원천세 수정신고 저장 내용 검토",
+      "summary": "저장한 수정신고서를 홈택스 내용검증 기준으로 확인해 바로 제출할 수 있는지, 경고 확인이 필요한지 알려 드립니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.amendment_report.review",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%88%98%EC%A0%95%EC%8B%A0%EA%B3%A0-%EA%B2%80%ED%86%A0",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__amendment_report__review",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1114",
+      "slug": "원천세-수정신고-접수증-조회",
+      "name": "원천세 수정신고 접수증 조회",
+      "summary": "제출한 원천세 수정신고의 접수번호와 접수일을 홈택스 접수 목록에서 다시 확인합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.amendment_report.receipt",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%88%98%EC%A0%95%EC%8B%A0%EA%B3%A0-%EC%A0%91%EC%88%98%EC%A6%9D-%EC%A1%B0%ED%9A%8C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__amendment_report__receipt",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1112",
+      "slug": "원천세-수정신고-제출",
+      "name": "원천세 수정신고 제출",
+      "summary": "미리보기까지 마친 원천세 수정신고서를 홈택스에 제출합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.amendment_report.submit",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%88%98%EC%A0%95%EC%8B%A0%EA%B3%A0-%EC%A0%9C%EC%B6%9C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__amendment_report__submit",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1110",
+      "slug": "원천세-수정신고-미리보기",
+      "name": "원천세 수정신고 제출 전 미리보기",
+      "summary": "검토를 마친 수정신고서가 제출될 모습을 그대로 보여 드립니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.amendment_report.preview",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%88%98%EC%A0%95%EC%8B%A0%EA%B3%A0-%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__amendment_report__preview",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1102",
+      "slug": "원천세-수정신고-작성시작",
+      "name": "원천세 수정신고 초안 초기화",
+      "summary": "마감된 원천세 신고의 수정신고를 처음 작성하거나 이미 제출한 수정신고를 다시 고칠 수 있게 수정신고 초안을 엽니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.amendment_report.init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%88%98%EC%A0%95%EC%8B%A0%EA%B3%A0-%EC%9E%91%EC%84%B1%EC%8B%9C%EC%9E%91",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__amendment_report__init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1151",
+      "slug": "원천세-신고-삭제신청-내역-조회",
+      "name": "원천세 신고 삭제신청 내역 조회",
+      "summary": "기간을 정하면 그동안 낸 원천세 신고 삭제신청을 신청 일시와 처리 상태, 삭제 완료 여부와 함께 모아 보여 드립니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.delete_request.history",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%8B%A0%EA%B3%A0-%EC%82%AD%EC%A0%9C%EC%8B%A0%EC%B2%AD-%EB%82%B4%EC%97%AD-%EC%A1%B0%ED%9A%8C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__delete_request__history",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1143",
+      "slug": "원천세-신고-삭제신청-대상-조회",
+      "name": "원천세 신고 삭제신청 대상 조회",
+      "summary": "홈택스에 접수된 원천세 신고 가운데 삭제를 신청할 수 있는 신고를 귀속월과 접수번호로 보여 드립니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.delete_request.candidates",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%8B%A0%EA%B3%A0-%EC%82%AD%EC%A0%9C%EC%8B%A0%EC%B2%AD-%EB%8C%80%EC%83%81-%EC%A1%B0%ED%9A%8C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__delete_request__candidates",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1149",
+      "slug": "원천세-신고-삭제신청-접수증-조회",
+      "name": "원천세 신고 삭제신청 접수증 조회",
+      "summary": "제출한 원천세 신고 삭제신청이 홈택스에 접수됐는지 접수번호와 접수 일시, 처리 상태로 보여 드립니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.delete_request.receipt",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%8B%A0%EA%B3%A0-%EC%82%AD%EC%A0%9C%EC%8B%A0%EC%B2%AD-%EC%A0%91%EC%88%98%EC%A6%9D-%EC%A1%B0%ED%9A%8C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__delete_request__receipt",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1147",
+      "slug": "원천세-신고-삭제신청-제출",
+      "name": "원천세 신고 삭제신청 제출",
+      "summary": "준비 단계에서 확인한 원천세 신고의 삭제신청을 홈택스에 제출합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.delete_request.submit",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%8B%A0%EA%B3%A0-%EC%82%AD%EC%A0%9C%EC%8B%A0%EC%B2%AD-%EC%A0%9C%EC%B6%9C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__delete_request__submit",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1145",
+      "slug": "원천세-신고-삭제신청-준비",
+      "name": "원천세 신고 삭제신청 준비",
+      "summary": "고른 원천세 신고가 조회 때와 그대로인지 다시 확인하고 신청인 이름과 연락처, 개인정보 동의를 점검합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.delete_request.prepare",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%8B%A0%EA%B3%A0-%EC%82%AD%EC%A0%9C%EC%8B%A0%EC%B2%AD-%EC%A4%80%EB%B9%84",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__delete_request__prepare",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1379",
+      "slug": "원천세-신고-접수-내역-조회",
+      "name": "원천세 신고 접수 내역 조회",
+      "summary": "기간을 정해 접수된 원천세 신고를 정기신고, 수정신고, 기한후신고 구분 없이 받아 접수번호와 접수일, 납부세액을 확인합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.regular_report.history",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%8B%A0%EA%B3%A0-%EC%A0%91%EC%88%98-%EB%82%B4%EC%97%AD-%EC%A1%B0%ED%9A%8C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__regular_report__history",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1355",
+      "slug": "원천세-전자파일-변환신고-내용검증-요청",
+      "name": "원천세 전자파일 변환신고 내용검증 요청",
+      "summary": "형식검증을 통과한 원천세 신고 전자파일의 내용검증을 홈택스에 요청합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.file_conversion.content_validate",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%A0%84%EC%9E%90%ED%8C%8C%EC%9D%BC-%EB%B3%80%ED%99%98%EC%8B%A0%EA%B3%A0-%EB%82%B4%EC%9A%A9%EA%B2%80%EC%A6%9D-%EC%9A%94%EC%B2%AD",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__file_conversion__content_validate",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1353",
+      "slug": "원천세-전자파일-변환신고-암호-입력-형식검증",
+      "name": "원천세 전자파일 변환신고 암호 입력 형식검증",
+      "summary": "홈택스가 암호 입력을 요청한 원천세 신고 전자파일에 암호를 넣어 형식검증을 다시 요청합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.file_conversion.format_validate",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%A0%84%EC%9E%90%ED%8C%8C%EC%9D%BC-%EB%B3%80%ED%99%98%EC%8B%A0%EA%B3%A0-%EC%95%94%ED%98%B8-%EC%9E%85%EB%A0%A5-%ED%98%95%EC%8B%9D%EA%B2%80%EC%A6%9D",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__file_conversion__format_validate",
+        "enabled": false
+      }
+    },
+    {
+      "id": "1351",
+      "slug": "원천세-전자파일-변환신고-원본-올리기",
+      "name": "원천세 전자파일 변환신고 원본 올리기",
+      "summary": "미리 등록한 원천세 신고 전자파일 원본을 홈택스 변환 시스템에 올리고 곧바로 형식검증을 요청합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.file_conversion.upload",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%A0%84%EC%9E%90%ED%8C%8C%EC%9D%BC-%EB%B3%80%ED%99%98%EC%8B%A0%EA%B3%A0-%EC%9B%90%EB%B3%B8-%EC%98%AC%EB%A6%AC%EA%B8%B0",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__file_conversion__upload",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1349",
+      "slug": "원천세-전자파일-변환신고-작업-시작",
+      "name": "원천세 전자파일 변환신고 작업 시작",
+      "summary": "정기, 수정, 기한후 중 신고 구분을 정해 원천세 전자파일 변환신고 작업을 시작합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.file_conversion.init",
+      "kind": "step",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%A0%84%EC%9E%90%ED%8C%8C%EC%9D%BC-%EB%B3%80%ED%99%98%EC%8B%A0%EA%B3%A0-%EC%9E%91%EC%97%85-%EC%8B%9C%EC%9E%91",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__file_conversion__init",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1363",
+      "slug": "원천세-전자파일-변환신고-접수증-조회",
+      "name": "원천세 전자파일 변환신고 접수증 조회",
+      "summary": "제출한 원천세 전자파일 변환신고가 홈택스에 접수됐는지 접수번호로 다시 확인합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.file_conversion.receipt",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%A0%84%EC%9E%90%ED%8C%8C%EC%9D%BC-%EB%B3%80%ED%99%98%EC%8B%A0%EA%B3%A0-%EC%A0%91%EC%88%98%EC%A6%9D-%EC%A1%B0%ED%9A%8C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__file_conversion__receipt",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1361",
+      "slug": "원천세-전자파일-변환신고-제출",
+      "name": "원천세 전자파일 변환신고 제출",
+      "summary": "미리보기로 확인한 원천세 전자파일 변환신고 대상을 홈택스에 접수합니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.file_conversion.submit",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%A0%84%EC%9E%90%ED%8C%8C%EC%9D%BC-%EB%B3%80%ED%99%98%EC%8B%A0%EA%B3%A0-%EC%A0%9C%EC%B6%9C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__file_conversion__submit",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1359",
+      "slug": "원천세-전자파일-변환신고-미리보기",
+      "name": "원천세 전자파일 변환신고 제출 전 미리보기",
+      "summary": "내용검증까지 끝나 변환이 완료된 원천세 신고 가운데 제출할 대상 전체를 제출 전에 펼쳐 봅니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.file_conversion.preview",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%A0%84%EC%9E%90%ED%8C%8C%EC%9D%BC-%EB%B3%80%ED%99%98%EC%8B%A0%EA%B3%A0-%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__file_conversion__preview",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1357",
+      "slug": "원천세-전자파일-변환신고-진행현황-조회",
+      "name": "원천세 전자파일 변환신고 진행현황 조회",
+      "summary": "원천세 신고 전자파일의 형식검증과 내용검증이 어디까지 왔는지 홈택스에서 다시 읽어 옵니다.",
+      "category": "홈택스",
+      "provider": "hometax",
+      "action": "hometax.tax.withholding.file_conversion.status",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%A0%84%EC%9E%90%ED%8C%8C%EC%9D%BC-%EB%B3%80%ED%99%98%EC%8B%A0%EA%B3%A0-%EC%A7%84%ED%96%89%ED%98%84%ED%99%A9-%EC%A1%B0%ED%9A%8C",
+      "docs_url": null,
+      "mcp": {
+        "name": "hometax__tax__withholding__file_conversion__status",
         "enabled": true
       }
     },
@@ -3405,7 +3837,7 @@
       "id": "777",
       "slug": "증명서-내려받기",
       "name": "증명서 내려받기",
-      "summary": "신청해 둔 증명서를 증명서 ID와 접수번호로 출력해 PDF로 받습니다.",
+      "summary": "국세완납증명, 사업자등록증명 등 신청해 둔 증명서를 증명서 ID와 접수번호로 출력해 PDF로 받습니다.",
       "category": "홈택스",
       "provider": "hometax",
       "action": "hometax.certificate.download",
@@ -3418,26 +3850,10 @@
       }
     },
     {
-      "id": "780",
-      "slug": "증명서-서식-목록",
-      "name": "증명서 서식 목록 조회",
-      "summary": "국세완납증명, 납세사실증명, 사업자등록증명처럼 신청할 수 있는 증명서 서식 아홉 가지의 이름과 서식 값을 돌려줍니다.",
-      "category": "홈택스",
-      "provider": "hometax",
-      "action": "hometax.certificate.list_templates",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/%EC%A6%9D%EB%AA%85%EC%84%9C-%EC%84%9C%EC%8B%9D-%EB%AA%A9%EB%A1%9D",
-      "docs_url": null,
-      "mcp": {
-        "name": "hometax__certificate__list_templates",
-        "enabled": true
-      }
-    },
-    {
       "id": "792",
       "slug": "증명서-서식-지정-신청",
       "name": "증명서 서식 지정 신청",
-      "summary": "필요한 증명서 서식을 골라 홈택스에 발급을 신청하고, 접수되면 증명서 ID를 받습니다.",
+      "summary": "국세완납증명, 사업자등록증명 등 증명서 서식을 골라 홈택스에 발급을 신청하고, 접수되면 증명서 ID를 받습니다.",
       "category": "홈택스",
       "provider": "hometax",
       "action": "hometax.certificate.apply_with_template",
@@ -3453,7 +3869,7 @@
       "id": "51",
       "slug": "증명서-진위확인",
       "name": "증명서 신청 목록 조회",
-      "summary": "홈택스에 신청해 둔 증명서가 어느 단계인지 목록으로 확인합니다.",
+      "summary": "홈택스에 신청해 둔 국세완납증명, 사업자등록증명 등 증명서가 어느 단계인지 목록으로 확인합니다.",
       "category": "홈택스",
       "provider": "hometax",
       "action": "hometax.certificate.list",
@@ -3558,7 +3974,7 @@
       "docs_url": null,
       "mcp": {
         "name": "hometax__certificate__apply__business_closure",
-        "enabled": false
+        "enabled": true
       }
     },
     {
@@ -3706,38 +4122,6 @@
       }
     },
     {
-      "id": "72",
-      "slug": "홈택스-세션-로그인",
-      "name": "홈택스 세션 로그인(연동)",
-      "summary": "홈택스 연동에 등록해 둔 공인인증서로 로그인해 이후 조회와 발행에 쓸 세션을 만듭니다.",
-      "category": "홈택스",
-      "provider": "hometax",
-      "action": "hometax.session.login",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/%ED%99%88%ED%83%9D%EC%8A%A4-%EC%84%B8%EC%85%98-%EB%A1%9C%EA%B7%B8%EC%9D%B8",
-      "docs_url": null,
-      "mcp": {
-        "name": "hometax__session__login",
-        "enabled": true
-      }
-    },
-    {
-      "id": "75",
-      "slug": "국세청-회원-등록여부",
-      "name": "홈택스 회원 등록 여부 조회",
-      "summary": "연동해 둔 홈택스가 어느 사업자로 열려 있는지 확인합니다.",
-      "category": "홈택스",
-      "provider": "hometax",
-      "action": "hometax.session.user_info",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/%EA%B5%AD%EC%84%B8%EC%B2%AD-%ED%9A%8C%EC%9B%90-%EB%93%B1%EB%A1%9D%EC%97%AC%EB%B6%80",
-      "docs_url": null,
-      "mcp": {
-        "name": "hometax__session__user_info",
-        "enabled": true
-      }
-    },
-    {
       "id": "108",
       "slug": "환급세액-조회-정기신고",
       "name": "환급세액 조회(정기 신고)",
@@ -3766,7 +4150,23 @@
       "docs_url": null,
       "mcp": {
         "name": "hometax__certificate__apply__business_suspension",
-        "enabled": false
+        "enabled": true
+      }
+    },
+    {
+      "id": "836",
+      "slug": "google-ads-search-report",
+      "name": "검색 광고 성과 조회",
+      "summary": "광고 계정과 기간, 지표를 넣으면 검색 캠페인의 노출과 클릭 같은 성과를 행으로 받습니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.ads.search.report",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-ads-search-report",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__ads__search__report",
+        "enabled": true
       }
     },
     {
@@ -3782,6 +4182,214 @@
       "docs_url": null,
       "mcp": {
         "name": "google__search_console__performance",
+        "enabled": true
+      }
+    },
+    {
+      "id": "941",
+      "slug": "google-ads-search-campaign-create",
+      "name": "검색 캠페인 만들기",
+      "summary": "캠페인 이름과 일일 예산, 연결 페이지, 광고 제목과 설명, 키워드를 넣으면 일시정지 상태의 검색 캠페인을 만듭니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.ads.search.campaign.create",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-ads-search-campaign-create",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__ads__search__campaign__create",
+        "enabled": true
+      }
+    },
+    {
+      "id": "939",
+      "slug": "google-ads-search-campaign-update",
+      "name": "검색 캠페인 수정",
+      "summary": "캠페인 번호와 바꿀 이름이나 운영 상태, 일일 예산을 넣으면 그 검색 캠페인을 고칩니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.ads.search.campaign.update",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-ads-search-campaign-update",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__ads__search__campaign__update",
+        "enabled": true
+      }
+    },
+    {
+      "id": "880",
+      "slug": "google-ads-channels-report",
+      "name": "광고 네 채널 합본 성과 조회",
+      "summary": "광고 계정과 기간, 지표를 정하면 검색, 디스플레이, Performance Max, Demand Gen 네 유형의 성과를 함께 받습니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.ads.channels.report",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-ads-channels-report",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__ads__channels__report",
+        "enabled": true
+      }
+    },
+    {
+      "id": "844",
+      "slug": "google-ads-video-report",
+      "name": "동영상 광고 성과 조회",
+      "summary": "광고 계정과 기간, 받을 지표를 정하면 동영상 캠페인의 노출과 조회수, 조회율을 행으로 돌려줍니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.ads.video.report",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-ads-video-report",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__ads__video__report",
+        "enabled": true
+      }
+    },
+    {
+      "id": "838",
+      "slug": "google-ads-display-report",
+      "name": "디스플레이 광고 성과 조회",
+      "summary": "광고 계정과 기간, 받을 지표를 정하면 디스플레이 캠페인의 노출과 클릭, 클릭률을 행으로 돌려줍니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.ads.display.report",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-ads-display-report",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__ads__display__report",
+        "enabled": true
+      }
+    },
+    {
+      "id": "943",
+      "slug": "google-ads-display-campaign-create",
+      "name": "디스플레이 캠페인 만들기",
+      "summary": "이름과 예산, 연결 페이지, 광고 문구, 먼저 올린 이미지 번호를 넣으면 멈춘 상태의 디스플레이 캠페인을 만듭니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.ads.display.campaign.create",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-ads-display-campaign-create",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__ads__display__campaign__create",
+        "enabled": true
+      }
+    },
+    {
+      "id": "937",
+      "slug": "google-ads-display-campaign-update",
+      "name": "디스플레이 캠페인 수정",
+      "summary": "디스플레이 캠페인 번호와 바꿀 값을 넣으면 이름이나 운영 상태, 하루 예산을 고칩니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.ads.display.campaign.update",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-ads-display-campaign-update",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__ads__display__campaign__update",
+        "enabled": true
+      }
+    },
+    {
+      "id": "927",
+      "slug": "google-tag-manager-version-publish",
+      "name": "버전 게시",
+      "summary": "작업공간 경로나 버전 경로 가운데 하나를 넣으면 그 내용을 실제 사이트에 게시합니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.tag_manager.version.publish",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-tag-manager-version-publish",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__tag_manager__version__publish",
+        "enabled": true
+      }
+    },
+    {
+      "id": "909",
+      "slug": "google-search-console-site-remove",
+      "name": "사이트 제거",
+      "summary": "사이트 주소를 넣으면 연결한 계정의 사이트 목록에서 그 사이트를 뺍니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.search_console.site.remove",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-search-console-site-remove",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__search_console__site__remove",
+        "enabled": true
+      }
+    },
+    {
+      "id": "907",
+      "slug": "google-search-console-site-add",
+      "name": "사이트 추가",
+      "summary": "사이트 주소를 넣으면 연결한 계정의 사이트 목록에 그 사이트를 더합니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.search_console.site.add",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-search-console-site-add",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__search_console__site__add",
+        "enabled": true
+      }
+    },
+    {
+      "id": "983",
+      "slug": "google-search-console-sitemap-list",
+      "name": "사이트맵 목록 조회",
+      "summary": "사이트 주소를 넣으면 그 사이트에 제출된 사이트맵 목록을 받습니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.search_console.sitemap.list",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-search-console-sitemap-list",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__search_console__sitemap__list",
+        "enabled": true
+      }
+    },
+    {
+      "id": "905",
+      "slug": "google-search-console-sitemap-delete",
+      "name": "사이트맵 삭제",
+      "summary": "사이트 주소와 사이트맵 주소를 넣으면 그 사이트맵을 목록에서 뺍니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.search_console.sitemap.delete",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-search-console-sitemap-delete",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__search_console__sitemap__delete",
+        "enabled": true
+      }
+    },
+    {
+      "id": "903",
+      "slug": "google-search-console-sitemap-submit",
+      "name": "사이트맵 제출",
+      "summary": "사이트 주소와 사이트맵 주소를 넣으면 그 사이트맵을 연결한 사이트에 제출합니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.search_console.sitemap.submit",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-search-console-sitemap-submit",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__search_console__sitemap__submit",
         "enabled": true
       }
     },
@@ -3802,6 +4410,118 @@
       }
     },
     {
+      "id": "913",
+      "slug": "google-analytics-measurement-create",
+      "name": "속성 만들기",
+      "summary": "애널리틱스 계정 번호와 속성 이름, 시간대를 넣으면 그 계정 아래에 새 속성을 만듭니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.analytics.measurement.create",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-analytics-measurement-create",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__analytics__measurement__create",
+        "enabled": true
+      }
+    },
+    {
+      "id": "911",
+      "slug": "google-analytics-measurement-update",
+      "name": "속성 설정 수정",
+      "summary": "속성 번호와 바꿀 설정을 넣으면 보낸 설정만 고치고 나머지는 그대로 둡니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.analytics.measurement.update",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-analytics-measurement-update",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__analytics__measurement__update",
+        "enabled": true
+      }
+    },
+    {
+      "id": "949",
+      "slug": "google-youtube-video-thumbnail-set",
+      "name": "썸네일 설정",
+      "summary": "영상 번호와 먼저 올린 썸네일 이미지 번호를 넣으면 그 영상의 맞춤 썸네일을 바꿉니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.youtube.video.thumbnail.set",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-youtube-video-thumbnail-set",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__youtube__video__thumbnail__set",
+        "enabled": true
+      }
+    },
+    {
+      "id": "929",
+      "slug": "google-ads-video-asset-create",
+      "name": "영상 자산 연결",
+      "summary": "영상 주소를 넣으면 그 영상을 광고 계정의 영상 자산으로 연결합니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.ads.video.asset.create",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-ads-video-asset-create",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__ads__video__asset__create",
+        "enabled": true
+      }
+    },
+    {
+      "id": "915",
+      "slug": "google-youtube-video-update",
+      "name": "영상 정보 수정",
+      "summary": "영상 번호와 바꿀 항목을 넣으면 제목이나 설명, 태그, 카테고리, 공개 범위 같은 영상 정보를 고칩니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.youtube.video.update",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-youtube-video-update",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__youtube__video__update",
+        "enabled": true
+      }
+    },
+    {
+      "id": "878",
+      "slug": "google-youtube-report-job-create",
+      "name": "예약 보고 만들기",
+      "summary": "보고 유형을 넣으면 그 보고서를 매일 만드는 정기 작업을 채널에 겁니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.youtube.report_job.create",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-youtube-report-job-create",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__youtube__report_job__create",
+        "enabled": true
+      }
+    },
+    {
+      "id": "876",
+      "slug": "google-youtube-report-job-read",
+      "name": "예약 보고 목록 조회",
+      "summary": "작업 번호 없이 부르면 걸려 있는 정기 보고 작업 목록을, 번호를 넣으면 그 작업이 만든 보고서 목록을 받습니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.youtube.report_job.read",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-youtube-report-job-read",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__youtube__report_job__read",
+        "enabled": true
+      }
+    },
+    {
       "id": "805",
       "slug": "google-analytics-report",
       "name": "웹사이트 성과 조회",
@@ -3814,6 +4534,198 @@
       "docs_url": null,
       "mcp": {
         "name": "google__analytics__report",
+        "enabled": true
+      }
+    },
+    {
+      "id": "951",
+      "slug": "google-youtube-video-caption-add",
+      "name": "자막 추가",
+      "summary": "영상 번호와 먼저 올린 자막 파일 번호, 언어, 트랙 이름을 넣으면 그 영상에 자막 트랙을 더합니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.youtube.video.caption.add",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-youtube-video-caption-add",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__youtube__video__caption__add",
+        "enabled": true
+      }
+    },
+    {
+      "id": "919",
+      "slug": "google-youtube-playlist-create",
+      "name": "재생목록 만들기",
+      "summary": "채널과 재생목록 이름을 넣으면 그 채널에 새 재생목록을 만듭니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.youtube.playlist.create",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-youtube-playlist-create",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__youtube__playlist__create",
+        "enabled": true
+      }
+    },
+    {
+      "id": "985",
+      "slug": "google-youtube-playlist-list",
+      "name": "재생목록 목록 조회",
+      "summary": "채널 번호를 넣으면 그 채널의 재생목록 목록을 받습니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.youtube.playlist.list",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-youtube-playlist-list",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__youtube__playlist__list",
+        "enabled": true
+      }
+    },
+    {
+      "id": "921",
+      "slug": "google-youtube-playlist-item-add",
+      "name": "재생목록에 영상 넣기",
+      "summary": "채널과 재생목록 번호, 영상 번호를 넣으면 그 영상을 재생목록에 더합니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.youtube.playlist.item.add",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-youtube-playlist-item-add",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__youtube__playlist__item__add",
+        "enabled": true
+      }
+    },
+    {
+      "id": "834",
+      "slug": "google-youtube-analytics-report",
+      "name": "채널 성과 조회",
+      "summary": "채널과 기간, 지표를 정하면 조회수와 시청 시간, 구독자 같은 채널 지표를 행으로 받습니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.youtube.analytics.report",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-youtube-analytics-report",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__youtube__analytics__report",
+        "enabled": true
+      }
+    },
+    {
+      "id": "987",
+      "slug": "google-youtube-video-list",
+      "name": "채널 영상 목록 조회",
+      "summary": "채널 번호를 넣으면 그 채널에 올린 영상 목록을 받습니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.youtube.video.list",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-youtube-video-list",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__youtube__video__list",
+        "enabled": true
+      }
+    },
+    {
+      "id": "923",
+      "slug": "google-tag-manager-tag-create",
+      "name": "태그 만들기",
+      "summary": "컨테이너와 작업공간, 태그 이름과 유형을 넣으면 그 작업공간에 태그를 만듭니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.tag_manager.tag.create",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-tag-manager-tag-create",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__tag_manager__tag__create",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1049",
+      "slug": "google-tag-manager-tag-audit",
+      "name": "태그 설정 점검",
+      "summary": "컨테이너 경로를 넣으면 게시된 태그가 모두 일시정지돼 있는지, 발동 트리거가 없어 동작하지 않는 태그가 있는지 점검합니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.tag_manager.tag.audit",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-tag-manager-tag-audit",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__tag_manager__tag__audit",
+        "enabled": true
+      }
+    },
+    {
+      "id": "925",
+      "slug": "google-tag-manager-tag-update",
+      "name": "태그 수정",
+      "summary": "태그 경로와 바꿀 항목을 넣으면 그 태그를 고치고 보내지 않은 항목은 현재 값으로 남깁니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.tag_manager.tag.update",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-tag-manager-tag-update",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__tag_manager__tag__update",
+        "enabled": true
+      }
+    },
+    {
+      "id": "842",
+      "slug": "google-ads-demand-gen-report",
+      "name": "Demand Gen 광고 성과 조회",
+      "summary": "광고 계정과 기간, 지표를 정하면 Demand Gen 캠페인의 노출과 클릭 같은 성과를 행으로 받습니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.ads.demand_gen.report",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-ads-demand-gen-report",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__ads__demand_gen__report",
+        "enabled": true
+      }
+    },
+    {
+      "id": "947",
+      "slug": "google-ads-demand-gen-campaign-create",
+      "name": "Demand Gen 캠페인 만들기",
+      "summary": "이름과 예산, 연결 페이지, 제목과 설명, 이미지와 로고 번호를 넣으면 멈춘 상태의 Demand Gen 캠페인을 만듭니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.ads.demand_gen.campaign.create",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-ads-demand-gen-campaign-create",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__ads__demand_gen__campaign__create",
+        "enabled": true
+      }
+    },
+    {
+      "id": "936",
+      "slug": "google-ads-demand-gen-campaign-update",
+      "name": "Demand Gen 캠페인 수정",
+      "summary": "Demand Gen 캠페인 번호와 바꿀 값을 넣으면 이름이나 운영 상태, 하루 예산을 고칩니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.ads.demand_gen.campaign.update",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-ads-demand-gen-campaign-update",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__ads__demand_gen__campaign__update",
         "enabled": true
       }
     },
@@ -3850,18 +4762,50 @@
       }
     },
     {
-      "id": "719",
-      "slug": "ibk-fast-account-session-login",
-      "name": "IBK기업은행 빠른조회 계좌 연결 로그인",
-      "summary": "IBK기업은행 계좌 자격으로 조회용 연결을 열고, 일부가 가려진 계좌번호로 대상 계좌를 확인합니다.",
-      "category": "IBK기업은행 빠른조회",
-      "provider": "ibk_fast_account",
-      "action": "ibk_fast_account.session.login",
+      "id": "840",
+      "slug": "google-ads-pmax-report",
+      "name": "Performance Max 광고 성과 조회",
+      "summary": "광고 계정과 기간, 지표를 정하면 Performance Max 캠페인의 성과를 행으로 받습니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.ads.pmax.report",
       "kind": "product",
-      "url": "https://xboss.biz/service-products/ibk-fast-account-session-login",
+      "url": "https://xboss.biz/service-products/google-ads-pmax-report",
       "docs_url": null,
       "mcp": {
-        "name": "ibk_fast_account__session__login",
+        "name": "google__ads__pmax__report",
+        "enabled": true
+      }
+    },
+    {
+      "id": "945",
+      "slug": "google-ads-pmax-campaign-create",
+      "name": "Performance Max 캠페인 만들기",
+      "summary": "이름과 예산, 연결 페이지, 제목과 설명, 이미지와 로고 번호를 넣으면 멈춘 상태의 Performance Max 캠페인을 만듭니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.ads.pmax.campaign.create",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-ads-pmax-campaign-create",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__ads__pmax__campaign__create",
+        "enabled": true
+      }
+    },
+    {
+      "id": "938",
+      "slug": "google-ads-pmax-campaign-update",
+      "name": "Performance Max 캠페인 수정",
+      "summary": "Performance Max 캠페인 번호와 바꿀 이름, 운영 상태, 하루 예산을 넣으면 그 캠페인을 고칩니다.",
+      "category": "Google 마케팅",
+      "provider": "google",
+      "action": "google.ads.pmax.campaign.update",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/google-ads-pmax-campaign-update",
+      "docs_url": null,
+      "mcp": {
+        "name": "google__ads__pmax__campaign__update",
         "enabled": true
       }
     },
@@ -3898,26 +4842,10 @@
       }
     },
     {
-      "id": "728",
-      "slug": "kb-fast-account-session-login",
-      "name": "KB국민은행 빠른조회 계좌 연결 로그인",
-      "summary": "KB국민은행 계좌를 조회용으로 연결합니다.",
-      "category": "KB국민은행 빠른조회",
-      "provider": "kb_fast_account",
-      "action": "kb_fast_account.session.login",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/kb-fast-account-session-login",
-      "docs_url": null,
-      "mcp": {
-        "name": "kb_fast_account__session__login",
-        "enabled": true
-      }
-    },
-    {
       "id": "704",
       "slug": "kb-biz-card-payments-result",
       "name": "KB국민카드 기업카드 결제내역 전체 수집",
-      "summary": "결제 자료를 구간별로 나눠 부르지 않고 조건에 걸린 것을 한 번에 받습니다.",
+      "summary": "법인카드 결제 자료를 구간별로 나눠 부르지 않고 조건에 걸린 것을 한 번에 받습니다.",
       "category": "KB국민카드 기업카드",
       "provider": "kb_biz_card",
       "action": "kb_biz_card.payments.result",
@@ -3933,7 +4861,7 @@
       "id": "698",
       "slug": "kb-biz-card-payments-search",
       "name": "KB국민카드 기업카드 결제내역 조건 조회",
-      "summary": "카드 대금이 언제 얼마 청구됐고 결제됐는지 기간과 부서별로 받습니다.",
+      "summary": "법인카드 대금이 언제 얼마 청구됐고 결제됐는지 기간을 정해 한 페이지씩 받습니다.",
       "category": "KB국민카드 기업카드",
       "provider": "kb_biz_card",
       "action": "kb_biz_card.payments.search",
@@ -3949,7 +4877,7 @@
       "id": "695",
       "slug": "kb-biz-card-payments-init",
       "name": "KB국민카드 기업카드 결제내역 조회 시작",
-      "summary": "결제내역을 조회하기 전에 카드사에 등록된 부서 목록과 부서별 사용 상태를 받아옵니다.",
+      "summary": "법인카드 결제내역을 조회하기 전에 카드사에 등록된 부서 목록과 부서별 사용 상태를 받아옵니다.",
       "category": "KB국민카드 기업카드",
       "provider": "kb_biz_card",
       "action": "kb_biz_card.payments.init",
@@ -3965,7 +4893,7 @@
       "id": "701",
       "slug": "kb-biz-card-payments-page",
       "name": "KB국민카드 기업카드 결제내역 페이지 조회",
-      "summary": "이미 정해 둔 결제내역 조회 조건에서 볼 페이지를 지정해 그 구간만 받아옵니다.",
+      "summary": "이미 정해 둔 법인카드 결제내역 조회 조건에서 볼 페이지를 지정해 그 구간만 받아옵니다.",
       "category": "KB국민카드 기업카드",
       "provider": "kb_biz_card",
       "action": "kb_biz_card.payments.page",
@@ -3978,26 +4906,10 @@
       }
     },
     {
-      "id": "716",
-      "slug": "kb-biz-card-session-login",
-      "name": "KB국민카드 기업카드 공동인증서 로그인",
-      "summary": "법인 공동인증서로 KB국민카드 기업카드 사이트에 로그인해 승인내역, 결제내역, 매입내역 조회에 쓸 연결을 엽니다.",
-      "category": "KB국민카드 기업카드",
-      "provider": "kb_biz_card",
-      "action": "kb_biz_card.session.login",
-      "kind": "product",
-      "url": "https://xboss.biz/service-products/kb-biz-card-session-login",
-      "docs_url": null,
-      "mcp": {
-        "name": "kb_biz_card__session__login",
-        "enabled": true
-      }
-    },
-    {
       "id": "692",
       "slug": "kb-biz-card-purchases-result",
       "name": "KB국민카드 기업카드 매입내역 전체 수집",
-      "summary": "매입일이 지정한 기간 안에 드는 매입 확정 건을 페이지를 넘겨 가며 받지 않고 전부 모아 한 번에 돌려받습니다.",
+      "summary": "매입일이 지정한 기간 안에 드는 법인카드 매입 확정 건을 페이지를 넘겨 가며 받지 않고 전부 모아 한 번에 돌려받습니다.",
       "category": "KB국민카드 기업카드",
       "provider": "kb_biz_card",
       "action": "kb_biz_card.purchases.result",
@@ -4013,7 +4925,7 @@
       "id": "686",
       "slug": "kb-biz-card-purchases-search",
       "name": "KB국민카드 기업카드 매입내역 조건 조회",
-      "summary": "카드사가 가맹점 매입을 확정한 건 가운데 매입일이 지정한 기간에 드는 건을 한 페이지(최대 열 건)씩 받아옵니다.",
+      "summary": "카드사가 법인카드의 가맹점 매입을 확정한 건 가운데 매입일이 지정한 기간에 드는 건을 한 페이지(최대 열 건)씩 받아옵니다.",
       "category": "KB국민카드 기업카드",
       "provider": "kb_biz_card",
       "action": "kb_biz_card.purchases.search",
@@ -4029,7 +4941,7 @@
       "id": "683",
       "slug": "kb-biz-card-purchases-init",
       "name": "KB국민카드 기업카드 매입내역 조회 시작",
-      "summary": "카드사가 가맹점 매입을 확정한 기록을 조회하기 전에, 등록된 부서 목록과 첫 번째 부서의 카드 목록을 받아옵니다.",
+      "summary": "카드사가 법인카드의 가맹점 매입을 확정한 기록을 조회하기 전에, 등록된 부서 목록과 첫 번째 부서의 카드 목록을 받아옵니다.",
       "category": "KB국민카드 기업카드",
       "provider": "kb_biz_card",
       "action": "kb_biz_card.purchases.init",
@@ -4045,7 +4957,7 @@
       "id": "689",
       "slug": "kb-biz-card-purchases-page",
       "name": "KB국민카드 기업카드 매입내역 페이지 조회",
-      "summary": "정해 둔 매입 조회 조건에서 몇 번째 페이지를 볼지 지정해 그 페이지의 매입 확정 건만 받습니다.",
+      "summary": "정해 둔 법인카드 매입 조회 조건에서 몇 번째 페이지를 볼지 지정해 그 페이지의 매입 확정 건만 받습니다.",
       "category": "KB국민카드 기업카드",
       "provider": "kb_biz_card",
       "action": "kb_biz_card.purchases.page",
@@ -4077,7 +4989,7 @@
       "id": "680",
       "slug": "kb-biz-card-approvals-result",
       "name": "KB국민카드 기업카드 승인내역 전체 수집",
-      "summary": "페이지를 하나씩 넘겨 가며 받는 대신, 조건에 걸린 승인 건을 전부 모아 한 번에 돌려받습니다.",
+      "summary": "페이지를 하나씩 넘겨 가며 받는 대신, 조건에 걸린 법인카드 승인 건을 전부 모아 한 번에 돌려받습니다.",
       "category": "KB국민카드 기업카드",
       "provider": "kb_biz_card",
       "action": "kb_biz_card.approvals.result",
@@ -4093,7 +5005,7 @@
       "id": "674",
       "slug": "kb-biz-card-approvals-search",
       "name": "KB국민카드 기업카드 승인내역 조건 조회",
-      "summary": "기간을 정해 카드 승인이 일어난 건별 기록을 한 페이지(최대 열 건)씩 조회합니다.",
+      "summary": "기간을 정해 법인카드 승인이 일어난 건별 기록을 한 페이지(최대 열 건)씩 조회합니다.",
       "category": "KB국민카드 기업카드",
       "provider": "kb_biz_card",
       "action": "kb_biz_card.approvals.search",
@@ -4109,7 +5021,7 @@
       "id": "671",
       "slug": "kb-biz-card-approvals-init",
       "name": "KB국민카드 기업카드 승인내역 조회 시작",
-      "summary": "승인내역을 조회하기 전에 회사에 등록된 부서 목록과 첫 번째 부서의 카드 목록을 받아옵니다.",
+      "summary": "법인카드 승인내역을 조회하기 전에 회사에 등록된 부서 목록과 첫 번째 부서의 카드 목록을 받아옵니다.",
       "category": "KB국민카드 기업카드",
       "provider": "kb_biz_card",
       "action": "kb_biz_card.approvals.init",
@@ -4141,7 +5053,7 @@
       "id": "710",
       "slug": "kb-biz-card-common-cards-select",
       "name": "KB국민카드 기업카드 카드 목록 조회",
-      "summary": "회사에 발급된 기업카드를 부서별로 받아, 어느 임직원에게 나간 카드인지 확인합니다.",
+      "summary": "회사에 발급된 법인카드를 부서별로 받아, 어느 임직원에게 나간 카드인지 확인합니다.",
       "category": "KB국민카드 기업카드",
       "provider": "kb_biz_card",
       "action": "kb_biz_card.common.cards.select",
@@ -4150,6 +5062,134 @@
       "docs_url": null,
       "mcp": {
         "name": "kb_biz_card__common__cards__select",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1079",
+      "slug": "nh-fast-account-transaction-history-search",
+      "name": "NH농협은행 빠른조회 거래내역 조회",
+      "summary": "시작일과 종료일을 정해 NH농협은행 계좌의 거래내역을 받습니다.",
+      "category": "NH농협은행 빠른조회",
+      "provider": "nh_fast_account",
+      "action": "nh_fast_account.transaction_history.search",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/nh-fast-account-transaction-history-search",
+      "docs_url": null,
+      "mcp": {
+        "name": "nh_fast_account__transaction_history__search",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1075",
+      "slug": "nh-fast-account-accounts-list",
+      "name": "NH농협은행 빠른조회 계좌 목록 조회",
+      "summary": "NH농협은행에 등록한 조회 계좌 연동을 한 번에 나열합니다.",
+      "category": "NH농협은행 빠른조회",
+      "provider": "nh_fast_account",
+      "action": "nh_fast_account.accounts.list",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/nh-fast-account-accounts-list",
+      "docs_url": null,
+      "mcp": {
+        "name": "nh_fast_account__accounts__list",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1077",
+      "slug": "nh-fast-account-balance-query",
+      "name": "NH농협은행 빠른조회 잔액 조회",
+      "summary": "등록한 NH농협은행 계좌 하나의 현재 잔액과 출금 가능 금액을 받습니다.",
+      "category": "NH농협은행 빠른조회",
+      "provider": "nh_fast_account",
+      "action": "nh_fast_account.balance.query",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/nh-fast-account-balance-query",
+      "docs_url": null,
+      "mcp": {
+        "name": "nh_fast_account__balance__query",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1343",
+      "slug": "marketing-optimization-suggest",
+      "name": "광고 개선 제안",
+      "summary": "키워드와 검색어, 소재, 입찰의 성과 숫자와 직접 정한 기준을 넣으면 손볼 후보를 근거 숫자와 함께 골라 드립니다.",
+      "category": "XBOSS 마케팅 분석",
+      "provider": "marketing",
+      "action": "marketing.optimization.suggest",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/marketing-optimization-suggest",
+      "docs_url": null,
+      "mcp": {
+        "name": "marketing__optimization__suggest",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1342",
+      "slug": "marketing-lead-to-revenue-reconcile",
+      "name": "광고 매출 연결 계산",
+      "summary": "광고비와 같은 기간의 매출, 신규 유료 고객 수를 넣으면 ROAS와 고객 획득 비용을 계산해 돌려줍니다.",
+      "category": "XBOSS 마케팅 분석",
+      "provider": "marketing",
+      "action": "marketing.lead_to_revenue.reconcile",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/marketing-lead-to-revenue-reconcile",
+      "docs_url": null,
+      "mcp": {
+        "name": "marketing__lead_to_revenue__reconcile",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1345",
+      "slug": "marketing-report-archive-save",
+      "name": "마케팅 보고 보관",
+      "summary": "만들어 둔 마케팅 성과 보고를 기간과 채널 정보와 함께 보관합니다.",
+      "category": "XBOSS 마케팅 분석",
+      "provider": "marketing",
+      "action": "marketing.report_archive.save",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/marketing-report-archive-save",
+      "docs_url": null,
+      "mcp": {
+        "name": "marketing__report_archive__save",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1341",
+      "slug": "marketing-growth-review",
+      "name": "마케팅 성과 보고",
+      "summary": "보고 기간과 채널별 광고비를 넣으면 통화별 광고비 합계와 ROAS, 고객 획득 비용 CAC, 목표 달성률을 한 번에 계산합니다.",
+      "category": "XBOSS 마케팅 분석",
+      "provider": "marketing",
+      "action": "marketing.growth_review.compute",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/marketing-growth-review",
+      "docs_url": null,
+      "mcp": {
+        "name": "marketing__growth_review__compute",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1344",
+      "slug": "marketing-report-archive-list",
+      "name": "보관한 마케팅 보고 찾기",
+      "summary": "보관해 둔 마케팅 성과 보고를 기간과 채널로 골라 최근 기간부터 돌려줍니다.",
+      "category": "XBOSS 마케팅 분석",
+      "provider": "marketing",
+      "action": "marketing.report_archive.list",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/marketing-report-archive-list",
+      "docs_url": null,
+      "mcp": {
+        "name": "marketing__report_archive__list",
         "enabled": true
       }
     }

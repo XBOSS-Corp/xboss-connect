@@ -1,7 +1,7 @@
 import { readFile, writeFile, mkdir, readdir, lstat, unlink } from 'node:fs/promises';
 import { resolve, relative, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { loadCatalog, productStartUrl, productInfoUrl, productDocumentPath } from '../src/catalog.mjs';
+import { loadCatalog, productStartUrl, productInfoUrl, productDocumentPath, documentText } from '../src/catalog.mjs';
 
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const MARKER = '<!-- Generated from catalog/public-products.json. -->';
@@ -37,7 +37,7 @@ async function write(path, lines) {
     const info = await lstat(destination);
     if (!info.isFile() || info.isSymbolicLink()) throw new Error('일반 문서 파일만 갱신할 수 있습니다.');
   } catch (error) { if (error.code !== 'ENOENT') throw error; }
-  await writeFile(destination, (Array.isArray(lines) ? lines.join('\n') : lines).replace(/·/g, ', ').trimEnd() + '\n', 'utf8');
+  await writeFile(destination, documentText(Array.isArray(lines) ? lines.join('\n') : lines).trimEnd() + '\n', 'utf8');
 }
 export async function generateDocs() {
   const catalog = await loadCatalog();
@@ -52,10 +52,8 @@ export async function generateDocs() {
     ['전자세금계산서-발행', '거래 내용을 확인하고 전자세금계산서 발행'],
     ['전자세금계산서-발행취소', '원본 세금계산서 전액 취소 수정발행'],
     ['현금영수증-발행', '현금 결제 건의 현금영수증 발급'],
-    ['payslip-xlsx', '계산된 급여로 직원별 명세서 엑셀 생성'],
     ['register-xlsx', '한 달 급여 데이터를 대장 엑셀로 정리'],
     ['원천세-정기신고-제출', '작성·검토를 마친 원천세 정기신고 제출'],
-    ['payroll-pack-premium-summary-v1-generate', '건강보험·국민연금 고지 보험료 요약'],
     ['증명서-자동-신청-내려받기', '국세완납증명서 신청부터 PDF 받기까지'],
     ['naver-searchad-performance', '네이버 검색광고 성과 조회'],
     ['google-marketing-report', '측정 진단·웹사이트 성과·검색 실적을 보고서로'],
@@ -70,8 +68,8 @@ export async function generateDocs() {
     'node bin/xboss.mjs search "4대보험"',
     'node bin/xboss.mjs search "마케팅"',
     'node bin/xboss.mjs doctor --anonymous',
-    'node bin/xboss.mjs schema payslip-xlsx --anonymous',
-    'node bin/xboss.mjs schema payslip-xlsx --anonymous --template',
+    'node bin/xboss.mjs schema register-xlsx --anonymous',
+    'node bin/xboss.mjs schema register-xlsx --anonymous --template',
   ].join('\n');
   const intro = [
     MARKER, '# XBOSS Connect | 홈택스, 4대보험, 정부24, 은행, 위택스 등 15개 이상 기관과 플랫폼 업무 자동화', '',

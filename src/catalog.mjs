@@ -71,3 +71,8 @@ export function productInfoUrl(product, { source = 'xboss-connect' } = {}) {
 export function productDocumentPath(product) {
   return 'docs/products/' + product.slug + '.md';
 }
+
+/** How catalog text is written into the published documents: a middle dot becomes a comma. The generator writes with it and the verifier compares with it. */
+export function documentText(text) {
+  return text.replace(/·/g, ', ');
+}

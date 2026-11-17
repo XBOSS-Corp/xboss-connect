@@ -3,7 +3,7 @@
 
 **Korean business data, connected to your AI and code.**
 
-Explore 214 business products across Korean tax, social insurance, supported bank inquiries, payroll, and marketing data.
+Explore 293 business products across Korean tax, social insurance, supported bank inquiries, payroll, and marketing data.
 
 **Start for free.** Product requirements and usage terms are shown when you get started.
 
@@ -16,8 +16,8 @@ node bin/xboss.mjs search "세금계산서"
 node bin/xboss.mjs search "4대보험"
 node bin/xboss.mjs search "마케팅"
 node bin/xboss.mjs doctor --anonymous
-node bin/xboss.mjs schema payslip-xlsx --anonymous
-node bin/xboss.mjs schema payslip-xlsx --anonymous --template
+node bin/xboss.mjs schema register-xlsx --anonymous
+node bin/xboss.mjs schema register-xlsx --anonymous --template
 ```
 
 Local product search and public connection checks do not require an account.
@@ -26,7 +26,7 @@ For an actual job, follow the [connection guide](docs/quickstart.md), inspect th
 
 This repository contains clients for XBOSS public APIs, examples, and documentation. Institution connections and job processing run on the XBOSS service.
 
-The [catalog](catalog/public-products.json) contains 214 business products and 45 intermediate workflow steps, verified against official public sources on 2026-11-02. Product names are preserved in Korean.
+The [catalog](catalog/public-products.json) contains 293 business products and 31 intermediate workflow steps, verified against official public sources on 2026-11-17. Product names are preserved in Korean.
 
 [Official site](https://xboss.biz) ,  [Developer documentation](https://developer.xdata.kr) ,  [Help](https://xboss.biz/service-inquiry)
 

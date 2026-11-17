@@ -3,6 +3,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
+import { documentText } from '../src/catalog.mjs';
 
 const runFile = promisify(execFile);
 const PROJECT_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -204,7 +205,7 @@ function verifyCatalog(files, issues, warnings) {
       const detailFile = `docs/products/${product.slug}.md`;
       const detail = files.get(detailFile);
       if (!detail) issue(issues, 'PRODUCT_DETAIL_MISSING', detailFile, null, 'A catalog record has no product document.');
-      else if (!detail.split(/\r?\n/).some(line => line === `# ${product.name}`)) issue(issues, 'PRODUCT_NAME_DRIFT', detailFile, null, 'The document heading must equal the official product name.');
+      else if (!detail.split(/\r?\n/).some(line => line === `# ${documentText(product.name)}`)) issue(issues, 'PRODUCT_NAME_DRIFT', detailFile, null, 'The document heading must equal the official product name.');
     }
   }
   for (const indexFile of ['README.md', 'PRODUCTS.md']) {
@@ -219,7 +220,7 @@ function verifyCatalog(files, issues, warnings) {
     for (const product of catalog.products) {
       if (!isObject(product)) continue;
       if (!linked.has(product.slug)) issue(issues, 'INDEX_PRODUCT_MISSING', indexFile, null, 'An index omits a catalog record.');
-      else if (!linked.get(product.slug).has(product.name)) issue(issues, 'INDEX_NAME_DRIFT', indexFile, null, 'An index lacks the official product name for a catalog record.');
+      else if (!linked.get(product.slug).has(documentText(product.name))) issue(issues, 'INDEX_NAME_DRIFT', indexFile, null, 'An index lacks the official product name for a catalog record.');
     }
   }
   for (const fileName of files.keys()) {

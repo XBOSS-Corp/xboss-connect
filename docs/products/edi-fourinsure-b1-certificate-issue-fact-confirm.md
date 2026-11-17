@@ -13,7 +13,7 @@ XBOSS는 무료로 시작할 수 있습니다. 이 상품의 준비 사항과 �
 
 [AI 연결 안내](../ai-connect.md) ,  [코드 시작 안내](../quickstart.md)
 
-AI에서 이용 가능한 업무는 실제 연결 후 도구 목록에서 확인하세요.
+MCP 도구명: `fourinsure__b1__certificate__issue_fact__confirm`. 실제 연결 후 도구 목록에서 현재 입력 스키마와 이용 가능 여부를 확인하세요.
 
 REST 실행 식별자: provider `fourinsure`, action `fourinsure.b1.certificate.issue_fact.confirm`.
 공식 상품 안내에서 필요한 기관 연결과 입력값을 확인한 뒤 실행하세요.
