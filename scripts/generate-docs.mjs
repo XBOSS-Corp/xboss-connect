@@ -52,11 +52,13 @@ export async function generateDocs() {
     ['전자세금계산서-발행', '거래 내용을 확인하고 전자세금계산서 발행'],
     ['전자세금계산서-발행취소', '원본 세금계산서 전액 취소 수정발행'],
     ['현금영수증-발행', '현금 결제 건의 현금영수증 발급'],
-    ['register-xlsx', '한 달 급여 데이터를 대장 엑셀로 정리'],
+    ['register-xlsx', '급여대장과 직원별 급여명세서 엑셀을 각각 생성'],
+    ['gov24-business-registration-certificate-issue', '정부24에서 법인 사업자등록증명 발급'],
     ['원천세-정기신고-제출', '작성·검토를 마친 원천세 정기신고 제출'],
     ['증명서-자동-신청-내려받기', '국세완납증명서 신청부터 PDF 받기까지'],
     ['naver-searchad-performance', '네이버 검색광고 성과 조회'],
     ['google-marketing-report', '측정 진단·웹사이트 성과·검색 실적을 보고서로'],
+    ['marketing-budget-limit-get', '조직에 설정한 하루 광고 예산과 입찰가 한도 확인'],
   ];
   const preferred = highlights.map(([slug]) => slug);
   const featured = preferred.map((slug) => products.find((p) => p.slug === slug && p.kind === 'product'));
@@ -78,13 +80,14 @@ export async function generateDocs() {
     '홈택스, 4대보험, 정부24, 은행, 위택스 등 15개 이상 기관과 플랫폼의 업무를 연결합니다.', '',
     '전자세금계산서와 현금영수증, 4대보험과 급여명세서, 은행과 기업카드 조회, 고용지원금, 거래처 확인, 광고 성과까지.',
     'XBOSS의 **업무 상품 ' + count + '개**를 한곳에서 탐색할 수 있습니다.', '',
-    '**무료로 시작할 수 있습니다.** 상품별 준비 사항과 이용 조건은 시작 과정에서 확인하세요.', '',
-    '[상품 찾기](#전체-상품) · [AI에 연결](docs/ai-connect.md) · [n8n 템플릿](examples/n8n/README.md) · [코드로 시작](docs/quickstart.md) · [English](README.en.md)', '',
+    '**먼저 결과를 보고 싶다면** [n8n 가상 급여 마감 예제 실행](https://n8n.io/workflows/22207-xboss/). API 키 없이 대사표와 직원별 급여명세서 검토본 ZIP을 만들어 볼 수 있습니다.', '',
+    '**내 AI에서 사용하려면** [사용하는 앱의 연결 방법 보기](docs/ai-connect.md). Codex, ChatGPT, Claude, Cursor, Gemini CLI의 설정과 첫 호출을 확인할 수 있습니다.', '',
+    '[상품 찾기](#전체-상품) · [코드로 시작](docs/quickstart.md) · [English](README.en.md)', '',
     '[내 업무에 맞는 활용법과 시작 경로](docs/use-cases.md)에서 사업 운영, 직원 입퇴사, 자금 확인, 마케팅 분석과 서비스 개발에 맞는 업무를 고르세요.', '',
     '## 이런 업무부터 찾아보세요', '',
     '| 필요한 업무 | 얻는 결과 |', '| --- | --- |', examples, '',
     '4대보험 취득·상실 초안, 지원 은행 거래내역 등 다른 업무도 [전체 상품](PRODUCTS.md)에서 찾을 수 있습니다.',
-    '상품별 입력과 기관 연결이 필요합니다. 신고 초안은 최종 제출과 구분하고, 실제 발행·제출은 내용을 확인한 뒤 진행하세요.', '',
+    '상품별 입력과 기관 연결 요건을 확인하세요. 신고 초안은 최종 제출과 구분하고, 실제 발행·제출은 내용을 확인한 뒤 진행하세요.', '',
     '## 가장 편한 방법으로 시작하세요', '',
     '- **브라우저에서:** 아래에서 상품을 고르고 상품별 시작 링크를 여세요.',
     '- **AI에서:** [연결 안내](docs/ai-connect.md)에 따라 공식 MCP를 연결하세요. 현재 도구 목록으로 지원 업무와 입력을 확인할 수 있습니다.',
@@ -144,6 +147,11 @@ export async function generateDocs() {
     const connection = p.mcp.enabled && p.mcp.name
       ? 'MCP 도구명: ' + inline(p.mcp.name) + '. 실제 연결 후 도구 목록에서 현재 입력 스키마와 이용 가능 여부를 확인하세요.'
       : 'AI에서 이용 가능한 업무는 실제 연결 후 도구 목록에서 확인하세요.';
+    const payrollHelp = p.slug === 'register-xlsx' ? [
+      '- 월별 급여대장 XLSX는 ' + inline('payroll_artifact__register_xlsx') + '로 생성합니다.',
+      '- 직원별 급여명세서 XLSX는 ' + inline('payroll_artifact__payslip_xlsx') + '로 따로 생성합니다. 지급일과 사업장 정보도 필요합니다.',
+      '- 금액과 공제 내역을 준비한 뒤 파일로 만듭니다. [가상 데이터로 급여 마감 대사 체험](https://n8n.io/workflows/22207-xboss/)을 먼저 해볼 수 있습니다.', ''
+    ] : [];
     await write(productDocumentPath(p), [
       MARKER, '# ' + md(p.name), '', md(p.summary), '', '**분야:** ' + md(p.category), '',
       ...(p.kind === 'step' ? ['이 항목은 업무 과정의 중간 화면 단계입니다. 전체 업무 흐름은 공식 상품 안내를 확인하세요.', ''] : []),
@@ -151,7 +159,7 @@ export async function generateDocs() {
       'XBOSS는 무료로 시작할 수 있습니다. 이 상품의 준비 사항과 이용 조건은 시작 과정에서 확인하세요.', '',
       '## AI와 코드에서 사용하기', '',
       '[AI 연결 안내](../ai-connect.md) · [코드 시작 안내](../quickstart.md)', '',
-      connection, '',
+      connection, '', ...payrollHelp,
       'REST 실행 식별자: provider ' + inline(p.provider) + ', action ' + inline(p.action) + '.',
       '공식 상품 안내에서 필요한 기관 연결과 입력값을 확인한 뒤 실행하세요.', '',
       code('node bin/xboss.mjs show "' + p.slug + '"'), '',

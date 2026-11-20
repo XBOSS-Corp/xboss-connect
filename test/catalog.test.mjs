@@ -90,7 +90,12 @@ test('public index keeps exact names and separates screen steps across categorie
     '#### 화면 단계 (1개)', '- [세금 자료 로그인](https://xdata.kr/service-products/tax-login): 준비 단계입니다.',
     '### 마케팅 (1개)', '- [네이버 광고 성과 조회](https://xboss.biz/service-products/naver-report): 광고 실적입니다.',
   ].join('\r\n');
-  const index = parsePublicIndex(text);
+  const institutionLinks = [
+    '## 기관별 API',
+    '- [홈택스 API 연동](https://xboss.biz/service-products/institution/hometax): 기관 안내',
+    '## 상품',
+  ].join('\r\n');
+  const index = parsePublicIndex(institutionLinks + '\r\n' + text);
   assert.equal(index.size, 3);
   assert.equal(index.get('tax-login').kind, 'step');
   assert.equal(index.get('naver-report').kind, 'product');

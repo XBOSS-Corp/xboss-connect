@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "xboss-connect",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "홈택스, 4대보험, 정부24, 은행, 위택스 등 15개 이상 기관과 플랫폼 업무를 AI에 연결합니다. 세금계산서, 증명서, 급여 엑셀, 계좌 조회, 지원금 진단과 마케팅 보고서를 지원하는 XBOSS 공식 플러그인입니다.",
   "author": {
     "name": "XBOSS",

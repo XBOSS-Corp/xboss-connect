@@ -22,7 +22,7 @@ export function parsePublicIndex(text) {
     const heading = /^### ([^(]+)\s*\(/.exec(line);
     if (heading) { category = heading[1].trim(); kind = 'product'; }
     if (/^#### 화면 단계/.test(line)) kind = 'step';
-    const item = /^- \[([^\]]+)\]\((https:\/\/(?:xboss\.biz|xdata\.kr)\/service-products\/[^)]+)\)(?::\s*(.*))?$/.exec(line);
+    const item = /^- \[([^\]]+)\]\((https:\/\/(?:xboss\.biz|xdata\.kr)\/service-products\/[^/?)#]+)\)(?::\s*(.*))?$/.exec(line);
     if (!item) continue;
     if (!category) throw new Error('상품 분류를 확인할 수 없습니다.');
     const url = new URL(item[2]);
