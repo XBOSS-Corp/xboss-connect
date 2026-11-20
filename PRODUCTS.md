@@ -3,7 +3,7 @@
 
 **필요한 업무를 찾고, 해당 상품에서 바로 시작하세요.**
 
-2026-11-17 확인: 업무 상품 293개와 화면 단계 31개입니다.
+2026-11-20 확인: 업무 상품 295개와 화면 단계 31개입니다.
 화면 단계는 독립 업무 상품 수와 구분했습니다.
 
 [무료로 시작하기](https://xboss.biz/auth/signup) ,  [AI 연결](docs/ai-connect.md) ,  [코드 시작](docs/quickstart.md)
@@ -454,6 +454,8 @@
 
 - [광고 개선 제안](docs/products/marketing-optimization-suggest.md) — 키워드와 검색어, 소재, 입찰의 성과 숫자와 직접 정한 기준을 넣으면 손볼 후보를 근거 숫자와 함께 골라 드립니다.
 - [광고 매출 연결 계산](docs/products/marketing-lead-to-revenue-reconcile.md) — 광고비와 같은 기간의 매출, 신규 유료 고객 수를 넣으면 ROAS와 고객 획득 비용을 계산해 돌려줍니다.
+- [광고비 한도 보기](docs/products/marketing-budget-limit-get.md) — 우리 조직이 정해 둔 하루 예산 상한과 입찰가 상한을 원 단위로 돌려줍니다.
+- [광고비 한도 정하기](docs/products/marketing-budget-limit-set.md) — AI 에이전트나 API가 광고 금액을 바꿀 때 넘지 못할 하루 예산 상한과 입찰가 상한을 원 단위로 정합니다.
 - [마케팅 보고 보관](docs/products/marketing-report-archive-save.md) — 만들어 둔 마케팅 성과 보고를 기간과 채널 정보와 함께 보관합니다.
 - [마케팅 성과 보고](docs/products/marketing-growth-review.md) — 보고 기간과 채널별 광고비를 넣으면 통화별 광고비 합계와 ROAS, 고객 획득 비용 CAC, 목표 달성률을 한 번에 계산합니다.
 - [보관한 마케팅 보고 찾기](docs/products/marketing-report-archive-list.md) — 보관해 둔 마케팅 성과 보고를 기간과 채널로 골라 최근 기간부터 돌려줍니다.

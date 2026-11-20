@@ -8,11 +8,13 @@
 홈택스, 4대보험, 정부24, 은행, 위택스 등 15개 이상 기관과 플랫폼의 업무를 연결합니다.
 
 전자세금계산서와 현금영수증, 4대보험과 급여명세서, 은행과 기업카드 조회, 고용지원금, 거래처 확인, 광고 성과까지.
-XBOSS의 **업무 상품 293개**를 한곳에서 탐색할 수 있습니다.
+XBOSS의 **업무 상품 295개**를 한곳에서 탐색할 수 있습니다.
 
-**무료로 시작할 수 있습니다.** 상품별 준비 사항과 이용 조건은 시작 과정에서 확인하세요.
+**먼저 결과를 보고 싶다면** [n8n 가상 급여 마감 예제 실행](https://n8n.io/workflows/22207-xboss/). API 키 없이 대사표와 직원별 급여명세서 검토본 ZIP을 만들어 볼 수 있습니다.
 
-[상품 찾기](#전체-상품) ,  [AI에 연결](docs/ai-connect.md) ,  [n8n 템플릿](examples/n8n/README.md) ,  [코드로 시작](docs/quickstart.md) ,  [English](README.en.md)
+**내 AI에서 사용하려면** [사용하는 앱의 연결 방법 보기](docs/ai-connect.md). Codex, ChatGPT, Claude, Cursor, Gemini CLI의 설정과 첫 호출을 확인할 수 있습니다.
+
+[상품 찾기](#전체-상품) ,  [코드로 시작](docs/quickstart.md) ,  [English](README.en.md)
 
 [내 업무에 맞는 활용법과 시작 경로](docs/use-cases.md)에서 사업 운영, 직원 입퇴사, 자금 확인, 마케팅 분석과 서비스 개발에 맞는 업무를 고르세요.
 
@@ -23,14 +25,16 @@ XBOSS의 **업무 상품 293개**를 한곳에서 탐색할 수 있습니다.
 | [전자세금계산서 발행](docs/products/%EC%A0%84%EC%9E%90%EC%84%B8%EA%B8%88%EA%B3%84%EC%82%B0%EC%84%9C-%EB%B0%9C%ED%96%89.md) | 거래 내용을 확인하고 전자세금계산서 발행 |
 | [전자세금계산서 수정 취소](docs/products/%EC%A0%84%EC%9E%90%EC%84%B8%EA%B8%88%EA%B3%84%EC%82%B0%EC%84%9C-%EB%B0%9C%ED%96%89%EC%B7%A8%EC%86%8C.md) | 원본 세금계산서 전액 취소 수정발행 |
 | [현금영수증 개별 발급](docs/products/%ED%98%84%EA%B8%88%EC%98%81%EC%88%98%EC%A6%9D-%EB%B0%9C%ED%96%89.md) | 현금 결제 건의 현금영수증 발급 |
-| [급여대장/명세서 통합팩](docs/products/register-xlsx.md) | 한 달 급여 데이터를 대장 엑셀로 정리 |
+| [급여대장/명세서 통합팩](docs/products/register-xlsx.md) | 급여대장과 직원별 급여명세서 엑셀을 각각 생성 |
+| [정부24 사업자등록증명(법인) 발급](docs/products/gov24-business-registration-certificate-issue.md) | 정부24에서 법인 사업자등록증명 발급 |
 | [원천세 정기신고 제출](docs/products/%EC%9B%90%EC%B2%9C%EC%84%B8-%EC%A0%95%EA%B8%B0%EC%8B%A0%EA%B3%A0-%EC%A0%9C%EC%B6%9C.md) | 작성, 검토를 마친 원천세 정기신고 제출 |
 | [증명서 자동 신청 후 내려받기](docs/products/%EC%A6%9D%EB%AA%85%EC%84%9C-%EC%9E%90%EB%8F%99-%EC%8B%A0%EC%B2%AD-%EB%82%B4%EB%A0%A4%EB%B0%9B%EA%B8%B0.md) | 국세완납증명서 신청부터 PDF 받기까지 |
 | [네이버 검색광고 성과 보고서 조회](docs/products/naver-searchad-performance.md) | 네이버 검색광고 성과 조회 |
 | [마케팅 통합 보고](docs/products/google-marketing-report.md) | 측정 진단, 웹사이트 성과, 검색 실적을 보고서로 |
+| [광고비 한도 보기](docs/products/marketing-budget-limit-get.md) | 조직에 설정한 하루 광고 예산과 입찰가 한도 확인 |
 
 4대보험 취득, 상실 초안, 지원 은행 거래내역 등 다른 업무도 [전체 상품](PRODUCTS.md)에서 찾을 수 있습니다.
-상품별 입력과 기관 연결이 필요합니다. 신고 초안은 최종 제출과 구분하고, 실제 발행, 제출은 내용을 확인한 뒤 진행하세요.
+상품별 입력과 기관 연결 요건을 확인하세요. 신고 초안은 최종 제출과 구분하고, 실제 발행, 제출은 내용을 확인한 뒤 진행하세요.
 
 ## 가장 편한 방법으로 시작하세요
 
@@ -64,7 +68,7 @@ node bin/xboss.mjs schema register-xlsx --anonymous --template
 
 ## 전체 상품
 
-2026-11-17 공식 공개 목록 확인: **업무 상품 293개 ,  화면 단계 31개**.
+2026-11-20 공식 공개 목록 확인: **업무 상품 295개 ,  화면 단계 31개**.
 상품명은 모두 아래에 텍스트로 수록했습니다. 브라우저 찾기와 저장소 검색으로도 찾을 수 있습니다.
 
 ### 4대보험
@@ -513,6 +517,8 @@ node bin/xboss.mjs schema register-xlsx --anonymous --template
 
 - [광고 개선 제안](docs/products/marketing-optimization-suggest.md) — 키워드와 검색어, 소재, 입찰의 성과 숫자와 직접 정한 기준을 넣으면 손볼 후보를 근거 숫자와 함께 골라 드립니다.
 - [광고 매출 연결 계산](docs/products/marketing-lead-to-revenue-reconcile.md) — 광고비와 같은 기간의 매출, 신규 유료 고객 수를 넣으면 ROAS와 고객 획득 비용을 계산해 돌려줍니다.
+- [광고비 한도 보기](docs/products/marketing-budget-limit-get.md) — 우리 조직이 정해 둔 하루 예산 상한과 입찰가 상한을 원 단위로 돌려줍니다.
+- [광고비 한도 정하기](docs/products/marketing-budget-limit-set.md) — AI 에이전트나 API가 광고 금액을 바꿀 때 넘지 못할 하루 예산 상한과 입찰가 상한을 원 단위로 정합니다.
 - [마케팅 보고 보관](docs/products/marketing-report-archive-save.md) — 만들어 둔 마케팅 성과 보고를 기간과 채널 정보와 함께 보관합니다.
 - [마케팅 성과 보고](docs/products/marketing-growth-review.md) — 보고 기간과 채널별 광고비를 넣으면 통화별 광고비 합계와 ROAS, 고객 획득 비용 CAC, 목표 달성률을 한 번에 계산합니다.
 - [보관한 마케팅 보고 찾기](docs/products/marketing-report-archive-list.md) — 보관해 둔 마케팅 성과 보고를 기간과 채널로 골라 최근 기간부터 돌려줍니다.

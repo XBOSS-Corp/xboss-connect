@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-17T14:40:47.203Z",
+  "generated_at": "2026-11-20T01:48:30.341Z",
   "source": {
     "catalog_url": "https://api.xdata.kr/v1/public/catalog/products",
     "site_url": "https://xboss.biz",
-    "verified_at": "2026-11-17T14:40:47.203Z",
+    "verified_at": "2026-11-20T01:48:30.341Z",
     "verification_status": "live",
-    "record_count": 324
+    "record_count": 326
   },
   "products": [
     {
@@ -5142,6 +5142,38 @@
       "docs_url": null,
       "mcp": {
         "name": "marketing__lead_to_revenue__reconcile",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1414",
+      "slug": "marketing-budget-limit-get",
+      "name": "광고비 한도 보기",
+      "summary": "우리 조직이 정해 둔 하루 예산 상한과 입찰가 상한을 원 단위로 돌려줍니다.",
+      "category": "XBOSS 마케팅 분석",
+      "provider": "marketing",
+      "action": "marketing.budget_limit.get",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/marketing-budget-limit-get",
+      "docs_url": null,
+      "mcp": {
+        "name": "marketing__budget_limit__get",
+        "enabled": true
+      }
+    },
+    {
+      "id": "1415",
+      "slug": "marketing-budget-limit-set",
+      "name": "광고비 한도 정하기",
+      "summary": "AI 에이전트나 API가 광고 금액을 바꿀 때 넘지 못할 하루 예산 상한과 입찰가 상한을 원 단위로 정합니다.",
+      "category": "XBOSS 마케팅 분석",
+      "provider": "marketing",
+      "action": "marketing.budget_limit.set",
+      "kind": "product",
+      "url": "https://xboss.biz/service-products/marketing-budget-limit-set",
+      "docs_url": null,
+      "mcp": {
+        "name": "marketing__budget_limit__set",
         "enabled": true
       }
     },

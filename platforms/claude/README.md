@@ -22,7 +22,8 @@
 공개 디렉터리 심사 상태와 별도로, 공식 GitHub 저장소에서 직접 설치할 수 있습니다. Claude Code 2.1.275 이상에서 다음 명령을 사용하세요.
 
 ```text
-/plugin install xboss-connect --marketplace XBOSS-Corp/xboss-connect
+/plugin marketplace add XBOSS-Corp/xboss-connect
+/plugin install xboss-connect@xboss
 ```
 
 ## 연결하고 첫 업무 시작하기
@@ -33,7 +34,7 @@
 4. 원하는 결과와 기간을 한국어로 요청합니다. AI가 현재 도구의 필수 입력을 확인한 뒤 요청한 범위의 업무를 진행합니다.
 5. 완료된 작업의 결과 파일 링크에서 같은 XBOSS 계정으로 로그인해 엑셀이나 PDF를 받습니다. 계정 권한이 없는 작업은 열 수 없습니다.
 
-현재 서버가 공개 체험을 허용하는 도구는 해당 조건 안에서 로그인 전 확인할 수 있습니다. 보호된 기관 업무에는 계정 권한과 기관 연결이 필요합니다. [무료로 시작하기](https://xboss.biz/auth/signup?utm_source=claude&utm_medium=plugin&utm_campaign=xboss_connect) 후 상품별 제공량과 이용 조건은 콘솔에서 확인하세요.
+계정 연결 후에는 기관 자격증명이 필요 없는 [가상 급여대장 만들기](../../docs/ai-connect.md#2-가상-자료로-첫-결과-받기)부터 해보세요. 파일이 생성되면 결과 링크로 이동해 내려받습니다. [무료로 시작하기](https://xboss.biz/auth/signup?utm_source=claude&utm_medium=plugin&utm_campaign=xboss_connect)에서 제공량과 이용 조건을 확인할 수 있습니다.
 
 ## 바로 요청해 보세요
 
