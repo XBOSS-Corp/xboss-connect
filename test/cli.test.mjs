@@ -253,6 +253,26 @@ test('schema resolves a public slug to its declared name across every list page'
   assert.deepEqual(JSON.parse(h.stdout[0]), tool);
 });
 
+test('schema resolves both blog draft spellings and product slugs across rollout', async () => {
+  for (const [slug, current, previous] of [
+    ['naver-blog-post-draft-save', 'naver__blog__draft__save', 'naver__blog__post_via_retired_api__publish'],
+    ['tistory-post-draft-save', 'tistory__blog__draft__save', 'tistory__retired_openapi__publish'],
+  ]) {
+    const readCatalog = async () => ({
+      products: [{ ...product, slug, mcp: { name: current, enabled: true } }],
+    });
+    for (const name of [current, previous]) {
+      const tool = { name, inputSchema: { type: 'object' } };
+      const client = { listTools: async () => ({ tools: [tool] }) };
+      for (const reference of [slug, previous, current]) {
+        const h = harness({ client, readCatalog });
+        await main(['schema', reference], h.dependencies);
+        assert.deepEqual(JSON.parse(h.stdout[0]), tool);
+      }
+    }
+  }
+});
+
 test('schema rejects absent and disabled mappings instead of guessing a tool name', async () => {
   const absent = harness({ client: { listTools: async () => ({ tools: [{ name: 'naver__report' }] }) } });
   await assert.rejects(main(['schema', product.slug], absent.dependencies), /현재 목록에 없습니다/);

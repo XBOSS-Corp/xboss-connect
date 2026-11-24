@@ -2149,7 +2149,7 @@
       "url": "https://xboss.biz/service-products/naver-blog-post-draft-save",
       "docs_url": null,
       "mcp": {
-        "name": "naver__blog__post_via_retired_api__publish",
+        "name": "naver__blog__draft__save",
         "enabled": true
       }
     },
@@ -2709,7 +2709,7 @@
       "url": "https://xboss.biz/service-products/tistory-post-draft-save",
       "docs_url": null,
       "mcp": {
-        "name": "tistory__retired_openapi__publish",
+        "name": "tistory__blog__draft__save",
         "enabled": true
       }
     },

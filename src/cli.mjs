@@ -45,13 +45,27 @@ function inputTemplate(schema, depth = 0) {
   return null;
 }
 
-async function selectedTool(tools, reference, readCatalog) {
-  const exact = tools.find((tool) => tool.name === reference);
+const blogDraftToolAliases = new Map([
+  ['naver__blog__draft__save', 'naver__blog__post_via_retired_api__publish'],
+  ['naver__blog__post_via_retired_api__publish', 'naver__blog__draft__save'],
+  ['tistory__blog__draft__save', 'tistory__retired_openapi__publish'],
+  ['tistory__retired_openapi__publish', 'tistory__blog__draft__save'],
+]);
+
+function findListedTool(tools, name) {
+  const exact = tools.find((tool) => tool.name === name);
   if (exact) return exact;
+  const alias = blogDraftToolAliases.get(name);
+  return alias === undefined ? undefined : tools.find((tool) => tool.name === alias);
+}
+
+async function selectedTool(tools, reference, readCatalog) {
+  const listed = findListedTool(tools, reference);
+  if (listed) return listed;
   const catalog = await readCatalog();
   const product = catalog.products.find((item) => item.slug === reference);
   if (!product) throw new Error('현재 도구를 찾지 못했습니다. tools의 정확한 도구명 또는 search에서 찾은 상품 slug를 사용하세요.');
-  const tool = product.mcp.enabled && tools.find((item) => item.name === product.mcp.name);
+  const tool = product.mcp.enabled && findListedTool(tools, product.mcp.name);
   if (!tool) throw new Error('이 상품의 MCP 도구가 현재 목록에 없습니다. 상품의 API·MCP 지원 여부와 내 계정 연결을 확인하세요.');
   return tool;
 }
